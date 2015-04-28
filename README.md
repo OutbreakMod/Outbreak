@@ -2,7 +2,8 @@
 ================
 
 Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod.
-Created for Arma 3.
+
+Created for Arma 3 (Zeus).
 
 --------------------------
 Mods Used
