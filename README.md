@@ -1,19 +1,20 @@
-Outbreak server mod created by Alex (TheAmazingAussie), heavily inspired by DayZ mod.
+***Outbreak Mod***
+------------------
+
+Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod.
 Created for Arma 3.
+**Mods Used**
+---------
 
-------------------
-*** MODS USED ****
-------------------
-
-Arma2Net by Scott_NZ for the server hive.
-Scorch's Inventory Items - www.armaholic.com/page.php?id=21689
+ 1. Arma2Net by Scott_NZ for the server hive.
+ 2. Scorch's Inventory Items - www.armaholic.com/page.php?id=21689
 
 Thanks to these AMAZING mod creators <3
 
----------------------
-*** CONTACT INFO ****
----------------------
+**Contact**
+------------
 
 Email: alex.daniel.97@gmail.com
+
 Forum: outbreakmc.net (TheAmazingAussie profile)
 
