@@ -20,5 +20,5 @@ Contact
 
 Email: alex.daniel.97@gmail.com
 
-Forum: outbreakmc.net (TheAmazingAussie profile)
+Twitter: http://twitter.com/TheAmazingAussie
 
