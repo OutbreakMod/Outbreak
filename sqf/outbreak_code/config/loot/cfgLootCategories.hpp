@@ -4,8 +4,8 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"ItemGPS","item",0.1},
-			{"ItemMap","item",0.3},
-			{"ItemWatch","item",0.1},
+			{"ItemMap","item",0.2},
+			{"ItemWatch","item",0.2},
 			{"Binocular","item",0.2}
 		};
 	};
@@ -13,8 +13,8 @@ class CfgLootCategories {
 	class MilitaryTools {
 		
 		loot[] = {
-			{"NVGoggles","item",0.01},
-			{"Rangefinder","item",0.01}
+			{"NVGoggles","item",0.03},
+			{"Rangefinder","item",0.05}
 		};
 	};
 	

@@ -65,18 +65,21 @@ if (count(_positions) > 0) then {
 						_maxItems = _current + floor (random 3); // number giving possibily of more items into this holder. max = three, min = 1
 						
 						// add any other items into holder
-						for "_j" from 0 to count (_spawnItems) - 1 do { 
+						
+						_objItems = _className call building_items;
+						
+						for "_j" from 0 to count (_objItems) - 1 do { 
 							
 							if (_current <= _maxItems) then {
 							
-								_item = _spawnItems select _i;
+								_item = _objItems select _i;
 
-								_itemClass = _item select 0;
-								_itemType = _item select 1;
-								_chance = _item select 2;
+								_class = _item select 0;
+								_type = _item select 1;
+								_itemChance = _item select 2;
 								
-								if ((random 1) < _chance) then { 
-									_weaponHolder addItemCargoGlobal [_itemClass, 1];
+								if ((random 1) < _itemChance && _type == _itemType) then { 
+									_weaponHolder addItemCargoGlobal [_class, 1];
 									_current = _current + 1;
 								};
 							};
