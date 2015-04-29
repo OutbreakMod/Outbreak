@@ -3,16 +3,17 @@ class CfgLootCategories {
 	class GeneralTools {
 		
 		loot[] = {
-			{"ItemGPS","item",0.1},
-			{"ItemMap","item",0.2},
-			{"ItemWatch","item",0.2},
-			{"Binocular","item",0.2}
+			{"ItemGPS","item",0.05},
+			{"ItemMap","item",0.1},
+			{"ItemWatch","item",0.07},
+			{"Binocular","item",0.06}
 		};
 	};
 	
 	class MilitaryTools {
 		
 		loot[] = {
+			{"sc_mre","item",0.06},
 			{"NVGoggles","item",0.03},
 			{"Rangefinder","item",0.05}
 		};
@@ -40,6 +41,81 @@ class CfgLootCategories {
 			{"srifle_EBR_ARCO_pointer_snds_F","gun",0.05},
 			{"srifle_EBR_DMS_pointer_snds_F","gun",0.05},
 			{"rifle_EBR_SOS_F","gun",0.01}
+		};
+	};
+	
+	class MedicalGeneral {
+		
+		loot[] = {
+			{"MedicalBox","supplybox",0.04}
+		};
+	};
+	
+	class Medical {
+		
+		loot[] = {
+			{"sc_bandage", "item",0.06},
+			{"sc_ibuprofen", "item",0.04},
+			{"sc_morphine", "item",0.04},
+			{"sc_epinephrine", "item",0.03},
+			{"sc_blood", "item",0.02}
+		};
+	};
+	
+	class Food {
+		
+		loot[] = {
+			{"sc_twinkies", "item",0.02},
+			{"sc_snoballs", "item",0.02},
+			{"sc_pbj", "item",0.02},
+			{"sc_donut", "item",0.02},
+			{"sc_potato", "item",0.08},
+			{"sc_energy_drink", "item",0.06},
+			{"sc_corn", "item",0.05},
+			{"sc_coffee", "item",0.07},
+			{"sc_cereal", "item",0.06},
+			{"sc_carrot", "item",0.05},
+			{"sc_candybar", "item",0.02},
+			{"sc_soda", "item",0.06},
+			{"sc_juicebox", "item",0.06},
+			{"sc_chips", "item", 0.1},
+			{"sc_cannedfood","item", 0.05}
+		};
+	};
+	
+	class CivillianPistols {
+		
+		loot[] = {
+			{"hgun_P07_F","gun",0.08},
+			{"hgun_Pistol_heavy_01_F", "gun",0.06},
+			{"hgun_ACPC2_F", "gun",0.06}
+		};
+	};
+	
+	class CivillianClothes {
+		
+		loot[] = {
+			{"U_C_Poloshirt_blue", "item",0.04},
+			{"U_C_Poloshirt_burgundy", "item",0.04},
+			{"U_C_Poloshirt_stripped", "item",0.04},
+			{"U_C_Poloshirt_tricolour", "item",0.04},
+			{"U_C_Poloshirt_salmon", "item",0.04},
+			{"U_C_Poloshirt_redwhite", "item",0.04},
+			{"U_C_Commoner1_1", "item",0.04},
+			{"U_C_Poor_1", "item",0.04}
+		};
+	};
+	
+	class CivillianBackpacks {
+		
+		loot[] = {
+			{"B_OutdoorPack_blk", "item",0.05},
+			{"B_OutdoorPack_tan", "item",0.04},
+			{"B_OutdoorPack_blu", "item",0.05},
+			{"B_HuntingBackpack", "item",0.04},
+			{"B_Kitbag_mcamo", "item",0.05},
+			{"B_Kitbag_sgg", "item",0.04},
+			{"B_Kitbag_cbr", "item",0.04}
 		};
 	};
 };

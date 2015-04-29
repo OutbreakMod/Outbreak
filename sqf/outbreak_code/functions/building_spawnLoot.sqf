@@ -6,8 +6,13 @@
 _className = typeOf _this;
 _config = configFile >> "CfgBuildingType" >> _className;
 _positions = [] + getArray(_config >> "positions");
-_lootMin = getNumber(_config >> "lootMin");
-_lootMax = getNumber(_config >> "lootMax");
+_lootMin = 0 + getNumber(_config >> "lootMin");
+_lootMax = 0 + getNumber(_config >> "lootMax");
+
+if (_lootMax == 0) then {
+	_lootMax = (count _positions);
+};
+
 _lootNumber = round (random(_lootMax - _lootMin) + 1) + _lootMin;
 _usedPos = [];
 
@@ -22,9 +27,9 @@ if (count(_positions) > 0) then {
 
 				_loot = _spawnItems select _i;
 			
-				_itemClass 	= _loot select 0;
-				_itemType 	= _loot select 1;
-				_chance 	= _loot select 2;
+				_itemClass = _loot select 0;
+				_itemType = _loot select 1;
+				_chance = _loot select 2;
 				
 				if ((random 1) < _chance) then {
 					
@@ -46,16 +51,23 @@ if (count(_positions) > 0) then {
 				
 					if (_itemType == "gun") then {
 		
-						_weaponHolder = createVehicle ["WeaponHolderSimulated", _lootPos, [], 0, "can_collide"];
+						_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 						_weaponHolder setVariable ["isLoot", true];
 						_weaponHolder addWeaponCargoGlobal [_itemClass, 1];
 						_magazine = getArray (configFile >> "CfgWeapons" >> _itemClass >> "magazines") select 0;
 						_weaponHolder addMagazineCargo [_magazine, floor (random 4)];
 					};
 					
+					if (_itemType == "supplybox") then {
+					
+						_supplyBox = createVehicle [_itemClass, _lootPos, [], 0, "CAN_COLLIDE"];
+						_supplyBox setVariable ["isLoot", true];
+						
+					};
+					
 					if (_itemType == "item") then {
 		
-						_weaponHolder = createVehicle ["WeaponHolderSimulated", _lootPos, [], 0, "can_collide"];
+						_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 						_weaponHolder setVariable ["isLoot", true];
 						_weaponHolder addItemCargoGlobal [_itemClass, 1];
 						
@@ -66,7 +78,7 @@ if (count(_positions) > 0) then {
 						for "_j" from 0 to count (_objItems) - 1 do { 
 							if (_current <= _maxItems) then {
 								_item = _objItems select _i;
-								if ((random 1) < (_item select 2) && _type == (_item select 1)) then { 
+								if ((random 1) < (_item select 2) && _itemType == (_item select 1)) then { 
 									_weaponHolder addItemCargoGlobal [(_item select 0), 1];
 									_current = _current + 1;
 								};

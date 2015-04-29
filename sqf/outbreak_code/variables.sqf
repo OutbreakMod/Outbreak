@@ -21,7 +21,7 @@
 	};
 	
 	if (_command == "login") then {
-		[] call player_missionLogin;
+		[] call player_clientLogin;
 	};
 	
 	// load gear
@@ -36,4 +36,20 @@
 	if (_command == "hint") then {
 		hint format[_response select 1];
 	};
+};
+
+player_clientLogin = {
+
+	player addAction ["Select No Weapon", {
+		player action ["SwitchWeapon", player, player, 100];
+		player switchcamera cameraView;
+	}];
+
+	player addAction ["Select Primary Weapon", {
+		player action ["SwitchWeapon", player, player, 1];
+		player switchcamera cameraView;
+	}];
+
+	// call login on mission file
+	[] call player_missionLogin;
 };
