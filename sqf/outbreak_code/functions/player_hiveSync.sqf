@@ -6,7 +6,12 @@
 private ["_position", "_inventory"];
 
 // fields
-_position = format["%1", getPosATL player];
+_pos = getPosATL player;
+
+// TODO: Check debug coord, if so, don't save, potential character loss
+if (_pos select 0 == -7245) exitWith {};
+
+_position = format["%1", _pos];
 _inventory = format["%1", player call player_serializeInventory];
 
 // send request to server

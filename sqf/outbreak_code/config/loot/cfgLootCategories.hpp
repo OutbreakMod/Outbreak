@@ -6,7 +6,8 @@ class CfgLootCategories {
 			{"ItemGPS","item",0.05},
 			{"ItemMap","item",0.1},
 			{"ItemWatch","item",0.07},
-			{"Binocular","item",0.06}
+			{"Binocular","item",0.06},
+			{"sc_knife","item",0.06}
 		};
 	};
 	
@@ -62,7 +63,7 @@ class CfgLootCategories {
 		};
 	};
 	
-	class Food {
+	class Supermarket {
 		
 		loot[] = {
 			{"sc_twinkies", "item",0.02},
@@ -83,6 +84,20 @@ class CfgLootCategories {
 		};
 	};
 	
+	class CivillianFoodStorage {
+		
+		loot[] = {
+			{"sc_energy_drink", "item",0.06},
+			{"sc_corn", "item",0.02},
+			{"sc_coffee", "item",0.03},
+			{"sc_cereal", "item",0.03},
+			{"sc_soda", "item",0.04},
+			{"sc_juicebox", "item",0.06},
+			{"sc_chips", "item", 0.5},
+			{"sc_cannedfood","item", 0.05}
+		};
+	};
+
 	class CivillianPistols {
 		
 		loot[] = {
@@ -106,16 +121,28 @@ class CfgLootCategories {
 		};
 	};
 	
+	/*
+_weaponHolder = createVehicle ["GroundWeaponHolder", getPos player, [], 0, "CAN_COLLIDE"];
+_weaponHolder addItemCargoGlobal ["B_Kitbag_mcamo", 1];
+
+_weaponHolder = createVehicle ["GroundWeaponHolder", getPos player, [], 0, "CAN_COLLIDE"];
+_weaponHolder addItemCargoGlobal ["B_AssaultPack_khk", 1];
+
+_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
+						_weaponHolder setVariable ["isLoot", true];
+						_weaponHolder addBackpackCargoGlobal ["B_AssaultPack_khk", 1];
+	*/
+	
 	class CivillianBackpacks {
 		
 		loot[] = {
-			{"B_OutdoorPack_blk", "item",0.05},
-			{"B_OutdoorPack_tan", "item",0.04},
-			{"B_OutdoorPack_blu", "item",0.05},
-			{"B_HuntingBackpack", "item",0.04},
-			{"B_Kitbag_mcamo", "item",0.05},
-			{"B_Kitbag_sgg", "item",0.04},
-			{"B_Kitbag_cbr", "item",0.04}
+			{"B_OutdoorPack_blk", "backpack",0.05},
+			{"B_OutdoorPack_tan", "backpack",0.04},
+			{"B_OutdoorPack_blu", "backpack",0.05},
+			{"B_HuntingBackpack", "backpack",0.04},
+			{"B_Kitbag_mcamo", "backpack",0.05},
+			{"B_Kitbag_sgg", "backpack",0.04},
+			{"B_Kitbag_cbr", "backpack",0.04}
 		};
 	};
 };

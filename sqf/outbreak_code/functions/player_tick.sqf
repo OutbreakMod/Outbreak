@@ -38,7 +38,7 @@ _spawnCheck = [] spawn {
 	while {alive player} do {
 		
 		// spawn loot check every 60 seconds
-		if ((_timer % 60) == 0) then {
+		if ((_timer % 20) == 0) then {
 			[player, "loot"] call player_spawnCheck;
 		};
 		
@@ -66,22 +66,12 @@ _ambience = [] spawn {
 };
 	
 _inventoryInteract = [] spawn {
-	fnc_test = { 
-		_idc = ctrlIDC (_this select 0);
-		_selectedIndex = _this select 1;
-		_data = format ["Data\n%1\n________\n",lbData [_idc, _selectedIndex]];
-		_text = format ["Text\n%1\n________\n",lbText [_idc, _selectedIndex]];
-		_value = format ["Value\n%1\n________\n",lbValue [_idc, _selectedIndex]];
-		_pic = format ["Picture\n%1\n________\n",lbPicture [_idc, _selectedIndex]]; 
-		hint format["Selected Uniform Index: %1\n%2%3%4%5",_selectedIndex,_data,_text,_value,_pic];
-		false
-	};
 	while {alive player} do {
 		 waituntil {!(isnull (finddisplay 602))};
-		((findDisplay 602) displayCtrl 633) ctrlSetEventHandler ["LBDblClick", "_this call fnc_test"];
-		((findDisplay 602) displayCtrl 638) ctrlSetEventHandler ["LBDblClick", "_this call fnc_test"];
-		((findDisplay 602) displayCtrl 619) ctrlSetEventHandler ["LBDblClick", "_this call fnc_test"];
-		((findDisplay 602) displayCtrl 640) ctrlSetEventHandler ["LBDblClick", "_this call fnc_test"];
+		((findDisplay 602) displayCtrl 633) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
+		((findDisplay 602) displayCtrl 638) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
+		((findDisplay 602) displayCtrl 619) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
+		((findDisplay 602) displayCtrl 640) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
 		 waituntil {isnull (finddisplay 602)};
 	};
 };

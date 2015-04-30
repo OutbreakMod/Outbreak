@@ -23,6 +23,10 @@ spawn_townWreckGenerator = compile preProcessFileLineNumbers "addons\outbreak_co
 player_clearInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_clearInventory.sqf";
 player_loadInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_loadInventory.sqf";
 player_serializeInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_serializeInventory.sqf";
+player_useItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_useItem.sqf";
+
+// KK functions
+fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc_inString.sqf";
 
 // new player tick loop
 [] execVM "addons\outbreak_code\functions\player_tick.sqf"; // true = start a loop for various things
