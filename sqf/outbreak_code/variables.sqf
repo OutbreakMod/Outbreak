@@ -11,10 +11,11 @@
 	// force player to find a spawn
 	if (_command == "findspawn") then { 
 		_pos = [] call player_findSpawn;
-		player setPos _pos;
-		[] call player_missionSpawn;
-		
+		player setPos _pos;	
 		player setVariable ["outbreaklogin", 1, true];
+		
+		[] call player_missionSpawn;
+		[] call player_clientLogin;
 	};
 	
 	// compile db pos and teleport
@@ -42,6 +43,16 @@
 };
 
 player_clientLogin = {
+
+	player_noWeapon = player addAction ["Select No Weapon", {
+		player action ["SwitchWeapon", player, player, 100];
+		player switchcamera cameraView;
+	}];
+
+	player_primaryWeapon = player addAction ["Select Primary Weapon", {
+		player action ["SwitchWeapon", player, player, 1];
+		player switchcamera cameraView;
+	}];
 
 	// call login on mission file
 	[] call player_missionLogin;

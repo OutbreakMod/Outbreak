@@ -3,22 +3,6 @@
 	@author: TheAmazingAussie
 */
 
-
-
-if (isNil 'player_noWeapon') then {
-	player_noWeapon = player addAction ["Select No Weapon", {
-		player action ["SwitchWeapon", player, player, 100];
-		player switchcamera cameraView;
-	}];
-};
-
-if (isNil 'player_primaryWeapon') then {
-	player_primaryWeapon = player addAction ["Select Primary Weapon", {
-		player action ["SwitchWeapon", player, player, 1];
-		player switchcamera cameraView;
-	}];
-};
-
 _inVehicle = (vehicle player != player);
 _cursorTarget = cursorTarget;
 
