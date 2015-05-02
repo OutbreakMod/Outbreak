@@ -3,6 +3,8 @@
 	@author: TheAmazingAussie
 */
 
+
+
 if (isNil 'player_noWeapon') then {
 	player_noWeapon = player addAction ["Select No Weapon", {
 		player action ["SwitchWeapon", player, player, 100];

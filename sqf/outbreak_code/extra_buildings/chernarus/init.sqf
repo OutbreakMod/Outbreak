@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_towns"];
+private ["_towns", "_x"];
 
 _towns = [
 	"balota",
@@ -16,4 +16,4 @@ _towns = [
 
 {
 	[] execVM format["addons\outbreak_code\extra_buildings\chernarus\%1.sqf", _x];
-} count _towns;
+} forEach _towns;

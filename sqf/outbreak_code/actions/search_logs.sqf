@@ -70,6 +70,4 @@ if (_type == "ground") then {
 	
 	player_performingAction = false;
 	action_searchWoodPile = -1;
-	
-	hint "hi!";
 };

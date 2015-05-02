@@ -10,4 +10,3 @@ _corpse = _this select 1;
 
 // respawn
 [] execVM "addons\outbreak_code\functions\player_login.sqf";
-
