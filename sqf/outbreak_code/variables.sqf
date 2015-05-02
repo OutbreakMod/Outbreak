@@ -13,6 +13,8 @@
 		_pos = [] call player_findSpawn;
 		player setPos _pos;
 		[] call player_missionSpawn;
+		
+		player setVariable ["outbreaklogin", 1, true];
 	};
 	
 	// compile db pos and teleport
@@ -22,6 +24,7 @@
 	
 	if (_command == "login") then {
 		[] call player_clientLogin;
+		player setVariable ["outbreaklogin", 1, true];
 	};
 	
 	// load gear
@@ -39,16 +42,6 @@
 };
 
 player_clientLogin = {
-
-	player addAction ["Select No Weapon", {
-		player action ["SwitchWeapon", player, player, 100];
-		player switchcamera cameraView;
-	}];
-
-	player addAction ["Select Primary Weapon", {
-		player action ["SwitchWeapon", player, player, 1];
-		player switchcamera cameraView;
-	}];
 
 	// call login on mission file
 	[] call player_missionLogin;

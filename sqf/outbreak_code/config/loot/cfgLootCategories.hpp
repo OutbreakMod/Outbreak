@@ -7,6 +7,13 @@ class CfgLootCategories {
 			{"ItemMap","item",0.1},
 			{"ItemWatch","item",0.07},
 			{"Binocular","item",0.06},
+		};
+	};
+	
+	class CookingUtilities {
+		
+		loot[] = {
+			{"sc_matchbook","item",0.08},
 			{"sc_knife","item",0.06}
 		};
 	};
@@ -76,7 +83,7 @@ class CfgLootCategories {
 			{"sc_coffee", "item",0.07},
 			{"sc_cereal", "item",0.06},
 			{"sc_carrot", "item",0.05},
-			{"sc_candybar", "item",0.02},
+			{"sc_candybar", "item",0.03},
 			{"sc_soda", "item",0.06},
 			{"sc_juicebox", "item",0.06},
 			{"sc_chips", "item", 0.1},
@@ -136,13 +143,13 @@ _weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLI
 	class CivillianBackpacks {
 		
 		loot[] = {
-			{"B_OutdoorPack_blk", "backpack",0.05},
-			{"B_OutdoorPack_tan", "backpack",0.04},
-			{"B_OutdoorPack_blu", "backpack",0.05},
-			{"B_HuntingBackpack", "backpack",0.04},
-			{"B_Kitbag_mcamo", "backpack",0.05},
-			{"B_Kitbag_sgg", "backpack",0.04},
-			{"B_Kitbag_cbr", "backpack",0.04}
+			{"B_OutdoorPack_blk", "backpack",0.02},
+			{"B_OutdoorPack_tan", "backpack",0.02},
+			{"B_OutdoorPack_blu", "backpack",0.02},
+			{"B_HuntingBackpack", "backpack",0.015},
+			{"B_Kitbag_mcamo", "backpack",0.01},
+			{"B_Kitbag_sgg", "backpack",0.01},
+			{"B_Kitbag_cbr", "backpack",0.01}
 		};
 	};
 };

@@ -12,7 +12,7 @@ _lootItems = [];
 
 {
 	_lootItems = _lootItems + getArray(_cfgLootCategories >> _x >> "loot");
-} forEach _lootCategories;
+} count _lootCategories;
 
 /*
 	Function created by Killzone Kid

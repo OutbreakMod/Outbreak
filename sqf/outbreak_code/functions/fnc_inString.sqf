@@ -26,13 +26,13 @@ _found = false;
 
 for "_i" from _needleLen to count _haystack do {
 
-	if (toString _hay == _needle) exitWith {
-		_found = true
+	if (toString _hay != _needle) then {
+		_hay set [_needleLen, _haystack select _i];
+		_hay set [0, "x"];
+		_hay = _hay - ["x"]
+	} else {
+		_found = true;
 	};
-	
-	_hay set [_needleLen, _haystack select _i];
-	_hay set [0, "x"];
-	_hay = _hay - ["x"]
 };
 
 _found

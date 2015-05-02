@@ -63,4 +63,4 @@ _wrecks = [
 			_survivor setVariable ["townsGenerated", _townPos];
 		};	
 	};
-} foreach _nearestLoc;
+} count _nearestLoc;

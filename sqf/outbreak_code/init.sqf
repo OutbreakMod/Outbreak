@@ -13,6 +13,7 @@ player_killed = compile preProcessFileLineNumbers "addons\outbreak_code\function
 player_findSpawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findSpawn.sqf";
 player_spawnCheck = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_spawnCheck.sqf";
 player_hiveSync = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_hiveSync.sqf";
+player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_pressKey.sqf";
 
 // building
 building_items = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_items.sqf";
@@ -27,6 +28,8 @@ player_useItem = compile preProcessFileLineNumbers "addons\outbreak_code\functio
 
 // KK functions
 fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc_inString.sqf";
+
+// actions
 
 // new player tick loop
 [] execVM "addons\outbreak_code\functions\player_tick.sqf"; // true = start a loop for various things

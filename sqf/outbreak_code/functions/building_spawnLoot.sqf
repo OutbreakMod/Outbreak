@@ -8,6 +8,7 @@ _config = configFile >> "CfgBuildingType" >> _className;
 _positions = [] + getArray(_config >> "positions");
 _lootMin = 0 + getNumber(_config >> "lootMin");
 _lootMax = 0 + getNumber(_config >> "lootMax");
+_lootArray = [];
 
 if (_lootMax == 0) then {
 	_lootMax = (count _positions);
@@ -18,14 +19,15 @@ _usedPos = [];
 
 if (count(_positions) > 0) then {
 	
-	_spawnItems = _className call building_items;
-	_items = 0;
-	
-	if (count (_spawnItems) > 0) then {
-		while {_items < _lootNumber} do {
-			for "_i" from 0 to count (_spawnItems) - 1 do {
+	_buildingLoot = _className call building_items;
 
-				_loot = _spawnItems select _i;
+	if (count (_buildingLoot) > 0) then {
+		
+		while {count(_this getVariable ["lootarray", []]) < _lootNumber} do {
+		
+			for "_i" from 0 to count (_buildingLoot) - 1 do {
+
+				_loot = _buildingLoot select _i;
 			
 				_itemClass = _loot select 0;
 				_itemType = _loot select 1;
@@ -42,12 +44,14 @@ if (count(_positions) > 0) then {
 					};
 					
 					_usedPos = _usedPos + [_lootPos];			
-					_lootPos = _x modelToWorld _lootPos;
+					_lootPos = _this modelToWorld _lootPos;
 	
 					diag_log format ["Spawned item: %1 at building: %2", _itemClass, _className];
 					
-					_items = _items + 1;
-					_x setVariable ["lootcount", _items, true];
+					_this setVariable ["lootarray", _lootArray, true];
+					
+					// flush loot every 10 minutes
+					_this setVariable ["loottimer", serverTime + (600), true];
 				
 					if (_itemType == "gun") then {
 		
@@ -56,12 +60,24 @@ if (count(_positions) > 0) then {
 						_weaponHolder addWeaponCargoGlobal [_itemClass, 1];
 						_magazine = getArray (configFile >> "CfgWeapons" >> _itemClass >> "magazines") select 0;
 						_weaponHolder addMagazineCargo [_magazine, floor (random 4)];
+						
+						_lootArray = _lootArray + [_weaponHolder];
 					};
 					
 					if (_itemType == "supplybox") then {
 					
 						_supplyBox = createVehicle [_itemClass, _lootPos, [], 0, "CAN_COLLIDE"];
 						_supplyBox setVariable ["isLoot", true];
+						_supplyBox setDir (random 360);
+						
+						_lootArray = _lootArray + [_supplyBox];
+					};
+					
+					if (_itemType == "backpack") then {
+		
+						_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
+						_weaponHolder setVariable ["isLoot", true];
+						_weaponHolder addBackpackCargoGlobal [_itemClass, 1];
 						
 					};
 					
@@ -84,6 +100,8 @@ if (count(_positions) > 0) then {
 								};
 							};
 						};
+						
+						_lootArray = _lootArray + [_weaponHolder];
 					};
 				};
 			};

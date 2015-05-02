@@ -29,7 +29,7 @@ if (_check == "loot") then {
 			_x call building_spawnLoot;
 		};
 		
-	} forEach _nearby;
+	} count _nearby;
 };
 
 if (_check == "towngen") then {

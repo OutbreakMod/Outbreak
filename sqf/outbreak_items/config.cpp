@@ -165,6 +165,7 @@ class CfgWeapons
             		mass = 3;
         	}; 
 		picture = "\outbreak_items\images\knife.paa";
+		model = "a3\structures_f\Items\Tools\Screwdriver_V1_F";
 		descriptionShort = "";
 	};
 	class sc_clacker: ItemWatch
