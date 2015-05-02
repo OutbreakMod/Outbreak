@@ -17,8 +17,8 @@ if (_type == "ground") then {
 	_check = "medic";
 
 	player playActionNow _animation;
-
-	_interrupt = false;
+	player setVariable ["action_interrupt", false];
+	
 	_animState = animationState player;
 	_loop = true;
 	_started = false;
@@ -32,7 +32,6 @@ if (_type == "ground") then {
 		
 		if (_hasAction) then {
 			_started = true;
-			player_performingAction = true;
 		};
 		
 		if (_started && !_hasAction) then {
@@ -40,7 +39,7 @@ if (_type == "ground") then {
 			_finished = true;
 		};
 		
-		if (_interrupt) then {
+		if (player getVariable ["action_interrupt", false]) then {
 			_loop = false;
 		};
 		
@@ -49,18 +48,28 @@ if (_type == "ground") then {
 
 	_loop = false;
 
-	if (!_finished) exitWith { 
-		_interrupt = false;
-		player playActionNow "stop";
-		cutText [_message, "PLAIN DOWN"];
+	if (!_finished) then {
+	
+		player setVariable ["action_interrupt", false];
+
+		if (vehicle player == player) then {
+			player switchmove "";
+			player playActionNow "stop";
+		};
+		
+		cutText ["I have cancelled searching for logs", "PLAIN DOWN"];
 	};
 
 	if (_finished) then {
-		_interrupt = false;
-		cutText ["I have found a log!", "PLAIN DOWN"];
+	
+		player setVariable ["action_interrupt", false];
 		player addItem "sc_wood";
+	
+		cutText ["I have found a log!", "PLAIN DOWN"];
 	}; 
 	
 	player_performingAction = false;
 	action_searchWoodPile = -1;
+	
+	hint "hi!";
 };

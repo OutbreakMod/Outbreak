@@ -32,4 +32,4 @@ fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions
 // actions
 
 // new player tick loop
-[] execVM "addons\outbreak_code\functions\player_tick.sqf"; // true = start a loop for various things
+[] execVM "addons\outbreak_code\functions\player_login.sqf"; // true = start a loop for various things
