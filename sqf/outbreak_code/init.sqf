@@ -8,7 +8,6 @@
 
 // general player functions
 player_respawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_respawn.sqf";
-player_murdered = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_murdered.sqf";
 player_killed = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_killed.sqf";
 player_findSpawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findSpawn.sqf";
 player_spawnCheck = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_spawnCheck.sqf";

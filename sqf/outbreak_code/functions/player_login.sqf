@@ -21,11 +21,12 @@ deleteVehicle (_previousUnit);
 // new handlers
 //player removeAllMPEventHandlers "MPRespawn";
 //player removeAllMPEventHandlers "MPKilled";
+//player addMPEventHandler ["MPRespawn", { _this call player_respawn; }];
+//player addMPEventHandler ["MPKilled", { _this call player_murdered; }];
+
 player removeAllEventHandlers "Killed";
 player removeAllEventHandlers "Respawn";
 
-//player addMPEventHandler ["MPRespawn", { _this call player_respawn; }];
-//player addMPEventHandler ["MPKilled", { _this call player_murdered; }];
 player addEventHandler ["Killed", { _this call player_killed; }];
 player addEventHandler ["Respawn", { _this call player_respawn; }];
 
