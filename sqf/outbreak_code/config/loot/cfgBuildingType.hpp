@@ -53,7 +53,7 @@ class CfgBuildingType
 	class Land_Wreck_Heli_Attack_02_F : Default {
 		lootMin = 0;
 		lootMax = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "HeliCrashGuns", "SniperRifles", "HighCaliberRifles", "Medical"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "HeliCrash", "SniperRifles", "HighCaliberRifles", "Medical"};
 		positions[] = {};
 	};
 	

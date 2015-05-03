@@ -55,14 +55,11 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"srifle_DMR_01_DMS_F","gun",0.05},
-			//{"m107_F_default","gun",0.08},
-			{"m107_F_scop_QLD","gun",0.03},
-			//{"m107_F_scop_Bors","gun",0.03},
-			//{"AS50","gun",0.02}
+			{"srifle_EBR_DMS_pointer_snds_F","gun",0.05},
 		};
 	};
 	
-	class HeliCrashGuns {
+	class HeliCrash {
 		
 		loot[] = {
 			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.04},
