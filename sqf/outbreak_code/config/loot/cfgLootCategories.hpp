@@ -35,8 +35,7 @@ class CfgLootCategories {
 			{"arifle_MXC_F","gun",0.15},
 			{"arifle_MX_Holo_pointer_F","gun",0.10},
 			{"arifle_MXM_RCO_pointer_snds_F","gun",0.05},
-			{"arifle_Katiba_F","gun",0.20},
-			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.15}
+			{"arifle_Katiba_F","gun",0.20}
 			
 		};
 	};
@@ -48,7 +47,28 @@ class CfgLootCategories {
 			{"srifle_EBR_ARCO_pointer_F","gun",0.07},
 			{"srifle_EBR_ARCO_pointer_snds_F","gun",0.05},
 			{"srifle_EBR_DMS_pointer_snds_F","gun",0.05},
-			{"rifle_EBR_SOS_F","gun",0.01}
+			{"srifle_DMR_01_DMS_F","gun",0.02}
+		};
+	};
+	
+	class HighCaliberRifles {
+		
+		loot[] = {
+			{"srifle_DMR_01_DMS_F","gun",0.05},
+			//{"m107_F_default","gun",0.08},
+			{"m107_F_scop_QLD","gun",0.03},
+			//{"m107_F_scop_Bors","gun",0.03},
+			//{"AS50","gun",0.02}
+		};
+	};
+	
+	class HeliCrashGuns {
+		
+		loot[] = {
+			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.04},
+			{"hgun_PDW2000_Holo_snds_F","gun",0.07},
+			{"SMG_01_Holo_pointer_snds_F","gun",0.5},
+			
 		};
 	};
 	
