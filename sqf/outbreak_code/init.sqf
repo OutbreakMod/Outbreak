@@ -17,6 +17,7 @@ player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functi
 // building
 building_items = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_items.sqf";
 building_spawnLoot = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_spawnLoot.sqf";
+building_lootCreate = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_lootCreate.sqf";
 spawn_townWreckGenerator = compile preProcessFileLineNumbers "addons\outbreak_code\functions\spawn_townWreckGenerator.sqf";
 
 // inventory
