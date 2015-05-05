@@ -3,32 +3,23 @@
 	@author: TheAmazingAussie
 */
 
-private ["_minimumSpawnRadius", "_maximumSpawnRadius", "_animalRadius", "_animalAgents", "_nearAnimals", "_animalGroup", "_animalUnit", "_animalType", "_animalPosition"];
+private ["_minimumSpawnRadius", "_maximumSpawnRadius", "_animalAgents", "_animalGroup", "_animalUnit", "_animalType", "_animalPosition"];
 
-_minimumSpawnRadius = 15;
-_maximumSpawnRadius = 30;
+_minimumSpawnRadius = _this select 0;
+_maximumSpawnRadius = _this select 1;
+_animalAgents = _this select 2;
 
-_animalRadius = 5;
-_animalAgents = ["Cock_random_F", "Hen_random_F", "Goat_random_F", "Sheep_random_F", "Rabbit_F"];
+// find best animal position
+_animalPosition = [getPosATL player, _minimumSpawnRadius, _maximumSpawnRadius, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 
-// find near animals
-_nearAnimals = (getPosATL player) nearEntities [_animalAgents, _maximumSpawnRadius];
+// create group for goat
+_animalGroup = createGroup Civilian;
 
-if ((count _nearAnimals) < _animalRadius) then {
-	
-	_animalsToSpawn = _animalRadius - (count _nearAnimals);
-	
-	for "_i" from 0 to (_animalsToSpawn) do { 
-	
-		_animalPosition = [getPosATL player, _minimumSpawnRadius, _maximumSpawnRadius, 1, 0, 50, 0] call BIS_fnc_findSafePos;
-		
-		// create group for goat
-		_animalGroup = createGroup Civilian;
-		
-		// select random animal
-		_animalType = _animalAgents call BIS_fnc_selectRandom;
-		
-		// create unit
-		_animalUnit = (_animalGroup) createUnit [_animalType, _animalPosition, [], 0, "NONE"];
-	};
-};
+// select random animal
+_animalType = _animalAgents call BIS_fnc_selectRandom;
+
+// create unit
+_animalUnit = (_animalGroup) createUnit [_animalType, _animalPosition, [], 0, "NONE"];
+
+// create AI
+[_animalPosition, _animalUnit] execFSM "addons\outbreak_code\fsm\animal_ai.fsm";
