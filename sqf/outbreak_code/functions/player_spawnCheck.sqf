@@ -37,5 +37,20 @@ if (_check == "loot") then {
 };
 
 if (_check == "animal") then {
-	[] call player_spawnAnimal;
+	
+	_animalRadius = 5;
+	_minimumSpawnRadius = 280;
+	_maximumSpawnRadius = 300;
+	
+	_animalAgents = ["Goat_random_F", "Sheep_random_F", "Rabbit_F"]; // "Cock_random_F", "Hen_random_F", 
+	_nearAnimals = (getPosATL player) nearEntities [_animalAgents, _maximumSpawnRadius];
+
+	if ((count _nearAnimals) < _animalRadius) then {
+		
+		_animalsToSpawn = _animalRadius - (count _nearAnimals);	
+		
+		for "_i" from 0 to (_animalsToSpawn) do { 
+			[_maximumSpawnRadius, _maximumSpawnRadius, _animalAgents] spawn player_spawnAnimal;
+		};
+	};
 };
