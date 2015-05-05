@@ -26,7 +26,7 @@ class CfgVehicles
 			{
 				name = "sc_morphine";
 				count = 2;
-			}
+			};
 			class _xx_sc_blood
 			{
 				name = "sc_blood";

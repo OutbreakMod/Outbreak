@@ -5,7 +5,7 @@
 
 private ["_entityCheckRadius", "_entityAgents", "_nearEntity"];
 
-_entityCheckRadius = 1000;
+_entityCheckRadius = 500;
 _entityAgents = ["Cock_random_F", "Hen_random_F", "Goat_random_F", "Sheep_random_F", "Rabbit_F"];
 _nearEntity = (getPos player) nearEntities [_animalAgents, _entityCheckRadius];
 
