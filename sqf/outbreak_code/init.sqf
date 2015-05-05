@@ -13,6 +13,7 @@ player_findSpawn = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 player_spawnCheck = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_spawnCheck.sqf";
 player_hiveSync = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_hiveSync.sqf";
 player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_pressKey.sqf";
+player_spawnAnimal = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_spawnAnimal.sqf";
 
 // building
 building_items = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_items.sqf";

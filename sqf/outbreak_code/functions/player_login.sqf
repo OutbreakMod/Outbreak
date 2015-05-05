@@ -57,7 +57,10 @@ if (_NOT_LOGGED_IN) then {
 	titleText ["Error occurred, please try again later.","BLACK FADED", _HIGH_NUMBER];
 } else {
 	titleFadeOut 7;
-
+	
+	// clear all useless entities on login
+	[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
+	
 	if (!_respawning) then {
 
 		_spawnThread = [] spawn {
@@ -65,8 +68,13 @@ if (_NOT_LOGGED_IN) then {
 			while {true} do {
 				
 				// spawn loot check every 60 seconds
-				if ((_timer % 20) == 0) then {
+				if ((_timer % 60) == 0) then {
 					[player, "loot"] call player_spawnCheck;
+				};
+				
+				// spawn animal check every 20 seconds
+				if ((_timer % 120) == 0) then {
+					[player, "animal"] call player_spawnCheck;
 				};
 				
 				if ((_timer % 1) == 0) then {

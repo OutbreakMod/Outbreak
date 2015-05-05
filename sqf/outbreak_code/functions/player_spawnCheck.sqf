@@ -6,7 +6,11 @@
 private ["_nearby", "_nearbyRadius", "_positions", "_weapon_holder", "_lootPos", "_spawnItem", "_spawnItems", "_itemClass", "_itemType", "_lootPos", "_i", "_x", "_lootArray"];
 
 _unit = _this select 0;
-_check = _this select 1; // "loot" or "zombie"
+_check = _this select 1;
+
+if (_check == "towngen") then {
+	[player] spawn spawn_townWreckGenerator;
+};
 
 if (_check == "loot") then {
 
@@ -18,7 +22,7 @@ if (_check == "loot") then {
 
 			// clear previous loot
 			_lootArray = _x getVariable ["lootarray", []];
-			
+		
 			for "_i" from 0 to count (_lootArray) - 1 do {
 				deleteVehicle (_lootArray select _i);
 			};
@@ -29,11 +33,9 @@ if (_check == "loot") then {
 			_x call building_spawnLoot;
 		};
 		
-	} count _nearby;
+	} foreach _nearby;
 };
 
-if (_check == "towngen") then {
-	
-	
-	[player] spawn spawn_townWreckGenerator;
+if (_check == "animal") then {
+	[] call player_spawnAnimal;
 };
