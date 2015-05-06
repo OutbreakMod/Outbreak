@@ -13,7 +13,7 @@
 	["loot", 60],
 	["animal", 120],
 	["actions", 1],
-	["sync", 20]
+	["sync", 10]
 	];
 	
 	while {true} do {

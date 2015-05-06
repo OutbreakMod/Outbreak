@@ -12,7 +12,7 @@ _pos = getPosATL player;
 player setVariable ["lastpos", _pos];
 
 // only sync when alive
-if (alive player) then {
+if (player getVariable ["alive", false]) then {
 
 	// TODO: Check debug coord, if so, don't save, potential character loss
 	if ((player getVariable ["outbreaklogin", -1]) == 1) then {

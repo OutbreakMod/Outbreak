@@ -33,6 +33,9 @@ player addEventHandler ["Respawn", { _this call player_respawn; }];
 // add variable
 player setVariable ["playeruuid", getPlayerUID player];
 
+// alive!
+player setVariable ["alive", true];
+
 // clears a players inventory from default mission items
 player call player_clearInventory;
 
