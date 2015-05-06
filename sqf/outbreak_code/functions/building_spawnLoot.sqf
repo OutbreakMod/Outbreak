@@ -55,7 +55,7 @@ if (count(_positions) > 0) then {
 					
 					// handler for spawning loot
 					_item = [_lootPos, _itemClass, _itemType, _className] call building_lootCreate;
-					_lootArray = _lootArray + [_item];
+					_lootArray pushBack [_item];
 				};
 			};
 		};

@@ -22,7 +22,10 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 	
 	_dist = player distance _cursorTarget;
 
-	if (_dist < 4) then {
+	if (_dist < 3) then {
+		
+		hint format["Cursor: %1 -//- %2", typeOf _cursorTarget, _cursorTarget];
+	
 		if (_cursorTarget isKindOf "Pile_of_wood") then {
 
 		};

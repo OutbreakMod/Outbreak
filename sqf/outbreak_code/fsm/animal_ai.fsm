@@ -11,7 +11,6 @@ item6[] = {"Ready",4,218,-150.000000,150.000000,-50.000000,200.000000,0.000000,"
 item7[] = {"time_up",4,218,-25.000000,225.000000,75.000000,275.000000,0.000000,"time" \n "up"};
 item8[] = {"player_check",4,218,-250.000000,175.000000,-150.000000,225.000000,1.000000,"player" \n "check"};
 item9[] = {"player_check",4,218,100.000000,300.000000,200.000000,350.000000,1.000000,"player" \n "check"};
-item10[] = {"player__very_clo",4,4314,-25.000000,150.000000,100.000000,200.000000,0.000000,"player " \n "very close"};
 link0[] = {0,6};
 link1[] = {1,7};
 link2[] = {1,9};
@@ -20,15 +19,13 @@ link4[] = {4,3};
 link5[] = {4,5};
 link6[] = {4,7};
 link7[] = {4,8};
-link8[] = {4,10};
-link9[] = {5,4};
-link10[] = {6,4};
-link11[] = {7,2};
-link12[] = {8,4};
-link13[] = {9,1};
-link14[] = {10,4};
+link8[] = {5,4};
+link9[] = {6,4};
+link10[] = {7,2};
+link11[] = {8,4};
+link12[] = {9,1};
 globals[] = {25.000000,1,0,0,0,640,480,1,90,6316128,1,-327.316101,324.634613,494.325989,-92.510025,811,730,1};
-window[] = {2,-1,-1,-1,-1,1120,208,1416,208,3,829};
+window[] = {2,-1,-1,-1,-1,938,26,1234,26,3,829};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -140,7 +137,7 @@ class FSM
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
           condition=/*%FSM<CONDITION""">*/"_agent distance _pos < 3"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/"_pos = [_pos,10,90,4,0,5,0] call BIS_fnc_findSafePos;" \n
-           "_agent moveTo _pos;"/*%FSM</ACTION""">*/;
+           "_agent doMove _pos;"/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
         /*%FSM<LINK "player_check">*/
@@ -158,20 +155,6 @@ class FSM
            "if (_isSomeone) then {" \n
            "	_timeA = time;" \n
            "};"/*%FSM</ACTION""">*/;
-        };
-        /*%FSM</LINK>*/
-        /*%FSM<LINK "player__very_clo">*/
-        class player__very_clo
-        {
-          priority = 0.000000;
-          to="Loiter";
-          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"count (getposATL _agent nearEntities [[""CAManBase"", ""Man""], 8]) > 0"/*%FSM</CONDITION""">*/;
-          action=/*%FSM<ACTION""">*/"_runPos = [getPos _agent,10,300,4,0,5,0] call BIS_fnc_findSafePos;" \n
-           "_agent moveTo _runPos;" \n
-           "_agent forceSpeed 3;" \n
-           "" \n
-           ""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
         /*%FSM<LINK "time_up">*/

@@ -11,18 +11,22 @@ _pos = getPosATL player;
 // set last position
 player setVariable ["lastpos", _pos];
 
-// TODO: Check debug coord, if so, don't save, potential character loss
-if ((player getVariable ["outbreaklogin", -1]) == 1) then {
+// only sync when alive
+if (alive player) then {
 
-	// create variables
-	_position = format["%1", _pos];
-	_inventory = format["%1", player call player_serializeInventory];
-	
-	// send request to server
-	hive_playerSave = [player, _position, _inventory];
-	publicVariableServer "hive_playerSave";
+	// TODO: Check debug coord, if so, don't save, potential character loss
+	if ((player getVariable ["outbreaklogin", -1]) == 1) then {
 
-	// log
-	diag_log format ["Hive sync request"];
+		// create variables
+		_position = format["%1", _pos];
+		_inventory = format["%1", player call player_serializeInventory];
+		
+		// send request to server
+		hive_playerSave = [player, _position, _inventory];
+		publicVariableServer "hive_playerSave";
 
+		// log
+		diag_log format ["Hive sync request"];
+
+	};
 };
