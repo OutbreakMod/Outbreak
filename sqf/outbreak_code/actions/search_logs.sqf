@@ -64,7 +64,8 @@ if (_type == "ground") then {
 	
 		player setVariable ["action_interrupt", false];
 		player addItem "sc_wood";
-	
+		
+		// TODO: Add chance
 		cutText ["I have found a log!", "PLAIN DOWN"];
 	}; 
 	
