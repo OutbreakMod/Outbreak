@@ -3,10 +3,12 @@
 	@author: TheAmazingAussie
 */
 
+private ["_unit", "_array", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems"];
+
 _unit = _this select 0;
 _array = _this select 1;
 
-if(count _array != 0) then {
+if((count _array) > 0) then {
 
 	_headgear = _array select 0;
 	_goggles = _array select 1;
@@ -99,10 +101,22 @@ if(count _array != 0) then {
 		};
 	} foreach _handgunweaponitems;
 
+	_setBinoc = false;
+	
 	{
 		if(_x != "") then {
-			_unit additem _x;
-			_unit assignItem _x;
+			
+			if (!_setBinoc) then {
+				if (_x == "Binocular") then {
+					_unit addWeapon _x;
+					_setBinoc = true;
+				} else {
+					if (_x == "Rangefinder") then {
+						_unit addWeapon _x;
+						_setBinoc = true;
+					}
+				};
+			};
 		};
 	} foreach _assigneditems;
 

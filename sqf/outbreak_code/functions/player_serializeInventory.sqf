@@ -4,6 +4,8 @@
 	@author: TheAmazingAussie
 */
 
+private ["_array"];
+
 _array = [
 	(headgear _this), 
 	(goggles _this), 

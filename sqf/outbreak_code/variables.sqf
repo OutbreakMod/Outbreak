@@ -28,10 +28,9 @@
 		player setVariable ["outbreaklogin", 1, true];
 	};
 	
-	// load gear
 	if (_command == "gear") then {
 		_invArray = _response select 1;
-		diag_log format["Inventory request: %1, %2", _invArray];
+		diag_log format["Inventory request: %1", _invArray];
 		_load = [player, _invArray] call player_loadInventory;
 		diag_log format["Inventory response: %1", _load];
 	};

@@ -22,4 +22,4 @@ _animalType = _animalAgents call BIS_fnc_selectRandom;
 _animalUnit = (_animalGroup) createUnit [_animalType, _animalPosition, [], 0, "NONE"];
 
 // create AI
-[_animalPosition, _animalUnit] execFSM "addons\outbreak_code\fsm\animal_ai.fsm";
+[_animalPosition, _animalUnit] execFSM "addons\outbreak_code\functions\fsm\animal_ai.fsm";

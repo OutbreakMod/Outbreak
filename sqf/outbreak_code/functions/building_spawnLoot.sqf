@@ -48,14 +48,14 @@ if (count(_positions) > 0) then {
 	
 					diag_log format ["Spawned item: %1 at building: %2", _itemClass, _className];
 					
-					_this setVariable ["lootarray", _lootArray, true];
-					
 					// flush loot every 10 minutes
 					_this setVariable ["loottimer", serverTime + (600), true];
 					
 					// handler for spawning loot
 					_item = [_lootPos, _itemClass, _itemType, _className] call building_lootCreate;
-					_lootArray pushBack [_item];
+					
+					_lootArray = _lootArray + [_item];
+					_this setVariable ["lootarray", _lootArray, true];
 				};
 			};
 		};
