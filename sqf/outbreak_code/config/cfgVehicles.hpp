@@ -1,6 +1,20 @@
 class CfgVehicles
 {
 	class GroundWeaponHolder;
+	
+	class Sack0: GroundWeaponHolder
+	{
+		scope = 2;
+		vehicleClass = "Medical";
+		displayName = "Medical Supplies";
+		model = "a3\structures_f\Civ\Market\Sack_F";
+
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems{};
+	};
+		
+	
 	class MedicalBox: GroundWeaponHolder
 	{
 		scope = 2;

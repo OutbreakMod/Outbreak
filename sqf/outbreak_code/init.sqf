@@ -18,7 +18,7 @@ player_spawnAnimal = compile preProcessFileLineNumbers "addons\outbreak_code\fun
 // building
 building_items = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_items.sqf";
 building_spawnLoot = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_spawnLoot.sqf";
-building_lootCreate = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_lootCreate.sqf";
+loot_holder = compile preProcessFileLineNumbers "addons\outbreak_code\functions\loot_holder.sqf";
 spawn_townWreckGenerator = compile preProcessFileLineNumbers "addons\outbreak_code\functions\spawn_townWreckGenerator.sqf";
 
 // inventory
@@ -28,7 +28,7 @@ player_serializeInventory = compile preProcessFileLineNumbers "addons\outbreak_c
 player_useItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_useItem.sqf";
 
 // KK functions
-fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc_inString.sqf";
+fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_inString.sqf";
 
 // actions
 

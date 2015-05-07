@@ -111,7 +111,10 @@ if((count _array) > 0) then {
 				_setBinoc = true;	
 			} else {
 				_unit additem _x;
-				_unit assignItem _x;
+				
+				if (_x in ["ItemCompass", "ItemMap", "ItemWatch", "ItemGPS"]) then {
+					_unit assignItem _x;
+				};
 			};		
 		};
 	} foreach _assigneditems;

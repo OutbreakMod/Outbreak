@@ -535,6 +535,19 @@ class CfgWeapons
 		picture = "\outbreak_items\images\rawmeat.paa";
 		descriptionShort = "";
 	};
+	
+	class sc_rawmutton: ItemWatch
+	{
+		displayName = "Raw Mutton";
+		count = 1;
+		class ItemInfo
+        	{
+            		mass = 2;
+        	}; 
+		picture = "\outbreak_items\images\rawmeat.paa";
+		descriptionShort = "";
+	};
+	
 	class sc_rock: ItemWatch
 	{
 		displayName = "Rock";
