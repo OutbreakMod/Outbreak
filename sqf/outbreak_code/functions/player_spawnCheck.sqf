@@ -39,8 +39,8 @@ if (_check == "loot") then {
 if (_check == "animal") then {
 	
 	_animalRadius = 5;
-	_minimumSpawnRadius = 20;
-	_maximumSpawnRadius = 40;
+	_minimumSpawnRadius = 280;
+	_maximumSpawnRadius = 300;
 	
 	_animalAgents = ["Sheep_random_F"]; // goat only animal in arma 3 which hasn't got broken AI
 	//["Goat_random_F", "Sheep_random_F", "Rabbit_F"]; // "Cock_random_F", "Hen_random_F", 

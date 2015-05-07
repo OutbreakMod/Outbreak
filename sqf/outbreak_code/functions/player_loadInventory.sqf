@@ -114,7 +114,10 @@ if((count _array) > 0) then {
 					if (_x == "Rangefinder") then {
 						_unit addWeapon _x;
 						_setBinoc = true;
-					}
+					} else {
+						_unit additem _x;
+						_unit assignItem _x;
+					};
 				};
 			};
 		};
