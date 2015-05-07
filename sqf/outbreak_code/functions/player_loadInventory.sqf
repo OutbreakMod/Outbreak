@@ -105,21 +105,21 @@ if((count _array) > 0) then {
 	
 	{
 		if(_x != "") then {
-			
-			if (!_setBinoc) then {
-				if (_x == "Binocular") then {
+		
+			if ((_x == "Rangefinder") or (_x == "Binocular")) then {
+				
+				if (!_setBinoc) {
 					_unit addWeapon _x;
 					_setBinoc = true;
 				} else {
-					if (_x == "Rangefinder") then {
-						_unit addWeapon _x;
-						_setBinoc = true;
-					} else {
-						_unit additem _x;
-						_unit assignItem _x;
-					};
+					_unit additem _x;
++					_unit assignItem _x;
 				};
-			};
+				
+			} else {
+				_unit additem _x;
++				_unit assignItem _x;
+			};		
 		};
 	} foreach _assigneditems;
 
