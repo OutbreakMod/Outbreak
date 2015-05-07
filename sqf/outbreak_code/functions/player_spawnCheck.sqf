@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_nearby", "_nearbyRadius", "_positions", "_weapon_holder", "_lootPos", "_spawnItem", "_spawnItems", "_itemClass", "_itemType", "_lootPos", "_i", "_x", "_lootArray"];
+private ["_nearby", "_nearbyRadius", "_positions", "_weapon_holder", "_lootPos", "_spawnItem", "_spawnItems", "_itemClass", "_itemType", "_lootPos", "_i", "_x", "_lootArray", "_animalAgents", "_animalRadius", "_animalsToSpawn"];
 
 _unit = _this select 0;
 _check = _this select 1;
@@ -14,7 +14,7 @@ if (_check == "towngen") then {
 
 if (_check == "loot") then {
 
-	_nearbyRadius = 100;
+	_nearbyRadius = 120;
 	_nearby = (getPosATL _unit) nearObjects ["building", _nearbyRadius];
 		
 	{
@@ -39,8 +39,8 @@ if (_check == "loot") then {
 if (_check == "animal") then {
 	
 	_animalRadius = 5;
-	_minimumSpawnRadius = 280;
-	_maximumSpawnRadius = 300;
+	_minimumSpawnRadius = 20;
+	_maximumSpawnRadius = 30;
 	
 	_animalAgents = ["Sheep_random_F"]; // goat only animal in arma 3 which hasn't got broken AI
 	//["Goat_random_F", "Sheep_random_F", "Rabbit_F"]; // "Cock_random_F", "Hen_random_F", 
