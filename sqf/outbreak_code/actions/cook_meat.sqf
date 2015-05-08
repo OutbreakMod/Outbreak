@@ -3,11 +3,10 @@
 	@author: TheAmazingAussie
 */
 
-private ["_animation", "_animState", "_loop", "_started", "_finished", "_type", "_dist", "_fireplace", "_target", "_lit"];
+private ["_animation", "_animState", "_loop", "_started", "_finished", "_type", "_dist", "_fireplace", "_target", "_lit", "_configMeat", "_cookedMeat", "_i", "_countMeat"];
 
 _type = (_this select 3) select 0;
 _target = (_this select 3) select 1;
-_lit = (_this select 3) select 2;
 
 player playActionNow "Medic";
 player setVariable ["action_interrupt", false];
@@ -54,30 +53,30 @@ if (!_finished) then {
 		player playActionNow "stop";
 	};
 	
-	if (_lit) then {
-		cutText ["I've cancelled lighting the fireplace", "PLAIN DOWN"];
-	} else {
-		cutText ["I've cancelled extinguishing the fireplace", "PLAIN DOWN"];
-	};
+	cutText ["I've stopped cooking meat", "PLAIN DOWN"];
 };
 
 if (_finished) then {
 
 	player setVariable ["action_interrupt", false];
+	cutText ["I've cooked all the meat", "PLAIN DOWN"];
 	
-	if (_lit) then {
-		cutText ["I've lit the fireplace", "PLAIN DOWN"];
-		_target inflame true;
-	} else {
-		cutText ["I've extinguished the fire", "PLAIN DOWN"];
-		_target inflame false;
-	};
+	_meat = ["sc_rawmutton"];
+	
+	{
+			
+		_configMeat = configFile >> "CfgItems" >> "Meat" >> _x;
+		_cookedMeat = getText(_configMeat >> "cooked");
+	
+		_countMeat = ([player, _x] call fnc_countItems);
+		
+		for "_i" from 0 to _countMeat do {
+			player removeItem _x;
+			player addItem _cookedMeat;
+		}
+		
+	} foreach _meat;
 }; 
 
 player_performingAction = false;
-
-if (_lit) then {
-	action_lightFireplace = -1;
-} else {
-	action_extFireplace = -1;
-};
+action_cookMeat = -1;

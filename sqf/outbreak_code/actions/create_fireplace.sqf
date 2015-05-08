@@ -66,7 +66,6 @@ if (_finished) then {
 	
 	_fireplace = createVehicle ["Land_Fireplace_F", (getPosATL player), [], 0, "CAN_COLLIDE"];
 	_fireplace setDir (random 360);
-	_fireplace inflame true;
 }; 
 
 player_performingAction = false;

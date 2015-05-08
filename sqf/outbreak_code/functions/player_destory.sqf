@@ -15,8 +15,7 @@ _unit = _this select 0;
 
 action_searchWoodPile = -1;
 action_gutAnimal = -1;
-action_extFireplace = -1;
-action_lightFireplace = -1;
+action_cookMeat = -1;
 player_performingAction = false;
 
 player_noWeapon = nil;

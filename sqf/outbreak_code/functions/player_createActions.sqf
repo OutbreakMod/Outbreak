@@ -20,12 +20,8 @@ if (isNil 'action_gutAnimal') then {
 	action_gutAnimal = -1;
 };
 
-if (isNil 'action_lightFireplace') then {
-	action_lightFireplace = -1;
-};
-
-if (isNil 'action_extFireplace') then {
-	action_extFireplace = -1;
+if (isNil 'action_cookMeat') then {
+	action_cookMeat = -1;
 };
 
 if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
@@ -45,6 +41,15 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		} else {
 			player removeAction action_gutAnimal;
 			action_gutAnimal = -1;
+		};
+		
+		if ((inflamed _cursorTarget) && (_type == "Land_FirePlace_F") && ([player, "sc_matchbook"] call fnc_hasItem)) then {
+			if (action_cookMeat < 0) then {
+				action_cookMeat = player addAction ["Cook Meat", "addons\outbreak_code\actions\cook_meat.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+			};
+		} else {
+			player removeAction action_cookMeat;
+			action_cookMeat = -1;
 		};
 	};
 };

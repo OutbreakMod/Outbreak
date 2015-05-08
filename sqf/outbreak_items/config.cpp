@@ -379,6 +379,17 @@ class CfgWeapons
 		picture = "\outbreak_items\images\cookedmeat.paa";
 		descriptionShort = "";
 	};
+	class sc_cookedmutton: ItemWatch
+	{
+		displayName = "Cooked Mutton";
+		count = 1;
+		class ItemInfo
+        	{
+            		mass = 2;
+        	}; 
+		picture = "\outbreak_items\images\cookedmeat.paa";
+		descriptionShort = "";
+	};
 	class sc_disinfectant: ItemWatch
 	{
 		displayName = "Disinfectant";
