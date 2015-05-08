@@ -8,6 +8,9 @@ private ["_type", "_deadAnimal", "_message", "_animation", "_check", "_interrupt
 _type = (_this select 3) select 0;
 _deadAnimal = (_this select 3) select 1;
 
+player removeAction action_gutAnimal;
+action_gutAnimal = -1;
+
 _loop = true;
 
 if (!([player, "sc_knife"] call fnc_hasItem)) then {
@@ -83,7 +86,6 @@ if (_finished) then {
 }; 
 
 player_performingAction = false;
-action_gutAnimal = -1;
 
 if (_finished) then {
 

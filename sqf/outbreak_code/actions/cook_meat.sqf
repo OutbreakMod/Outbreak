@@ -8,6 +8,9 @@ private ["_animation", "_animState", "_loop", "_started", "_finished", "_type", 
 _type = (_this select 3) select 0;
 _target = (_this select 3) select 1;
 
+player removeAction action_cookMeat;
+action_cookMeat = -1;
+
 player playActionNow "Medic";
 player setVariable ["action_interrupt", false];
 
@@ -59,18 +62,17 @@ if (!_finished) then {
 if (_finished) then {
 
 	player setVariable ["action_interrupt", false];
-	cutText ["I've cooked all the meat", "PLAIN DOWN"];
+	cutText ["I've cooked all meat", "PLAIN DOWN"];
 	
 	_meat = ["sc_rawmutton"];
 	
 	{
-			
 		_configMeat = configFile >> "CfgItems" >> "Meat" >> _x;
 		_cookedMeat = getText(_configMeat >> "cooked");
 	
 		_countMeat = ([player, _x] call fnc_countItems);
 		
-		for "_i" from 0 to _countMeat do {
+		for "_i" from 1 to _countMeat do {
 			player removeItem _x;
 			player addItem _cookedMeat;
 		}
@@ -79,4 +81,3 @@ if (_finished) then {
 }; 
 
 player_performingAction = false;
-action_cookMeat = -1;
