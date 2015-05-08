@@ -27,8 +27,11 @@ player_loadInventory = compile preProcessFileLineNumbers "addons\outbreak_code\f
 player_serializeInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_serializeInventory.sqf";
 player_useItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_useItem.sqf";
 
-// KK functions
+// fnc functions
 fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_inString.sqf";
+fnc_getServerVehicle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_getServerVehicle.sqf";
+fnc_hasItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_hasItem.sqf";
+fnc_countItems = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_countItems.sqf";
 
 // actions
 

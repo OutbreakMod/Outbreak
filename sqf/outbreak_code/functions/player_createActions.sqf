@@ -20,6 +20,14 @@ if (isNil 'action_gutAnimal') then {
 	action_gutAnimal = -1;
 };
 
+if (isNil 'action_lightFireplace') then {
+	action_lightFireplace = -1;
+};
+
+if (isNil 'action_extFireplace') then {
+	action_extFireplace = -1;
+};
+
 if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
@@ -27,6 +35,8 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 	if (_dist < 3) then {
 		
 		_type = typeOf _cursorTarget;
+		
+		hint _type;
 	
 		if ((_type in ["Sheep_random_F"]) && (!alive _cursorTarget)) then {
 			if (action_gutAnimal < 0) then {
@@ -35,7 +45,7 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		} else {
 			player removeAction action_gutAnimal;
 			action_gutAnimal = -1;
-		}
+		};
 	};
 };
 

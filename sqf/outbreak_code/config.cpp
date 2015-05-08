@@ -12,6 +12,7 @@ class CfgPatches {
 #include "config\cfgMagazines.hpp"
 #include "config\cfgAmmo.hpp"
 #include "config\cfgMusic.hpp"
+#include "config\cfgItems.hpp"
 
 #include "config\loot\cfgBuildingType.hpp"
 #include "config\loot\cfgLootCategories.hpp"
