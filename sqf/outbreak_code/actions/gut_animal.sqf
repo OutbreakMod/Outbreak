@@ -78,7 +78,7 @@ if (_finished) then {
 	_rawMeat = getText(_configMeat >> "raw");
 	_amount = getNumber(_configMeat >> "yield");
 
-	_basket = createVehicle ["OutbreakBasket", (getPosATL player), [], 0, "CAN_COLLIDE"];
+	_basket = createVehicle ["OutbreakBasket", (getPosATL _deadAnimal), [], 0, "CAN_COLLIDE"];
 	_basket setDir (random 360);
 	_basket addItemCargoGlobal [_rawMeat, _amount];
 	
