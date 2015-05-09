@@ -3,28 +3,23 @@
 	@author: TheAmazingAussie
 */
 
-private ["_player", "_sfx", "_distance", "_multiplayer"];
+private ["_singleplayer"];
 
-_player = _this select 0;
-_sfx = _this select 1;
-_distance = _this select 2;
+soundpos = _this select 0;
+sfx = _this select 1;
+dist = _this select 2;
 
 // multiplayer sound only if others are around
-_multiplayer = ({isPlayer _x} count (_player nearEntities ["AllVehicles", _distance]) < 2);
+_singleplayer = ({isPlayer _x} count (soundpos nearEntities ["AllVehicles", dist]) < 2);
 
-if (_multiplayer) then {
-
-	diag_log format["Multiplayer sound created"];
-	[{player say [_sfx, _distance];}, "BIS_fnc_spawn", true, false] spawn BIS_fnc_MP; 
-	
-} else {
+if (_singleplayer) then {
 
 	diag_log format["Local sound created"];
-	player say [_sfx, _distance];
-};
+	playSound3D [format["addons\outbreak_sfx\sfx\%1.wss", sfx], objNull, false, soundpos, 1, 1, dist];
 
-// sound function
-fnc_createSound = {
-	// unit, sound, distance
-	(_this select 0) say [(_this select 1), (_this select 2)];
+	} else {
+
+	diag_log format["Multiplayer sound created"];
+	[{playSound3D [format["addons\outbreak_sfx\sfx\%1.wss", sfx], objNull, false, soundpos, 1, 1, dist];}, "BIS_fnc_spawn", true, false] spawn BIS_fnc_MP; 
+	
 };
