@@ -8,22 +8,6 @@ private ["_inVehicle", "_cursorTarget", "_dist", "_type", "_surface"];
 _inVehicle = (vehicle player != player);
 _cursorTarget = cursorTarget;
 
-if (isNil 'player_performingAction') then {
-	player_performingAction = false;
-};
-
-if (isNil 'action_searchWoodPile') then {
-	action_searchWoodPile = -1;
-};
-
-if (isNil 'action_gutAnimal') then {
-	action_gutAnimal = -1;
-};
-
-if (isNil 'action_cookMeat') then {
-	action_cookMeat = -1;
-};
-
 if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
