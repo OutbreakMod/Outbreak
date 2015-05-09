@@ -29,7 +29,7 @@ _finished = false;
 player_performingAction = true;
 
 // PLAY SOUND
-[(getPosATL _deadAnimal), "effects_guts", 2] call object_speak;
+[player, "effects_guts", 2] call object_speak;
 
 while {_loop} do {
 

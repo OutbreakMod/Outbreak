@@ -13,5 +13,7 @@ _nearEntity = (getPos player) nearEntities [_entityAgents, _entityCheckRadius];
 {
 	if (alive _x) then {
 		deleteVehicle _x;
+	} else {
+		player reveal _x;
 	};
 } foreach _nearEntity;

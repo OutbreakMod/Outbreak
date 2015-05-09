@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_nearby", "_nearbyRadius", "_positions", "_lootPos", "_spawnItem", "_spawnItems", "_itemClass", "_itemType", "_lootPos", "_i", "_x", "_lootArray", "_animalAgents", "_animalRadius", "_animalsToSpawn"];
+private ["_nearby", "_nearbyRadius", "_positions", "_weapon_holder", "_lootPos", "_spawnItem", "_spawnItems", "_itemClass", "_itemType", "_lootPos", "_i", "_x", "_lootArray", "_animalAgents", "_animalRadius", "_animalsToSpawn"];
 
 _unit = _this select 0;
 _check = _this select 1;
