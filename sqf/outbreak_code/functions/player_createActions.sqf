@@ -31,8 +31,6 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 	if (_dist < 3) then {
 		
 		_type = typeOf _cursorTarget;
-		
-		hint _type;
 	
 		if ((_type in ["Sheep_random_F"]) && (!alive _cursorTarget)) then {
 			if (action_gutAnimal < 0) then {
@@ -51,6 +49,11 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 			player removeAction action_cookMeat;
 			action_cookMeat = -1;
 		};
+	} else {
+		player removeAction action_cookMeat;
+		action_cookMeat = -1;
+		player removeAction action_gutAnimal;
+		action_gutAnimal = -1;
 	};
 };
 
