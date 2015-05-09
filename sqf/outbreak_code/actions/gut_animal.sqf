@@ -28,6 +28,9 @@ _started = false;
 _finished = false;
 player_performingAction = true;
 
+// PLAY SOUND
+[player, "effects_guts", 2] call object_speak;
+
 while {_loop} do {
 
 	_animState = animationState player;

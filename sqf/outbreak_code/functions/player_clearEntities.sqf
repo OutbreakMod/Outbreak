@@ -12,7 +12,8 @@ _nearEntity = (getPos player) nearEntities [_entityAgents, _entityCheckRadius];
 // remove all animals on join
 {
 	if (alive _x) then {
-		deleteVehicle (_x);
+		deleteVehicle _x;
+	} else {
+		player reveal _x;
 	};
-	
 } foreach _nearEntity;

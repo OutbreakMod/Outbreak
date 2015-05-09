@@ -32,8 +32,7 @@ fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions
 fnc_getServerVehicle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_getServerVehicle.sqf";
 fnc_hasItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_hasItem.sqf";
 fnc_countItems = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_countItems.sqf";
-
-// actions
+object_speak = compile preProcessFileLineNumbers "addons\outbreak_code\functions\object_speak.sqf";
 
 // new player tick loop
 [false] execVM "addons\outbreak_code\functions\player_login.sqf"; // true = start a loop for various things
