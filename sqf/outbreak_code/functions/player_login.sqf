@@ -3,8 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_respawning", "_timer", "_spawnPosition"];
-
+private ["_respawning", "_timer"];
 
 _respawning = _this select 0;
 _previousUnit = player;
