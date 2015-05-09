@@ -61,11 +61,22 @@ if (!_finished) then {
 
 if (_finished) then {
 
-	player setVariable ["action_interrupt", false];
-	cutText ["I created a fireplace", "PLAIN DOWN"];
+	_location = player modeltoworld [0,1,0];
+	_location set [2,0];
+	_isOk = count (_location isFlatEmpty [0.5,0,0,4,0,false,player]) > 0;
 	
-	_fireplace = createVehicle ["Land_Fireplace_F", (getPosATL player), [], 0, "CAN_COLLIDE"];
-	_fireplace setDir (random 360);
+	if (_isOk) then {
+		
+		player setVariable ["action_interrupt", false];
+		
+		_fireplace = createVehicle ["Land_Fireplace_F", _location, [], 0, "CAN_COLLIDE"];
+		_fireplace setDir (random 360);
+		
+		cutText ["I created a fireplace", "PLAIN DOWN"];
+	
+	} else {
+		cutText ["I can't make a fireplace here", "PLAIN DOWN"];
+	};
 }; 
 
 player_performingAction = false;
