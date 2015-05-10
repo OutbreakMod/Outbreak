@@ -8,25 +8,25 @@ private ["_type", "_deadAnimal", "_message", "_animation", "_check", "_interrupt
 _type = (_this select 3) select 0;
 _deadAnimal = (_this select 3) select 1;
 
+_loop = true;
+
 player removeAction action_gutAnimal;
 action_gutAnimal = -1;
 
-_loop = true;
-
-if (!([player, "sc_knife"] call fnc_hasItem)) then {
+if (!([player, "sc_knife"] call fnc_hasItem)) exitWith {
 	
 	cutText ["I need a knife to gut the animal", "PLAIN DOWN"];
 	_loop = false;
 };
 
-player removeAction action_gutAnimal;
+player_performingAction = true;
+
 player playActionNow "Medic";
 player setVariable ["action_interrupt", false];
 
 _animState = animationState player;
 _started = false;
 _finished = false;
-player_performingAction = true;
 
 // PLAY SOUND
 [(getPosATL _deadAnimal), "effects_guts", 2] call object_speak;

@@ -7,10 +7,11 @@ private ["_animation", "_animState", "_loop", "_started", "_finished", "_type", 
 
 _loop = true;
 
-if (!([player, "sc_wood", 3] call fnc_hasItem)) then {
+if (!([player, "sc_wood", 3] call fnc_hasItem)) exitWith {
 	cutText ["I need more wood to make a fireplace", "PLAIN DOWN"];
-	_loop = false;
 };
+
+player_performingAction = true;
 
 player playActionNow "Medic";
 player setVariable ["action_interrupt", false];
@@ -18,7 +19,6 @@ player setVariable ["action_interrupt", false];
 _animState = animationState player;
 _started = false;
 _finished = false;
-player_performingAction = true;
 
 while {_loop} do {
 
