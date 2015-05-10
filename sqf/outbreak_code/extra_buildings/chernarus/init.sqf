@@ -7,7 +7,7 @@ private ["_towns", "_x"];
 
 _towns = [
 	"balota",
-	"starysobor",
+	"berezino",
 	"chernogorsk",
 	"elektro",
 	"nwaf",

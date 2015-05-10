@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_unit", "_array", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems", "_setBinoc"];
+private ["_unit", "_array", "_headgear", "_goggles", "_uniform", "_uniformitems", "_vest", "_vestitems", "_backpack", "_backpackitems", "_primaryweapon", "_primaryweaponitems", "_primaryweaponmagazine", "_secondaryweapon", "_secondaryweaponitems", "_secondaryweaponmagazine", "_handgunweapon", "_handgunweaponitems", "_handgunweaponmagazine", "_assigneditems"];
 
 _unit = _this select 0;
 _array = _this select 1;
@@ -105,17 +105,18 @@ if((count _array) > 0) then {
 	
 	{
 		if(_x != "") then {
-		
-			if ((_x == "Rangefinder") or (_x == "Binocular") and (!_setBinoc)) then {
-				_unit addWeapon _x;
-				_setBinoc = true;	
-			} else {
-				_unit additem _x;
-				
-				if (_x in ["ItemCompass", "ItemMap", "ItemWatch", "ItemGPS"]) then {
-					_unit assignItem _x;
+			
+			if (!_setBinoc) then {
+				if (_x == "Binocular") then {
+					_unit addWeapon _x;
+					_setBinoc = true;
+				} else {
+					if (_x == "Rangefinder") then {
+						_unit addWeapon _x;
+						_setBinoc = true;
+					}
 				};
-			};		
+			};
 		};
 	} foreach _assigneditems;
 
@@ -125,5 +126,3 @@ if((count _array) > 0) then {
 } else {
 	false;
 };
-
-//[91,34,34,44,34,71,95,84,97,99,116,105,99,97,108,95,67,108,101,97,114,34,44,34,85,95,67,95,80,111,108,111,115,104,105,114,116,95,116,114,105,99,111,108,111,117,114,34,44,91,34,115,99,95,119,111,111,100,34,93,44,34,86,95,66,97,110,100,111,108,108,105,101,114,66,95,98,108,107,34,44,91,34,115,99,95,99,111,102,102,101,101,34,44,34,115,99,95,99,104,105,112,115,34,44,34,115,99,95,107,110,105,102,101,34,44,34,115,99,95,109,97,116,99,104,98,111,111,107,34,44,34,115,99,95,106,117,105,99,101,98,111,120,34,44,34,115,99,95,106,117,105,99,101,98,111,120,34,44,34,49,49,82,110,100,95,52,53,65,67,80,95,77,97,103,34,93,44,34,66,95,75,105,116,98,97,103,95,109,99,97,109,111,34,44,91,93,44,34,34,44,91,34,34,44,34,34,44,34,34,44,34,34,93,44,91,93,44,34,34,44,91,34,34,44,34,34,44,34,34,44,34,34,93,44,91,93,44,34,104,103,117,110,95,80,105,115,116,111,108,95,104,101,97,118,121,95,48,49,95,70,34,44,91,34,34,44,34,34,44,34,34,44,34,34,93,44,91,34,49,49,82,110,100,95,52,53,65,67,80,95,77,97,103,34,93,44,91,34,73,116,101,109,77,97,112,34,44,34,66,105,110,111,99,117,108,97,114,34,93,93]
