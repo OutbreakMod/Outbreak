@@ -10,8 +10,8 @@ _entityAgents = ["Cock_random_F", "Hen_random_F", "Goat_random_F", "Sheep_random
 _nearEntity = (getPos player) nearEntities [_entityAgents, _entityCheckRadius];
 
 // remove all animals on join
-//{
-//	if (alive _x) then {
-//		deleteVehicle (_x);
-//	};
-//} foreach _entityAgents;
+{
+	if (alive _x) then {
+		deleteVehicle _x;
+	};
+} foreach _nearEntity;

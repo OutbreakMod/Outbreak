@@ -3,13 +3,9 @@
 	@author: TheAmazingAussie
 */
 
-private ["_respawning", "_timer", "_spawnPosition"];
-
-// close dialog
-closeDialog 114; //continue idd
+private ["_respawning", "_timer"];
 
 _respawning = _this select 0;
-
 _previousUnit = player;
 _newUnit = (createGroup west) createUnit ["b_survivor_F", getPosATL player, [], 0, "NONE"];
 
@@ -31,10 +27,18 @@ player addEventHandler ["Killed", { _this call player_killed; }];
 player addEventHandler ["Respawn", { _this call player_respawn; }];
 
 // add variable
+player setVariable ["outbreaklogin", -1];
 player setVariable ["playeruuid", getPlayerUID player];
-
-// alive!
 player setVariable ["alive", true];
+
+// reset actions
+action_searchWoodPile = -1;
+action_gutAnimal = -1;
+action_cookMeat = -1;
+
+player_performingAction = false;
+player_noWeapon = nil;
+player_primaryWeapon = nil;
 
 // clears a players inventory from default mission items
 player call player_clearInventory;
