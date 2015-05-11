@@ -41,6 +41,14 @@
 	};
 };
 
+"player_updateDate" addPublicVariableEventHandler {
+
+	_response = _this select 1;
+	_date = _response select 0;
+	
+	setDate _date;
+};
+
 player_clientLogin = {
 
 	player_noWeapon = player addAction ["Select No Weapon", {

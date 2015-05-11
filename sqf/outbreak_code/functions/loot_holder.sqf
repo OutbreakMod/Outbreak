@@ -46,7 +46,7 @@ if (_itemType == "item") then {
 	_weaponHolder addItemCargoGlobal [_itemClass, 1];
 	
 	_current = 1;
-	_maxItems = _current + floor (random 3); // number giving possibily of more items into this holder. max = three, min = 1
+	_maxItems = _current + floor (random 2); // number giving possibily of more items into this holder. max = three, min = 1
 	
 	_objItems = _buildingClass call building_items;
 	for "_j" from 0 to count (_objItems) - 1 do { 

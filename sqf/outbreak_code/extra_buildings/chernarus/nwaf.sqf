@@ -1,7 +1,10 @@
+//MAP_Wall_IndCnc_4 > Land_Wall_IndCnc_4_F
+//MAP_Wall_IndCnc_4_D > Land_Wall_IndCnc_4_D_F
+
 _vehicle_38 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4", [4706.8408, 10220.183], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_F", [4706.8408, 10220.183], [], 0, "CAN_COLLIDE"];
   _vehicle_38 = _this;
   _this setDir -120.66573;
   _this setPos [4706.8408, 10220.183];
@@ -10,7 +13,7 @@ if (true) then
 _vehicle_39 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4_D", [4703.9126, 10225.121, 3.0517578e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_D_F", [4703.9126, 10225.121, 3.0517578e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_39 = _this;
   _this setDir -120.50405;
   _this setPos [4703.9126, 10225.121, 3.0517578e-005];
@@ -19,7 +22,7 @@ if (true) then
 _vehicle_45 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4", [4700.8765, 10230.42], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_F", [4700.8765, 10230.42], [], 0, "CAN_COLLIDE"];
   _vehicle_45 = _this;
   _this setDir -120.28407;
   _this setPos [4700.8765, 10230.42];
@@ -28,7 +31,7 @@ if (true) then
 _vehicle_46 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4", [4700.4014, 10234.975, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_F", [4700.4014, 10234.975, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_46 = _this;
   _this setDir -32.533897;
   _this setPos [4700.4014, 10234.975, -3.0517578e-005];
@@ -37,7 +40,7 @@ if (true) then
 _vehicle_47 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4_D", [4705.3057, 10238.101], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_D_F", [4705.3057, 10238.101], [], 0, "CAN_COLLIDE"];
   _vehicle_47 = _this;
   _this setDir -31.631397;
   _this setPos [4705.3057, 10238.101];
@@ -46,7 +49,7 @@ if (true) then
 _vehicle_48 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4", [4710.4014, 10241.301, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_F", [4710.4014, 10241.301, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_48 = _this;
   _this setDir -392.11761;
   _this setPos [4710.4014, 10241.301, -3.0517578e-005];
@@ -55,7 +58,7 @@ if (true) then
 _vehicle_50 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_End_2", [4730.771, 10238.016, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_End_2_F", [4730.771, 10238.016, -3.0517578e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_50 = _this;
   _this setDir 57.685169;
   _this setPos [4730.771, 10238.016, -3.0517578e-005];
@@ -82,7 +85,7 @@ if (true) then
 _vehicle_56 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4_D", [4715.377, 10244.567], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_D_F", [4715.377, 10244.567], [], 0, "CAN_COLLIDE"];
   _vehicle_56 = _this;
   _this setDir -33.001194;
   _this setPos [4715.377, 10244.567];
@@ -91,7 +94,7 @@ if (true) then
 _vehicle_57 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4", [4720.3804, 10247.849, 6.1035156e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_F", [4720.3804, 10247.849, 6.1035156e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_57 = _this;
   _this setDir -32.455116;
   _this setPos [4720.3804, 10247.849, 6.1035156e-005];
@@ -100,7 +103,7 @@ if (true) then
 _vehicle_61 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4", [4724.7822, 10248.348, -6.1035156e-005], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_F", [4724.7822, 10248.348, -6.1035156e-005], [], 0, "CAN_COLLIDE"];
   _vehicle_61 = _this;
   _this setDir -300.75626;
   _this setPos [4724.7822, 10248.348, -6.1035156e-005];
@@ -109,7 +112,7 @@ if (true) then
 _vehicle_62 = objNull;
 if (true) then
 {
-  _this = createVehicle ["MAP_Wall_IndCnc_4_D", [4727.8174, 10243.281], [], 0, "CAN_COLLIDE"];
+  _this = createVehicle ["Land_Wall_IndCnc_4_D_F", [4727.8174, 10243.281], [], 0, "CAN_COLLIDE"];
   _vehicle_62 = _this;
   _this setDir 61.111778;
   _this setPos [4727.8174, 10243.281];
