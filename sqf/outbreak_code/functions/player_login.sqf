@@ -35,6 +35,7 @@ player setVariable ["alive", true];
 action_searchWoodPile = -1;
 action_gutAnimal = -1;
 action_cookMeat = -1;
+action_makeshiftBaseBasic = -1;
 
 player_performingAction = false;
 player_noWeapon = nil;

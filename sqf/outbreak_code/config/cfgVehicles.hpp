@@ -57,6 +57,8 @@ class CfgVehicles
 		class TransportItems{};
 	};
 	
+	//http://www.sirlondon.net/arma3/library.php?startpage=3&startpage=1
+	
 	class Land_TentA_F;
 	class OutbreakTent: Land_TentA_F {
 		vehicleClass = "Survival";
@@ -80,7 +82,7 @@ class CfgVehicles
 	};
 
 	class Land_cargo_house_slum_F;
-	class OutbreakShackV1: Land_cargo_house_slum_F {
+	class OutbreakShackV4: Land_cargo_house_slum_F {
 		vehicleClass = "Survival";
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
@@ -91,7 +93,7 @@ class CfgVehicles
 	};
 
 	class Land_Slum_House01_F;
-	class OutbreakShackV2: Land_Slum_House01_F {
+	class OutbreakShackV3: Land_Slum_House01_F {
 		vehicleClass = "Survival";
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
@@ -102,7 +104,7 @@ class CfgVehicles
 	};
 
 	class Land_Slum_House03_F;
-	class OutbreakShackV3: Land_Slum_House03_F {
+	class OutbreakShackV2: Land_Slum_House03_F {
 		vehicleClass = "Survival";
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
@@ -113,7 +115,7 @@ class CfgVehicles
 	};
 
 	class Land_Slum_House02_F;
-	class OutbreakShackV4: Land_Slum_House02_F {
+	class OutbreakShackV1: Land_Slum_House02_F {
 		vehicleClass = "Survival";
 		transportMaxMagazines = 50;
 		transportMaxWeapons = 10;
