@@ -12,7 +12,7 @@ _loop = true;
 player removeAction action_makeshiftBaseBasic;
 action_makeshiftBaseBasic = -1;
 
-_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 200]
+_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 200];
 
 if ((count _cities) > 0) exitWith {
 	

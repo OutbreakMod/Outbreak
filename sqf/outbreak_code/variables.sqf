@@ -50,16 +50,19 @@
 };
 
 player_clientLogin = {
+	
+	// no weapon = select primary
+	// has weapon = select no weapon
+	
+	//player_noWeapon = player addAction ["Select No Weapon", {
+	//	player action ["SwitchWeapon", player, player, 100];
+	//	player switchcamera cameraView;
+	//}];
 
-	player_noWeapon = player addAction ["Select No Weapon", {
-		player action ["SwitchWeapon", player, player, 100];
-		player switchcamera cameraView;
-	}];
-
-	player_primaryWeapon = player addAction ["Select Primary Weapon", {
-		player action ["SwitchWeapon", player, player, 1];
-		player switchcamera cameraView;
-	}];
+	//player_primaryWeapon = player addAction ["Select Primary Weapon", {
+	//	player action ["SwitchWeapon", player, player, 1];
+	//	player switchcamera cameraView;
+	//}];
 
 	// call login on mission file
 	[] call player_missionLogin;

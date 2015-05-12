@@ -20,7 +20,7 @@ class CfgWeapons
             		mass = 1;
         	}; 
 		picture = "\outbreak_items\images\bandage.paa";
-		descriptionShort = "";
+		descriptionShort = "Stops bleeding open wounds and potential infection";
 	};
 	class sc_elasticbandage: ItemWatch
 	{
@@ -111,7 +111,7 @@ class CfgWeapons
         	}; 
 		picture = "\outbreak_items\images\toolbox.paa";
 		model = "a3\structures_f\Items\Electronics\SatellitePhone_F";
-		descriptionShort = "";
+		descriptionShort = "Used for replacing car parts";
 	};
 	class sc_scrap: ItemWatch
 	{
@@ -122,7 +122,7 @@ class CfgWeapons
             		mass = 4;
         	}; 
 		picture = "\outbreak_items\images\scrap.paa";
-		descriptionShort = "";
+		descriptionShort = "Spare recycled metal to create other objects out of metal";
 	};
 	class sc_note: ItemWatch
 	{
@@ -323,7 +323,7 @@ class CfgWeapons
         	}; 
 		picture = "\outbreak_items\images\chips.paa";
 		
-		descriptionShort = "";
+		descriptionShort = "A bag of potato chips";
 	};
 	class sc_cigarbox: ItemWatch
 	{
@@ -389,7 +389,7 @@ class CfgWeapons
             		mass = 2;
         	}; 
 		picture = "\outbreak_items\images\cookedmeat.paa";
-		descriptionShort = "";
+		descriptionShort = "Freshly cooked mutton from sheep";
 	};
 	class sc_disinfectant: ItemWatch
 	{
@@ -435,9 +435,9 @@ class CfgWeapons
 		picture = "\outbreak_items\images\foldedmap.paa";
 		descriptionShort = "";
 	};
-	class sc_fuelcan: ItemWatch
+	class sc_jerrycan: ItemWatch
 	{
-		displayName = "Fuel Can";
+		displayName = "Jerry Can";
 		count = 1;
 		class ItemInfo
         	{
@@ -445,7 +445,19 @@ class CfgWeapons
         	}; 
 		picture = "\outbreak_items\images\fuelcan.paa";
 		model = "a3\structures_f\Items\Vessels\CanisterFuel_F.p3d"
-		descriptionShort = "";
+		descriptionShort = "A jerry can, can be refueled at petrol stations";
+	};
+	class sc_cartyre: ItemWatch
+	{
+		displayName = "Car Tyre";
+		count = 1;
+		class ItemInfo
+        	{
+            		mass = 10;
+        	}; 
+		picture = "\outbreak_items\outbreak_images\outbreak_car_wheel.paa";
+		model = "a3\structures_f\Civ\Garbage\Tyre_F.p3d"
+		descriptionShort = "Standard tyre designed to fit most vehicles";
 	};
 	class sc_harddrive: ItemWatch
 	{
@@ -949,7 +961,7 @@ class CfgWeapons
         	}; 
 		picture = "\outbreak_items\images\hammer.paa";
 		model = "a3\structures_f\Items\Tools\Hammer_F";
-		descriptionShort = "";
+		descriptionShort = "Used to break things and drive in nails";
 	};
 	class sc_human_flesh: ItemWatch
 	{

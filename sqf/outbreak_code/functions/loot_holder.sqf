@@ -39,6 +39,17 @@ if (_itemType == "backpack") then {
 	_item = _weaponHolder;
 };
 
+if (_itemType == "single") then {
+
+	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
+	_weaponHolder setVariable ["isLoot", true];
+	_weaponHolder addItemCargoGlobal [_itemClass, 1];
+	//_weaponHolder setVectorUp [0.052336,-0.998629,0];
+	_weaponHolder setVectorDir [0,0,-1];
+	
+	_item = _weaponHolder;
+};
+
 if (_itemType == "item") then {
 
 	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
