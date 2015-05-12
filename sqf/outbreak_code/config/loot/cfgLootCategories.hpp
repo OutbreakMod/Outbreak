@@ -173,9 +173,9 @@ _weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLI
 	class Industrial {
 		
 		loot[] = {
-			{"sc_hammer", "item",0.05},
-			{"sc_toolbox", "item",0.05},
-			{"sc_scrap", "item",0.04}
+			{"sc_hammer","item", 0.06},
+			{"sc_toolbox","item", 0.08},
+			{"sc_scrap","item", 0.04}
 		};
 	};
 };
