@@ -1,6 +1,6 @@
 class CfgVehicles
 {
-	class GroundWeaponHolder;
+	class GroundWeaponHolder;	
 	class MedicalBox: GroundWeaponHolder
 	{
 		scope = 2;
@@ -44,7 +44,7 @@ class CfgVehicles
 			};
 		};
 	};
-	
+
 	class OutbreakBasket: GroundWeaponHolder
 	{
 		scope = 2;
@@ -55,5 +55,87 @@ class CfgVehicles
 		class TransportMagazines{};
 		class TransportWeapons{};
 		class TransportItems{};
+	};
+	
+	class Land_TentA_F;
+	class OutbreakTent: Land_TentA_F {
+		vehicleClass = "Survival";
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 5;
+		create = "WeaponHolder_OutbreakTent";
+		constructioncount = 1;
+		offset[] = {0,2.5,0};
+	};
+	
+	class Land_TentDome_F;
+	class OutbreakTentDome: Land_TentDome_F {
+		vehicleClass = "Survival";
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 5;
+		create = "WeaponHolder_OutbreakTent";
+		constructioncount = 1;
+		offset[] = {0,2.5,0};
+	};
+
+	class Land_cargo_house_slum_F;
+	class OutbreakShackV1: Land_cargo_house_slum_F {
+		vehicleClass = "Survival";
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 5;
+		create = "WeaponHolder_OutbreakTent";
+		constructioncount = 1;
+		offset[] = {0,2.5,0};
+	};
+
+	class Land_Slum_House01_F;
+	class OutbreakShackV2: Land_Slum_House01_F {
+		vehicleClass = "Survival";
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 5;
+		create = "WeaponHolder_OutbreakTent";
+		constructioncount = 1;
+		offset[] = {0,2.5,0};
+	};
+
+	class Land_Slum_House03_F;
+	class OutbreakShackV3: Land_Slum_House03_F {
+		vehicleClass = "Survival";
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 5;
+		create = "WeaponHolder_OutbreakTent";
+		constructioncount = 1;
+		offset[] = {0,2.5,0};
+	};
+
+	class Land_Slum_House02_F;
+	class OutbreakShackV4: Land_Slum_House02_F {
+		vehicleClass = "Survival";
+		transportMaxMagazines = 50;
+		transportMaxWeapons = 10;
+		transportMaxBackpacks = 5;
+		create = "WeaponHolder_OutbreakTent";
+		constructioncount = 1;
+		offset[] = {0,2.5,0};
+	};
+
+	class WeaponHolder_OutbreakTent: GroundWeaponHolder {
+		
+		scope = 2;
+		displayName = "Tent";
+		
+		class TransportMagazines{};
+		class TransportWeapons{};
+		class TransportItems
+		{
+			class _xx_ItemTentOld {
+				item = "outbreak_tent";
+				count = 1;
+			};
+		};
 	};
 };

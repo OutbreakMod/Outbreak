@@ -48,6 +48,8 @@ if (!_inVehicle && !player_performingAction) then {
 	_surface = surfaceType getPosATL player;
 	_isForest = ["forest", str(_surface)] call fnc_inString;
 	
+	// search logs
+	
 	if (_isForest) then {
 		if (action_searchWoodPile < 0) then {
 			action_searchWoodPile = player addAction ["Search for logs", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
@@ -55,6 +57,17 @@ if (!_inVehicle && !player_performingAction) then {
 	} else {
 		player removeAction action_searchWoodPile;
 		action_searchWoodPile = -1;
+	};
+
+	// create basic structure
+	
+	if (([player, "sc_wood", 20] call fnc_hasItem) && ([player, "sc_toolbox"] call fnc_hasItem) && ([player, "sc_hammer"] call fnc_hasItem)) then {
+		if (action_makeshiftBaseV1 < 0) then {
+			action_makeshiftBaseV1 = player addAction ["Build Makeshift Base", "addons\outbreak_code\actions\makeshift_base.sqf", "v1", 3, true, true, "", ""];
+		};
+	} else {
+		player removeAction action_makeshiftBaseV1;
+		action_makeshiftBaseV1 = -1;
 	};
 };
 

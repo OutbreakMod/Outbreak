@@ -169,4 +169,13 @@ _weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLI
 			{"B_Kitbag_cbr", "backpack",0.01}
 		};
 	};
+	
+	class Industrial {
+		
+		loot[] = {
+			{"sc_hammer", "item",0.05},
+			{"sc_toolbox", "item",0.05},
+			{"sc_scrap", "item",0.04}
+		};
+	};
 };

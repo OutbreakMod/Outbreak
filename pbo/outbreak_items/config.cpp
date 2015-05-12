@@ -110,6 +110,7 @@ class CfgWeapons
             		mass = 10;
         	}; 
 		picture = "\outbreak_items\images\toolbox.paa";
+		model = "a3\structures_f\Items\Electronics\Land_SatellitePhone_F";
 		descriptionShort = "";
 	};
 	class sc_scrap: ItemWatch
@@ -673,7 +674,7 @@ class CfgWeapons
 	};
 	class sc_wood: ItemWatch
 	{
-		displayName = "Wood";
+		displayName = "Log";
 		count = 1;
 		class ItemInfo
         	{
@@ -947,6 +948,7 @@ class CfgWeapons
             		mass = 4;
         	}; 
 		picture = "\outbreak_items\images\hammer.paa";
+		model = "a3\structures_f\Items\Tools\Hammer_F";
 		descriptionShort = "";
 	};
 	class sc_human_flesh: ItemWatch

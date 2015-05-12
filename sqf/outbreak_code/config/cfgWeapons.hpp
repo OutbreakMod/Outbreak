@@ -29,29 +29,4 @@ class CfgWeapons
 		model = "a3\structures_f\Items\Tools\Axe_fire_F";
 		descriptionShort = "";
 	};
-	
-	class Pistol;
-	class Pistol_Base_F: Pistol
-	{
-		class WeaponSlotsInfo;
-	};
-	
-	class MeleeFireaxe : Pistol_Base_F
-	{
-		scope = 2;
-		picture = "\outbreak_items\images\axe.paa";
-		model = "a3\structures_f\Items\Tools\Axe_fire_F";
-		magazines[] = { "hatchet_swing" };
-		recoil = "recoil_pistol_p07";
-		displayname = "Fire Axe";
-		descriptionShort = "Fire Axe";
-		cursor = "EmptyCursor";
-		cursorAim = "throw";
-		cursorSize = 1;
-		weaponInfoType = "RscWeaponEmpty";
-		class WeaponSlotsInfo
-		{
-			mass = 20;
-		};
-	};
 };
