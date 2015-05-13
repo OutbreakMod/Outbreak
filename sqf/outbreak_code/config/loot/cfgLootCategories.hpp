@@ -145,6 +145,14 @@ class CfgLootCategories {
 			{"U_C_Poor_1", "item",0.04}
 		};
 	};
+
+	class Hunting {
+		
+		loot[] = {
+			{"Trixie_Enfield", "gun",0.09},
+			{"Trixie_CZ550", "item",0.04}
+		};
+	};
 	
 	/*
 _weaponHolder = createVehicle ["GroundWeaponHolder", getPos player, [], 0, "CAN_COLLIDE"];
