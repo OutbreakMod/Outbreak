@@ -14,7 +14,7 @@ if (_lootMax == 0) then {
 	_lootMax = (count _positions);
 };
 
-_lootNumber = round (random(_lootMax - _lootMin) + 1) + _lootMin;
+_lootNumber = round (random(_lootMax - _lootMin)) + _lootMin;
 _usedPos = [];
 
 if (count(_positions) > 0) then {

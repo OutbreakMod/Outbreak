@@ -22,20 +22,20 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"sc_mre","item",0.06},
-			{"NVGoggles","item",0.03},
-			{"Rangefinder","item",0.05}
+			{"NVGoggles","item",0.01},
+			{"Rangefinder","item",0.02}
 		};
 	};
 	
 	class AssaultRifles {
 		
 		loot[] = {
-			{"arifle_Katiba_C_ACO_pointer_snds_F","gun",0.12},
-			{"arifle_Katiba_C_F","gun",0.12},
-			{"arifle_MXC_F","gun",0.15},
-			{"arifle_MX_Holo_pointer_F","gun",0.10},
+			{"arifle_Katiba_C_ACO_pointer_snds_F","gun",00.4},
+			{"arifle_Katiba_C_F","gun",0.6},
+			{"arifle_MXC_F","gun",0.08},
+			{"arifle_MX_Holo_pointer_F","gun",0.07},
 			{"arifle_MXM_RCO_pointer_snds_F","gun",0.05},
-			{"arifle_Katiba_F","gun",0.20}
+			{"arifle_Katiba_F","gun",0.08}
 			
 		};
 	};
@@ -43,11 +43,10 @@ class CfgLootCategories {
 	class SniperRifles {
 		
 		loot[] = {
-			{"srifle_EBR_ACO_F","gun",0.08},
-			{"srifle_EBR_ARCO_pointer_F","gun",0.07},
-			{"srifle_EBR_ARCO_pointer_snds_F","gun",0.05},
-			{"srifle_EBR_DMS_pointer_snds_F","gun",0.05},
-			{"srifle_DMR_01_DMS_F","gun",0.02}
+			{"srifle_EBR_ACO_F","gun",0.06},
+			{"srifle_EBR_ARCO_pointer_F","gun",0.05},
+			{"srifle_EBR_ARCO_pointer_snds_F","gun",0.04},
+			{"srifle_EBR_DMS_pointer_snds_F","gun",0.04}
 		};
 	};
 	
@@ -56,6 +55,9 @@ class CfgLootCategories {
 		loot[] = {
 			{"srifle_DMR_01_DMS_F","gun",0.05},
 			{"srifle_EBR_DMS_pointer_snds_F","gun",0.05},
+			{"LMG_Zafir_F","gun",0.03},
+			{"srifle_LRR_LRPS_F","gun",0.01},
+			{"srifle_GM6_LRPS_F","gun",0.02}
 		};
 	};
 	
@@ -79,10 +81,10 @@ class CfgLootCategories {
 	class Medical {
 		
 		loot[] = {
-			{"sc_bandage", "item",0.06},
-			{"sc_ibuprofen", "item",0.04},
-			{"sc_morphine", "item",0.04},
-			{"sc_epinephrine", "item",0.03},
+			{"sc_bandage", "item",0.08},
+			{"sc_ibuprofen", "item",0.06},
+			{"sc_morphine", "item",0.05},
+			{"sc_epinephrine", "item",0.04},
 			{"sc_blood", "item",0.02}
 		};
 	};
@@ -113,7 +115,6 @@ class CfgLootCategories {
 		loot[] = {
 			{"sc_energy_drink", "item",0.06},
 			{"sc_corn", "item",0.02},
-			{"sc_coffee", "item",0.03},
 			{"sc_cereal", "item",0.03},
 			{"sc_soda", "item",0.04},
 			{"sc_juicebox", "item",0.06},

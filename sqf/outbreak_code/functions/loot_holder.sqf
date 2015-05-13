@@ -15,9 +15,22 @@ if (_itemType == "gun") then {
 	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 	_weaponHolder setVariable ["isLoot", true];
 	_weaponHolder addWeaponCargoGlobal [_itemClass, 1];
-	_magazine = getArray (configFile >> "CfgWeapons" >> _itemClass >> "magazines") select 0;
-	_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
 	
+	_magazine = getArray (configFile >> "CfgWeapons" >> _itemClass >> "magazines") select 0;
+	
+	if (_itemClass == "LMG_Zafir_F") then {
+		_magazine = "150Rnd_762x54_Box";
+	};
+	
+	if (_itemClass == "srifle_LRR_LRPS_F") then {
+		_magazine = "7Rnd_408_Mag";	
+	};
+
+	if (_itemClass == "srifle_GM6_LRPS_F") then {
+		_magazine = "5Rnd_127x108_Mag";
+	};	
+	
+	_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
 	_item = _weaponHolder;
 };
 

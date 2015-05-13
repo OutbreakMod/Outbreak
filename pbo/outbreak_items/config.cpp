@@ -110,7 +110,7 @@ class CfgWeapons
             		mass = 10;
         	}; 
 		picture = "\outbreak_items\images\toolbox.paa";
-		model = "a3\structures_f\Items\Electronics\SatellitePhone_F";
+		model = "a3\structures_f\Items\Luggage\Suitcase_F";
 		descriptionShort = "Used for replacing car parts";
 	};
 	class sc_scrap: ItemWatch
