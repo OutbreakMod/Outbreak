@@ -153,19 +153,7 @@ class CfgLootCategories {
 			{"Trixie_CZ550", "item",0.04}
 		};
 	};
-	
-	/*
-_weaponHolder = createVehicle ["GroundWeaponHolder", getPos player, [], 0, "CAN_COLLIDE"];
-_weaponHolder addItemCargoGlobal ["B_Kitbag_mcamo", 1];
 
-_weaponHolder = createVehicle ["GroundWeaponHolder", getPos player, [], 0, "CAN_COLLIDE"];
-_weaponHolder addItemCargoGlobal ["B_AssaultPack_khk", 1];
-
-_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
-						_weaponHolder setVariable ["isLoot", true];
-						_weaponHolder addBackpackCargoGlobal ["B_AssaultPack_khk", 1];
-	*/
-	
 	class CivillianBackpacks {
 		
 		loot[] = {
@@ -187,6 +175,18 @@ _weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLI
 			{"sc_hammer","single", 0.06},
 			{"sc_toolbox","single", 0.08},
 			{"sc_scrap","item", 0.05}
+		};
+	};
+	
+	class Magazines {
+		
+		loot[] = {
+			{"20Rnd_762x51_Mag", "magazine",0.05},
+			{"5Rnd_127x108_Mag", "magazine",0.04},
+			{"30Rnd_65x39_caseless_green", "magazine",0.06},
+			{"30Rnd_65x39_caseless_mag", "magazine",0.06},
+			{"Trixie_CZ550_Mag","magazine",0.07},
+			{"Trixie_Enfield_Mag","magazine",0.08}
 		};
 	};
 };

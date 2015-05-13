@@ -63,6 +63,14 @@ if (_itemType == "single") then {
 	_item = _weaponHolder;
 };
 
+if (_itemType == "magazine") then {
+
+	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
+	_weaponHolder setVariable ["isLoot", true];
+	_weaponHolder addItemCargoGlobal [_itemClass, floor (random 2)];
+	
+};
+
 if (_itemType == "item") then {
 
 	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
