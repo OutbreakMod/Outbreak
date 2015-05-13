@@ -85,6 +85,10 @@ if (_finished) then {
 	_vehicle = createVehicle [_class, _location, [], 0, "CAN_COLLIDE"];
 	_vehicle setDir round(direction player);
 	_vehicle setPos _location;
+		
+	// save to database
+	hive_newObject = [player, _vehicle];
+	publicVariableServe "hive_newObject";
 }; 
 
 player_performingAction = false;
