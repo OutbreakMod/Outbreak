@@ -4,8 +4,8 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"ItemGPS","item",0.05},
-			{"ItemMap","item",0.1},
-			{"ItemWatch","item",0.07},
+			{"ItemMap","item",0.07},
+			{"ItemWatch","item",0.03},
 			{"Binocular","item",0.06},
 		};
 	};
@@ -185,6 +185,14 @@ class CfgLootCategories {
 			{"5Rnd_127x108_Mag", "magazine",0.04},
 			{"30Rnd_65x39_caseless_green", "magazine",0.06},
 			{"30Rnd_65x39_caseless_mag", "magazine",0.06},
+			{"Trixie_CZ550_Mag","magazine",0.07},
+			{"Trixie_Enfield_Mag","magazine",0.08}
+		};
+	};
+
+	class CivillianMagazines {
+		
+		loot[] = {
 			{"Trixie_CZ550_Mag","magazine",0.07},
 			{"Trixie_Enfield_Mag","magazine",0.08}
 		};

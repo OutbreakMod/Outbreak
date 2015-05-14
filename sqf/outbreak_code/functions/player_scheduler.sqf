@@ -11,9 +11,9 @@
 	
 	_scheduled = [
 	["loot", 60],
-	["animal", 120],
+	["animal", 300],
 	["actions", 1],
-	["sync", 10]
+	["sync", 60]
 	];
 	
 	while {true} do {
@@ -60,7 +60,7 @@
 			((findDisplay 602) displayCtrl 633) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
 			((findDisplay 602) displayCtrl 638) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
 			((findDisplay 602) displayCtrl 619) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
-			((findDisplay 602) displayCtrl 640) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
+			//((findDisplay 602) displayCtrl 640) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"]; // disable tent interaction
 		};
 		
 		 waituntil {isnull (finddisplay 602)};

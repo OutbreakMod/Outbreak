@@ -67,7 +67,7 @@ if (_itemType == "magazine") then {
 
 	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 	_weaponHolder setVariable ["isLoot", true];
-	_weaponHolder addItemCargoGlobal [_itemClass, floor (random 2)];
+	_weaponHolder addMagazineCargoGlobal [_itemClass, floor (random 3)];
 	
 };
 
@@ -84,8 +84,16 @@ if (_itemType == "item") then {
 	for "_j" from 0 to count (_objItems) - 1 do { 
 		if (_current <= _maxItems) then {
 			_item = _objItems select _i;
-			if ((random 1) < (_item select 2) && _itemType == (_item select 1)) then { 
+			
+			if ((random 1) < (_item select 2) && ((_item select 1) == _itemType)) then { 
 				_weaponHolder addItemCargoGlobal [(_item select 0), 1];
+				diag_log format ["Spawned item: %1 at building: %2", (_item select 0), _buildingClass];
+				_current = _current + 1;
+			};
+			
+			if ((random 1) < (_item select 2) && ((_item select 1) == "magazine")) then { 
+				_weaponHolder addMagazineCargoGlobal [(_item select 0), 1];
+				diag_log format ["Spawned item: %1 at building: %2", (_item select 0), _buildingClass];
 				_current = _current + 1;
 			};
 		};

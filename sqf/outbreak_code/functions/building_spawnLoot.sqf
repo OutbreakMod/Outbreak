@@ -53,7 +53,6 @@ if (count(_positions) > 0) then {
 					
 					// handler for spawning loot
 					_item = [_lootPos, _itemClass, _itemType, _className] call loot_holder;
-					_item setVectorUp surfaceNormal position _item;
 					
 					_lootArray = _lootArray + [_item];
 					_this setVariable ["lootarray", _lootArray, true];

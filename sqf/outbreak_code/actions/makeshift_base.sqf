@@ -82,13 +82,15 @@ if (_finished) then {
 		_class = "OutbreakShackV1";
 	};
 	
+	_dir = round(direction player);
+	
 	_vehicle = createVehicle [_class, _location, [], 0, "CAN_COLLIDE"];
-	_vehicle setDir round(direction player);
+	_vehicle setDir _dir;
 	_vehicle setPos _location;
 		
 	// save to database
-	hive_newObject = [player, _vehicle];
-	publicVariableServe "hive_newObject";
+	hive_newObject = [player, _class, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir];
+	publicVariableServer "hive_newObject";
 }; 
 
 player_performingAction = false;

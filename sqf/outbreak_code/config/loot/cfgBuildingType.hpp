@@ -25,19 +25,19 @@ class CfgBuildingType
 	
 	class CampEast_EP1 : Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage", "Magazines"};
 		positions[] = {{-0.670898,0.95459,-1.31049},{1.68506,-2.43384,-1.31049},{-1.76318,-1.62646,-1.31049}};
 	};
 	
 	class CampEast : Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage", "Magazines"};
 		positions[] = {{-0.670898,0.95459,-1.31049},{1.68506,-2.43384,-1.31049},{-1.76318,-1.62646,-1.31049}};
 	};
 	
 	class Land_tent_east : Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage", "Magazines"};
 		positions[] = {{-0.670898,0.95459,-1.71049},{1.68506,-2.43384,-1.71049},{-1.76318,-1.62646,-1.71049}};
 	};
 	
@@ -53,13 +53,13 @@ class CfgBuildingType
 	
 	class Land_A_GeneralStore_01a : Default {
 		lootMin = 5;
-		lootCategories[] = {"GeneralTools", "Supermarket", "CivillianPistols", "CivillianBackpacks", "CookingUtilities"};
+		lootCategories[] = {"GeneralTools", "Supermarket", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianMagazines"};
 		positions[] = {{13.2969,4.94678,-1.20155},{2.97559,7.32373,-1.20155},{-8.35352,-0.0244141,-1.20155},{7.78223,4.45801,-1.20155},{6.59863,-0.292969,-1.20155},{-6.92285,-1.6709,-1.20155},{11.9189,-2.81885,-1.20155},{-1.85547,-2.16162,-1.20155},{12.4678,4.51172,-1.20155},{12.2119,6.25098,-0.301548},{12.1895,3.68262,0.0484505},{11.8174,6.31689,-0.65155},{-8.67676,-2.41064,-1.13155},{-4.2002,-3.14355,-0.351551},{-0.165039,-1.3457,-0.351551},{14.6006,-1.38281,-0.351551},{3.03809,-5.03418,-0.351551},{0.512695,3.40527,-0.31155},{4.77637,6.76172,-0.301548},{7.27539,0.938477,-0.621552},{3.96777,1.00488,-0.621552},{0.389648,0.95459,-0.621552},{5.04004,3.44287,-0.65155},{1.85254,6.4248,-0.65155},{-3.65723,6.61133,-0.20155},{-4.39746,4.46191,-0.691551},{6.9248,6.38574,-1.01155},{2.77637,3.38477,-1.01155},{-0.217773,6.68066,-1.01155},{4.49707,-4.98828,0.408451},{-2.33203,-1.35205,0.408451},{2.0127,-1.36572,0.408451},{6.39746,-3.04395,0.408451},{14.6045,-0.722168,0.408451},{-2.43164,-3.73682,0.02845},{-4.77539,-1.35986,0.02845},{-0.436523,-3.04297,0.02845},{14.6104,-2.17139,0.02845},{12.6592,0.830078,0.34845},{4.00684,-3.15039,-0.351551},{2.7334,-3.0415,-0.731548},{-2.67676,-1.36133,-0.731548},{-1.00488,-5.00537,-0.731548},{8.34863,-1.43018,-0.731548},{1.8291,3.77197,-0.661549}};
 	};
 	
 	class Land_A_GeneralStore_01 : Default {
 		lootMin = 5;
-		lootCategories[] = {"GeneralTools", "Supermarket", "CivillianPistols", "CivillianBackpacks", "CookingUtilities"};
+		lootCategories[] = {"GeneralTools", "Supermarket", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianMagazines"};
 		positions[] = {{11.8149,1.27979,-1.20155},{5.10449,1.61377,-1.20155},{1.70215,3.4292,-1.20155},{-0.771973,2.04102,-1.20155},{-3.59473,-6.04688,-1.20155},{-2.38428,-5.82202,-1.20155},{10.5171,-6.46729,-1.20155},{12.8472,-4.97754,-1.20155},{8.63623,-3.65381,-1.20155},{-3.22852,-10.0454,-1.21081},{11.0537,-0.321289,-0.661549},{11.0303,2.8833,0.0484514},{10.6646,1.86377,-0.651548},{6.66162,-2.69971,-0.611548},{6.02979,-2.6416,-0.611548},{2.16553,-2.68262,-0.611548},{-1.36963,-2.75684,-0.611548},{-0.919434,-0.283936,-0.301549},{0.583008,-0.308594,-1.01155},{0.804199,3.0752,-0.311549},{4.90234,3.04053,0.0484514},{-5.73779,0.694824,-0.20155},{0.796875,0.0898438,-0.301549},{2.73145,2.66406,-0.301549},{0.523926,2.81567,-1.01155},{-4.8208,2.87158,-0.701549},{-3.87061,-5.0415,-0.731549},{-4.73096,-5.00537,0.408451},{-2.1792,-5.02222,-0.351549},{-3.39795,-6.95508,-0.731549},{-3.58203,-7.24365,-0.731549},{-3.49756,-7.12695,0.408451},{-9.95215,-6.05859,0.348451},{13.4136,-5.93457,0.408451},{13.4463,-4.45898,0.028451},{13.4424,-6.20215,-0.351549},{2.93018,-8.67773,-0.351549},{1.53516,-6.79199,-0.351549},{7.16211,-5.12427,-0.351549},{6.79346,-5.11816,-0.73155},{2.87158,-6.91943,-0.73155},{0.0541992,-5.03271,-0.73155},{-1.979,-8.6875,-0.73155},{-5.84424,-5.04883,-0.73155},{-6.99268,-5.06836,-1.11155},{5.23535,-6.8335,-1.11155},{0.290039,-8.68701,-1.11155},{-0.649414,-8.68115,0.40845},{-0.983398,-9.56299,-1.21082}};
 	};
 	
@@ -101,7 +101,7 @@ class CfgBuildingType
 	
 	class Land_A_BuildingWIP : Default {
 		lootMin = 6;
-		lootCategories[] = {"GeneralTools", "CivillianPistols", "Industrial", "Magazines"};
+		lootCategories[] = {"GeneralTools", "Industrial", "Magazines"};
 		positions[] = {{-15.4871,-9.755,-6.53698},{-10.4043,-9.76697,-6.53213},{-12.0098,-5.50208,-6.53936},{-21.5681,-9.69409,-6.54067},{-23.7563,8.18347,-6.45811},{2.82544,11.3822,-6.47826},{-7.49634,-9.24609,-6.52115},{6.21216,7.7356,-6.41615},{-9.29541,0.683716,-6.53778},{16.8376,2.03186,-2.54291},{4.77661,-9.35681,-1.50389},{-20.3762,-2.86389,-2.53182},{-14.3564,-9.68604,-2.5341},{-24.1724,7.65405,-2.53182},{1.15796,8.03552,-2.53182},{-24.0901,11.4227,1.47364},{-22.1218,11.8442,1.47786},{-22.7849,10.4189,1.47402},{-8.66797,5.81238,1.47396},{-11.4856,-2.29419,2.50674},{-15.6948,-13.5236,5.46682},{-8.00171,-1.07678,5.31147},{8.66626,-8.14514,5.344},{11.5269,2.50977,-6.52237},{-15.926,-17.5713,-6.53193},{-23.8391,0.109863,-6.47638},{-24.2957,2.29199,-2.53182},{-7.6853,11.9902,-2.53182},{-17.7314,1.81299,-2.53182},{2.94116,6.97754,1.47579},{-9.39014,-9.62451,1.47428},{-24.1311,9.47656,5.46242}};
 	};
 
@@ -151,37 +151,37 @@ class CfgBuildingType
 	
 	class Land_Farm_Cowshed_a: Default {
 		lootMin = 2;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting", "CivillianMagazines"};
 		positions[] = {{-1.06836,-5.92163,-3.08763},{1.69043,-4.91089,-3.08763},{5.8833,-6.15381,-3.08763},{8.83984,-5.60278,-3.08763},{9.74023,-2.48657,-3.08763},{2.88428,-2.34546,-3.08763},{7.88037,2.94214,-3.08763}};
 	};
 	
 	class Land_Farm_Cowshed_b: Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting", "CivillianMagazines"};
 		positions[] = {{-3.26782,2.71875,-3.0311},{5.41699,-2.57813,-3.04111}};
 	};
 	
 	class Land_Farm_Cowshed_c: Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting", "CivillianMagazines"};
 		positions[] = {{0.625,-2.61133,-3.06583}};
 	};
 	
 	class Land_stodola_old_open: Default {
 		lootMin = 2;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting", "CivillianMagazines"};
 		positions[] = {{2.5437,-10.6599,2.96444},{-0.4021,-10.6228,2.96444},{-2.56641,-10.8538,-0.995487},{4.6665,3.45386,-5.08055},{-2.24414,10.396,-5.08055},{3.08691,9.24976,-5.08055},{-1.12744,10.5359,-0.993513},{-1.27563,10.6184,2.96444},{2.99268,10.7668,2.96444},{4.35425,-10.5923,-5.08055},{-2.47363,-5.49194,-5.08055}};
 	};
 	
 	class Land_stodola_open: Default {
 		lootMin = 1;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Industrial", "Hunting", "CivillianMagazines"};
 		positions[] = {{-3.77881,6.2478,-4.11348},{1.59106,6.31494,-4.10928},{-3.94727,-1.95605,-4.15359},{-0.440918,-3.91187,-4.1938}};
 	};
 	
 	class Land_Misc_deerstand: Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Medical", "Hunting"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Medical", "Hunting", "Magazines"};
 		positions[] = {{-0.923828,-0.808594,1.08539},{0.419922,-0.237305,1.08539}};
 	};
 	//Land_Ind_Workshop01_01
