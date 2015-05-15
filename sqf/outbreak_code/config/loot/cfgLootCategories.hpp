@@ -3,10 +3,19 @@ class CfgLootCategories {
 	class GeneralTools {
 		
 		loot[] = {
-			{"ItemGPS","item",0.05},
 			{"ItemMap","item",0.07},
 			{"ItemWatch","item",0.03},
 			{"Binocular","item",0.06},
+		};
+	};
+	
+	class MilitaryTools {
+		
+		loot[] = {
+			{"ItemGPS","item",0.05},
+			{"sc_mre","item",0.06},
+			{"NVGoggles","item",0.01},
+			{"Rangefinder","item",0.02}
 		};
 	};
 	
@@ -15,15 +24,6 @@ class CfgLootCategories {
 		loot[] = {
 			{"sc_matchbook","item",0.08},
 			{"sc_knife","item",0.06}
-		};
-	};
-	
-	class MilitaryTools {
-		
-		loot[] = {
-			{"sc_mre","item",0.06},
-			{"NVGoggles","item",0.01},
-			{"Rangefinder","item",0.02}
 		};
 	};
 	
@@ -98,7 +98,6 @@ class CfgLootCategories {
 			{"sc_donut", "item",0.02},
 			{"sc_potato", "item",0.08},
 			{"sc_energy_drink", "item",0.06},
-			{"sc_corn", "item",0.05},
 			{"sc_coffee", "item",0.07},
 			{"sc_cereal", "item",0.06},
 			{"sc_carrot", "item",0.05},

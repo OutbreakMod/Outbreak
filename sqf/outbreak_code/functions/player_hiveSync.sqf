@@ -17,11 +17,8 @@ if (player getVariable ["alive", false]) then {
 	// TODO: Check debug coord, if so, don't save, potential character loss
 	if ((player getVariable ["outbreaklogin", -1]) == 1) then {
 
-		// create variables
-		_inventory = format["%1", player call player_serializeInventory];
-		
 		// send request to server
-		hive_playerSave = [player, _pos, _inventory];
+		hive_playerSave = [player, _pos, player call player_serializeInventory];
 		publicVariableServer "hive_playerSave";
 
 		// log

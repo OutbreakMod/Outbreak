@@ -72,6 +72,10 @@ if (_finished) then {
 	_fireplace = createVehicle ["Land_Fireplace_F", _location, [], 0, "CAN_COLLIDE"];
 	_fireplace setDir (random 360);
 	
+	for "_i" from 1 to 3 do {
+		player removeItem "sc_wood";
+	};
+	
 	cutText ["I created a fireplace", "PLAIN DOWN"];
 }; 
 

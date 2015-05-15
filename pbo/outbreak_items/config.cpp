@@ -43,7 +43,7 @@ class CfgWeapons
         	}; 
 		picture = "\outbreak_items\images\morphine.paa";
 		model = "a3\structures_f\Items\Stationery\PencilRed_F";
-		descriptionShort = "";
+		descriptionShort = "Used for fixing broken legs";
 	};
 	class sc_epinephrine: ItemWatch
 	{
@@ -55,7 +55,7 @@ class CfgWeapons
         	}; 
 		picture = "\outbreak_items\images\epinephrine.paa";
 		model = "a3\structures_f\Items\Stationery\PencilGreen_F";
-		descriptionShort = "";
+		descriptionShort = "Helps coming back into conciousness";
 	};
 	class sc_tourniquet: ItemWatch
 	{

@@ -12,7 +12,7 @@ _loop = true;
 player removeAction action_makeshiftBaseBasic;
 action_makeshiftBaseBasic = -1;
 
-_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 200];
+_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 300];
 
 if ((count _cities) > 0) exitWith {
 	
@@ -78,15 +78,19 @@ if (_finished) then {
 	_location = player modelToWorld [0,2.5,0];
 	_location set [2,0];
 	
-	if (_type == "v1") then {
-		_class = "OutbreakShackV1";
-	};
-	
 	_dir = round(direction player);
 	
-	_vehicle = createVehicle [_class, _location, [], 0, "CAN_COLLIDE"];
+	_vehicle = createVehicle [_type, _location, [], 0, "CAN_COLLIDE"];
 	_vehicle setDir _dir;
 	_vehicle setPos _location;
+	
+	for "_i" from 1 to 2 do {
+		player removeItem "sc_scrap";
+	};
+	
+	for "_i" from 1 to 20 do {
+		player removeItem "sc_wood";
+	};
 		
 	// save to database
 	hive_newObject = [player, _class, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir];
