@@ -14,6 +14,7 @@ player_spawnCheck = compile preProcessFileLineNumbers "addons\outbreak_code\func
 player_hiveSync = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_hiveSync.sqf";
 player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_pressKey.sqf";
 player_spawnAnimal = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_spawnAnimal.sqf";
+player_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_handleDamage.sqf";
 
 // building
 building_items = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_items.sqf";
@@ -33,6 +34,7 @@ fnc_getServerVehicle = compile preProcessFileLineNumbers "addons\outbreak_code\f
 fnc_hasItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_hasItem.sqf";
 fnc_countItems = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_countItems.sqf";
 object_speak = compile preProcessFileLineNumbers "addons\outbreak_code\functions\object_speak.sqf";
+fnc_damageType = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageType.sqf";
 
 // new player tick loop
 [false] execVM "addons\outbreak_code\functions\player_login.sqf"; // true = start a loop for various things

@@ -22,14 +22,19 @@ deleteVehicle (_previousUnit);
 
 player removeAllEventHandlers "Killed";
 player removeAllEventHandlers "Respawn";
+player removeAllEventHandlers "HandleDamage";
 
 player addEventHandler ["Killed", { _this call player_killed; }];
 player addEventHandler ["Respawn", { _this call player_respawn; }];
+player addEventHandler ["HandleDamage", { _this call player_handleDamage; }];
 
 // add variable
 player setVariable ["outbreaklogin", -1];
 player setVariable ["playeruuid", getPlayerUID player];
 player setVariable ["alive", true];
+
+// medical
+player setVariable ["health", 6000];
 
 // reset actions
 action_searchWoodPile = -1;
@@ -58,6 +63,22 @@ while {(_NOT_LOGGED_IN) && (_LOGIN_TRIES <= 20)} do {
 		sleep 1;
 		_LOGIN_TRIES = _LOGIN_TRIES + 1;
 		titleText [format["Retrying authentication (%1)... Please wait...", _LOGIN_TRIES], "BLACK FADED", 0.1];
+	};
+};
+
+_test = (createGroup west) createUnit ["b_survivor_F", getPosATL player, [], 0, "NONE"];
+_test setVariable ["health", 6000];
+
+_test removeAllEventHandlers "HandleDamage";
+_test addEventHandler ["HandleDamage", { _this call player_handleDamage; }];
+
+// timer
+[_test] spawn {
+
+	while {alive (_this select 0)} do {
+		if ((_this select 0 getVariable ["health", 6000]) < 0) then {
+			(_this select 0) setDamage 1;
+		};
 	};
 };
 
