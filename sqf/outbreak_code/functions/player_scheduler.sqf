@@ -11,8 +11,12 @@
 	
 	_scheduled = [
 	["loot", 60],
-	["animal", 300],
+	["npc", 300],
 	["actions", 1],
+	["debugmenu", 1],
+	["blood", 1],
+	["health", 1],
+	["bones", 1],
 	["sync", 60]
 	];
 	
@@ -22,7 +26,7 @@
 			_seconds = _x select 1;
 			
 			if ((_timer % _seconds) == 0) then {
-				[player, _task] call player_spawnCheck;
+				[player, _task] spawn player_spawnCheck;
 			};
 			
 		} foreach _scheduled;
@@ -31,7 +35,7 @@
 		_timer = _timer + 1;
 	};
 };
-	
+
 [] spawn {
 	while {true} do {
 		_sound = format["ambient_%1", floor(random 7) + 1];

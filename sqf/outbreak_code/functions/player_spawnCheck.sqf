@@ -8,8 +8,30 @@ private ["_nearby", "_nearbyRadius", "_positions", "_lootPos", "_spawnItem", "_s
 _unit = _this select 0;
 _check = _this select 1;
 
-if (_check == "towngen") then {
-	[player] spawn spawn_townWreckGenerator;
+if (_check == "npc") then {
+	player_agentsSpawnCheck = [getPosATL _unit];
+	publicVariableServer "player_agentsSpawnCheck";
+};
+
+if (_check == "bones") then {
+	if (player getVariable ["leg_break", false] && player getVariable ["fracture_update", false]) then {
+		player setHit ["legs", 1];
+		player setVariable ["fracture_update", false, true];
+		player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+		[player] call player_hiveSync; // force save
+	};
+};
+
+if (_check == "health") then {
+	if (player getVariable ["health", 6000] < 0) then {
+		player setDamage 1;
+	};
+};
+
+if (_check == "blood") then {
+	if (player getVariable ["bloods", 6000] < 0) then {
+		player setDamage 1;
+	};
 };
 
 if (_check == "loot") then {
@@ -36,27 +58,6 @@ if (_check == "loot") then {
 	} foreach _nearby;
 };
 
-if (_check == "animal") then {
-	
-	_animalRadius = 5;
-	_minimumSpawnRadius = 20;
-	_maximumSpawnRadius = 30;
-	
-	_animalAgents = ["Sheep_random_F"]; // goat only animal in arma 3 which hasn't got broken AI
-	//["Goat_random_F", "Sheep_random_F", "Rabbit_F"]; // "Cock_random_F", "Hen_random_F", 
-	
-	_nearAnimals = (getPosATL player) nearEntities [_animalAgents, _maximumSpawnRadius];
-
-	if ((count _nearAnimals) < _animalRadius) then {
-		
-		_animalsToSpawn = _animalRadius - (count _nearAnimals);	
-		
-		for "_i" from 0 to (_animalsToSpawn) do { 
-			[_maximumSpawnRadius, _maximumSpawnRadius, _animalAgents] spawn player_spawnAnimal;
-		};
-	};
-};
-
 // Create scroll menu actions
 
 if (_check == "actions") then {
@@ -66,6 +67,9 @@ if (_check == "actions") then {
 // Sync user to database
 
 if (_check == "sync") then {
-	[] call player_hiveSync;
+	[player] call player_hiveSync;
 };
-			
+
+if (_check == "debugmenu") then {
+	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
+};

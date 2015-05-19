@@ -23,6 +23,19 @@
 		player setPosATL (_response select 1);
 	};
 	
+	if (_command == "medical") then {
+		
+		_medicalArray = _response select 1;
+		
+		if ((_medicalArray select 0) == 1) then {
+			player setHit ["legs", 1];
+			player getVariable ["leg_break", true, true];
+		};
+	
+		player setVariable ["health", _medicalArray select 1, true];
+		player setVariable ["blood", _medicalArray select 2, true];
+	};
+	
 	if (_command == "login") then {
 		[] call player_clientLogin;
 		player setVariable ["outbreaklogin", 1, true];

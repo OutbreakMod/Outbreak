@@ -3,26 +3,26 @@
 	@author: TheAmazingAussie
 */
 
-private ["_position", "_inventory", "_pos"];
+private ["_position", "_inventory", "_pos", "_unit", "_legFracture"];
 
-// fields
-_pos = getPosATL player;
+_unit = _this select 0;
 
-// set last position
-player setVariable ["lastpos", _pos];
+_pos = getPosATL _unit;
+_unit setVariable ["lastpos", _pos];
 
-// only sync when alive
-if (player getVariable ["alive", false]) then {
+if (_unit getVariable ["alive", false]) then {
+	if ((_unit getVariable ["outbreaklogin", -1]) == 1) then {
 
-	// TODO: Check debug coord, if so, don't save, potential character loss
-	if ((player getVariable ["outbreaklogin", -1]) == 1) then {
-
+		_legFracture = 0;
+		
+		if (_unit getVariable ["leg_break", false]) then {
+			_legFracture = 1;
+		};
+	
 		// send request to server
-		hive_playerSave = [player, _pos, player call player_serializeInventory];
+		hive_playerSave = [_unit, name _unit, _pos, _unit call player_serializeInventory, _legFracture, _unit getVariable ["health", 6000], _unit getVariable ["blood", 6000]];
 		publicVariableServer "hive_playerSave";
 
-		// log
 		diag_log format ["Hive sync request"];
-
 	};
 };

@@ -12,7 +12,7 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
 
-	if (_dist < 3) then {
+	if (_dist < 4) then {
 		
 		_type = typeOf _cursorTarget;
 	
@@ -25,6 +25,18 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 			action_gutAnimal = -1;
 		};
 		
+		/////////////////
+		// Study body
+		/////////////////
+		if ((_cursorTarget isKindOf "Man") && (!alive _cursorTarget)) then {
+			if (action_studyBody < 0) then {
+				action_studyBody = player addAction ["Study Body", "addons\outbreak_code\actions\study_body.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+			};
+		} else {
+			player removeAction action_studyBody;
+			action_studyBody = -1;
+		};
+		
 		if ((inflamed _cursorTarget) && (_type == "Land_FirePlace_F") && ([player, "sc_matchbook"] call fnc_hasItem)) then {
 			if (action_cookMeat < 0) then {
 				action_cookMeat = player addAction ["Cook Meat", "addons\outbreak_code\actions\cook_meat.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
@@ -33,11 +45,14 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 			player removeAction action_cookMeat;
 			action_cookMeat = -1;
 		};
+		
 	} else {
 		player removeAction action_cookMeat;
 		action_cookMeat = -1;
 		player removeAction action_gutAnimal;
 		action_gutAnimal = -1;
+		player removeAction action_studyBody;
+		action_studyBody = -1;
 	};
 };
 

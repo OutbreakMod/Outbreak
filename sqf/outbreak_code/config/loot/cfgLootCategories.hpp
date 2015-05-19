@@ -112,13 +112,13 @@ class CfgLootCategories {
 	class CivillianFoodStorage {
 		
 		loot[] = {
-			{"sc_energy_drink", "item",0.06},
+			{"sc_energy_drink", "item",0.03},
 			{"sc_corn", "item",0.02},
 			{"sc_cereal", "item",0.03},
 			{"sc_soda", "item",0.04},
-			{"sc_juicebox", "item",0.06},
-			{"sc_chips", "item", 0.5},
-			{"sc_cannedfood","item", 0.05}
+			{"sc_juicebox", "item",0.04},
+			{"sc_chips", "item", 0.3},
+			{"sc_cannedfood","item", 0.06}
 		};
 	};
 
@@ -149,7 +149,7 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"Trixie_Enfield", "gun",0.09},
-			{"Trixie_CZ550", "item",0.04}
+			{"Trixie_CZ550", "gun",0.04}
 		};
 	};
 

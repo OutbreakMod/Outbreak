@@ -11,6 +11,21 @@ class CfgPatches
 class CfgWeapons
 {
 	class ItemWatch;
+	// OUTBREAK ITEMS
+	class outbreak_cooking_pot: ItemWatch
+	{
+		displayName = "Cooking Pot";
+		count = 1;
+		class ItemInfo
+        	{
+            		mass = 1;
+        	}; 
+		picture = "\outbreak_items\outbreak_images\outbreak_cooking_pot.paa";
+		model = "a3\structures_f\Items\Vessels\Bucket_Clean_F";
+		descriptionShort = "Used to slow cook meat and also boil and steam vegetables";
+	};
+	
+	// SCORCH ITEM
 	class sc_bandage: ItemWatch
 	{
 		displayName = "Bandage";
