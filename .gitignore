@@ -44,3 +44,5 @@ Temporary Items
 
 # Mod files
 .pbo
+pbo/*.pbo
+sqf/*.pbo
