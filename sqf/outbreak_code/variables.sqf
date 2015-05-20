@@ -15,7 +15,7 @@
 		player setVariable ["outbreaklogin", 1, true];
 		
 		[] call player_missionSpawn;
-		[] call player_clientLogin;
+		[] call player_missionLogin;
 	};
 	
 	// compile db pos and teleport
@@ -37,7 +37,7 @@
 	};
 	
 	if (_command == "login") then {
-		[] call player_clientLogin;
+		[] call player_missionLogin;
 		player setVariable ["outbreaklogin", 1, true];
 	};
 	
@@ -60,23 +60,4 @@
 	_date = _response select 0;
 	
 	setDate _date;
-};
-
-player_clientLogin = {
-	
-	// no weapon = select primary
-	// has weapon = select no weapon
-	
-	//player_noWeapon = player addAction ["Select No Weapon", {
-	//	player action ["SwitchWeapon", player, player, 100];
-	//	player switchcamera cameraView;
-	//}];
-
-	//player_primaryWeapon = player addAction ["Select Primary Weapon", {
-	//	player action ["SwitchWeapon", player, player, 1];
-	//	player switchcamera cameraView;
-	//}];
-
-	// call login on mission file
-	[] call player_missionLogin;
 };

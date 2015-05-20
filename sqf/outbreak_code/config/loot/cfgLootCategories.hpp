@@ -41,11 +41,11 @@ class CfgLootCategories {
 	class AssaultRifles {
 		
 		loot[] = {
-			{"arifle_Katiba_C_ACO_pointer_snds_F","gun",00.4},
+			{"arifle_Katiba_C_ACO_pointer_snds_F","gun",00.3},
 			{"arifle_Katiba_C_F","gun",0.6},
 			{"arifle_MXC_F","gun",0.08},
 			{"arifle_MX_Holo_pointer_F","gun",0.07},
-			{"arifle_MXM_RCO_pointer_snds_F","gun",0.05},
+			{"arifle_MXM_RCO_pointer_snds_F","gun",0.03},
 			{"arifle_Katiba_F","gun",0.08}
 		};
 	};
@@ -53,8 +53,8 @@ class CfgLootCategories {
 	class SubmachineGuns {
 		
 		loot[] = {
-			{"hgun_PDW2000_Holo_F","gun",0.06},
-			{"SMG_01_Holo_F","gun",0.06}
+			{"hgun_PDW2000_Holo_F","gun",0.08},
+			{"SMG_01_Holo_F","gun",0.07}
 			
 		};
 	};
@@ -71,19 +71,14 @@ class CfgLootCategories {
 	class SniperRifles {
 		
 		loot[] = {
-			{"srifle_EBR_ACO_F","gun",0.06},
-			{"srifle_EBR_ARCO_pointer_F","gun",0.05},
-			{"srifle_EBR_ARCO_pointer_snds_F","gun",0.04},
-			{"srifle_EBR_DMS_pointer_snds_F","gun",0.04}
+			{"srifle_DMR_01_DMS_F","gun",0.05},
+			{"LMG_Zafir_F","gun",0.05}, // LMG
 		};
 	};
 	
 	class HighCaliberRifles {
 		
 		loot[] = {
-			{"srifle_DMR_01_DMS_F","gun",0.05},
-			{"srifle_EBR_DMS_pointer_snds_F","gun",0.05},
-			{"LMG_Zafir_F","gun",0.03},
 			{"srifle_LRR_LRPS_F","gun",0.01},
 			{"srifle_GM6_LRPS_F","gun",0.02}
 		};
@@ -95,7 +90,11 @@ class CfgLootCategories {
 		loot[] = {
 			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.05},
 			{"100Rnd_127x99_mag","item",0.08},
-			{"outbreak_tent","item",0.2} // 20% 
+			{"outbreak_tent","item",0.2}, // 20% 
+			{"srifle_EBR_ACO_F","gun",0.06},
+			{"srifle_EBR_ARCO_pointer_F","gun",0.05},
+			{"srifle_EBR_ARCO_pointer_snds_F","gun",0.04},
+			{"srifle_EBR_DMS_pointer_snds_F","gun",0.04}
 		};
 	};
 	
@@ -201,18 +200,18 @@ class CfgLootCategories {
 			{"sc_cartyre","single", 0.05},
 			{"sc_hammer","single", 0.09},
 			{"sc_toolbox","single", 0.06},
-			{"sc_scrap","item", 0.06},
-			{"Hatchet","gun", 0.08}
+			{"sc_scrap","item", 0.06}
 		};
 	};
 	
 	class Magazines {
 		
 		loot[] = {
-			{"20Rnd_762x51_Mag", "magazine",0.05},
+			{"20Rnd_762x51_Mag", "magazine",0.04},
 			{"5Rnd_127x108_Mag", "magazine",0.04},
 			{"30Rnd_65x39_caseless_green", "magazine",0.06},
-			{"30Rnd_65x39_caseless_mag", "magazine",0.06}
+			{"30Rnd_65x39_caseless_mag", "magazine",0.06},
+			{"10Rnd_762x54_Mag","magazine",0.05}
 		};
 	};
 

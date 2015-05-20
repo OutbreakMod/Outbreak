@@ -69,10 +69,7 @@ while {(_NOT_LOGGED_IN) && (_LOGIN_TRIES <= 20)} do {
 	} else {
 		sleep 1;
 		_LOGIN_TRIES = _LOGIN_TRIES + 1;
-		titleText [format["Retrying authentication (%1)... Please wait...", _LOGIN_TRIES], "BLACK FADED", 0.1];
-		
-		hive_playerLogin = [player];
-		publicVariableServer "hive_playerLogin";
+		titleText [format["Trying to load character (%1)... Please wait...", _LOGIN_TRIES], "BLACK FADED", 0.1];
 	};
 };
 
