@@ -28,6 +28,7 @@ player setVariable ["outbreaklogin", -1];
 player setVariable ["playeruuid", getPlayerUID player, true];
 player setVariable ["alive", true];
 player setVariable ["deathmessage", format["His name was %1 and died from death", name player], true];
+player enableFatigue false;
 
 // medical
 player setVariable ["blood", 6000, true];
@@ -50,9 +51,9 @@ player call player_clearInventory;
 
 _LOGIN_TIMER = 10;
 while {_LOGIN_TIMER > 0} do {
-	sleep 1;
+	titleText [format["Logging in %1 seconds... Please wait...", _LOGIN_TIMER], "BLACK FADED", 0.1];
 	_LOGIN_TIMER = _LOGIN_TIMER - 1;
-	titleText [format["Logging in (%1) seconds... Please wait...", _LOGIN_TIMER], "BLACK FADED", 0.1];
+	sleep 1;
 };
 
 hive_playerLogin = [player];
@@ -69,6 +70,9 @@ while {(_NOT_LOGGED_IN) && (_LOGIN_TRIES <= 20)} do {
 		sleep 1;
 		_LOGIN_TRIES = _LOGIN_TRIES + 1;
 		titleText [format["Retrying authentication (%1)... Please wait...", _LOGIN_TRIES], "BLACK FADED", 0.1];
+		
+		hive_playerLogin = [player];
+		publicVariableServer "hive_playerLogin";
 	};
 };
 
@@ -76,6 +80,13 @@ if (_NOT_LOGGED_IN) then {
 	titleText ["Error occurred, please try again later.","BLACK FADED", _HIGH_NUMBER];
 } else {
 
+	// melee fix shit
+	player removeItems "hatchet_swing";
+	
+	if ((handgunWeapon player) == "Hatchet") then {
+		player addMagazine "hatchet_swing";
+	};
+	
 	titleFadeOut 7;
 	//[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
 	

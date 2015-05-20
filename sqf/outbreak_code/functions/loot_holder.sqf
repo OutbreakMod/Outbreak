@@ -30,7 +30,12 @@ if (_itemType == "gun") then {
 		_magazine = "5Rnd_127x108_Mag";
 	};	
 	
-	_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
+	if (_itemClass != "Hatchet") then {
+		_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
+	} else {
+		_weaponHolder addMagazineCargoGlobal ["hatchet_swing", 1];
+	};
+	
 	_item = _weaponHolder;
 };
 

@@ -44,11 +44,13 @@ if (_posAmount > 0) then {
 					
 					_lootPos = (_positions call BIS_fnc_selectRandom);
 					
-					while {_lootPos in _usedPos} do {
+					_tries = 0;
+					while {_lootPos in _usedPos && _tries < 30} do {
 						_lootPos = (_positions call BIS_fnc_selectRandom);
+						_tries = _tries + 1;
 					};
 					
-					_usedPos = _usedPos + [_lootPos];			
+					_usedPos = _usedPos + [_lootPos];						
 					_lootPos = _this modelToWorld _lootPos;
 	
 					diag_log format ["Spawned item: %1 at building: %2", _itemClass, _className];

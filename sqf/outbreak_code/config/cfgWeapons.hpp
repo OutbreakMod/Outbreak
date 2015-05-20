@@ -1,32 +1,27 @@
-class Mode_SemiAuto;	// External class reference
-class MuzzleSlot;	// External class reference
-
 class CfgWeapons
 {
-	class ItemWatch;
-	class outbreak_tent: ItemWatch
-	{
-		displayName = "Pitchable Tent";
-		count = 1;
-		class ItemInfo
-        	{
-            		mass = 10;
-        	}; 
-		picture = "\outbreak_items\outbreak_images\outbreak_sleeping_bag.paa";
-		model = "\a3\structures_f\Civ\Camping\Sleeping_bag_folded_F";
-		descriptionShort = "";
+	/*extern*/ class InventoryItem_Base_F;
+	/*extern*/ class ItemCore;
+	/*extern*/ class Pistol;
+	class Pistol_Base_F: Pistol {
+		/*extern*/ class WeaponSlotsInfo;
 	};
-	
-	class outbreak_fireaxe: ItemWatch
-	{
-		displayName = "Fire Axe";
-		count = 1;
-		class ItemInfo
-        	{
-            		mass = 10;
-        	}; 
-		picture = "\outbreak_items\images\axe.paa";
-		model = "a3\structures_f\Items\Tools\Axe_fire_F";
-		descriptionShort = "";
+
+	class Hatchet: Pistol_Base_F {
+		scope = 2;
+		model = "\outbreak_assets\models\hatchet.p3d";
+		picture = "\outbreak_assets\textures\hatchet_icon.paa";
+		magazines[] = {"hatchet_swing"};
+		displayname = "Hatchet";
+		descriptionShort = "Hatchet";
+		cursor = "EmptyCursor";
+		cursorAim = "throw";
+		cursorSize = 1;
+		weaponInfoType = "RscWeaponEmpty";
+		handanim[] ={"OFP2_ManSkeleton","\outbreak_assets\anim\hatch_hold.rtm"};
+
+		class WeaponSlotsInfo {
+			mass = 20;
+		};
 	};
 };

@@ -84,16 +84,18 @@ if (_finished) then {
 	_vehicle setDir _dir;
 	_vehicle setPos _location;
 	
-	for "_i" from 1 to 2 do {
-		player removeItem "sc_scrap";
-	};
-	
-	for "_i" from 1 to 20 do {
-		player removeItem "sc_wood";
+	if (_type == "OutbreakShackV1") then {
+		for "_i" from 1 to 2 do {
+			player removeItem "sc_scrap";
+		};
+		
+		for "_i" from 1 to 20 do {
+			player removeItem "sc_wood";
+		};
 	};
 		
 	// save to database
-	hive_newObject = [player, _class, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir];
+	hive_newObject = [player, _type, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir];
 	publicVariableServer "hive_newObject";
 }; 
 

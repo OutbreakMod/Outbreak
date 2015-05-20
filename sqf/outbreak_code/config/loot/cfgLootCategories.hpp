@@ -93,8 +93,9 @@ class CfgLootCategories {
 	class Helicrash {
 		
 		loot[] = {
-			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.04},
-			{"100Rnd_127x99_mag","item",0.05}
+			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.05},
+			{"100Rnd_127x99_mag","item",0.08},
+			{"outbreak_tent","item",0.2} // 20% 
 		};
 	};
 	
@@ -152,9 +153,9 @@ class CfgLootCategories {
 	class CivillianPistols {
 		
 		loot[] = {
-			{"hgun_P07_F","gun",0.08},
-			{"hgun_Pistol_heavy_01_F", "gun",0.06},
-			{"hgun_ACPC2_F", "gun",0.06}
+			{"hgun_P07_F","gun",0.06},
+			{"hgun_Pistol_heavy_01_F", "gun",0.04},
+			{"hgun_ACPC2_F", "gun",0.05}
 		};
 	};
 	
@@ -176,7 +177,7 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"Trixie_Enfield", "gun",0.09},
-			{"Trixie_CZ550", "gun",0.04}
+			{"Trixie_CZ550", "gun",0.03}
 		};
 	};
 
@@ -196,11 +197,12 @@ class CfgLootCategories {
 	class Industrial {
 		
 		loot[] = {
-			{"sc_jerrycan","single", 0.04},
-			{"sc_cartyre","single", 0.03},
-			{"sc_hammer","single", 0.06},
-			{"sc_toolbox","single", 0.08},
-			{"sc_scrap","item", 0.05}
+			{"sc_jerrycan","single", 0.06},
+			{"sc_cartyre","single", 0.05},
+			{"sc_hammer","single", 0.09},
+			{"sc_toolbox","single", 0.06},
+			{"sc_scrap","item", 0.06},
+			{"Hatchet","gun", 0.08}
 		};
 	};
 	

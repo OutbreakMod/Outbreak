@@ -14,5 +14,8 @@ class CfgPatches {
 #include "config\cfgMusic.hpp"
 #include "config\cfgItems.hpp"
 
+#include "config\cfgGesturesMale.hpp"
+#include "config\cfgMovesBasic.hpp"
+
 #include "config\loot\cfgBuildingType.hpp"
 #include "config\loot\cfgLootCategories.hpp"

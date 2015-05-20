@@ -9,8 +9,8 @@ _unit = _this select 0;
 _check = _this select 1;
 
 if (_check == "npc") then {
-	player_agentsSpawnCheck = [getPosATL _unit];
-	publicVariableServer "player_agentsSpawnCheck";
+	//player_agentsSpawnCheck = [getPosATL _unit];
+	//publicVariableServer "player_agentsSpawnCheck";
 };
 
 if (_check == "bones") then {
