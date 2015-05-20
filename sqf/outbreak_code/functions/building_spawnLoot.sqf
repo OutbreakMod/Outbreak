@@ -5,19 +5,26 @@
 
 _className = typeOf _this;
 _config = configFile >> "CfgBuildingType" >> _className;
+
 _positions = [] + getArray(_config >> "positions");
+_posAmount = count _positions;
+
 _lootMin = 0 + getNumber(_config >> "lootMin");
 _lootMax = 0 + getNumber(_config >> "lootMax");
-_lootArray = [];
 
 if (_lootMax == 0) then {
-	_lootMax = (count _positions);
+	_lootMax = _posAmount;
 };
 
-_lootNumber = round (random(_lootMax - _lootMin)) + _lootMin;
+_lootNumber = floor (random (_lootMax + 1) - _lootMin) + _lootMin;
+
+if (_lootNumber > _posAmount) then {
+	_lootNumber = floor random _posAmount;
+};
+
 _usedPos = [];
 
-if (count(_positions) > 0) then {
+if (_posAmount > 0) then {
 	
 	_buildingLoot = _className call building_items;
 
@@ -36,11 +43,9 @@ if (count(_positions) > 0) then {
 				if ((random 1) < _chance) then {
 					
 					_lootPos = (_positions call BIS_fnc_selectRandom);
-
-					_tries = 0;
-					while {_lootPos in _usedPos && _tries < count _positions} do {
+					
+					while {_lootPos in _usedPos} do {
 						_lootPos = (_positions call BIS_fnc_selectRandom);
-						_tries = _tries + 1;
 					};
 					
 					_usedPos = _usedPos + [_lootPos];			

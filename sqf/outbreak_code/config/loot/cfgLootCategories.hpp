@@ -19,6 +19,17 @@ class CfgLootCategories {
 		};
 	};
 	
+	class Military {
+		
+		loot[] = {
+			{"ItemGPS","item",0.05},
+			{"sc_mre","item",0.06},
+			{"NVGoggles","item",0.01},
+			{"Rangefinder","item",0.02}
+		};
+	};
+	
+	
 	class CookingUtilities {
 		
 		loot[] = {
@@ -36,6 +47,23 @@ class CfgLootCategories {
 			{"arifle_MX_Holo_pointer_F","gun",0.07},
 			{"arifle_MXM_RCO_pointer_snds_F","gun",0.05},
 			{"arifle_Katiba_F","gun",0.08}
+		};
+	};
+	
+	class SubmachineGuns {
+		
+		loot[] = {
+			{"hgun_PDW2000_Holo_F","gun",0.06},
+			{"SMG_01_Holo_F","gun",0.06}
+			
+		};
+	};
+	
+	class SubmachineGunsSilenced {
+		
+		loot[] = {
+			{"hgun_PDW2000_Holo_snds_F","gun",0.04},
+			{"SMG_01_Holo_pointer_snds_F","gun",0.04}
 			
 		};
 	};
@@ -61,13 +89,12 @@ class CfgLootCategories {
 		};
 	};
 	
-	class HeliCrash {
+		
+	class Helicrash {
 		
 		loot[] = {
 			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.04},
-			{"hgun_PDW2000_Holo_snds_F","gun",0.07},
-			{"SMG_01_Holo_pointer_snds_F","gun",0.5},
-			
+			{"100Rnd_127x99_mag","item",0.05}
 		};
 	};
 	
@@ -171,7 +198,9 @@ class CfgLootCategories {
 		loot[] = {
 			{"sc_jerrycan","single", 0.04},
 			{"sc_cartyre","single", 0.03},
-			{"sc_hammer","single", 0.06},
+			{"sc_hammer","single"
+			
+			\\, 0.06},
 			{"sc_toolbox","single", 0.08},
 			{"sc_scrap","item", 0.05}
 		};
@@ -183,9 +212,7 @@ class CfgLootCategories {
 			{"20Rnd_762x51_Mag", "magazine",0.05},
 			{"5Rnd_127x108_Mag", "magazine",0.04},
 			{"30Rnd_65x39_caseless_green", "magazine",0.06},
-			{"30Rnd_65x39_caseless_mag", "magazine",0.06},
-			{"Trixie_CZ550_Mag","magazine",0.07},
-			{"Trixie_Enfield_Mag","magazine",0.08}
+			{"30Rnd_65x39_caseless_mag", "magazine",0.06}
 		};
 	};
 
