@@ -31,8 +31,8 @@ player setVariable ["deathmessage", format["His name was %1 and died from death"
 player enableFatigue false;
 
 // medical
-player setVariable ["blood", 6000, true];
-player setVariable ["health", 6000, true];
+player setVariable ["blood", outbreak_full_blood, true];
+player setVariable ["health", outbreak_full_health, true];
 
 // reset actions
 action_searchWoodPile = -1;

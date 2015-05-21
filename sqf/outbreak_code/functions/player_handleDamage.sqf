@@ -70,6 +70,10 @@ if (_hit == "leg_l" && _damage > 0.9) then {
 
 };
 
+// notify player damage taken
+1 call fnc_damageEffect;
+
+// set new health
 _unit setVariable ["health", _health];
 
 diag_log str(_this);

@@ -35,6 +35,8 @@ fnc_hasItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\
 fnc_countItems = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_countItems.sqf";
 object_speak = compile preProcessFileLineNumbers "addons\outbreak_code\functions\object_speak.sqf";
 fnc_damageType = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageType.sqf";
+fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageEffect.sqf";
+fnc_bloodEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_bloodEffect.sqf";
 
 // new player tick loop
 [false] execVM "addons\outbreak_code\functions\player_login.sqf"; // true = start a loop for various things

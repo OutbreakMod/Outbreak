@@ -25,19 +25,19 @@ class CfgBuildingType
 	
 	class CampEast_EP1 : Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "MedicalGeneral", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
 		positions[] = {{-0.670898,0.95459,-1.31049},{1.68506,-2.43384,-1.31049},{-1.76318,-1.62646,-1.31049}};
 	};
 	
 	class CampEast : Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "MedicalGeneral", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
 		positions[] = {{-0.670898,0.95459,-1.31049},{1.68506,-2.43384,-1.31049},{-1.76318,-1.62646,-1.31049}};
 	};
 	
 	class Land_tent_east : Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "MedicalGeneral", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
 		positions[] = {{-0.670898,0.95459,-1.71049},{1.68506,-2.43384,-1.71049},{-1.76318,-1.62646,-1.71049}};
 	};
 	
@@ -65,19 +65,19 @@ class CfgBuildingType
 	
 	class Land_A_Pub_01 : Default {
 		lootMin = 5;
-		lootCategories[] = {"GeneralTools", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianFoodStorage"};
+		lootCategories[] = {"GeneralTools", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianFoodStorage", "MiscMedical"};
 		positions[] =  {{1.17188,5.7522,-5.75623},{6.46191,-1.73706,-5.01623},{6.46777,1.47949,-5.75623},{0.975098,-5.80859,-5.75621},{-5.79736,-2.57813,-1.79123},{-7.35303,-3.7627,-1.79123},{4.56885,0.998291,-1.79123},{3.45947,0.236328,-1.79123},{1.91504,6.302,-1.79123},{0.114258,2.17432,-1.79123},{6.52832,6.10889,-1.79123},{0.555176,0.169189,-1.79123},{-4.37793,-2.64038,-5.75623},{-7.1709,-1.76855,-5.75623}};
 	};
 	
 	class Land_HouseV2_02_Interier : Default {
 		lootMin = 2;
-		lootCategories[] = {"GeneralTools", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianFoodStorage"};
+		lootCategories[] = {"GeneralTools", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianFoodStorage", "MiscMedical"};
 		positions[] = {{6.97412,1.26904,-5.53068},{4.21631,6.56396,-5.53068},{-5.94922,-1.28955,-5.53068},{-3.31494,6.44287,-5.53068}};
 	};
 	
 	class Land_HouseV2_04_interier : Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianFoodStorage"};
+		lootCategories[] = {"GeneralTools", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianFoodStorage", "MiscMedical"};
 		positions[] = {{-5.08826,3.13818,-5.73971},{7.37061,6.52881,-5.73873},{1.75281,3.70752,-5.73953},{-3.75183,7.1626,-5.73842},{0.292725,1.27441,-2.93809}};
 	};
 	
@@ -181,7 +181,7 @@ class CfgBuildingType
 	
 	class Land_Misc_deerstand: Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Medical", "Hunting", "Magazines"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "MiscMedical", "Hunting", "Magazines"};
 		positions[] = {{-0.923828,-0.808594,1.08539},{0.419922,-0.237305,1.08539}};
 	};
 	//Land_Ind_Workshop01_01

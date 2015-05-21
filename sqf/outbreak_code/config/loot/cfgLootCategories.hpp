@@ -105,6 +105,15 @@ class CfgLootCategories {
 		};
 	};
 	
+	class MiscMedical {
+		
+		loot[] = {
+			{"sc_bandage", "item",0.08},
+			{"sc_ibuprofen", "item",0.06},
+			{"sc_morphine", "item",0.05},
+		};
+	};
+	
 	class Supermarket {
 		
 		loot[] = {
