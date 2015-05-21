@@ -20,6 +20,12 @@ if (_check == "bones") then {
 		player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
 		[player] call player_hiveSync; // force save
 	};
+	
+	if (!(player getVariable ["leg_break", false]) && player getVariable ["fracture_update", false]) then {
+		player setHit ["legs", 0];
+		player setVariable ["fracture_update", false, true];
+		[player] call player_hiveSync; // force save
+	};
 };
 
 if (_check == "health") then {

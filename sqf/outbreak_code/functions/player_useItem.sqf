@@ -19,3 +19,6 @@ if (_text == "Pitchable Tent") then {
 	 ["", "", "", "OutbreakTent"] execVM "addons\outbreak_code\actions\makeshift_base.sqf";
 };
 
+if (_text == "Morphine") then {
+	 ["", "", "", player] execVM "addons\outbreak_code\actions\apply_morphine.sqf";
+};

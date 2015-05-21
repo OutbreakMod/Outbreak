@@ -13,7 +13,7 @@ class CfgBuildingType
 	
 	class Land_Mil_Barracks_i : Default {
 		lootMin = 4;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "SniperRifles", "Magazines", "SubmachineGuns", "SubmachineGunsSilenced"};
+		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "SniperRifles", "Magazines", "SubmachineGuns", "Barracks"};
 		positions[] = {{4.56494,-2.67383,-1.14822},{0.312988,1.54492,-1.09824},{-2.95361,1.49414,-1.11823},{-3.39111,-1.99023,-0.708221},{-6.68604,-1,0.0917664},{-8.94238,-2.52441,-1.09824},{-0.59668,-1.49609,-1.10825},{3.03467,-1.00586,0.0917664},{-0.214355,-2.19531,0.0917664},{-8.93018,1.53906,-1.09824}};
 	};
 	

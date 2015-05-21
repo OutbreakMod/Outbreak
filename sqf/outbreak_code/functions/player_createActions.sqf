@@ -37,6 +37,19 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 			action_studyBody = -1;
 		};
 		
+		///////////////////
+		// Apply morphine
+		///////////////////
+		
+		if ((_cursorTarget isKindOf "Man") && (alive _cursorTarget) && (_cursorTarget getVariabe ["leg_break", false])) then {
+			if (action_applyMorphine < 0) then {
+				action_applyMorphine = player addAction ["Apply Morphine", "addons\outbreak_code\actions\apply_morphine.sqf", _cursorTarget, 3, true, true, "", "];
+			};
+		} else {
+			player removeAction action_applyMorphine;
+			action_applyMorphine = -1;
+		};
+		
 		if ((inflamed _cursorTarget) && (_type == "Land_FirePlace_F") && ([player, "sc_matchbook"] call fnc_hasItem)) then {
 			if (action_cookMeat < 0) then {
 				action_cookMeat = player addAction ["Cook Meat", "addons\outbreak_code\actions\cook_meat.sqf", [_type, _cursorTarget], 3, true, true, "", ""];

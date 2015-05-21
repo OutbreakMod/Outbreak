@@ -18,18 +18,7 @@ class CfgLootCategories {
 			{"Rangefinder","item",0.02}
 		};
 	};
-	
-	class Military {
-		
-		loot[] = {
-			{"ItemGPS","item",0.05},
-			{"sc_mre","item",0.06},
-			{"NVGoggles","item",0.01},
-			{"Rangefinder","item",0.02}
-		};
-	};
-	
-	
+
 	class CookingUtilities {
 		
 		loot[] = {
@@ -38,6 +27,16 @@ class CfgLootCategories {
 		};
 	};
 	
+	class Barracks {
+		
+		loot[] = {
+			{"hgun_PDW2000_Holo_snds_F","gun",0.04},
+			{"SMG_01_Holo_pointer_snds_F","gun",0.04},
+			{"hgun_Pistol_heavy_01_snds_F","gun",0.03},
+			{"hgun_Rook40_snds_F","gun",0.04}
+		};
+	};	
+
 	class AssaultRifles {
 		
 		loot[] = {
@@ -58,16 +57,6 @@ class CfgLootCategories {
 			
 		};
 	};
-	
-	class SubmachineGunsSilenced {
-		
-		loot[] = {
-			{"hgun_PDW2000_Holo_snds_F","gun",0.04},
-			{"SMG_01_Holo_pointer_snds_F","gun",0.04}
-			
-		};
-	};
-	
 	class SniperRifles {
 		
 		loot[] = {
