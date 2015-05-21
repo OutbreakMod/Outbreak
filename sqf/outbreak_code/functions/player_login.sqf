@@ -76,13 +76,6 @@ while {(_NOT_LOGGED_IN) && (_LOGIN_TRIES <= 20)} do {
 if (_NOT_LOGGED_IN) then {
 	titleText ["Error occurred, please try again later.","BLACK FADED", _HIGH_NUMBER];
 } else {
-
-	// melee fix shit
-	player removeItems "hatchet_swing";
-	
-	if ((handgunWeapon player) == "Hatchet") then {
-		player addMagazine "hatchet_swing";
-	};
 	
 	titleFadeOut 7;
 	//[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
