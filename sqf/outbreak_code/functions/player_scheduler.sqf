@@ -21,12 +21,17 @@
 	];
 	
 	while {true} do {
+	
 		{
 			_task = _x select 0;
 			_seconds = _x select 1;
 			
-			if ((_timer % _seconds) == 0) then {
-				[player, _task] spawn player_spawnCheck;
+			if ((_seconds == 1) or (_seconds == 1)) then {
+				[player, _task] call player_spawnCheck;
+			} else {
+				if ((_timer % _seconds) == 0) then {
+					[player, _task] call player_spawnCheck;
+				};
 			};
 			
 		} foreach _scheduled;

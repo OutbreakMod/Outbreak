@@ -5,10 +5,9 @@
 
 private ["_inVehicle", "_cursorTarget", "_dist", "_type", "_surface"];
 
-_inVehicle = (vehicle player != player);
 _cursorTarget = cursorTarget;
 
-if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
+if (!isNil '_cursorTarget' && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
 
@@ -71,12 +70,14 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		action_gutAnimal = -1;
 		player removeAction action_studyBody;
 		action_studyBody = -1;
+		player removeAction action_applyMorphine;
+		action_applyMorphine = -1;
 	};
 };
 
 // misc actions not requiring objects
 
-if (!_inVehicle && !player_performingAction) then {
+if (!player_performingAction) then {
 	
 	_surface = surfaceType getPosATL player;
 	_isForest = ["forest", str(_surface)] call fnc_inString;
