@@ -40,6 +40,7 @@ action_gutAnimal = -1;
 action_cookMeat = -1;
 action_makeshiftBaseBasic = -1;
 action_studyBody = -1;
+action_applyMorphine = -1;
 
 player_performingAction = false;
 needsFractureUpdate = false;
