@@ -38,12 +38,11 @@ player setVariable ["health", outbreak_full_health, true];
 action_searchWoodPile = -1;
 action_gutAnimal = -1;
 action_cookMeat = -1;
-action_makeshiftBaseBasic = -1;
 action_studyBody = -1;
 action_applyMorphine = -1;
+action_makeshiftBaseBasic = -1;
 
 player_performingAction = false;
-needsFractureUpdate = false;
 player_noWeapon = nil;
 player_primaryWeapon = nil;
 
