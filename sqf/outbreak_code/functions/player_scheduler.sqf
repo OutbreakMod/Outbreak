@@ -10,14 +10,13 @@
 	_timer = 0;
 	
 	_scheduled = [
-	["loot", 60],
-	["npc", 300],
-	["actions", 1],
-	["debugmenu", 1],
-	["blood", 1],
-	["health", 1],
-	["bones", 1],
-	["sync", 60]
+		["loot", 60],
+		["npc", 300],
+		["actions", 1],
+		["blood", 1],
+		["health", 1],
+		["bones", 1],
+		["sync", 60]
 	];
 	
 	while {true} do {
@@ -26,12 +25,8 @@
 			_task = _x select 0;
 			_seconds = _x select 1;
 			
-			if ((_seconds == 1) or (_seconds == 1)) then {
-				[player, _task] call player_spawnCheck;
-			} else {
-				if ((_timer % _seconds) == 0) then {
-					[player, _task] call player_spawnCheck;
-				};
+			if ((_timer % _seconds) == 0) then {
+				null = [player, _task] spawn player_spawnCheck;
 			};
 			
 		} foreach _scheduled;

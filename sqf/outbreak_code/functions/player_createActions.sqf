@@ -5,18 +5,19 @@
 
 private ["_inVehicle", "_cursorTarget", "_dist", "_type", "_surface"];
 
+_inVehicle = (vehicle player != player);
 _cursorTarget = cursorTarget;
 
-if (!isNil '_cursorTarget' && !player_performingAction) then {
+if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
 
 	if (_dist < 4) then {
 		
 		_type = typeOf _cursorTarget;
-	
+		
 		///////////////////
-		// Apply morphine
+		// Gut animal
 		///////////////////
 		if ((_type in ["Sheep_random_F"]) && (!alive _cursorTarget)) then {
 			if (action_gutAnimal < 0) then {
@@ -44,7 +45,7 @@ if (!isNil '_cursorTarget' && !player_performingAction) then {
 		///////////////////
 		if ((_cursorTarget isKindOf "Man") && (alive _cursorTarget) && (_cursorTarget getVariable ["leg_break", false])) then {
 			if (action_applyMorphine < 0) then {
-				action_applyMorphine = player addAction ["Apply Morphine", "addons\outbreak_code\actions\apply_morphine.sqf", _cursorTarget, 3, true, true, "", "];
+				action_applyMorphine = player addAction ["Apply Morphine", "addons\outbreak_code\actions\apply_morphine.sqf", _cursorTarget, 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_applyMorphine;
@@ -77,7 +78,9 @@ if (!isNil '_cursorTarget' && !player_performingAction) then {
 
 // misc actions not requiring objects
 
-if (!player_performingAction) then {
+if (!_inVehicle && !player_performingAction) then {
+	
+	diag_log format ["cursortest4"];
 	
 	_surface = surfaceType getPosATL player;
 	_isForest = ["forest", str(_surface)] call fnc_inString;
@@ -108,4 +111,3 @@ if (!player_performingAction) then {
 		action_makeshiftBaseBasic = -1;
 	};
 };
-

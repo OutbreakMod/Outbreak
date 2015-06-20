@@ -17,9 +17,12 @@ _unitIsPlayer = _unit == player;
 _scale = 100;
 _health = _unit getVariable ["health", 0];
 
+_effect = false;
+
 if (_type == 7) then {
 	_unit setVariable ["deathmessage", format["His name was %1 and died from from a high caliber bullet", name _unit], true];
 	_unit setDamage 1;
+	_effect = true;
 };
 
 if (_damage > 0.4) then {
@@ -60,6 +63,7 @@ if (_damage > 0.4) then {
 	};
 	
 	_health = _health - (_damage * _scale);
+	_effect = true;
 };
 
 if (_hit == "leg_l" && _damage > 0.9) then {
@@ -67,24 +71,16 @@ if (_hit == "leg_l" && _damage > 0.9) then {
 	_unit setVariable ["leg_break", true, true];
 	_unit setVariable ["fracture_update", true, true];
 	_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
+	_effect = true;
 
 };
 
 // notify player damage taken
-1 call fnc_damageEffect;
+if (_effect) then {
+	1 call fnc_damageEffect;
+};
 
 // set new health
 _unit setVariable ["health", _health];
-
-diag_log str(_this);
-
-/*15:54:01 "[B Alpha 2-3:1 (AmazingAussie),"head",0.37478,<NULL-object>,""]"
-15:54:01 "[B Alpha 2-3:1 (AmazingAussie),"",2.23612,<NULL-object>,""]"
-15:54:01 "[B Alpha 2-3:1 (AmazingAussie),"",0.43551,B Alpha 2-3:1 (AmazingAussie),""]"
-15:54:01 "[B Alpha 2-3:1 (AmazingAussie),"head",0.37478,B Alpha 2-3:1 (AmazingAussie),""]"
-15:54:01 "[B Alpha 2-3:1 (AmazingAussie),"body",11.1806,B Alpha 2-3:1 (AmazingAussie),""]"
-15:54:01 "[B Alpha 2-3:1 (AmazingAussie),"hand_l",0.845738,B Alpha 2-3:1 (AmazingAussie),""]"
-15:54:01 "[B Alpha 2-3:1 (AmazingAussie),"leg_l",1.11806,B Alpha 2-3:1 (AmazingAussie),""]"*/
-
 
 0;

@@ -35,7 +35,7 @@ if (_check == "health") then {
 };
 
 if (_check == "blood") then {
-	if (player getVariable ["bloods", 6000] < 0) then {
+	if (player getVariable ["blood", 6000] < 0) then {
 		player setDamage 1;
 	};
 };

@@ -8,9 +8,8 @@ private ["_animation", "_animState", "_loop", "_started", "_finished", "_type", 
 _loop = true;
 _target = _this select 3;
 
-if (!([player, "sc_morphine", 1] call fnc_hasItem)) exitWith {
-	cutText ["I don't have morphine", "PLAIN DOWN"];
-};
+player removeAction action_applyMorphine;
+action_applyMorphine = -1;
 
 player_performingAction = true;
 

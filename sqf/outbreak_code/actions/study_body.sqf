@@ -10,7 +10,7 @@ _unit = (_this select 3) select 1;
 
 _loop = true;
 
-player removeAction action_gutAnimal;
-action_gutAnimal = -1;
+player removeAction action_studyBody;
+action_studyBody = -1;
 
 cutText [format["%1", _unit getVariable ["deathmessage", "His name was unknown and died from unknown"]], "PLAIN DOWN"];
