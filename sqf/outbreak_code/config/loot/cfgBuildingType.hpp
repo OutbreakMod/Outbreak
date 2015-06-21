@@ -2,6 +2,7 @@ class CfgBuildingType
 {
 	class Default {
 		lootMax = 0;
+		lootRespawnSeconds = 300; // default 5 minute respawn timer
 	}
 	
 	// Military
@@ -9,36 +10,42 @@ class CfgBuildingType
 		lootMin = 1;
 		lootCategories[] = {"GeneralTools", "AssaultRifles", "MilitaryTools", "CivillianBackpacks", "Industrial", "Magazines", "SubmachineGuns"};
 		positions[] = {{-13.0562,-17.6318,-5.87253},{-12.9907,20.873,-5.87253},{12.7217,22.6377,-5.87253},{1.80469,3.94238,-5.87253},{13.1997,-18.3457,-5.87253}};
+		lootRespawnSeconds = 600;
 	};
 	
 	class Land_Mil_Barracks_i : Default {
 		lootMin = 4;
 		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "SniperRifles", "Magazines", "SubmachineGuns", "Barracks"};
 		positions[] = {{4.56494,-2.67383,-1.14822},{0.312988,1.54492,-1.09824},{-2.95361,1.49414,-1.11823},{-3.39111,-1.99023,-0.708221},{-6.68604,-1,0.0917664},{-8.94238,-2.52441,-1.09824},{-0.59668,-1.49609,-1.10825},{3.03467,-1.00586,0.0917664},{-0.214355,-2.19531,0.0917664},{-8.93018,1.53906,-1.09824}};
+		lootRespawnSeconds = 1200; // 20 mins for high value loot
 	};
 	
 	class Land_Mil_ControlTower : Default {
 		lootMin = 2;
 		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Magazines", "SubmachineGuns"};
 		positions[] = {{7.33203,-1.104,-1.0787},{2.00684,-0.88623,-1.0787},{6.10938,3.34473,-1.0787},{1.90332,3.67188,-5.51367},{8.71387,3.8042,-9.6387}};
+		lootRespawnSeconds = 600;
 	};
 	
 	class CampEast_EP1 : Default {
 		lootMin = 0;
 		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "MedicalGeneral", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
 		positions[] = {{-0.670898,0.95459,-1.31049},{1.68506,-2.43384,-1.31049},{-1.76318,-1.62646,-1.31049}};
+		lootRespawnSeconds = 600;
 	};
 	
 	class CampEast : Default {
 		lootMin = 0;
 		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "MedicalGeneral", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
 		positions[] = {{-0.670898,0.95459,-1.31049},{1.68506,-2.43384,-1.31049},{-1.76318,-1.62646,-1.31049}};
+		lootRespawnSeconds = 600;
 	};
 	
 	class Land_tent_east : Default {
 		lootMin = 0;
 		lootCategories[] = {"GeneralTools", "MilitaryTools", "AssaultRifles", "CivillianPistols", "Medical", "MedicalGeneral", "CivillianFoodStorage", "Magazines", "SubmachineGuns"};
 		positions[] = {{-0.670898,0.95459,-1.71049},{1.68506,-2.43384,-1.71049},{-1.76318,-1.62646,-1.71049}};
+		lootRespawnSeconds = 600;
 	};
 	
 	// medical
@@ -151,31 +158,31 @@ class CfgBuildingType
 	
 	class Land_Farm_Cowshed_a: Default {
 		lootMin = 2;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Hunting", "CivillianMagazines"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "CivillianMagazines", "Farm"};
 		positions[] = {{-1.06836,-5.92163,-3.08763},{1.69043,-4.91089,-3.08763},{5.8833,-6.15381,-3.08763},{8.83984,-5.60278,-3.08763},{9.74023,-2.48657,-3.08763},{2.88428,-2.34546,-3.08763},{7.88037,2.94214,-3.08763}};
 	};
 	
 	class Land_Farm_Cowshed_b: Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Hunting", "CivillianMagazines"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Farm", "CivillianMagazines"};
 		positions[] = {{-3.26782,2.71875,-3.0311},{5.41699,-2.57813,-3.04111}};
 	};
 	
 	class Land_Farm_Cowshed_c: Default {
 		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Hunting", "CivillianMagazines"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Farm", "CivillianMagazines"};
 		positions[] = {{0.625,-2.61133,-3.06583}};
 	};
 	
 	class Land_stodola_old_open: Default {
 		lootMin = 2;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Hunting", "CivillianMagazines"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Farm", "CivillianMagazines"};
 		positions[] = {{2.5437,-10.6599,2.96444},{-0.4021,-10.6228,2.96444},{-2.56641,-10.8538,-0.995487},{4.6665,3.45386,-5.08055},{-2.24414,10.396,-5.08055},{3.08691,9.24976,-5.08055},{-1.12744,10.5359,-0.993513},{-1.27563,10.6184,2.96444},{2.99268,10.7668,2.96444},{4.35425,-10.5923,-5.08055},{-2.47363,-5.49194,-5.08055}};
 	};
 	
 	class Land_stodola_open: Default {
 		lootMin = 1;
-		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Hunting", "CivillianMagazines"};
+		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "Farm", "CivillianMagazines"};
 		positions[] = {{-3.77881,6.2478,-4.11348},{1.59106,6.31494,-4.10928},{-3.94727,-1.95605,-4.15359},{-0.440918,-3.91187,-4.1938}};
 	};
 	
@@ -183,6 +190,7 @@ class CfgBuildingType
 		lootMin = 0;
 		lootCategories[] = {"GeneralTools", "CivillianFoodStorage", "MiscMedical", "Hunting", "Magazines"};
 		positions[] = {{-0.923828,-0.808594,1.08539},{0.419922,-0.237305,1.08539}};
+		lootRespawnSeconds = 30; // ten minutes
 	};
 	//Land_Ind_Workshop01_01
 	//Land_Ind_Workshop01_02

@@ -32,12 +32,12 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		// Study body
 		/////////////////
 		if ((_cursorTarget isKindOf "Man") && (!alive _cursorTarget)) then {
-			if (action_studyBody < 0) then {
-				action_studyBody = player addAction ["Study Body", "addons\outbreak_code\actions\study_body.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+			if (action_studyDeadBody < 0) then {
+				action_studyDeadBody = player addAction ["Study Body", "addons\outbreak_code\actions\study_body.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
 			};
 		} else {
-			player removeAction action_studyBody;
-			action_studyBody = -1;
+			player removeAction action_studyDeadBody;
+			action_studyDeadBody = -1;
 		};
 		
 		///////////////////
@@ -69,8 +69,8 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		action_cookMeat = -1;
 		player removeAction action_gutAnimal;
 		action_gutAnimal = -1;
-		player removeAction action_studyBody;
-		action_studyBody = -1;
+		player removeAction action_studyDeadBody;
+		action_studyDeadBody = -1;
 		player removeAction action_applyMorphine;
 		action_applyMorphine = -1;
 	};

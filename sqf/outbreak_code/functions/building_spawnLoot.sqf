@@ -9,6 +9,7 @@ _config = configFile >> "CfgBuildingType" >> _className;
 _positions = [] + getArray(_config >> "positions");
 _posAmount = count _positions;
 
+_lootRespawn = getNumber(_config >> "lootRespawnSeconds");
 _lootMin = 0 + getNumber(_config >> "lootMin");
 _lootMax = 0 + getNumber(_config >> "lootMax");
 
@@ -23,6 +24,7 @@ if (_lootNumber > _posAmount) then {
 };
 
 _usedPos = [];
+_lootArray = [];
 
 if (_posAmount > 0) then {
 	
@@ -55,8 +57,8 @@ if (_posAmount > 0) then {
 	
 					diag_log format ["Spawned item: %1 at building: %2", _itemClass, _className];
 					
-					// flush loot every 10 minutes
-					_this setVariable ["loottimer", serverTime + (600), true];
+					// flush loot every whatever respawn time is chosen
+					_this setVariable ["loottimer", serverTime + (_lootRespawn), true];
 					
 					// handler for spawning loot
 					_item = [_lootPos, _itemClass, _itemType, _className] call loot_holder;

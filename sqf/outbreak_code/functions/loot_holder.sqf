@@ -3,6 +3,8 @@
 	@author: TheAmazingAussie
 */
 
+private ["_lootPos", "_itemClass", "_itemType", "_buildingClass", "_magazine"];
+
 _lootPos = _this select 0;
 _itemClass = _this select 1;
 _itemType = _this select 2;
@@ -28,14 +30,9 @@ if (_itemType == "gun") then {
 
 	if (_itemClass == "srifle_GM6_LRPS_F") then {
 		_magazine = "5Rnd_127x108_Mag";
-	};	
-	
-	if (_itemClass != "Hatchet") then {
-		_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
-	} else {
-		_weaponHolder addMagazineCargoGlobal ["hatchet_swing", 1];
 	};
 	
+	_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
 	_item = _weaponHolder;
 };
 

@@ -40,28 +40,42 @@ class CfgLootCategories {
 	class AssaultRifles {
 		
 		loot[] = {
-			{"arifle_Katiba_C_ACO_pointer_snds_F","gun",00.3},
-			{"arifle_Katiba_C_F","gun",0.6},
-			{"arifle_MXC_F","gun",0.08},
-			{"arifle_MX_Holo_pointer_F","gun",0.07},
-			{"arifle_MXM_RCO_pointer_snds_F","gun",0.03},
-			{"arifle_Katiba_F","gun",0.08}
+			//{"arifle_Katiba_C_ACO_pointer_snds_F","gun",00.3},
+			//{"arifle_Katiba_C_F","gun",0.6},
+			//{"arifle_MXC_F","gun",0.08},
+			//{"arifle_MX_Holo_pointer_F","gun",0.07},
+			//{"arifle_MXM_RCO_pointer_snds_F","gun",0.03},
+			//{"arifle_Katiba_F","gun",0.08}
+			{"arifle_mas_ak_74m","gun",0.06},
+			{"arifle_mas_aks74","gun",0.07},
+			{"arifle_mas_ak74","gun",0.08},
+			{"arifle_mas_akm","gun",0.05}
 		};
 	};
 	
 	class SubmachineGuns {
 		
 		loot[] = {
-			{"hgun_PDW2000_Holo_F","gun",0.08},
-			{"SMG_01_Holo_F","gun",0.07}
+			{"hgun_PDW2000_Holo_F","gun",0.06},
+			{"SMG_01_Holo_F","gun",0.06}
 			
 		};
 	};
+	
+	class LightMachineGuns {
+		
+		loot[] = {
+			{"hgun_PDW2000_Holo_F","gun",0.06},
+			{"SMG_01_Holo_F","gun",0.06}
+			
+		};
+	};
+	
 	class SniperRifles {
 		
 		loot[] = {
-			{"srifle_DMR_01_DMS_F","gun",0.05},
-			{"LMG_Zafir_F","gun",0.05}, // LMG
+			{"srifle_mas_svd_h","gun",0.03},
+			{"srifle_mas_ksvk_h","gun",0.01}, // LMG
 		};
 	};
 	
@@ -150,7 +164,7 @@ class CfgLootCategories {
 	class CivillianPistols {
 		
 		loot[] = {
-			{"hgun_P07_F","gun",0.06},
+			{"hgun_mas_mak_F","gun",0.06},
 			{"hgun_Pistol_heavy_01_F", "gun",0.04},
 			{"hgun_ACPC2_F", "gun",0.05}
 		};
@@ -173,10 +187,20 @@ class CfgLootCategories {
 	class Hunting {
 		
 		loot[] = {
-			{"Trixie_Enfield", "gun",0.09},
+			{"srifle_mas_m24_v_h","gun",0.3}, //@mas
 			{"Trixie_CZ550", "gun",0.03}
 		};
 	};
+	
+	class Farm {
+		
+		loot[] = {
+			{"Trixie_Enfield", "gun",0.08},
+			{"Trixie_CZ550", "gun",0.03},
+			{"arifle_mas_saiga","gun",0.09}
+		};
+	};
+
 
 	class CivillianBackpacks {
 		
@@ -205,11 +229,13 @@ class CfgLootCategories {
 	class Magazines {
 		
 		loot[] = {
-			{"20Rnd_762x51_Mag", "magazine",0.04},
+			{"20Rnd_762x51_Mag", "magazine",0.04}, 
 			{"5Rnd_127x108_Mag", "magazine",0.04},
-			{"30Rnd_65x39_caseless_green", "magazine",0.06},
-			{"30Rnd_65x39_caseless_mag", "magazine",0.06},
-			{"10Rnd_762x54_Mag","magazine",0.05}
+			{"10Rnd_mas_762x54_mag","magazine",0.02}, // @mas
+			{"5Rnd_mas_762x51_Stanag","magazine",0.03} // @mas
+			{"30Rnd_mas_762x39_mag", "magazine",0.05}, // @mas
+			{"30Rnd_mas_545x39_mag", "magazine",0.06} // @mas	
+			
 		};
 	};
 

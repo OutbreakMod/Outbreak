@@ -14,6 +14,8 @@ _ammo = _this select 4;
 _type = [_damage, _ammo] call fnc_damageType;
 _unitIsPlayer = _unit == player;
 
+if (!_unitIsPlayer) exitWith { 0 };
+
 _scale = 100;
 _health = _unit getVariable ["health", 0];
 
