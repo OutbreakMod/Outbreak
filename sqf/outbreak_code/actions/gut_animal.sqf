@@ -77,7 +77,7 @@ if (_finished) then {
 	player setVariable ["action_interrupt", false];
 	cutText ["I have successfully gutted the animal, meat is next to the carcass", "PLAIN DOWN"];
 	
-	_configMeat = configFile >> "CfgItems" >> "GutAnimal" >> _type;
+	_configMeat = configFile >> "CfgItems" >> "cfgGutAnimal" >> _type;
 	_rawMeat = getText(_configMeat >> "raw");
 	_amount = getNumber(_configMeat >> "yield");
 

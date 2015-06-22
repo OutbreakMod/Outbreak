@@ -17,10 +17,10 @@ if (_lootMax == 0) then {
 	_lootMax = _posAmount;
 };
 
-_lootNumber = floor (random (_lootMax + 1) - _lootMin) + _lootMin;
+_lootNumber = (floor (random _lootMax + 1) + _lootMin);
 
 if (_lootNumber > _posAmount) then {
-	_lootNumber = floor random _posAmount;
+	_lootNumber = _lootNumber - 1;
 };
 
 _usedPos = [];

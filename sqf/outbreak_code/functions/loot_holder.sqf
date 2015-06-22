@@ -32,6 +32,10 @@ if (_itemType == "gun") then {
 		_magazine = "5Rnd_127x108_Mag";
 	};
 	
+	if (_itemClass == "hgun_mas_grach_F") then {
+		_magazine = "15Rnd_mas_9x21_Mag";
+	};
+	
 	_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
 	_item = _weaponHolder;
 };

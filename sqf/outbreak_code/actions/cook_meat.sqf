@@ -67,7 +67,7 @@ if (_finished) then {
 	_meat = ["sc_rawmutton"];
 	
 	{
-		_configMeat = configFile >> "CfgItems" >> "Meat" >> _x;
+		_configMeat = configFile >> "CfgItems" >> "cfgMeat" >> _x;
 		_cookedMeat = getText(_configMeat >> "cooked");
 	
 		_countMeat = ([player, _x] call fnc_countItems);

@@ -14,8 +14,16 @@ class CfgLootCategories {
 		loot[] = {
 			{"ItemGPS","item",0.05},
 			{"sc_mre","item",0.06},
-			{"NVGoggles","item",0.01},
-			{"Rangefinder","item",0.02}
+			{"NVGoggles","single",0.01},
+			{"Rangefinder","single",0.02}
+		};
+	};
+	
+	class MilitarySpecial {
+		
+		loot[] = {
+			{"NVGoggles","single",0.01},
+			{"Rangefinder","single",0.02}
 		};
 	};
 
@@ -27,15 +35,19 @@ class CfgLootCategories {
 		};
 	};
 	
-	class Barracks {
+	class Attachments {
 		
 		loot[] = {
-			{"hgun_PDW2000_Holo_snds_F","gun",0.04},
-			{"SMG_01_Holo_pointer_snds_F","gun",0.04},
-			{"hgun_Pistol_heavy_01_snds_F","gun",0.03},
-			{"hgun_Rook40_snds_F","gun",0.04}
+			{"optic_mas_acog_eo", "item",0.01},
+			{"optic_ACO", "item",0.01},
+			{"optic_mas_Holosight_blk", "item",0.01},
+			{"muzzle_mas_snds_M", "item",0.01},
+			{"optic_mas_kobra", "item",0.01},
+			{"muzzle_mas_snds_AK", "item",0.01},
+			{"optic_mas_PSO_eo", "item",0.01},
+			{"optic_mas_acog_eo","item",0.01}
 		};
-	};	
+	};
 
 	class AssaultRifles {
 		
@@ -48,16 +60,19 @@ class CfgLootCategories {
 			//{"arifle_Katiba_F","gun",0.08}
 			{"arifle_mas_ak_74m","gun",0.06},
 			{"arifle_mas_aks74","gun",0.07},
-			{"arifle_mas_ak74","gun",0.08},
-			{"arifle_mas_akm","gun",0.05}
+			{"arifle_mas_ak74","gun",0.06},
+			{"arifle_mas_akm","gun",0.05},
+			{"arifle_mas_m14_a","gun",0.03}
 		};
 	};
 	
 	class SubmachineGuns {
 		
 		loot[] = {
-			{"hgun_PDW2000_Holo_F","gun",0.06},
-			{"SMG_01_Holo_F","gun",0.06}
+			{"hgun_PDW2000_Holo_F","gun",0.03},
+			{"SMG_01_Holo_F","gun",0.03},
+			{"hgun_mas_sa61_F","gun",0.05},
+			{"arifle_mas_bizon","gun",0.04}// @mas
 			
 		};
 	};
@@ -66,7 +81,7 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"hgun_PDW2000_Holo_F","gun",0.06},
-			{"SMG_01_Holo_F","gun",0.06}
+			{"LMG_mas_pkm_F","gun",0.03}
 			
 		};
 	};
@@ -74,8 +89,8 @@ class CfgLootCategories {
 	class SniperRifles {
 		
 		loot[] = {
-			{"srifle_mas_svd_h","gun",0.03},
-			{"srifle_mas_ksvk_h","gun",0.01}, // LMG
+			{"srifle_mas_svd_h","gun",0.02},
+			{"srifle_mas_ksvk_h","gun",0.01},
 		};
 	};
 	
@@ -83,7 +98,8 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"srifle_LRR_LRPS_F","gun",0.01},
-			{"srifle_GM6_LRPS_F","gun",0.02}
+			{"srifle_GM6_LRPS_F","gun",0.01},
+			{"srifle_mas_m107_h","gun",0.01} // @mas m107
 		};
 	};
 	
@@ -91,13 +107,11 @@ class CfgLootCategories {
 	class Helicrash {
 		
 		loot[] = {
-			{"arifle_TRG21_GL_ACO_pointer_F","gun",0.05},
-			{"100Rnd_127x99_mag","item",0.08},
-			{"outbreak_tent","item",0.2}, // 20% 
-			{"srifle_EBR_ACO_F","gun",0.06},
-			{"srifle_EBR_ARCO_pointer_F","gun",0.05},
-			{"srifle_EBR_ARCO_pointer_snds_F","gun",0.04},
-			{"srifle_EBR_DMS_pointer_snds_F","gun",0.04}
+			{"outbreak_tent","single",0.1}, // 10% 
+			{"arifle_mas_m4","gun",0.05}, // @mas
+			{"arifle_mas_hk417c","gun",0.04}, // @mas
+			{"arifle_mas_m16","gun",0.05}, // @mas
+			{"arifle_mas_fal","gun",0.03} // @mas
 		};
 	};
 	
@@ -143,7 +157,7 @@ class CfgLootCategories {
 			{"sc_candybar", "item",0.03},
 			{"sc_soda", "item",0.06},
 			{"sc_juicebox", "item",0.06},
-			{"sc_chips", "item", 0.1},
+			{"sc_chips", "item", 0.01},
 			{"sc_cannedfood","item", 0.05}
 		};
 	};
@@ -156,17 +170,8 @@ class CfgLootCategories {
 			{"sc_cereal", "item",0.03},
 			{"sc_soda", "item",0.04},
 			{"sc_juicebox", "item",0.04},
-			{"sc_chips", "item", 0.3},
+			{"sc_chips", "item", 0.03},
 			{"sc_cannedfood","item", 0.06}
-		};
-	};
-
-	class CivillianPistols {
-		
-		loot[] = {
-			{"hgun_mas_mak_F","gun",0.06},
-			{"hgun_Pistol_heavy_01_F", "gun",0.04},
-			{"hgun_ACPC2_F", "gun",0.05}
 		};
 	};
 	
@@ -229,21 +234,31 @@ class CfgLootCategories {
 	class Magazines {
 		
 		loot[] = {
-			{"20Rnd_762x51_Mag", "magazine",0.04}, 
+			{"20Rnd_mas_762x51_Stanag", "magazine",0.02},
 			{"5Rnd_127x108_Mag", "magazine",0.04},
 			{"10Rnd_mas_762x54_mag","magazine",0.02}, // @mas
-			{"5Rnd_mas_762x51_Stanag","magazine",0.03} // @mas
+			{"5Rnd_mas_762x51_Stanag","magazine",0.03}, // @mas
 			{"30Rnd_mas_762x39_mag", "magazine",0.05}, // @mas
 			{"30Rnd_mas_545x39_mag", "magazine",0.06} // @mas	
 			
+		};
+	};
+	
+	class CivillianPistols {
+		
+		loot[] = {
+			{"hgun_mas_mak_F","gun",0.06}, // @mas makarov
+			{"hgun_mas_grach_F", "gun",0.04} // @mas russian mil pistol
 		};
 	};
 
 	class CivillianMagazines {
 		
 		loot[] = {
-			{"Trixie_CZ550_Mag","magazine",0.07},
-			{"Trixie_Enfield_Mag","magazine",0.08}
+			{"Trixie_CZ550_Mag","magazine",0.02},
+			{"Trixie_Enfield_Mag","magazine",0.03},
+			{"8Rnd_mas_9x18_Mag","magazine",0.05},
+			{"15Rnd_mas_9x21_Mag","magazine",0.04}
 		};
 	};
 };

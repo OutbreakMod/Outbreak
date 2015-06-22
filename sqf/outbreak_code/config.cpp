@@ -7,15 +7,13 @@ class CfgPatches {
 	};
 };
 
-#include "config\cfgWeapons.hpp"
-#include "config\cfgVehicles.hpp"
-#include "config\cfgMagazines.hpp"
-#include "config\cfgAmmo.hpp"
+// configuration files
+#include "config\cfgItems\cfgItems.hpp"
+#include "config\cfgVehicles\cfgVehicles.hpp"
+
+// Player music
 #include "config\cfgMusic.hpp"
-#include "config\cfgItems.hpp"
 
-#include "config\cfgGesturesMale.hpp"
-#include "config\cfgMovesBasic.hpp"
-
-#include "config\loot\cfgBuildingType.hpp"
-#include "config\loot\cfgLootCategories.hpp"
+// building loot
+#include "config\cfgLoot\cfgBuildingType.hpp"
+#include "config\cfgLoot\cfgLootCategories.hpp"
