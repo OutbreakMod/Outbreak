@@ -120,20 +120,70 @@ class CfgBuildingType
 		lootCategories[] = 
 		{
 			"GeneralTools", 
-			"MilitaryTools", 
 			"AssaultRifles", 
 			"CivillianPistols", 
 			"Medical", 
 			"MedicalGeneral", 
 			"CivillianFoodStorage",
 			"Magazines", 
-			"SubmachineGuns", 
 			"Attachments"
 		};
 		positions[] = {{-2.44727,0.250977,-1.70563},{-2.44873,3.00293,-1.70285}};
 	};
 	
-	// medical
+	// heli crash 
+	
+	//NATO
+	class Land_Wreck_Heli_Attack_02_F : Default {
+		lootMin = 0;
+		lootCategories[] = {
+			"GeneralTools", 
+			"MilitaryTools", 
+			"USHelicrash", 
+			"HighCaliberRifles", 
+			"Medical"
+		};
+		positions[] = {};
+	};
+
+	class MOD_UH1YWreck : Default {
+		lootMin = 0;
+		lootCategories[] = {
+			"GeneralTools", 
+			"MilitaryTools", 
+			"USHelicrash", 
+			"HighCaliberRifles", 
+			"Medical"
+		};
+		positions[] = {};
+	};	
+	
+	//RUSSIAN
+	class MOD_Mi8Wreck : Default {
+		lootMin = 0;
+		lootCategories[] = {
+			"GeneralTools", 
+			"MilitaryTools", 
+			"RUHelicrash", 
+			"SniperRifles", 
+			"Medical"
+		};
+		positions[] = {};
+	};
+
+	class Mi8Wreck : Default {
+		lootMin = 0;
+		lootCategories[] = {
+			"GeneralTools", 
+			"MilitaryTools", 
+			"RUHelicrash", 
+			"SniperRifles", 
+			"Medical"
+		};
+		positions[] = {};
+	};
+	
+	// Medical
 	
 	class Land_A_hospital : Default {
 		lootMin = 3;
@@ -230,14 +280,7 @@ class CfgBuildingType
 		lootCategories[] = {"GeneralTools", "CivillianPistols", "CivillianClothes", "CivillianBackpacks", "CivillianMagazines"};
 		positions[] = {{-7.84912,6.3855,-4.528},{3.84424,3.27051,-4.528},{-0.0383301,3.51733,-4.528},{5.37695,5.63379,-4.528},{15.5393,-1.90015,-4.528},{13.8057,-2.3811,-4.528},{10.114,3.44849,-4.528},{10.3008,6.32495,-4.528},{1.71021,1.66675,-4.528},{1.58032,5.87671,-2.028},{-0.599854,7.08984,-2.028},{3.87769,6.84229,-2.028},{-7.6709,6.72485,-2.038},{-4.729,4.19556,-2.028},{-7.93091,3.2041,-2.038},{10.2354,-1.9187,-2.018},{6.9812,-4.30933,-2.038},{15.4075,6.03198,-2.038},{13.9285,3.40649,-2.038},{0.163086,3.43286,0.472002},{7.13892,3.64844,0.471998},{1.71973,-1.40967,6.72491},{-0.443359,0.61499,-2.028},{-5.22144,-3.69971,-2.028},{3.50342,5.28027,-3.668},{5.68286,4.95898,-4.048},{0.895508,4.98511,-3.288},{2.42017,4.98291,-2.908},{15.8838,-2.62256,-2.908},{4.74072,6.75391,-0.938002},{7.69507,-0.465332,-1.618},{10.7341,-1.90918,-1.158},{6.34229,-2.73242,-0.398003},{-4.86572,7.16187,-0.988003},{-4.27173,4.2207,-0.778002},{-4.56543,5.48193,-1.348},{-8.21387,2.04932,-2.028},{12.6631,2.83398,-1.918},{12.8892,2.82178,-0.778002},{11.5281,7.08887,-1.338},{11.3428,5.02344,-1.158},{11.636,6.34937,-1.338},{-3.802,4.13525,1.71201},{0.720947,3.55957,0.952003},{-3.78076,4.44727,0.952003},{10.7363,3.28833,-3.668},{6.46191,5.13013,-2.908},{7.03906,6.25537,-4.098},{6.68823,5.81177,-3.818},{10.7056,4.13135,-3.288},{2.86792,-0.489014,6.72491}};
 	};
-	
-	// heli crash site
-	
-	class Land_Wreck_Heli_Attack_02_F : Default {
-		lootMin = 0;
-		lootCategories[] = {"GeneralTools", "MilitaryTools", "Helicrash", "HighCaliberRifles", "Medical"};
-		positions[] = {};
-	};
+
 	
 	// Industrial
 	

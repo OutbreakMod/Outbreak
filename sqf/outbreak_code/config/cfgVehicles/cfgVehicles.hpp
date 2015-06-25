@@ -23,4 +23,8 @@ class CfgVehicles
 	
 	class Land_Slum_House02_F;
 	#include "PlayerBases\OutbreakShackV1.hpp"
+	
+	class House;
+	#include "Wrecks\UH1YWreck.hpp"
+	#include "Wrecks\Mi8Wreck.hpp"
 };

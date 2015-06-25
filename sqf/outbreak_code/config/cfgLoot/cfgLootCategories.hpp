@@ -3,9 +3,9 @@ class CfgLootCategories {
 	class GeneralTools {
 		
 		loot[] = {
-			{"ItemMap","item",0.07},
-			{"ItemWatch","item",0.03},
-			{"Binocular","item",0.06},
+			{"ItemMap","single",0.07},
+			{"ItemWatch","single",0.03},
+			{"Binocular","single",0.06},
 		};
 	};
 	
@@ -32,6 +32,27 @@ class CfgLootCategories {
 		loot[] = {
 			{"sc_matchbook","item",0.08},
 			{"sc_knife","item",0.06}
+		};
+	};
+	
+	class USHelicrash {
+		
+		loot[] = {
+			{"outbreak_tent","single",0.1}, // 10% 
+			{"arifle_mas_m4","gun",0.05}, // @mas
+			{"arifle_mas_hk417c","gun",0.04}, // @mas
+			{"arifle_mas_m16","gun",0.05}, // @mas
+			{"arifle_mas_fal","gun",0.03} // @mas
+		};
+	};
+	
+	class RUHelicrash {
+		
+		loot[] = {
+			{"arifle_mas_asval_h","gun",0.03}, // 10% 
+			{"LMG_mas_rpk_F","gun",0.05}, // @mas
+			{"LMG_mas_pkm_F","gun",0.04}, // @mas
+			{"srifle_mas_vss_h","gun",0.05} // @mas
 		};
 	};
 	
@@ -100,18 +121,6 @@ class CfgLootCategories {
 			{"srifle_LRR_LRPS_F","gun",0.01},
 			{"srifle_GM6_LRPS_F","gun",0.01},
 			{"srifle_mas_m107_h","gun",0.01} // @mas m107
-		};
-	};
-	
-		
-	class Helicrash {
-		
-		loot[] = {
-			{"outbreak_tent","single",0.1}, // 10% 
-			{"arifle_mas_m4","gun",0.05}, // @mas
-			{"arifle_mas_hk417c","gun",0.04}, // @mas
-			{"arifle_mas_m16","gun",0.05}, // @mas
-			{"arifle_mas_fal","gun",0.03} // @mas
 		};
 	};
 	
