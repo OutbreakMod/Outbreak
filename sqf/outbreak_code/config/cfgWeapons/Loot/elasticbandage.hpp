@@ -6,6 +6,6 @@ class elasticbandage: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\elasticbandage.paa";
+	picture = "\outbreak_assets\textures\items\elasticbandage.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class human_flesh: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\humanflesh.paa";
+	picture = "\outbreak_assets\textures\items\humanflesh.paa";
 	descriptionShort = "";
 };

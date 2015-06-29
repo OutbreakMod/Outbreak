@@ -6,6 +6,6 @@ class pressure_cooker: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\pressurecooker.paa";
+	picture = "\outbreak_assets\textures\items\pressurecooker.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class keycard: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\keycard.paa";
+	picture = "\outbreak_assets\textures\items\keycard.paa";
 	descriptionShort = "";
 };

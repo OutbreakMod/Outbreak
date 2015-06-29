@@ -6,6 +6,6 @@ class mortarshell: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\mortarshell.paa";
+	picture = "\outbreak_assets\textures\items\mortarshell.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class pcpart2: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\pcpart2.paa";
+	picture = "\outbreak_assets\textures\items\pcpart2.paa";
 	descriptionShort = "";
 };

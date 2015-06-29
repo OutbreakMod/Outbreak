@@ -6,6 +6,6 @@ class bible: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\bible.paa";
+	picture = "\outbreak_assets\textures\items\bible.paa";
 	descriptionShort = "";
 };

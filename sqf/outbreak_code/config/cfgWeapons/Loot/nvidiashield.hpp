@@ -6,6 +6,6 @@ class nvidiashield: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\nvidiashield.paa";
+	picture = "\outbreak_assets\textures\items\nvidiashield.paa";
 	descriptionShort = "";
 };

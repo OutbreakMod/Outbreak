@@ -6,6 +6,6 @@ class o2tank: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\o2tank.paa";
+	picture = "\outbreak_assets\textures\items\o2tank.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class headset: ItemWatch
 		{
 				mass = 3;
 		}; 
-	picture = "\outbreak_assets\items\headset.paa";
+	picture = "\outbreak_assets\textures\items\headset.paa";
 	descriptionShort = "";
 };

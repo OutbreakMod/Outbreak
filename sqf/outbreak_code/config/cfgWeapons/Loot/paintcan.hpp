@@ -6,6 +6,6 @@ class paintcan: ItemWatch
 		{
 				mass = 5;
 		}; 
-	picture = "\outbreak_assets\items\paintcan.paa";
+	picture = "\outbreak_assets\textures\items\paintcan.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class matchbook: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\matchbook.paa";
+	picture = "\outbreak_assets\textures\items\matchbook.paa";
 	descriptionShort = "";
 };

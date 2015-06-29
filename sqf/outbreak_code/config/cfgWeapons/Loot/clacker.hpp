@@ -6,6 +6,6 @@ class clacker: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\clacker.paa";
+	picture = "\outbreak_assets\textures\items\clacker.paa";
 	descriptionShort = "";
 };

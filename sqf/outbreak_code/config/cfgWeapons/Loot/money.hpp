@@ -6,6 +6,6 @@ class money: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\money.paa";
+	picture = "\outbreak_assets\textures\items\money.paa";
 	descriptionShort = "";
 };

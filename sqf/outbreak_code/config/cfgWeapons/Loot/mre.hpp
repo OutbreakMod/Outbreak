@@ -6,6 +6,6 @@ class mre: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\mre.paa";
+	picture = "\outbreak_assets\textures\items\mre.paa";
 	descriptionShort = "";
 };

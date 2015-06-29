@@ -6,6 +6,6 @@ class potato: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\potato.paa";
+	picture = "\outbreak_assets\textures\items\potato.paa";
 	descriptionShort = "";
 };

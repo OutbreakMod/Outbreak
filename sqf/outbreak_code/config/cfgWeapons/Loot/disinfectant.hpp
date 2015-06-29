@@ -6,6 +6,6 @@ class disinfectant: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\disinfectant.paa";
+	picture = "\outbreak_assets\textures\items\disinfectant.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class carbattery: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\carbattery.paa";
+	picture = "\outbreak_assets\textures\items\carbattery.paa";
 	descriptionShort = "";
 };

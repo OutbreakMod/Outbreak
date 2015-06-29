@@ -6,6 +6,6 @@ class meth: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\meth.paa";
+	picture = "\outbreak_assets\textures\items\meth.paa";
 	descriptionShort = "";
 };

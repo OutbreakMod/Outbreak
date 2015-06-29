@@ -6,6 +6,6 @@ class defib: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\defib.paa";
+	picture = "\outbreak_assets\textures\items\defib.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class pet_treats: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\pettreats.paa";
+	picture = "\outbreak_assets\textures\items\pettreats.paa";
 	descriptionShort = "";
 };

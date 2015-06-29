@@ -6,6 +6,6 @@ class files: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\files.paa";
+	picture = "\outbreak_assets\textures\items\files.paa";
 	descriptionShort = "";
 };

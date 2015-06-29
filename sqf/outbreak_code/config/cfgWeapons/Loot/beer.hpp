@@ -6,6 +6,6 @@ class beer: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\beer.paa";
+	picture = "\outbreak_assets\textures\items\beer.paa";
 	descriptionShort = "";
 };

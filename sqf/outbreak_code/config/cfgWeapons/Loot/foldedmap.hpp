@@ -6,6 +6,6 @@ class foldedmap: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\foldedmap.paa";
+	picture = "\outbreak_assets\textures\items\foldedmap.paa";
 	descriptionShort = "";
 };

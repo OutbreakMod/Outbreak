@@ -6,6 +6,6 @@ class twinkies: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\twinkies.paa";
+	picture = "\outbreak_assets\textures\items\twinkies.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class basketball: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\basketball.paa";
+	picture = "\outbreak_assets\textures\items\basketball.paa";
 	descriptionShort = "";
 };

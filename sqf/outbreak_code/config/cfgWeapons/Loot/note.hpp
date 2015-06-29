@@ -6,6 +6,6 @@ class note: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\note.paa";
+	picture = "\outbreak_assets\textures\items\note.paa";
 	descriptionShort = "";
 };

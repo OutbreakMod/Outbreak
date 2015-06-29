@@ -6,6 +6,6 @@ class snoballs: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\snoballs.paa";
+	picture = "\outbreak_assets\textures\items\snoballs.paa";
 	descriptionShort = "";
 };

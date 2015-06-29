@@ -6,6 +6,6 @@ class tire: ItemWatch
 		{
 				mass = 10;
 		}; 
-	picture = "\outbreak_assets\items\tire.paa";
+	picture = "\outbreak_assets\textures\items\tire.paa";
 	descriptionShort = "";
 };

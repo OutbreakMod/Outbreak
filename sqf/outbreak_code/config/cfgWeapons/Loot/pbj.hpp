@@ -6,6 +6,6 @@ class pbj: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\pbj.paa";
+	picture = "\outbreak_assets\textures\items\pbj.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class gum: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\gum.paa";
+	picture = "\outbreak_assets\textures\items\gum.paa";
 	descriptionShort = "";
 };

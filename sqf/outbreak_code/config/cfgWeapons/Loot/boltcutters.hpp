@@ -6,7 +6,7 @@ class boltcutters: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\boltcutters.paa";
+	picture = "\outbreak_assets\textures\items\boltcutters.paa";
 	model = "a3\structures_f\Items\Tools\Pliers_F";
 	descriptionShort = "";
 };

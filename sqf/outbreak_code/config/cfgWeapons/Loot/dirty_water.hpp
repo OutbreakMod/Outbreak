@@ -6,6 +6,6 @@ class dirty_water: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\dirtywater.paa";
+	picture = "\outbreak_assets\textures\items\dirtywater.paa";
 	descriptionShort = "";
 };

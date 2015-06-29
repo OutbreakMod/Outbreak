@@ -6,6 +6,6 @@ class rope: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\rope.paa";
+	picture = "\outbreak_assets\textures\items\rope.paa";
 	descriptionShort = "";
 };

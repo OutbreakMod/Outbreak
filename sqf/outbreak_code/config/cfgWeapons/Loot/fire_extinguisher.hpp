@@ -6,6 +6,6 @@ class fire_extinguisher: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\fireextinguisher.paa";
+	picture = "\outbreak_assets\textures\items\fireextinguisher.paa";
 	descriptionShort = "";
 };

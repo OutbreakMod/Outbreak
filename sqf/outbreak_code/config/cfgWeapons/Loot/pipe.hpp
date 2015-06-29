@@ -6,6 +6,6 @@ class pipe: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\pipe.paa";
+	picture = "\outbreak_assets\textures\items\pipe.paa";
 	descriptionShort = "";
 };

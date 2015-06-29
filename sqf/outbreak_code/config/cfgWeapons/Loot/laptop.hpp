@@ -6,6 +6,6 @@ class laptop: ItemWatch
 		{
 				mass = 10;
 		}; 
-	picture = "\outbreak_assets\items\laptop.paa";
+	picture = "\outbreak_assets\textures\items\laptop.paa";
 	descriptionShort = "";
 };

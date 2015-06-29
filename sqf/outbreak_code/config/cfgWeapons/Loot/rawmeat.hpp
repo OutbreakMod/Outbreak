@@ -6,6 +6,6 @@ class rawmeat: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\rawmeat.paa";
+	picture = "\outbreak_assets\textures\items\rawmeat.paa";
 	descriptionShort = "";
 };

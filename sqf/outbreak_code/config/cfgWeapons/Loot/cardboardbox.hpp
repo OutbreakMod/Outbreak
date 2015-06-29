@@ -6,6 +6,6 @@ class cardboardbox: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\cardboardbox.paa";
+	picture = "\outbreak_assets\textures\items\cardboardbox.paa";
 	descriptionShort = "";
 };

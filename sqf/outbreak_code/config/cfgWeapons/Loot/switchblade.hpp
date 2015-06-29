@@ -6,6 +6,6 @@ class switchblade: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\switchblade.paa";
+	picture = "\outbreak_assets\textures\items\switchblade.paa";
 	descriptionShort = "";
 };

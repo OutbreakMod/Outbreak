@@ -6,6 +6,6 @@ class 3ds: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\3ds.paa";
+	picture = "\outbreak_assets\textures\items\3ds.paa";
 	descriptionShort = "";
 };

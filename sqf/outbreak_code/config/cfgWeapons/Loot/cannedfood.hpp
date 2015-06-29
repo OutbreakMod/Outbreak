@@ -6,6 +6,6 @@ class cannedfood: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\cannedfood.paa";
+	picture = "\outbreak_assets\textures\items\cannedfood.paa";
 	descriptionShort = "";
 };

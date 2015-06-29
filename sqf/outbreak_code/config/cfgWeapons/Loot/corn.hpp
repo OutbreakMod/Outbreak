@@ -6,6 +6,6 @@ class corn: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\corn.paa";
+	picture = "\outbreak_assets\textures\items\corn.paa";
 	descriptionShort = "";
 };

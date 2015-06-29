@@ -6,6 +6,6 @@ class soccerball: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\soccerball.paa";
+	picture = "\outbreak_assets\textures\items\soccerball.paa";
 	descriptionShort = "";
 };

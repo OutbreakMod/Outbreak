@@ -6,6 +6,6 @@ class tape: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\tape.paa";
+	picture = "\outbreak_assets\textures\items\tape.paa";
 	descriptionShort = "";
 };

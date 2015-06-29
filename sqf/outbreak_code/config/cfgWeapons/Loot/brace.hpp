@@ -6,6 +6,6 @@ class brace: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\brace.paa";
+	picture = "\outbreak_assets\textures\items\brace.paa";
 	descriptionShort = "";
 };

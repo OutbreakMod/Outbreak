@@ -6,6 +6,6 @@ class shiv: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\shiv.paa";
+	picture = "\outbreak_assets\textures\items\shiv.paa";
 	descriptionShort = "";
 };

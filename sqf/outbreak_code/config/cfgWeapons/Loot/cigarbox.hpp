@@ -6,6 +6,6 @@ class cigarbox: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\cigarbox.paa";
+	picture = "\outbreak_assets\textures\items\cigarbox.paa";
 	descriptionShort = "";
 };

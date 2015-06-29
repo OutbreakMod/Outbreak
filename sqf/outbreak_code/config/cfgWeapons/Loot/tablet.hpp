@@ -6,6 +6,6 @@ class tablet: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\tablet.paa";
+	picture = "\outbreak_assets\textures\items\tablet.paa";
 	descriptionShort = "";
 };

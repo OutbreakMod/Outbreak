@@ -6,6 +6,6 @@ class blood: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\blood.paa";
+	picture = "\outbreak_assets\textures\items\blood.paa";
 	descriptionShort = "";
 };

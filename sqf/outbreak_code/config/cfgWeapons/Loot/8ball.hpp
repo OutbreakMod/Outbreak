@@ -6,6 +6,6 @@ class 8ball: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\8ball.paa";
+	picture = "\outbreak_assets\textures\items\8ball.paa";
 	descriptionShort = "";
 };

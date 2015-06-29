@@ -6,6 +6,6 @@ class chips: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\chips.paa";
+	picture = "\outbreak_assets\textures\items\chips.paa";
 	descriptionShort = "A bag of potato chips";
 };

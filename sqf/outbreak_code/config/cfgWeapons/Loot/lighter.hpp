@@ -6,6 +6,6 @@ class lighter: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\lighter.paa";
+	picture = "\outbreak_assets\textures\items\lighter.paa";
 	descriptionShort = "";
 };

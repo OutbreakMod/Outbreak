@@ -6,7 +6,7 @@ class epinephrine: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\epinephrine.paa";
+	picture = "\outbreak_assets\textures\items\epinephrine.paa";
 	model = "a3\structures_f\Items\Stationery\PencilGreen_F";
 	descriptionShort = "Helps coming back into conciousness";
 };

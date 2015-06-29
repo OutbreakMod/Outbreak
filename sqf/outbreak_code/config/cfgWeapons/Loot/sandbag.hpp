@@ -6,6 +6,6 @@ class sandbag: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\sandbag.paa";
+	picture = "\outbreak_assets\textures\items\sandbag.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class psvita: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\psvita.paa";
+	picture = "\outbreak_assets\textures\items\psvita.paa";
 	descriptionShort = "";
 };

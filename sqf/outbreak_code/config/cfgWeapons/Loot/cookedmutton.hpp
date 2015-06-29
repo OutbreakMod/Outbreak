@@ -6,6 +6,6 @@ class cookedmutton: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\cookedmeat.paa";
+	picture = "\outbreak_assets\textures\items\cookedmeat.paa";
 	descriptionShort = "Freshly cooked mutton from sheep";
 };

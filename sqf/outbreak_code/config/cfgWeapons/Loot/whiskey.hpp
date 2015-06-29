@@ -6,6 +6,6 @@ class whiskey: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\whiskey.paa";
+	picture = "\outbreak_assets\textures\items\whiskey.paa";
 	descriptionShort = "";
 };

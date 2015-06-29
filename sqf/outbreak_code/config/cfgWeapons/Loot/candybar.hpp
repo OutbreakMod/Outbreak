@@ -6,6 +6,6 @@ class candybar: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\snickers.paa";
+	picture = "\outbreak_assets\textures\items\snickers.paa";
 	descriptionShort = "";
 };

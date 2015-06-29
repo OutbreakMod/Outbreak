@@ -6,6 +6,6 @@ class transmitter: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\transmitter.paa";
+	picture = "\outbreak_assets\textures\items\transmitter.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class bandage: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\bandage.paa";
+	picture = "\outbreak_assets\textures\items\bandage.paa";
 	descriptionShort = "Stops bleeding open wounds and potential infection";
 };

@@ -6,6 +6,6 @@ class battery: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\battery.paa";
+	picture = "\outbreak_assets\textures\items\battery.paa";
 	descriptionShort = "";
 };

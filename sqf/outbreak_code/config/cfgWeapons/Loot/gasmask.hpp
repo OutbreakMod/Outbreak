@@ -6,6 +6,6 @@ class gasmask: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\gasmask.paa";
+	picture = "\outbreak_assets\textures\items\gasmask.paa";
 	descriptionShort = "";
 };

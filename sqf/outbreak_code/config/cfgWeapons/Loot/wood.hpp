@@ -6,6 +6,6 @@ class wood: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\wood.paa";
+	picture = "\outbreak_assets\textures\items\wood.paa";
 	descriptionShort = "";
 };

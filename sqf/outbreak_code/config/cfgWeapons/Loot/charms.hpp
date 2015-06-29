@@ -6,6 +6,6 @@ class charms: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\charms.paa";
+	picture = "\outbreak_assets\textures\items\charms.paa";
 	descriptionShort = "";
 };

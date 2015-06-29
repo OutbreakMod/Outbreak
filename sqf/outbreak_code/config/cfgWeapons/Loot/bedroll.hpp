@@ -6,6 +6,6 @@ class bedroll: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\bedroll.paa";
+	picture = "\outbreak_assets\textures\items\bedroll.paa";
 	descriptionShort = "";
 };

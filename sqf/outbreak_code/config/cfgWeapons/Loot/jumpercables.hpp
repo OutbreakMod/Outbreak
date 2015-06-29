@@ -6,6 +6,6 @@ class jumpercables: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\jumpercables.paa";
+	picture = "\outbreak_assets\textures\items\jumpercables.paa";
 	descriptionShort = "";
 };

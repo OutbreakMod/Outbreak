@@ -6,6 +6,6 @@ class book: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\book.paa";
+	picture = "\outbreak_assets\textures\items\book.paa";
 	descriptionShort = "";
 };

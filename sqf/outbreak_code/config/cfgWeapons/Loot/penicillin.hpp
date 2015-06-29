@@ -6,6 +6,6 @@ class penicillin: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\penicillin.paa";
+	picture = "\outbreak_assets\textures\items\penicillin.paa";
 	descriptionShort = "";
 };

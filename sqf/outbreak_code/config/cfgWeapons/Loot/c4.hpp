@@ -6,6 +6,6 @@ class c4: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\c4.paa";
+	picture = "\outbreak_assets\textures\items\c4.paa";
 	descriptionShort = "";
 };

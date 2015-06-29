@@ -6,6 +6,6 @@ class bulletcasings: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\bulletcasings.paa";
+	picture = "\outbreak_assets\textures\items\bulletcasings.paa";
 	descriptionShort = "";
 };

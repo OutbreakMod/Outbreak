@@ -6,6 +6,6 @@ class anarchistcookbook: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\anarchistcookbook.paa";
+	picture = "\outbreak_assets\textures\items\anarchistcookbook.paa";
 	descriptionShort = "";
 };

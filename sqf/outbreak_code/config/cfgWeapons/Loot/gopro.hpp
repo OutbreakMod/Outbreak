@@ -6,6 +6,6 @@ class gopro: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\gopro.paa";
+	picture = "\outbreak_assets\textures\items\gopro.paa";
 	descriptionShort = "";
 };

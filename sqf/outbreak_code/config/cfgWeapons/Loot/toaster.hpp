@@ -6,6 +6,6 @@ class toaster: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\toaster.paa";
+	picture = "\outbreak_assets\textures\items\toaster.paa";
 	descriptionShort = "";
 };

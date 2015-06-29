@@ -6,6 +6,6 @@ class usbdrive: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\usbdrive.paa";
+	picture = "\outbreak_assets\textures\items\usbdrive.paa";
 	descriptionShort = "";
 };

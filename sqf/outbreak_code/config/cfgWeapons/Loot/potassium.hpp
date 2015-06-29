@@ -6,6 +6,6 @@ class potassium: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\potassium.paa";
+	picture = "\outbreak_assets\textures\items\potassium.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class razor: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\razor.paa";
+	picture = "\outbreak_assets\textures\items\razor.paa";
 	descriptionShort = "";
 };

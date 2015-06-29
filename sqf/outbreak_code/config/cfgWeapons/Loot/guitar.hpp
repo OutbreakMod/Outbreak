@@ -6,6 +6,6 @@ class guitar: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\guitar.paa";
+	picture = "\outbreak_assets\textures\items\guitar.paa";
 	descriptionShort = "";
 };

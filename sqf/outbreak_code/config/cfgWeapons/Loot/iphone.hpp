@@ -6,6 +6,6 @@ class iphone: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\iphone.paa";
+	picture = "\outbreak_assets\textures\items\iphone.paa";
 	descriptionShort = "";
 };

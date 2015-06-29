@@ -6,7 +6,7 @@ class hammer: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\hammer.paa";
+	picture = "\outbreak_assets\textures\items\hammer.paa";
 	model = "a3\structures_f\Items\Tools\Hammer_F";
 	descriptionShort = "Used to break things and drive in nails";
 };

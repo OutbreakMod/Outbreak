@@ -6,6 +6,6 @@ class rock: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\rock.paa";
+	picture = "\outbreak_assets\textures\items\rock.paa";
 	descriptionShort = "";
 };

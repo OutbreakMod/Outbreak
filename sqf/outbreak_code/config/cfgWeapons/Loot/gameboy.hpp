@@ -6,6 +6,6 @@ class gameboy: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\gameboy.paa";
+	picture = "\outbreak_assets\textures\items\gameboy.paa";
 	descriptionShort = "";
 };

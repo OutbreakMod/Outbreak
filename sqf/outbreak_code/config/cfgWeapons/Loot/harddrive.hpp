@@ -6,6 +6,6 @@ class harddrive: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\harddrive.paa";
+	picture = "\outbreak_assets\textures\items\harddrive.paa";
 	descriptionShort = "";
 };

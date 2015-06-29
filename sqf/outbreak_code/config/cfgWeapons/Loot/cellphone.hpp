@@ -6,6 +6,6 @@ class cellphone: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\cellphone.paa";
+	picture = "\outbreak_assets\textures\items\cellphone.paa";
 	descriptionShort = "";
 };

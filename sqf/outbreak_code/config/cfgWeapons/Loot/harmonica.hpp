@@ -6,6 +6,6 @@ class harmonica: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\harmonica.paa";
+	picture = "\outbreak_assets\textures\items\harmonica.paa";
 	descriptionShort = "";
 };

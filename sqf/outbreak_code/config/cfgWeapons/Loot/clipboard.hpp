@@ -6,6 +6,6 @@ class clipboard: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\clipboard.paa";
+	picture = "\outbreak_assets\textures\items\clipboard.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class ibuprofen: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\ibuprofen.paa";
+	picture = "\outbreak_assets\textures\items\ibuprofen.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class red_goo: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\redgoo.paa";
+	picture = "\outbreak_assets\textures\items\redgoo.paa";
 	descriptionShort = "";
 };

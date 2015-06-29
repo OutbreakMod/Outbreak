@@ -6,6 +6,6 @@ class scrap: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\scrap.paa";
+	picture = "\outbreak_assets\textures\items\scrap.paa";
 	descriptionShort = "Spare recycled metal to create other objects out of metal";
 };

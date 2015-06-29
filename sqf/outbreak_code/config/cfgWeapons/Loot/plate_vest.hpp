@@ -6,6 +6,6 @@ class plate_vest: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\platevest.paa";
+	picture = "\outbreak_assets\textures\items\platevest.paa";
 	descriptionShort = "";
 };

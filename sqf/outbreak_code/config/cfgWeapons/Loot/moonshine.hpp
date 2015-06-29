@@ -6,6 +6,6 @@ class moonshine: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\moonshine.paa";
+	picture = "\outbreak_assets\textures\items\moonshine.paa";
 	descriptionShort = "";
 };

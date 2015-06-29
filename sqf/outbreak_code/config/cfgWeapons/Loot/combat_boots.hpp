@@ -6,6 +6,6 @@ class combat_boots: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\combatboots.paa";
+	picture = "\outbreak_assets\textures\items\combatboots.paa";
 	descriptionShort = "";
 };

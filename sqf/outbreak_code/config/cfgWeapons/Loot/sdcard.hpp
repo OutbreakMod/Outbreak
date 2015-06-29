@@ -6,6 +6,6 @@ class sdcard: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\sdcard.paa";
+	picture = "\outbreak_assets\textures\items\sdcard.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class wrench: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\wrench.paa";
+	picture = "\outbreak_assets\textures\items\wrench.paa";
 	descriptionShort = "";
 };

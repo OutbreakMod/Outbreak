@@ -6,6 +6,6 @@ class nails: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\nails.paa";
+	picture = "\outbreak_assets\textures\items\nails.paa";
 	descriptionShort = "";
 };

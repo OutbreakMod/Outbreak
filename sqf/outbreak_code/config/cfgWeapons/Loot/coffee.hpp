@@ -6,6 +6,6 @@ class coffee: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\coffee.paa";
+	picture = "\outbreak_assets\textures\items\coffee.paa";
 	descriptionShort = "";
 };

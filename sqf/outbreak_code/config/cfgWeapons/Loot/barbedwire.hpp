@@ -6,6 +6,6 @@ class barbedwire: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\barbedwire.paa";
+	picture = "\outbreak_assets\textures\items\barbedwire.paa";
 	descriptionShort = "";
 };

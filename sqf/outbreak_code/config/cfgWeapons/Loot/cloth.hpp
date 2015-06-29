@@ -6,6 +6,6 @@ class cloth: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\cloth.paa";
+	picture = "\outbreak_assets\textures\items\cloth.paa";
 	descriptionShort = "";
 };

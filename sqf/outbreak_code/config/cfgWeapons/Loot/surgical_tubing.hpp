@@ -6,6 +6,6 @@ class surgical_tubing: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\surgicaltubing.paa";
+	picture = "\outbreak_assets\textures\items\surgicaltubing.paa";
 	descriptionShort = "";
 };

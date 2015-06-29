@@ -6,6 +6,6 @@ class green_goo: ItemWatch
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\items\greengoo.paa";
+	picture = "\outbreak_assets\textures\items\greengoo.paa";
 	descriptionShort = "";
 };

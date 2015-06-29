@@ -6,6 +6,6 @@ class marijuana: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\marijuana.paa";
+	picture = "\outbreak_assets\textures\items\marijuana.paa";
 	descriptionShort = "";
 };

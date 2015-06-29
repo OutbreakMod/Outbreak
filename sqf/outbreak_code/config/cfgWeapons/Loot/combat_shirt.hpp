@@ -6,6 +6,6 @@ class combat_shirt: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\combatshirt.paa";
+	picture = "\outbreak_assets\textures\items\combatshirt.paa";
 	descriptionShort = "";
 };

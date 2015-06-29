@@ -6,6 +6,6 @@ class ace: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\ace.paa";
+	picture = "\outbreak_assets\textures\items\ace.paa";
 	descriptionShort = "";
 };

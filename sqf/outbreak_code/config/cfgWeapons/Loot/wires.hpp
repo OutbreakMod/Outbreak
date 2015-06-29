@@ -6,6 +6,6 @@ class wires: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\wires.paa";
+	picture = "\outbreak_assets\textures\items\wires.paa";
 	descriptionShort = "";
 };

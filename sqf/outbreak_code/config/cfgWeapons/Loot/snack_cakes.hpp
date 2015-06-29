@@ -6,6 +6,6 @@ class snack_cakes: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\snackcakes.paa";
+	picture = "\outbreak_assets\textures\items\snackcakes.paa";
 	descriptionShort = "";
 };

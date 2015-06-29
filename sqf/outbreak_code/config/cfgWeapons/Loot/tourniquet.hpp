@@ -6,6 +6,6 @@ class tourniquet: ItemWatch
 		{
 				mass = 3;
 		}; 
-	picture = "\outbreak_assets\items\tourniquet.paa";
+	picture = "\outbreak_assets\textures\items\tourniquet.paa";
 	descriptionShort = "";
 };

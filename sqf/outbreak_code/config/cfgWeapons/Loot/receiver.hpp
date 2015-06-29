@@ -6,6 +6,6 @@ class receiver: ItemWatch
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\items\receiver.paa";
+	picture = "\outbreak_assets\textures\items\receiver.paa";
 	descriptionShort = "";
 };

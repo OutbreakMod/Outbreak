@@ -6,6 +6,6 @@ class suitcase: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\suitcase.paa";
+	picture = "\outbreak_assets\textures\items\suitcase.paa";
 	descriptionShort = "";
 };

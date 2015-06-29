@@ -6,6 +6,6 @@ class dogtag: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\dogtag.paa";
+	picture = "\outbreak_assets\textures\items\dogtag.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class skull: ItemWatch
 		{
 				mass = 3;
 		}; 
-	picture = "\outbreak_assets\items\skull.paa";
+	picture = "\outbreak_assets\textures\items\skull.paa";
 	descriptionShort = "";
 };

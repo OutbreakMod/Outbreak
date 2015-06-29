@@ -6,6 +6,6 @@ class schematic: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\schematic.paa";
+	picture = "\outbreak_assets\textures\items\schematic.paa";
 	descriptionShort = "";
 };

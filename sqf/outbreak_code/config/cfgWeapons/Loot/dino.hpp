@@ -6,6 +6,6 @@ class dino: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\dino.paa";
+	picture = "\outbreak_assets\textures\items\dino.paa";
 	descriptionShort = "";
 };

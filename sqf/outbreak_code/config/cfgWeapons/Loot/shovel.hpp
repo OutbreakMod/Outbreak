@@ -6,6 +6,6 @@ class shovel: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\shovel.paa";
+	picture = "\outbreak_assets\textures\items\shovel.paa";
 	descriptionShort = "";
 };

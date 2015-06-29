@@ -6,6 +6,6 @@ class scalpel: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\scalpel.paa";
+	picture = "\outbreak_assets\textures\items\scalpel.paa";
 	descriptionShort = "";
 };

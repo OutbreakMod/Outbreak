@@ -6,6 +6,6 @@ class microphone: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\microphone.paa";
+	picture = "\outbreak_assets\textures\items\microphone.paa";
 	descriptionShort = "";
 };

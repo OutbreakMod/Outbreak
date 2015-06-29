@@ -6,6 +6,6 @@ class cigarettepack: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\cigarettepack.paa";
+	picture = "\outbreak_assets\textures\items\cigarettepack.paa";
 	descriptionShort = "";
 };

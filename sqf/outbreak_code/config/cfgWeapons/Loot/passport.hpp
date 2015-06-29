@@ -6,6 +6,6 @@ class passport: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\passport.paa";
+	picture = "\outbreak_assets\textures\items\passport.paa";
 	descriptionShort = "";
 };

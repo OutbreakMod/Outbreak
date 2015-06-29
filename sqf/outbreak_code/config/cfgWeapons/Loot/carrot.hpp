@@ -6,6 +6,6 @@ class carrot: ItemWatch
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\items\carrot.paa";
+	picture = "\outbreak_assets\textures\items\carrot.paa";
 	descriptionShort = "";
 };

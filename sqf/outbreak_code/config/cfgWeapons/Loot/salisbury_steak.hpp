@@ -6,6 +6,6 @@ class salisbury_steak: ItemWatch
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\items\salisburysteak.paa";
+	picture = "\outbreak_assets\textures\items\salisburysteak.paa";
 	descriptionShort = "";
 };

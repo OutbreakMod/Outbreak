@@ -6,6 +6,6 @@ class gold: ItemWatch
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\items\gold.paa";
+	picture = "\outbreak_assets\textures\items\gold.paa";
 	descriptionShort = "";
 };
