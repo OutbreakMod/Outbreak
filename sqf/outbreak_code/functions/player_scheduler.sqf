@@ -62,7 +62,7 @@
 		 _idHandle = [633, 638, 619]; 
 		 
 		 {	
-			((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call selectSlot"];
+			((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call player_selectItem"];
 		 } forEach _idHandle;
 		
 		 waitUntil {isNull (findDisplay 602)};

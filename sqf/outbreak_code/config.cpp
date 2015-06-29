@@ -10,7 +10,7 @@ class CfgPatches {
 // configuration files
 #include "config\cfgGame\cfgGame.hpp"
 #include "config\cfgVehicles\cfgVehicles.hpp"
-#include "config\cfgWeapons\cfgWeapons.hpp"
+#include "config\cfgMagazines\cfgMagazines.hpp"
 
 // Player music
 #include "config\cfgMusic.hpp"

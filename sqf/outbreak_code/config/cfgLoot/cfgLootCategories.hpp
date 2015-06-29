@@ -30,7 +30,7 @@ class CfgLootCategories {
 	class CookingUtilities {
 		
 		loot[] = {
-			{"matchbook","item",0.08},
+			{"matchbox","item",0.08},
 			{"knife","item",0.06}
 		};
 	};
