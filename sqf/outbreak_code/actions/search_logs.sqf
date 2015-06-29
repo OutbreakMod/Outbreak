@@ -63,7 +63,7 @@ if (_type == "ground") then {
 	if (_finished) then {
 	
 		player setVariable ["action_interrupt", false];
-		player addItem "sc_wood";
+		player addItem "log";
 		
 		// TODO: Add chance
 		cutText ["I have found a log!", "PLAIN DOWN"];

@@ -85,7 +85,7 @@ if (_effect) then {
 _health = _health - (_damage * _scale);
 
 // update blood status
-[_unit getVariable ["blood", outbreak_full_blood] call fnc_bloodEffect;
+[_unit getVariable ["blood", outbreak_full_blood]] call fnc_bloodEffect;
 
 // set new health
 _unit setVariable ["health", _health];
