@@ -13,7 +13,7 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"ItemGPS","item",0.05},
-			{"sc_mre","item",0.06},
+			{"mre","item",0.06},
 			{"NVGoggles","single",0.01},
 			{"Rangefinder","single",0.02}
 		};
@@ -30,15 +30,15 @@ class CfgLootCategories {
 	class CookingUtilities {
 		
 		loot[] = {
-			{"sc_matchbook","item",0.08},
-			{"sc_knife","item",0.06}
+			{"matchbook","item",0.08},
+			{"knife","item",0.06}
 		};
 	};
 	
 	class USHelicrash {
 		
 		loot[] = {
-			{"outbreak_tent","single",0.1}, // 10% 
+			{"tent","single",0.1}, // 10% 
 			{"arifle_mas_m4","gun",0.05}, // @mas
 			{"arifle_mas_hk417c","gun",0.04}, // @mas
 			{"arifle_mas_m16","gun",0.05}, // @mas
@@ -134,53 +134,53 @@ class CfgLootCategories {
 	class Medical {
 		
 		loot[] = {
-			{"sc_bandage", "item",0.08},
-			{"sc_ibuprofen", "item",0.06},
-			{"sc_morphine", "item",0.05},
-			{"sc_epinephrine", "item",0.04},
-			{"sc_blood", "item",0.02}
+			{"bandage", "item",0.08},
+			{"ibuprofen", "item",0.06},
+			{"morphine", "item",0.05},
+			{"epinephrine", "item",0.04},
+			{"blood", "item",0.02}
 		};
 	};
 	
 	class MiscMedical {
 		
 		loot[] = {
-			{"sc_bandage", "item",0.08},
-			{"sc_ibuprofen", "item",0.06},
-			{"sc_morphine", "item",0.05},
+			{"bandage", "item",0.08},
+			{"ibuprofen", "item",0.06},
+			{"morphine", "item",0.05},
 		};
 	};
 	
 	class Supermarket {
 		
 		loot[] = {
-			{"sc_twinkies", "item",0.02},
-			{"sc_snoballs", "item",0.02},
-			{"sc_pbj", "item",0.02},
-			{"sc_donut", "item",0.02},
-			{"sc_potato", "item",0.08},
-			{"sc_energy_drink", "item",0.06},
-			{"sc_coffee", "item",0.07},
-			{"sc_cereal", "item",0.06},
-			{"sc_carrot", "item",0.05},
-			{"sc_candybar", "item",0.03},
-			{"sc_soda", "item",0.06},
-			{"sc_juicebox", "item",0.06},
-			{"sc_chips", "item", 0.01},
-			{"sc_cannedfood","item", 0.05}
+			{"twinkies", "item",0.02},
+			{"snoballs", "item",0.02},
+			{"pbj", "item",0.02},
+			{"donut", "item",0.02},
+			{"potato", "item",0.08},
+			{"energy_drink", "item",0.06},
+			{"coffee", "item",0.07},
+			{"cereal", "item",0.06},
+			{"carrot", "item",0.05},
+			{"candybar", "item",0.03},
+			{"soda", "item",0.06},
+			{"juicebox", "item",0.06},
+			{"chips", "item", 0.01},
+			{"cannedfood","item", 0.05}
 		};
 	};
 	
 	class CivillianFoodStorage {
 		
 		loot[] = {
-			{"sc_energy_drink", "item",0.03},
-			{"sc_corn", "item",0.02},
-			{"sc_cereal", "item",0.03},
-			{"sc_soda", "item",0.04},
-			{"sc_juicebox", "item",0.04},
-			{"sc_chips", "item", 0.03},
-			{"sc_cannedfood","item", 0.06}
+			{"energy_drink", "item",0.03},
+			{"corn", "item",0.02},
+			{"cereal", "item",0.03},
+			{"soda", "item",0.04},
+			{"juicebox", "item",0.04},
+			{"chips", "item", 0.03},
+			{"cannedfood","item", 0.06}
 		};
 	};
 	
@@ -232,11 +232,11 @@ class CfgLootCategories {
 	class Industrial {
 		
 		loot[] = {
-			{"sc_jerrycan","single", 0.06},
-			{"sc_cartyre","single", 0.05},
-			{"sc_hammer","single", 0.09},
-			{"sc_toolbox","single", 0.06},
-			{"sc_scrap","item", 0.06}
+			{"jerrycan","single", 0.06},
+			{"cartyre","single", 0.05},
+			{"hammer","single", 0.09},
+			{"toolbox","single", 0.06},
+			{"scrap","item", 0.06}
 		};
 	};
 	

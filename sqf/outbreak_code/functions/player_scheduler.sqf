@@ -55,18 +55,17 @@
 };
 
 [] spawn {
+
 	while {true} do {
-		 waituntil {!(isnull (finddisplay 602))};
+		 waitUntil {!(isNull (findDisplay 602))};
 		 
-		 if (player_performingAction) then { 
-			closeDialog 602;
-		 } else { 
-			((findDisplay 602) displayCtrl 633) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
-			((findDisplay 602) displayCtrl 638) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
-			((findDisplay 602) displayCtrl 619) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"];
-			//((findDisplay 602) displayCtrl 640) ctrlSetEventHandler ["LBDblClick", "_this call player_useItem"]; // disable tent interaction
-		};
+		 _idHandle = [633, 638, 619]; 
+		 
+		 {	
+			((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call selectSlot"];
+		 } forEach _idHandle;
 		
-		 waituntil {isnull (finddisplay 602)};
+		 waitUntil {isNull (findDisplay 602)};
 	};
+};
 };
