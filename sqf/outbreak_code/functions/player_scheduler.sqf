@@ -68,4 +68,3 @@
 		 waitUntil {isNull (findDisplay 602)};
 	};
 };
-};
