@@ -88,6 +88,6 @@ _health = _health - (_damage * _scale);
 [_unit getVariable ["blood", outbreak_full_blood]] call fnc_bloodEffect;
 
 // set new health
-_unit setVariable ["health", _health];
+_unit setVariable ["health", _health, true];
 
 0;
