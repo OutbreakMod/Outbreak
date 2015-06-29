@@ -9,3 +9,4 @@ class knife: ItemWatch
 	picture = "\outbreak_assets\items\knife.paa";
 	model = "a3\structures_f\Items\Tools\Screwdriver_V1_F";
 	descriptionShort = "";
+};

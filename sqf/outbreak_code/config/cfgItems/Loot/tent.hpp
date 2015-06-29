@@ -9,3 +9,4 @@ class tent: ItemWatch
 	picture = "\outbreak_assets\items\outbreak_sleeping_bag.paa";
 	model = "\a3\structures_f\Civ\Camping\Sleeping_bag_folded_F";
 	descriptionShort = "";
+};

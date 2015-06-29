@@ -9,3 +9,4 @@ class waterbottle: ItemWatch
 	picture = "\outbreak_assets\items\waterbottle.paa"; 
 	model = "a3\structures_f\Items\Food\BottlePlastic_V1_F";
 	descriptionShort = "";
+};

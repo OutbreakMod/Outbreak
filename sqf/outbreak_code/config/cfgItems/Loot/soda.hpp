@@ -9,3 +9,4 @@ class soda: ItemWatch
 	picture = "\outbreak_assets\items\soda.paa";
 	model = "a3\structures_f\Items\Food\Can_V1_F";
 	descriptionShort = "";
+};

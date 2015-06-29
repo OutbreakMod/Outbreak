@@ -9,3 +9,4 @@ class morphine: ItemWatch
 	picture = "\outbreak_assets\items\morphine.paa";
 	model = "a3\structures_f\Items\Stationery\PencilRed_F";
 	descriptionShort = "Used for fixing broken legs";
+};
