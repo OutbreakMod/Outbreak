@@ -61,7 +61,7 @@
 #include "usbdrive.hpp"
 #include "wallet.hpp"
 #include "whiskey.hpp"
-#include "wood.hpp"
+#include "log.hpp"
 #include "paintcan.hpp"
 #include "candybar.hpp"
 #include "charms.hpp"

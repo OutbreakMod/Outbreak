@@ -9,16 +9,16 @@ _keyCode = _this select 0;
 _handled = false;
 
 // no debug
-//if (_keyCode == 210) then {
+if (_keyCode == 210) then {
 
-	//if (isNil 'debugMenu') then {
-		//debugMenu = true;
-	//} else {
-		//debugMenu = !debugMenu;
-	//};
+	if (isNil 'debugMenu') then {
+		debugMenu = true;
+	} else {
+		debugMenu = !debugMenu;
+	};
 	
-	//[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
-//};
+	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
+};
 
 // Interrupt actions, ie, searching for logs etc
 

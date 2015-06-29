@@ -232,6 +232,8 @@ class CfgLootCategories {
 	class Industrial {
 		
 		loot[] = {
+			{"axe","single", 0.9},
+			{"fireaxe","single", 0.8},
 			{"jerrycan","single", 0.06},
 			{"cartyre","single", 0.05},
 			{"hammer","single", 0.09},

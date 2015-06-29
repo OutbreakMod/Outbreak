@@ -64,7 +64,6 @@ if (_damage > 0.4) then {
 		}; // 10% bleed
 	};
 	
-	_health = _health - (_damage * _scale);
 	_effect = true;
 };
 
@@ -81,6 +80,12 @@ if (_hit == "leg_l" && _damage > 0.9) then {
 if (_effect) then {
 	1 call fnc_damageEffect;
 };
+
+// calculate health
+_health = _health - (_damage * _scale);
+
+// update blood status
+[_unit getVariable ["blood", outbreak_full_blood] call fnc_bloodEffect;
 
 // set new health
 _unit setVariable ["health", _health];
