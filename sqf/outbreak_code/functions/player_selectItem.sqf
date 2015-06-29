@@ -3,24 +3,23 @@
 	@author: TheAmazingAussie
 */
 
+private ["_idc", "_selectedIndex", "_data", "_class", "_config"];
+
 _idc = ctrlIDC (_this select 0);
 _selectedIndex = _this select 1;
 
 _data = format ["%1", lbData [_idc, _selectedIndex]];
-_text = format ["%1", lbText [_idc, _selectedIndex]];
-
-hint _data;
 
 if (player_performingAction) exitWith {};
 
-if (_text == "Matchbook") then {
-	 [] execVM "addons\outbreak_code\actions\create_fireplace.sqf";
-};
+_class = (configFile >> "CfgMagazines" >> _data);
 
-if (_text == "Pitchable Tent") then {
-	 ["", "", "", "OutbreakTent"] execVM "addons\outbreak_code\actions\makeshift_base.sqf";
-};
+if (!isClass(_class)) exitWith {};
+if (!isClass(_class >> "ItemActions")) exitWith {};
 
-if (_text == "Morphine") then {
-	 ["", "", "", player] execVM "addons\outbreak_code\actions\apply_morphine.sqf";
-};
+_config = (_class >> "ItemActions");
+
+call compile (getText(_config >> "doubleClick"));
+
+
+

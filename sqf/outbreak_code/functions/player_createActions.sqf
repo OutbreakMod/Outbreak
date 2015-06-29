@@ -102,12 +102,12 @@ if (!_inVehicle && !player_performingAction) then {
 	///////////////////
 	// Build makeshift base
 	///////////////////
-	if (([player, "sc_wood", 20] call fnc_hasItem) && ([player, "sc_toolbox"] call fnc_hasItem) && ([player, "sc_hammer"] call fnc_hasItem) && ([player, "sc_scrap", 2] call fnc_hasItem)) then {
-		if (action_makeshiftBaseBasic < 0) then {
-			action_makeshiftBaseBasic = player addAction ["Build Makeshift Base", "addons\outbreak_code\actions\makeshift_base.sqf", "OutbreakShackV1", 3, true, true, "", ""];
-		};
-	} else {
-		player removeAction action_makeshiftBaseBasic;
-		action_makeshiftBaseBasic = -1;
-	};
+	//if (([player, "sc_wood", 20] call fnc_hasItem) && ([player, "sc_toolbox"] call fnc_hasItem) && ([player, "sc_hammer"] call fnc_hasItem) && ([player, "sc_scrap", 2] call fnc_hasItem)) then {
+	//	if (action_makeshiftBaseBasic < 0) then {
+	//		action_makeshiftBaseBasic = player addAction ["Build Makeshift Base", "addons\outbreak_code\actions\makeshift_base.sqf", "OutbreakShackV1", 3, true, true, "", ""];
+    //		};
+	//} else {
+	//	player removeAction action_makeshiftBaseBasic;
+	//	action_makeshiftBaseBasic = -1;
+	//};
 };

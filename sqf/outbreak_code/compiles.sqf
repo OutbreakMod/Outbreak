@@ -34,3 +34,7 @@ object_speak = compile preProcessFileLineNumbers "addons\outbreak_code\functions
 fnc_damageType = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageType.sqf";
 fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageEffect.sqf";
 fnc_bloodEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_bloodEffect.sqf";
+
+// actions
+create_fireplace = compile preProcessFileLineNumbers "addons\outbreak_code\actions\create_fireplace.sqf";
+build_base = compile preProcessFileLineNumbers "addons\outbreak_code\actions\build_base.sqf";

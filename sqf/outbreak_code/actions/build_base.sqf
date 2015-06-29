@@ -5,7 +5,7 @@
 
 private ["_type", "_animation", "_check", "_interrupt", "_animState", "_loop", "_started", "_finished", "_vehicle", "_location", "_class", "_cities"];
 
-_type = (_this select 3);
+_type = _this select 0;
 
 _loop = true;
 
