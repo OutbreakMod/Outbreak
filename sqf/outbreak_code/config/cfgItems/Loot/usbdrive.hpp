@@ -1,0 +1,11 @@
+class usbdrive: ItemWatch
+{
+	displayName = "USB Drive";
+	count = 1;
+	class ItemInfo
+		{
+				mass = 1;
+		}; 
+	picture = "\outbreak_assets\items\usbdrive.paa";
+	descriptionShort = "";
+};

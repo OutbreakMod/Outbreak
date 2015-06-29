@@ -1,0 +1,11 @@
+class bedroll: ItemWatch
+{
+	displayName = "Bedroll";
+	count = 1;
+	class ItemInfo
+		{
+				mass = 6;
+		}; 
+	picture = "\outbreak_assets\items\bedroll.paa";
+	descriptionShort = "";
+};

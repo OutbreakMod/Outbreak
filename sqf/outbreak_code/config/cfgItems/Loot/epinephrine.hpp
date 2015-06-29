@@ -1,0 +1,11 @@
+class epinephrine: ItemWatch
+{
+	displayName = "Epinephrine";
+	count = 1;
+	class ItemInfo
+		{
+				mass = 1;
+		}; 
+	picture = "\outbreak_assets\items\epinephrine.paa";
+	model = "a3\structures_f\Items\Stationery\PencilGreen_F";
+	descriptionShort = "Helps coming back into conciousness";
