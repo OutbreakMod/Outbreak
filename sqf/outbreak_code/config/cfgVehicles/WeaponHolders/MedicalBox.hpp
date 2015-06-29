@@ -9,34 +9,34 @@ class MedicalBox: GroundWeaponHolder
 	class TransportWeapons{};
 	class TransportItems
 	{
-		class _xx_sc_bandage
+		class _xx_bandage
 		{
-			name = "sc_bandage";
+			name = "bandage";
 			count = 5;
 		};
-		class _xx_sc_elasticbandage
+		class _xx_elasticbandage
 		{
-			name = "sc_elasticbandage";
+			name = "elasticbandage";
 			count = 4;
 		};
-		class _xx_sc_morphine
+		class _xx_morphine
 		{
-			name = "sc_morphine";
+			name = "morphine";
 			count = 2;
 		};
-		class _xx_sc_blood
+		class _xx_blood
 		{
-			name = "sc_blood";
+			name = "blood";
 			count = 3;
 		};
-		class _xx_sc_epinephrine
+		class _xx_epinephrine
 		{
-			name = "sc_epinephrine";
+			name = "epinephrine";
 			count = 2;
 		};
-		class _xx_sc_ibuprofen
+		class _xx_ibuprofen
 		{
-			name = "sc_epinephrine";
+			name = "epinephrine";
 			count = 2;
 		};
 	};
