@@ -9,3 +9,4 @@ class outbreak_fireaxe: ItemWatch
 	picture = "\outbreak_assets\items\axe.paa";
 	model = "a3\structures_f\Items\Tools\Axe_fire_F";
 	descriptionShort = "";
+};

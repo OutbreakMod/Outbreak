@@ -8,8 +8,9 @@ class CfgPatches {
 };
 
 // configuration files
-#include "config\cfgItems\cfgItems.hpp"
+#include "config\cfgGame\cfgGame.hpp"
 #include "config\cfgVehicles\cfgVehicles.hpp"
+#include "config\cfgWeapons\cfgWeapons.hpp"
 
 // Player music
 #include "config\cfgMusic.hpp"
@@ -17,3 +18,5 @@ class CfgPatches {
 // building loot
 #include "config\cfgLoot\cfgBuildingType.hpp"
 #include "config\cfgLoot\cfgLootCategories.hpp"
+
+// arma files

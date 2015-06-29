@@ -1,4 +1,4 @@
-class CfgItems {
+class CfgGame {
 	
 	// Hunting
 	#include "Hunting\cfgGutAnimal.hpp"

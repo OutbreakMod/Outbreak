@@ -1,5 +1,5 @@
 class CfgWeapons
 {
 	class ItemWatch;
-	#include "cfgItems\Loot\cfgLoot.hpp"
+	#include "Loot\cfgLoot.hpp"
 };

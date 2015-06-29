@@ -9,3 +9,4 @@ class tincan: ItemWatch
 	picture = "\outbreak_assets\items\tincan.paa";
 	model = "a3\structures_f\Items\Food\Can_Dented_F";
 	descriptionShort = "";
+};
