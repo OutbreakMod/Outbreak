@@ -10,11 +10,17 @@ _itemClass = _this select 1;
 _itemType = _this select 2;
 _buildingClass = _this select 3;
 
-_item = objNull;
+_nearByPile = nearestObjects [_lootPos, ["WeaponHolderSimulated", "GroundWeaponHolder"], 1];
+_weaponHolder = objNull;
+
+ if (count _nearByPile == 0) then {
+	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 1, "CAN_COLLIDE"];
+} else {
+	_weaponHolder = _nearByPile select 0;
+};
 
 if (_itemType == "gun") then {
 
-	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 	_weaponHolder setVariable ["isLoot", true];
 	_weaponHolder addWeaponCargoGlobal [_itemClass, 1];
 	
@@ -46,40 +52,29 @@ if (_itemType == "supplybox") then {
 	_supplyBox setVariable ["isLoot", true];
 	_supplyBox setDir (random 360);
 	
-	_item = _supplyBox;
+	_weaponHolder = _supplyBox;
 };
 
 if (_itemType == "backpack") then {
 
-	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 	_weaponHolder setVariable ["isLoot", true];
 	_weaponHolder addBackpackCargoGlobal [_itemClass, 1];
-	
-	_item = _weaponHolder;
 };
 
 if (_itemType == "single") then {
 
-	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 	_weaponHolder setVariable ["isLoot", true];
 	_weaponHolder addItemCargoGlobal [_itemClass, 1];
-	//_weaponHolder setVectorUp [0.052336,-0.998629,0];
-	//_weaponHolder setVectorDir [0,0,-1];
-	
-	_item = _weaponHolder;
 };
 
 if (_itemType == "magazine") then {
 
-	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 	_weaponHolder setVariable ["isLoot", true];
 	_weaponHolder addMagazineCargoGlobal [_itemClass, floor (random 3)];
-	
 };
 
 if (_itemType == "item") then {
 
-	_weaponHolder = createVehicle ["GroundWeaponHolder", _lootPos, [], 0, "CAN_COLLIDE"];
 	_weaponHolder setVariable ["isLoot", true];
 	_weaponHolder addItemCargoGlobal [_itemClass, 1];
 	
@@ -104,8 +99,6 @@ if (_itemType == "item") then {
 			};
 		};
 	};
-	
-	_item = _weaponHolder;
 };
 
-_item
+_weaponHolder

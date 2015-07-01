@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_animation", "_animState", "_loop", "_started", "_finished", "_type", "_dist", "_trees"];
+private ["_animation", "_animState", "_loop", "_started", "_finished", "_type", "_dist", "_trees", "_woodCutting", "_findNearestTree", "_obj"];
 
 player_performingAction = true;
 
@@ -11,22 +11,27 @@ _started = false;
 _finished = false;
 _woodCutting = false;
 _loop = true;
+
 _trees = getArray(configFile >> "CfgGame" >> "trees");
+_yield = getArray(configFile >> "CfgGame" >> "trees");
+_nearTrees = nearestObjects [getPosATL player, [], 4];
 
 _findNearestTree = objNull;
 
 {
 	_obj = _x call obj_getModelName;
+	diag_log format ["TREE: %1", _obj];
 	
 	if (_obj in _trees) then {
-		if ((damage _x) < 1) then {
+		
+		diag_log format ["FOUND TREE: %1", _obj];
+	
+		if ((damage _x) != 1) then {
 			_findNearestTree = _x;
 		};
 	};
-	
-	diag_log format ["tree: %1", _obj];
 
-} foreach nearestObjects [getPosATL player, [], 4];
+} foreach _nearTrees;
 
 _distance2d = [player, _findNearestTree] call BIS_fnc_distance2D;
 _distance3d = player distance _findNearestTree;

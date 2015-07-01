@@ -16,7 +16,7 @@
 		["blood", 1],
 		["health", 1],
 		["bones", 1],
-		["debugmenu", 1],
+		//["debugmenu", 1],
 		["sync", 60]
 	];
 	
