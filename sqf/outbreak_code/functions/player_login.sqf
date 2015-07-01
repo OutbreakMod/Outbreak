@@ -14,6 +14,9 @@ setPlayable _newUnit;
 selectPlayer _newUnit;
 deleteVehicle (_previousUnit);
 
+// create variables
+call compile preprocessFileLineNumbers "addons\outbreak_code\variables.sqf";
+
 // new handlers
 player removeAllEventHandlers "Killed";
 player removeAllEventHandlers "Respawn";
@@ -30,24 +33,12 @@ player setVariable ["alive", true];
 player setVariable ["deathmessage", format["His name was %1 and died from death", name player], true];
 player enableFatigue false;
 
-// medical
-player setVariable ["blood", outbreak_full_blood, true];
-player setVariable ["health", outbreak_full_health, true];
-
-// reset actions
-action_searchWoodPile = -1;
-action_gutAnimal = -1;
-action_cookMeat = -1;
-action_studyDeadBody = -1;
-action_applyMorphine = -1;
-action_makeshiftBaseBasic = -1;
-
-player_performingAction = false;
-player_noWeapon = nil;
-player_primaryWeapon = nil;
-
 // clears a players inventory from default mission items
 player call player_clearInventory;
+
+// medical
+player setVariable ["blood", MOD_FULL_BLOOD, true];
+player setVariable ["health", MOD_FULL_HEALTH, true];
 
 _LOGIN_TIMER = 10;
 while {_LOGIN_TIMER > 0} do {

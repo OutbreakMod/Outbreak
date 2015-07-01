@@ -7,10 +7,22 @@ class tent: CA_Magazine
 	descriptionShort = "";
 	
 	class ItemInfo {
-		mass = 10;
+		mass = 8;
 	}; 
 	
-	class ItemActions {
-		doubleClick = "['OutbreakTent'] call create_fireplace;";
+	class cfgItemActions {
+		doubleClick = "['tent', 'OutbreakTent', true] call player_build;";
+	};
+	
+	class cfgCraft {
+		recipe[] = {
+			{"toolbox", 1},
+			{"hammer", 1},
+			{"tent", 1}
+		};
+		
+		consume[] = {
+			{"tent", 1}
+		};
 	};
 };

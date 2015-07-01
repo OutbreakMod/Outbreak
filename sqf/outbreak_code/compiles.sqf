@@ -36,5 +36,23 @@ fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 fnc_bloodEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_bloodEffect.sqf";
 
 // actions
-create_fireplace = compile preProcessFileLineNumbers "addons\outbreak_code\actions\create_fireplace.sqf";
-build_base = compile preProcessFileLineNumbers "addons\outbreak_code\actions\build_base.sqf";
+player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
+player_chopWood = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_chopWood.sqf";
+
+obj_getModelName = {
+	_objInfo = toArray(str(_this));
+	_lenInfo = count _objInfo - 1;
+	_objName = [];
+	_i = 0;
+	// determine where the object name starts
+	{
+		if (58 == _objInfo select _i) exitWith {};
+		_i = _i + 1;
+	} count _objInfo;
+	_i = _i + 2; // skip the ": " part
+	for "_k" from _i to _lenInfo do {
+		_objName set [(count _objName), (_objInfo select _k)];
+	};
+	_objName = toLower(toString(_objName));
+	_objName
+};

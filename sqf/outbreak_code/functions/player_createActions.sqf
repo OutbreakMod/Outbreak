@@ -80,22 +80,20 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 if (!_inVehicle && !player_performingAction) then {
 	
-	diag_log format ["cursortest4"];
-	
 	_surface = surfaceType getPosATL player;
 	_isForest = ["forest", str(_surface)] call fnc_inString;
 
 	///////////////////
 	// Search legs
 	///////////////////
-	if (_isForest) then {
-		if (action_searchWoodPile < 0) then {
-			action_searchWoodPile = player addAction ["Search for logs", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
-		};
-	} else {
-		player removeAction action_searchWoodPile;
-		action_searchWoodPile = -1;
-	};
+	//if (_isForest) then {
+	//	if (action_searchWoodPile < 0) then {
+	//		action_searchWoodPile = player addAction ["Search for logs", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
+	//	};
+	//} else {
+	//	player removeAction action_searchWoodPile;
+	//	action_searchWoodPile = -1;
+	//};
 
 	// create basic structure
 	

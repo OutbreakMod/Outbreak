@@ -15,11 +15,11 @@ if (player_performingAction) exitWith {};
 _class = (configFile >> "CfgMagazines" >> _data);
 
 if (!isClass(_class)) exitWith {};
-if (!isClass(_class >> "ItemActions")) exitWith {};
+if (!isClass(_class >> "cfgItemActions")) exitWith {};
 
-_config = (_class >> "ItemActions");
+_config = (_class >> "cfgItemActions");
 
-call compile (getText(_config >> "doubleClick"));
+[getText(_config >> "doubleClick")] spawn { call compile (_this select 0); };
 
 
 

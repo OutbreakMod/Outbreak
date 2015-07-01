@@ -6,8 +6,11 @@ class fireaxe: CA_Magazine
 	model = "a3\structures_f\Items\Tools\Axe_fire_F";
 	descriptionShort = "A tool used to break down windows and doors during an emergency";
 	
-	class ItemInfo
-	{
+	class ItemInfo {
 		mass = 8;
+	};
+	
+	class cfgItemActions {
+		doubleClick = "_this call player_chopWood;";
 	};
 };
