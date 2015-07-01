@@ -67,22 +67,25 @@ if (_damage > 0.4) then {
 	_effect = true;
 };
 
-if (_hit == "leg_l" && _damage > 0.9) then {
+if (_hit == "leg_l") then {
 	
-	_unit setVariable ["leg_break", true, true];
-	_unit setVariable ["fracture_update", true, true];
-	_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
-	_effect = true;
+	if (_damage > 0.9) then {
+		_unit setVariable ["leg_break", true, true];
+		_unit setVariable ["fracture_update", true, true];
+		_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
+		_effect = true;
+	};
 
+	if (_damage > 0.3) then {
+		_effect = true;
+	};
 };
 
 // notify player damage taken
 if (_effect) then {
+	_health = _health - (_damage * _scale);
 	1 call fnc_damageEffect;
 };
-
-// calculate health
-_health = _health - (_damage * _scale);
 
 // update blood status
 [_unit getVariable ["blood", MOD_FULL_BLOOD]] call fnc_bloodEffect;

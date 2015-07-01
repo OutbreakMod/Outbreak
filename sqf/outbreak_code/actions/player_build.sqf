@@ -24,7 +24,7 @@ _canBuild = true;
 	if (!([player, _ingredient, _amount] call fnc_hasItem)) then {
 		
 		_displayName = getText (configFile >> "CfgMagazines" >> _ingredient >> "displayName");
-		cutText [format["Approximately %1 of %2 is required to build this", _amount, _displayName], "PLAIN DOWN"];		
+		cutText [format["Approximately %1 of %2 is required to build this", _amount, toLower (_displayName)], "PLAIN DOWN"];		
 		_canBuild = false;
 	};
 	

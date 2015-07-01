@@ -12,35 +12,33 @@ _finished = false;
 _woodCutting = false;
 _loop = true;
 
-_trees = getArray(configFile >> "CfgGame" >> "trees");
-_yield = getArray(configFile >> "CfgGame" >> "trees");
-_nearTrees = nearestObjects [getPosATL player, [], 4];
+_currentPos = player modelToWorld[0, 5, 0];
+if !(surfaceIsWater _currentPos) then {
+	_currentPos = ATLtoASL _currentPos;
+};
 
-_findNearestTree = objNull;
+_objects = lineIntersectsWith[eyePos player, _currentPos, player, objNull, true];
+_object = objNull;
+
+_type = 0;
 
 {
-	_obj = _x call obj_getModelName;
-	diag_log format ["TREE: %1", _obj];
-	
-	if (_obj in _trees) then {
-		
-		diag_log format ["FOUND TREE: %1", _obj];
-	
-		if ((damage _x) != 1) then {
-			_findNearestTree = _x;
-		};
+	_strObj = str _x;
+	if ((_strObj find " t_") != -1) exitWith{ _object = _x };
+	if ((_strObj find " b_") != -1) exitWith{ _object = _x; _type = 1 };
+	if ((_strObj find " bo_t_") != -1) exitWith{ _object = _x };
+	if ((_strObj find " MAP_t_") != -1) exitWith{ _object = _x };
+	if ((_strObj find " MAP_b_") != -1) exitWith{ _object = _x; _type = 1 };
+} foreach _objects;
+
+if (!isNull _object) then {
+	if (alive _object) then {
+		_woodCutting = true;
 	};
+};
 
-} foreach _nearTrees;
-
-_distance2d = [player, _findNearestTree] call BIS_fnc_distance2D;
-_distance3d = player distance _findNearestTree;
-_countOut = ceil(_distance3d-_distance2d);
-
-if (!isNull _findNearestTree) then {
-	_woodCutting = true;
-} else {
-	cutText ["There are no trees", "PLAIN DOWN"];
+if (!_woodCutting) then {
+	cutText ["I need to find a tree and look at it, to chop it down", "PLAIN DOWN"];
 };
 
 if (_woodCutting) then {
@@ -109,7 +107,7 @@ if (_woodCutting) then {
 		_item addMagazineCargoGlobal ["log", 1];
 		_item setDir (getDir player);
 		
-		_findNearestTree setDamage 1; //kill tree
+		_object setDamage 1; //kill tree
 	}; 
 };
 

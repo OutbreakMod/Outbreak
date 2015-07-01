@@ -101,4 +101,7 @@ if (_itemType == "item") then {
 	};
 };
 
+// stop floating objs
+_weaponHolder setPos _lootPos;
+
 _weaponHolder
