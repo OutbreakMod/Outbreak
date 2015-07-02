@@ -24,35 +24,37 @@ if (_itemType == "gun") then {
 	_weaponHolder setVariable ["isLoot", true];
 	_weaponHolder addWeaponCargoGlobal [_itemClass, 1];
 	
-	_magazine = getArray (configFile >> "CfgWeapons" >> _itemClass >> "magazines") select 0;
+	_amount = floor (random 4);
 	
-	if (_itemClass == "LMG_Zafir_F") then {
-		_magazine = "150Rnd_762x54_Box";
-	};
-	
-	if (_itemClass == "srifle_LRR_LRPS_F") then {
-		_magazine = "7Rnd_408_Mag";	
-	};
+	for "_i" from 1 to _amount do {
+		_magazine = getArray (configFile >> "CfgWeapons" >> _itemClass >> "magazines") call BIS_fnc_selectRandom;
+		
+		if (_itemClass == "LMG_Zafir_F") then {
+			_magazine = "150Rnd_762x54_Box";
+		};
 
-	if (_itemClass == "srifle_GM6_LRPS_F") then {
-		_magazine = "5Rnd_127x108_Mag";
+		if (_itemClass == "srifle_LRR_LRPS_F") then {
+			_magazine = "7Rnd_408_Mag";	
+		};
+
+		if (_itemClass == "srifle_GM6_LRPS_F") then {
+			_magazine = "5Rnd_127x108_Mag";
+		};
+
+		if (_itemClass == "LMG_mas_rpk_F") then {
+			_magazine = "100Rnd_mas_545x39_mag";
+		};
+		
+		_weaponHolder addMagazineCargoGlobal [_magazine, 1];
 	};
 	
-	if (_itemClass == "hgun_mas_grach_F") then {
-		_magazine = "15Rnd_mas_9x21_Mag";
-	};
-	
-	_weaponHolder addMagazineCargoGlobal [_magazine, floor (random 4)];
 	_item = _weaponHolder;
 };
 
 if (_itemType == "supplybox") then {
 
-	_supplyBox = createVehicle [_itemClass, _lootPos, [], 0, "CAN_COLLIDE"];
-	_supplyBox setVariable ["isLoot", true];
-	_supplyBox setDir (random 360);
-	
-	_weaponHolder = _supplyBox;
+	_weaponHolder = createVehicle [_itemClass, _lootPos, [], 0, "CAN_COLLIDE"];
+	_weaponHolder setVariable ["isLoot", true];
 };
 
 if (_itemType == "backpack") then {
@@ -104,4 +106,8 @@ if (_itemType == "item") then {
 // stop floating objs
 _weaponHolder setPos _lootPos;
 
+// random rotation
+_weaponHolder setDir (random 360);
+
+// return
 _weaponHolder

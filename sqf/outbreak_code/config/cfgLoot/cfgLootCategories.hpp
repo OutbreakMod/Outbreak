@@ -201,8 +201,8 @@ class CfgLootCategories {
 	class Hunting {
 		
 		loot[] = {
-			{"srifle_mas_m24_v_h","gun",0.3}, //@mas
-			{"Trixie_CZ550", "gun",0.03}
+			{"srifle_mas_m24_v_h","gun",0.02}, //@mas
+			{"Trixie_CZ550", "gun",0.04}
 		};
 	};
 	
@@ -211,7 +211,8 @@ class CfgLootCategories {
 		loot[] = {
 			{"Trixie_Enfield", "gun",0.08},
 			{"Trixie_CZ550", "gun",0.03},
-			{"arifle_mas_saiga","gun",0.09}
+			{"arifle_mas_saiga","gun",0.06},
+			{"WoodPileBox","supplybox",0.1}
 		};
 	};
 
@@ -232,8 +233,7 @@ class CfgLootCategories {
 	class Industrial {
 		
 		loot[] = {
-			{"axe","single", 0.9},
-			{"fireaxe","single", 0.8},
+			{"axe","single", 0.08},
 			{"jerrycan","single", 0.06},
 			{"cartyre","single", 0.05},
 			{"hammer","single", 0.09},

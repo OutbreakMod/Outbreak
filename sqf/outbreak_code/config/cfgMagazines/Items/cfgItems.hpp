@@ -61,7 +61,6 @@
 #include "usbdrive.hpp"
 #include "wallet.hpp"
 #include "whiskey.hpp"
-#include "log.hpp"
 #include "paintcan.hpp"
 #include "candybar.hpp"
 #include "charms.hpp"
@@ -148,3 +147,7 @@
 #include "tablet.hpp"
 #include "twinkies.hpp"
 #include "weapon_modkit.hpp"
+
+//farm
+#include "log.hpp"
+#include "log_rotten.hpp"

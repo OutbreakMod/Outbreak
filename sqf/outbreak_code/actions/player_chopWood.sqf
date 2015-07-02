@@ -95,11 +95,11 @@ if (_woodCutting) then {
 		
 		_wpPos = player modeltoWorld [0,-1,0];
 		_wpPos set [2,0]; // assuming the player in on the ground.
-		_nearByPile = nearestObjects [_wpPos, ["WeaponHolderSimulated", "GroundWeaponHolder"], 2];
+		_nearByPile = nearestObjects [_wpPos, ["ItemSack"], 2];
 		_item = objNull;
 		
 		 if (count _nearByPile == 0) then {
-			_item = createVehicle ["GroundWeaponHolder", _wpPos, [], 1, "CAN_COLLIDE"];
+			_item = createVehicle ["ItemSack", _wpPos, [], 1, "CAN_COLLIDE"];
 		} else {
 			_item = _nearByPile select 0;
 		};

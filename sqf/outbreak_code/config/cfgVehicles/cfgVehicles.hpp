@@ -3,7 +3,9 @@ class CfgVehicles
 	// Loot spawn
 	class GroundWeaponHolder;	
 	#include "WeaponHolders\OutbreakBasket.hpp"
-	#include "WeaponHolders\MedicalBox.hpp"
+	#include "WeaponHolders\ItemSack.hpp"
+	#include "Loot\MedicalBox.hpp"
+	#include "Loot\WoodPileBox.hpp"
 	
 	// Player bases
 	class Land_TentA_F;
