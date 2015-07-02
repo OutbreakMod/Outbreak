@@ -5,7 +5,7 @@
 
 private ["_health"];
 
-_health = _this select 0;
+_health = _this;
 
 "colorCorrections" ppEffectEnable true;
 "colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, (_health/MOD_FULL_HEALTH)],  [1, 1, 1, 0.0]];

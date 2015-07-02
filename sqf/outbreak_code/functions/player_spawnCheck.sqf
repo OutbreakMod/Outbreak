@@ -79,3 +79,12 @@ if (_check == "sync") then {
 if (_check == "debugmenu") then {
 	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
 };
+
+if (_check == "blood_level") then {
+
+	if (_unit setVariable ["blood_level", false]) then {
+		_unit setVariable ["blood_level", false];
+		_unit getVariable ["blood", MOD_FULL_BLOOD] call fnc_bloodEffect;
+	
+	};
+};

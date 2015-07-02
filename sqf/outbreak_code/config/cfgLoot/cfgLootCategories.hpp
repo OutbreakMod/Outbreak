@@ -14,8 +14,7 @@ class CfgLootCategories {
 		loot[] = {
 			{"ItemGPS","item",0.05},
 			{"mre","item",0.06},
-			{"NVGoggles","single",0.01},
-			{"Rangefinder","single",0.02}
+			{"Rangefinder","single",0.01}
 		};
 	};
 	
@@ -156,16 +155,11 @@ class CfgLootCategories {
 		loot[] = {
 			{"twinkies", "item",0.02},
 			{"snoballs", "item",0.02},
-			{"pbj", "item",0.02},
-			{"donut", "item",0.02},
-			{"potato", "item",0.08},
 			{"energy_drink", "item",0.06},
-			{"coffee", "item",0.07},
 			{"cereal", "item",0.06},
-			{"carrot", "item",0.05},
 			{"candybar", "item",0.03},
 			{"soda", "item",0.06},
-			{"juicebox", "item",0.06},
+			{"orangedrink", "item",0.06},
 			{"chips", "item", 0.01},
 			{"cannedfood","item", 0.05}
 		};
@@ -178,7 +172,7 @@ class CfgLootCategories {
 			{"corn", "item",0.02},
 			{"cereal", "item",0.03},
 			{"soda", "item",0.04},
-			{"juicebox", "item",0.04},
+			{"orangedrink", "item",0.04},
 			{"chips", "item", 0.03},
 			{"cannedfood","item", 0.06}
 		};
@@ -212,7 +206,9 @@ class CfgLootCategories {
 			{"Trixie_Enfield", "gun",0.08},
 			{"Trixie_CZ550", "gun",0.03},
 			{"arifle_mas_saiga","gun",0.06},
-			{"WoodPileBox","supplybox",0.1}
+			{"WoodPileBox","supplybox",0.1}, //0.1
+			{"carrot", "item",0.05},
+			{"potato", "item",0.05}
 		};
 	};
 
@@ -233,9 +229,9 @@ class CfgLootCategories {
 	class Industrial {
 		
 		loot[] = {
-			{"axe","single", 0.08},
-			{"jerrycan","single", 0.06},
-			{"cartyre","single", 0.05},
+			{"axe","single", 0.1},
+			{"jerrycan","single", 0.08},
+			{"cartyre","single", 0.06},
 			{"hammer","single", 0.09},
 			{"toolbox","single", 0.06},
 			{"scrap","item", 0.06}

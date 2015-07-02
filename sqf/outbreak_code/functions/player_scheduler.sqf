@@ -15,6 +15,7 @@
 		["actions", 1],
 		["blood", 1],
 		["health", 1],
+		["blood_level", 10],
 		["bones", 1],
 		//["debugmenu", 1],
 		["sync", 60]

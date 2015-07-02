@@ -8,8 +8,7 @@ class WoodPileBox: GroundWeaponHolder
 	class TransportWeapons{};
 	class TransportItems{};
 	
-	// add random amounts of log
 	class Eventhandlers {
-		init = "(_this select 0) addMagazineCargoGlobal ['log', floor (random 8)];";
+		init = " if (floor (random 2) == 1) then { (_this select 0) addMagazineCargoGlobal ['log', floor (random 8)]; (_this select 0) addMagazineCargoGlobal ['log_rotten', floor (random 8)]; } else { (_this select 0) addMagazineCargoGlobal ['log_rotten', floor (random 8)]; (_this select 0) addMagazineCargoGlobal ['log', floor (random 8)] };";
 	};
 };

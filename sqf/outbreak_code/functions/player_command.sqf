@@ -30,7 +30,8 @@ if (_command == "medical") then {
 	player setVariable ["health", (_medicalArray select 1), true];
 	player setVariable ["blood", (_medicalArray select 2), true];
 	
-	[(_medicalArray select 1)] call fnc_bloodEffect;
+	// low blood effect
+	player getVariable ["blood", 0] call fnc_bloodEffect;
 };
 
 if (_command == "login") then {
