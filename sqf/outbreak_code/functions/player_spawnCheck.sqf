@@ -68,6 +68,7 @@ if (_check == "loot") then {
 
 if (_check == "actions") then {
 	[] execVM "addons\outbreak_code\functions\player_createActions.sqf";
+	[] execVM "addons\outbreak_code\functions\player_interactWorld.sqf";
 };
 
 // Sync user to database

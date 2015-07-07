@@ -9,8 +9,4 @@ class fireaxe: CA_Magazine
 	class ItemInfo {
 		mass = 8;
 	};
-	
-	class cfgItemActions {
-		doubleClick = "_this call player_chopWood;";
-	};
 };

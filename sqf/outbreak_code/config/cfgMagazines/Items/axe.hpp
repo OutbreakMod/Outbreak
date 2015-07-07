@@ -9,8 +9,4 @@ class axe: CA_Magazine
 	class ItemInfo {
 		mass = 5;
 	};
-	
-	class cfgItemActions {
-		doubleClick = "_this call player_chopWood;";
-	};
 };

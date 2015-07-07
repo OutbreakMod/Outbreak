@@ -37,7 +37,6 @@ fnc_bloodEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functi
 
 // actions
 player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
-player_chopWood = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_chopWood.sqf";
 
 obj_getModelName = {
 	_objInfo = toArray(str(_this));
