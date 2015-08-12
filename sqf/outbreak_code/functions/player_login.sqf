@@ -14,9 +14,6 @@ setPlayable _newUnit;
 selectPlayer _newUnit;
 deleteVehicle (_previousUnit);
 
-// create variables
-call compile preprocessFileLineNumbers "addons\outbreak_code\variables.sqf";
-
 // new handlers
 player removeAllEventHandlers "Killed";
 player removeAllEventHandlers "Respawn";

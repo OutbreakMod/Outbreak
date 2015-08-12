@@ -17,7 +17,7 @@ if (_lootMax == 0) then {
 	_lootMax = _posAmount;
 };
 
-_lootNumber = (floor (random _lootMax + 1) + _lootMin);
+_lootNumber = (floor (random _lootMax) + _lootMin);
 
 if (_lootNumber > _posAmount) then {
 	_lootNumber = _lootNumber - 1;

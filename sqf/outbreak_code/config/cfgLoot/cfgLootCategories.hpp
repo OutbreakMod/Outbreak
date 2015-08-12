@@ -51,7 +51,7 @@ class CfgLootCategories {
 			{"arifle_mas_asval_h","gun",0.03}, // 10% 
 			{"LMG_mas_rpk_F","gun",0.05}, // @mas
 			{"LMG_mas_pkm_F","gun",0.04}, // @mas
-			{"srifle_mas_vss_h","gun",0.05} // @mas
+			{"srifle_mas_vss_h","gun",0.03} // @mas
 		};
 	};
 	
@@ -117,8 +117,6 @@ class CfgLootCategories {
 	class HighCaliberRifles {
 		
 		loot[] = {
-			{"srifle_LRR_LRPS_F","gun",0.01},
-			{"srifle_GM6_LRPS_F","gun",0.01},
 			{"srifle_mas_m107_h","gun",0.01} // @mas m107
 		};
 	};
@@ -229,7 +227,7 @@ class CfgLootCategories {
 	class Industrial {
 		
 		loot[] = {
-			{"axe","single", 0.1},
+			{"axe","single", 0.09},
 			{"jerrycan","single", 0.08},
 			{"cartyre","single", 0.06},
 			{"hammer","single", 0.09},

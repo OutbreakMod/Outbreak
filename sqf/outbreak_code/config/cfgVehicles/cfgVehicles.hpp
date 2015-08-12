@@ -27,6 +27,10 @@ class CfgVehicles
 	#include "PlayerBases\OutbreakShackV1.hpp"
 	
 	class House;
+	class SpawnedWreck : House {
+		heightAdjustment = 0;
+	};
+	
 	#include "Wrecks\UH1YWreck.hpp"
 	#include "Wrecks\Mi8Wreck.hpp"
 };

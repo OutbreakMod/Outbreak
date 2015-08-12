@@ -1,4 +1,4 @@
-class MOD_UH1YWreck: House
+class MOD_UH1YWreck: SpawnedWreck
 {
 	model = "\ca\air2\UH1Y\UH1Y_Crashed.p3d";
 	mapSize = 15;

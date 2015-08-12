@@ -19,4 +19,5 @@ class CfgPatches {
 #include "config\cfgLoot\cfgBuildingType.hpp"
 #include "config\cfgLoot\cfgLootCategories.hpp"
 
-// arma files
+// weapons
+#include "config\cfgWeapons\cfgWeapons.hpp"

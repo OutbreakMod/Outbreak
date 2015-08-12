@@ -1,4 +1,4 @@
-class MOD_Mi8Wreck: House
+class MOD_Mi8Wreck: SpawnedWreck
 {
 	model = "\Ca\air\MI8Wreck.p3d";
 	mapSize = 15;
