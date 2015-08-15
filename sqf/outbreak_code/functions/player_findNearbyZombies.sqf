@@ -7,9 +7,6 @@ private ["_unit", "_range", "_infected", "_isZombie", "_nearby"];
 
 _unit = _this select 0;
 _range = _this select 1;
-
-_nearby = (getPosATL _unit) nearEntities ["Man", _range];
-
 _infected = [];
 
 {
@@ -19,6 +16,6 @@ _infected = [];
 		_infected = _infected + [_x];
 	};
 	
-} forEach _nearby;
+} forEach ((getPosATL _unit) nearEntities ["Man", _range]);
 
-_infected
+_infected;
