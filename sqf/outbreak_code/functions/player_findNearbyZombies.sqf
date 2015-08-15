@@ -21,6 +21,4 @@ _infected = [];
 	
 } forEach _nearby;
 
-diag_log format ["Found (%1) nearby zombies!", count _infected];
-
 _infected
