@@ -22,7 +22,5 @@ if (_unit getVariable ["alive", false]) then {
 		// send request to server
 		hive_playerSave = [_unit, name _unit, _pos, _unit call player_serializeInventory, _legFracture, _unit getVariable ["health", 6000], _unit getVariable ["blood", 6000]];
 		publicVariableServer "hive_playerSave";
-
-		diag_log format ["Hive sync request"];
 	};
 };

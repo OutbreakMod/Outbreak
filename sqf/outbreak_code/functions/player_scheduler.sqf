@@ -11,7 +11,7 @@
 	
 	_scheduled = [
 		["loot", 60],
-		["npc", 300],
+		["zombie", 30],
 		["actions", 1],
 		["blood", 1],
 		["health", 1],

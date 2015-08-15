@@ -38,6 +38,10 @@ fnc_bloodEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functi
 // actions
 player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
 
+// infected
+player_findNearbyZombies = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearbyZombies.sqf";
+player_spawnZombies = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearbyZombies.sqf";
+
 obj_getModelName = {
 	_objInfo = toArray(str(_this));
 	_lenInfo = count _objInfo - 1;

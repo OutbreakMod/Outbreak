@@ -3,14 +3,13 @@
 	@author: TheAmazingAussie
 */
 
-private ["_nearby", "_nearbyRadius", "_positions", "_lootPos", "_spawnItem", "_spawnItems", "_itemClass", "_itemType", "_lootPos", "_i", "_x", "_lootArray", "_animalAgents", "_animalRadius", "_animalsToSpawn"];
+private ["_nearby", "_nearbyRadius", "_positions", "_lootPos", "_spawnItem", "_spawnItems", "_itemClass", "_itemType", "_lootPos", "_i", "_x", "_lootArray"];
 
 _unit = _this select 0;
 _check = _this select 1;
 
-if (_check == "npc") then {
-	//player_agentsSpawnCheck = [getPosATL _unit];
-	//publicVariableServer "player_agentsSpawnCheck";
+if (_check == "zombie") then {
+	[player, 80] call player_spawnZombies;
 };
 
 if (_check == "bones") then {
@@ -18,14 +17,14 @@ if (_check == "bones") then {
 		player setHit ["legs", 1];
 		player setVariable ["fracture_update", false, true];
 		player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
-		[player] call player_hiveSync; // force save
 	};
 	
 	if (!(player getVariable ["leg_break", false]) && player getVariable ["fracture_update", false]) then {
 		player setHit ["legs", 0];
 		player setVariable ["fracture_update", false, true];
-		[player] call player_hiveSync; // force save
 	};
+	
+	[player] call player_hiveSync; // force save
 };
 
 if (_check == "health") then {
@@ -47,16 +46,12 @@ if (_check == "loot") then {
 		
 	{
 		if (serverTime > _x getVariable ["loottimer", 0]) then {
-
-			// clear previous loot
 			_lootArray = _x getVariable ["lootarray", []];
 		
 			for "_i" from 0 to count (_lootArray) - 1 do {
 				deleteVehicle (_lootArray select _i);
 			};
-			
-			sleep 0.01;
-			
+
 			_x setVariable ["lootarray", []];
 			_x call building_spawnLoot;
 		};
@@ -64,14 +59,10 @@ if (_check == "loot") then {
 	} foreach _nearby;
 };
 
-// Create scroll menu actions
-
 if (_check == "actions") then {
 	[] execVM "addons\outbreak_code\functions\player_createActions.sqf";
 	[] execVM "addons\outbreak_code\functions\player_interactWorld.sqf";
 };
-
-// Sync user to database
 
 if (_check == "sync") then {
 	[player] call player_hiveSync;
@@ -82,7 +73,6 @@ if (_check == "debugmenu") then {
 };
 
 if (_check == "blood_level") then {
-
 	if (_unit setVariable ["blood_level", false]) then {
 		_unit setVariable ["blood_level", false];
 		_unit getVariable ["blood", MOD_FULL_BLOOD] call fnc_bloodEffect;
