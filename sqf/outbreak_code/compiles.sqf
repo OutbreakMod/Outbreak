@@ -12,6 +12,7 @@ player_hiveSync = compile preProcessFileLineNumbers "addons\outbreak_code\functi
 player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_pressKey.sqf";
 player_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_handleDamage.sqf";
 player_command = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_command.sqf";
+player_findNearby = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearby.sqf";
 
 // building
 building_items = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_items.sqf";
@@ -38,8 +39,8 @@ fnc_bloodEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functi
 player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
 
 // infected
-player_findNearbyZombies = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearbyZombies.sqf";
 player_spawnZombies = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_spawnZombies.sqf";
+fnc_startZombie = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\fnc_startZombie.sqf";
 
 obj_getModelName = {
 	_objInfo = toArray(str(_this));

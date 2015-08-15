@@ -27,6 +27,7 @@ player addEventHandler ["HandleDamage", { _this call player_handleDamage; }];
 player setVariable ["outbreaklogin", -1];
 player setVariable ["playeruuid", getPlayerUID player, true];
 player setVariable ["alive", true];
+player setVariable ["isPlayer", true, true];
 player setVariable ["deathmessage", format["His name was %1 and died from death", name player], true];
 player enableFatigue false;
 

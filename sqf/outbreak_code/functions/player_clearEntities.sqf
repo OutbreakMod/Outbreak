@@ -6,8 +6,11 @@
 private ["_radius", "_near"];
 
 _radius = 200;
-_near = [player, ZOMBIE_SPAWN_RANGE_WILD_MAX] call player_findNearbyZombies;
 
+// find near zombies
+_near = [player, _radius, "isZombie"] call player_findNearby;
+
+// delete all things
 {
 	if (alive _x) then {
 		deleteVehicle _x;

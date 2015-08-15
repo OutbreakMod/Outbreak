@@ -7,10 +7,12 @@ private ["_unit", "_range", "_infected", "_isZombie", "_nearby"];
 
 _unit = _this select 0;
 _range = _this select 1;
+_variable = _this select 2;
+
 _infected = [];
 
 {
-	_isZombie = (_x getVariable ["isZombie", false]);
+	_isZombie = (_x getVariable [_variable, false]);
 	
 	if (_isZombie) then {
 		_infected = _infected + [_x];
