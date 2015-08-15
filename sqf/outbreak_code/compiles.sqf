@@ -39,7 +39,7 @@ player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\p
 
 // infected
 player_findNearbyZombies = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearbyZombies.sqf";
-player_spawnZombies = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearbyZombies.sqf";
+player_spawnZombies = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_spawnZombies.sqf";
 
 obj_getModelName = {
 	_objInfo = toArray(str(_this));

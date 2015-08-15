@@ -5,13 +5,12 @@
 
 private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePosition", "_zombieRange", "_infected", "_isZombie"];
 
-diag_log format ["Spawn zombie test"];
+diag_log format ["Spawn zombie request %1", _this];
 
 _unit = _this select 0;
-_range = _this select 1;
-_amount = 6;
+_amount = ZOMBIE_SPAWN_WILD;
 
-_infected = (_this call player_findNearbyZombies);
+_infected = ([_unit, ZOMBIE_SPAWN_RANGE_WILD_MAX] call player_findNearbyZombies);
 _count = (count _infected);
 	
 // if the amount of current zeds is less than amount threshold, we spawn more infected
@@ -22,7 +21,7 @@ if (_count < _amount) then {
 
 	for "_i" from 0 to _toSpawn - 1 do { 
 		
-		_zombiePosition = [(position _unit), _range / 2, _range, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+		_zombiePosition = [(position _unit), ZOMBIE_SPAWN_RANGE_WILD_MAX / 2, ZOMBIE_SPAWN_RANGE_WILD_MAX, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 		
 		diag_log format ["Spawning zombie at %1", _zombiePosition];
 		

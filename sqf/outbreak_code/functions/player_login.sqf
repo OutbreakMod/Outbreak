@@ -66,7 +66,7 @@ if (_NOT_LOGGED_IN) then {
 } else {
 	
 	titleFadeOut 7;
-	//[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
+	[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
 	
 	if (!_respawning) then {
 		[] execVM "addons\outbreak_code\functions\player_scheduler.sqf";
