@@ -1,4 +1,5 @@
 class Land_A_hospital : Default {
+	zombieClothes = "civilian";
 	lootMin = 3;
 	lootCategories[] = 
 	{
@@ -10,6 +11,7 @@ class Land_A_hospital : Default {
 };
 
 class Land_A_GeneralStore_01a : Default {
+	zombieClothes = "civilian";
 	lootMin = 5;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -23,6 +25,7 @@ class Land_A_GeneralStore_01a : Default {
 };
 
 class Land_A_GeneralStore_01 : Default {
+	zombieClothes = "civilian";
 	lootMin = 5;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -36,6 +39,7 @@ class Land_A_GeneralStore_01 : Default {
 };
 
 class Land_A_Pub_01 : Default {
+	zombieClothes = "civilian";
 	lootMin = 5;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -50,6 +54,7 @@ class Land_A_Pub_01 : Default {
 };
 
 class Land_HouseV2_02_Interier : Default {
+	zombieClothes = "civilian";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -64,6 +69,7 @@ class Land_HouseV2_02_Interier : Default {
 };
 
 class Land_HouseV2_04_interier : Default {
+	zombieClothes = "civilian";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -78,6 +84,7 @@ class Land_HouseV2_04_interier : Default {
 };
 
 class Land_A_Office01 : Default {
+	zombieClothes = "worker";
 	lootMin = 5;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -90,6 +97,7 @@ class Land_A_Office01 : Default {
 };
 
 class Land_HouseV_1I1 : Default {
+	zombieClothes = "civilian";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -104,6 +112,7 @@ class Land_HouseV_1I1 : Default {
 };
 
 class Land_Rail_House_01 : Default {
+	zombieClothes = "civilian";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -118,6 +127,7 @@ class Land_Rail_House_01 : Default {
 };
 
 class Land_Panelak : Default {
+	zombieClothes = "civilian";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -132,6 +142,7 @@ class Land_Panelak : Default {
 };
 
 class Land_Panelak2 : Default {
+	zombieClothes = "civilian";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -146,6 +157,7 @@ class Land_Panelak2 : Default {
 };
 
 class Land_rail_station_big : Default {
+	zombieClothes = "worker";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 

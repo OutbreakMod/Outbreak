@@ -1,4 +1,5 @@
 class Land_A_BuildingWIP : Default {
+	zombieClothes = "worker";
 	lootMin = 6;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -10,6 +11,7 @@ class Land_A_BuildingWIP : Default {
 };
 
 class Land_Hangar_2 : Default {
+	zombieClothes = "worker";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -21,6 +23,7 @@ class Land_Hangar_2 : Default {
 };
 
 class Land_Ind_Workshop01_L : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -31,6 +34,7 @@ class Land_Ind_Workshop01_L : Default {
 };
 
 class Land_Ind_Workshop01_04 : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -41,6 +45,7 @@ class Land_Ind_Workshop01_04 : Default {
 };
 
 class Land_Ind_Workshop01_02 : Default {
+	zombieClothes = "worker";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -51,6 +56,7 @@ class Land_Ind_Workshop01_02 : Default {
 };
 
 class Land_Ind_Workshop01_01 : Default {
+	zombieClothes = "worker";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -61,6 +67,7 @@ class Land_Ind_Workshop01_01 : Default {
 };
 
 class Land_Barn_W_01 : Default {
+	zombieClothes = "worker";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -71,6 +78,7 @@ class Land_Barn_W_01 : Default {
 };
 
 class Land_Barn_Metal : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -81,6 +89,7 @@ class Land_Barn_Metal : Default {
 };
 
 class Land_repair_center : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -91,6 +100,7 @@ class Land_repair_center : Default {
 };
 
 class Land_Shed_Ind02 : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -101,6 +111,7 @@ class Land_Shed_Ind02 : Default {
 };
 
 class Land_Shed_W01 : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -111,6 +122,7 @@ class Land_Shed_W01 : Default {
 };
 
 class Land_Tovarna2 : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -121,6 +133,7 @@ class Land_Tovarna2 : Default {
 };
 
 class Land_hut06 : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -131,6 +144,7 @@ class Land_hut06 : Default {
 };
 
 class Land_kulna : Default {
+	zombieClothes = "worker";
 	lootMin = 1;
 	lootCategories[] = {
 		"GeneralTools", 

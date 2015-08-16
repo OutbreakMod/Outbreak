@@ -1,4 +1,5 @@
 class Land_SS_hangar : Default {
+	zombieClothes = "military";
 	lootMin = 1;
 	lootCategories[] = 
 	{
@@ -16,6 +17,7 @@ class Land_SS_hangar : Default {
 };
 
 class Land_Mil_Barracks_i : Default {
+	zombieClothes = "military";
 	lootMin = 4;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -32,6 +34,7 @@ class Land_Mil_Barracks_i : Default {
 };
 
 class Land_Mil_ControlTower : Default {
+	zombieClothes = "military";
 	lootMin = 2;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -47,6 +50,7 @@ class Land_Mil_ControlTower : Default {
 };
 
 class CampEast_EP1 : Default {
+	zombieClothes = "military";
 	lootMin = 0;
 	lootCategories[] = 
 	{
@@ -65,6 +69,7 @@ class CampEast_EP1 : Default {
 };
 
 class CampEast : Default {
+	zombieClothes = "military";
 	lootMin = 0;
 	lootCategories[] = 
 	{
@@ -83,6 +88,7 @@ class CampEast : Default {
 };
 
 class Land_tent_east : Default {
+	zombieClothes = "military";
 	lootMin = 0;
 	lootCategories[] = 
 	{
@@ -101,6 +107,7 @@ class Land_tent_east : Default {
 };
 
 class Land_Mil_Guardhouse: Default {
+	zombieClothes = "military";
 	lootMin = 0;
 	lootCategories[] = 
 	{
@@ -113,4 +120,5 @@ class Land_Mil_Guardhouse: Default {
 		"Attachments"
 	};
 	positions[] = {{-2.44727,0.250977,-1.70563},{-2.44873,3.00293,-1.70285}};
+	lootRespawnSeconds = 600;
 };

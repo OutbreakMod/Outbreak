@@ -21,3 +21,6 @@ class CfgPatches {
 
 // weapons
 #include "config\cfgWeapons\cfgWeapons.hpp"
+
+// zombies
+#include "config\cfgZombies\cfgZombies.hpp"

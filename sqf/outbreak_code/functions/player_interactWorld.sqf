@@ -26,7 +26,6 @@ if (!_inVehicle && !player_performingAction) then {
 		_objName = _x call obj_getModelName;
 		_object = _x;
 		
-		diag_log format["PLAYER INTERACT WORLD: %1", _objName];
 	} forEach _objects;
 
 	if (!isNull _object) then {
