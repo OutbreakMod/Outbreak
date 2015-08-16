@@ -3,15 +3,6 @@ class CfgZombies {
 	#include "cfgZombieClothes.hpp"
 };
 
-class CfgVehicles {
-	
-	class CAManBase;	// External class reference
-	
-	class Zombie : CAManBase {
-		faceType = "ZombieFace";
-	};
-};
-
 class CfgFaces {
 	class Man_A3;	// External class reference
 	class ZombieFace : Man_A3 {
