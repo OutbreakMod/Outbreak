@@ -40,7 +40,7 @@ if (_count < _amount) then {
 		_zombiePosition = [(position _unit), ZOMBIE_SPAWN_RANGE_WILD_MIN, ZOMBIE_SPAWN_RANGE_WILD_MAX, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 		
 		// spawn zombie
-		_agent = createAgent ["b_survivor_F", _zombiePosition, [], 0, "NONE"];
+		_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
 		
 		// log spawn
 		diag_log format ["Spawning zombie at %1", _zombiePosition];
