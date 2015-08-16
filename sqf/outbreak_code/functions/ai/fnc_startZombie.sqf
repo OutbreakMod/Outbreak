@@ -38,7 +38,7 @@ if (_isZombieWild) then {
 		if (isClass(_building)) then {
 		
 			_zombieClothes = getText (_building >> "zombieClothes");
-			_clothes = getArray getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
+			_clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
 		};
 	
 	} forEach _nearby;
