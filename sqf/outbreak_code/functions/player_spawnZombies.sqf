@@ -8,7 +8,17 @@ private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePositio
 diag_log format ["Spawn zombie request %1", _this];
 
 _unit = _this select 0;
+_isCity = count (nearestLocations [getPosATL _agent, ["NameCityCapital", "NameCity", "NameVillage"], 130]) > 0;
+
 _amount = ZOMBIE_SPAWN_WILD;
+_rangeMax = ZOMBIE_SPAWN_RANGE_WILD_MAX;
+_rangeMin = ZOMBIE_SPAWN_RANGE_WILD_MIN;
+
+if (_isCity) then {
+	_amount = ZOMBIE_SPAWN_CITY;
+	_rangeMax = ZOMBIE_SPAWN_RANGE_CITY_MAX;
+	_rangeMin = ZOMBIE_SPAWN_RANGE_CITY_MIN;
+};
 
 // find nearby zombies
 _infected = ([_unit, ZOMBIE_SPAWN_RANGE_WILD_MAX, "isZombie"] call player_findNearby);

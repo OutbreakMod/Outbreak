@@ -19,30 +19,21 @@ _agent setSkill 0;
 
 _isZombieWild = true;
 _cities = nearestLocations [getPosATL _agent, ["NameCityCapital", "NameCity", "NameVillage"], 130];
-_clothes = [];
+_clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "wild");
+_nearby = (getPosATL _agent) nearObjects ["building", 50];
 
-if ((count _cities) > 0) then {
-	_isZombieWild = false;
-};
+{
 	
-if (_isZombieWild) then {
-	_clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "wild");
-} else {
-	_nearby = (getPosATL _agent) nearObjects ["building", 20];
+	_className = typeOf _x;
+	_building = configFile >> "CfgBuildingType" >> _className;
 	
-	{
-		
-		_className = typeOf _x;
-		_building = configFile >> "CfgBuildingType" >> _className;
-		
-		if (isClass(_building)) then {
-		
-			_zombieClothes = getText (_building >> "zombieClothes");
-			_clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
-		};
+	if (isClass(_building)) then {
 	
-	} forEach _nearby;
-};
+		_zombieClothes = getText (_building >> "zombieClothes");
+		_clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
+	};
+
+} forEach _nearby;
 
 _agent addUniform (_clothes call BIS_fnc_selectRandom);
 

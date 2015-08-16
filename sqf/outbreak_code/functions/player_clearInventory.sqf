@@ -9,5 +9,6 @@ _this unlinkItem "NVGoggles_INDEP";
 removeUniform _this; 
 removeVest _this; 
 removeBackpack _this; 
-removeHeadgear _this; 
+removeHeadgear _this;
+removeGoggles _this;
 removeAllWeapons _this;
