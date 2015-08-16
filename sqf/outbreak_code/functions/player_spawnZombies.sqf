@@ -20,32 +20,22 @@ if (_isCity) then {
 	_rangeMin = ZOMBIE_SPAWN_RANGE_CITY_MIN;
 };
 
-// find nearby zombies
 _infected = ([_unit, ZOMBIE_SPAWN_RANGE_WILD_MAX, "isZombie"] call player_findNearby);
 _count = (count _infected);
 	
 // if the amount of current zeds is less than amount threshold, we spawn more infected
 if (_count < _amount) then {
 
-	// find the number to spawn
 	_toSpawn = _amount - _count;
-	
-	// log client dev stuff
 	diag_log format ["There needs to be (%1) more zombies to spawn!", _toSpawn];
 
-	// spawn any missing infected
 	for "_i" from 0 to _toSpawn - 1 do { 
 		
-		// find safe position to spawn zombie
 		_zombiePosition = [(position _unit), ZOMBIE_SPAWN_RANGE_WILD_MIN, ZOMBIE_SPAWN_RANGE_WILD_MAX, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 		
-		// spawn zombie
 		_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-		
-		// log spawn
-		diag_log format ["Spawning zombie at %1", _zombiePosition];
-		
-		// init zombie
 		[_agent] call fnc_startZombie;
+		
+		diag_log format ["Spawning zombie at %1", _zombiePosition];
 	};
 };
