@@ -39,7 +39,7 @@ if (_count < _amount) then {
 		{
 			if ((typeOf _x) in ["MOD_Mi8Wreck", "Mi8Wreck", "MOD_UH1YWreck", "Land_Wreck_Heli_Attack_02_F"]) then {
 				
-				if ((x getVariable ["helicrashMaxZeds", 0]) == 0) then {
+				if ((_x getVariable ["helicrashMaxZeds", 0]) == 0) then {
 					_maxZeds = floor (random 6) + 3;
 					_x setVariable["helicrashMaxZeds", _maxZeds, true];
 				};
@@ -50,6 +50,11 @@ if (_count < _amount) then {
 				
 				if (_zombies > _maxZeds) then {
 					_spawnZombie = false;
+				} else {
+				
+					_spawnMinRadius = 5;
+					_spawnMaxRadius = 8;
+					_zombiePosition = [(getPos _x), (random _spawnMaxRadius) + _spawnMinRadius, random 360] call BIS_fnc_relPos;
 				};
 			};
 			
