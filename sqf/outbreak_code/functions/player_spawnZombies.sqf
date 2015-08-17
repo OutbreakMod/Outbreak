@@ -51,9 +51,8 @@ if (_count < _amount) then {
 				_x setVariable["helicrashZedsSpawn", _zombies, true];
 				
 				if (_zombies > _maxZeds) then {
-					_spawnZombie = false;
+					_x setVariable ["helicrashNoZeds", true, true];
 				} else {
-				
 					_spawnMinRadius = 5;
 					_spawnMaxRadius = 8;
 					_zombiePosition = [(getPos _x), (random _spawnMaxRadius) + _spawnMinRadius, random 360] call BIS_fnc_relPos;

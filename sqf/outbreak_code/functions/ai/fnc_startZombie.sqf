@@ -20,20 +20,26 @@ _agent setHit ["hands", 0.9];
 // Dress up zombie 
 //////////////////////
 
-_isZombieWild = true;
-_cities = nearestLocations [getPosATL _agent, ["NameCityCapital", "NameCity", "NameVillage"], 80];
 _zombieClothes = "wild";
-_nearby = (getPosATL _agent) nearObjects ["building", 80];
+_nearby = nearestObjects [_agent, ["building"], 30];
 
-{
-	_className = typeOf _x;
+if (count _nearby > 0) then {
+	_nearestBuilding = _nearby select 0;
+	_className = typeOf _nearestBuilding;
 	_building = configFile >> "CfgBuildingType" >> _className;
-	
-	if (isClass(_building)) then {
-		_zombieClothes = getText (_building >> "zombieClothes");
-	};
 
-} forEach _nearby;
+	if (!(_nearestBuilding getVariable ["helicrashNoZeds", false])) then {
+		
+		if (isClass(_building)) then {
+			_zombieClothes = getText (_building >> "zombieClothes");
+		};
+		
+		_agent setVariable ["ZombieSpawned", getPos _nearestBuilding, true];
+	};
+	
+} else {
+	_agent setVariable ["ZombieSpawned", getPos _agent, true];
+};
 
 _clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
 _agent addUniform (_clothes call BIS_fnc_selectRandom);
@@ -49,6 +55,19 @@ if (_zombieClothes == "military") then {
 	}; 
 };
 
+if (_zombieClothes == "pilot") then {
+	
+	_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
+	_agent addVest (_vests call BIS_fnc_selectRandom);
+	
+	if (30 > random 100) then {
+		_helmets = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets");
+		_agent addHeadgear (_helmets call BIS_fnc_selectRandom);
+	}; 
+};
+
+_agent setVariable ["ZombieClothes", _zombieClothes];
+
 //////////////////////
 // End dress up zombie 
 //////////////////////
@@ -56,20 +75,33 @@ if (_zombieClothes == "military") then {
 _this spawn {
 	
 	_unit = _this select 0;
+	_zombieClothes = _unit getVariable ["ZombieClothes", false];
+	
 	_hasTarget = false;
 	_timer = 0;
 	
+	
 	while {alive _unit} do {
 		
-		if ((_timer % 30) == 0 && !(_hasTarget)) then {
+		if (_zombieClothes == "wild") then {
+			if ((_timer % 30) == 0 && !(_hasTarget)) then {
 			
-			_walkTo = [(position _unit), 20, 50, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+				_pos = _unit getVariable ["ZombieSpawned", 0];
+				_walkTo = [_pos, 20, 60, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+				_unit forceSpeed 1;
+				_unit moveTo _walkTo;
+				
+			};
+		} else {
+			if ((_timer % 5) == 0 && !(_hasTarget)) then {
 			
-			_unit forceSpeed 1;
-			_unit moveTo _walkTo;
+				_pos = _unit getVariable ["ZombieSpawned", 0];
+				_walkTo = [_pos, 5, 10, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+				_unit forceSpeed 1;
+				_unit moveTo _walkTo;
+			};
 		};
 		
-		// delete zombie if no players nearby
 		if ((_timer % 60) == 0) then {
 			
 			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
