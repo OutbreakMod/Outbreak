@@ -19,6 +19,7 @@ class CfgClothes {
 	
 	wild[] = {
 		"U_IG_Guerilla3_1",
+		"U_IG_Guerilla3_2",
 		"U_C_HunterBody_grn",
 		"U_C_HunterBody_brn",
 		"U_C_Poloshirt_blue",

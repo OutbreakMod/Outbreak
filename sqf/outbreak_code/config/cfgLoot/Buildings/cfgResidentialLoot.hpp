@@ -170,4 +170,129 @@ class Land_rail_station_big : Default {
 	};
 	positions[] = {{-4.97266,4.55737,-5.04438},{0.458496,4.85229,-5.04438},{2.4624,2.21851,-5.04438},{-1.32373,-2.60571,-5.04438},{-3.29443,-0.121826,-5.04438},{-1.07764,2.36646,-5.04438},{7.46045,-3.41528,-5.04438},{8.93408,3.1189,-5.04438},{-8.16357,-5.12842,-5.04438}};
 };
-	
+
+//Land_HouseV_2L
+//Land_houseV_2T2.jpg
+//Land_HouseV_1L1.jpg
+//Land_HouseV_1I4.jpg
+//Land_HouseV_1L2.jpg
+//Land_HouseV2_01A.jpg
+//Land_HouseV2_01B.jpg
+
+class Land_HouseV_2L : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CivillianBackpacks", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"MiscMedical", 
+		"CivillianMagazines"
+	};
+	positions[] = {{4.32617,1.81836,-3.96332},{-3.98438,-3.87207,-4.02338}};
+};
+
+class Land_houseV_2T2 : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CivillianBackpacks", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"MiscMedical", 
+		"CivillianMagazines"
+	};
+	positions[] = {{-4.24951,0.988281,-4.0574}};
+};
+
+class Land_HouseV_1L1 : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CivillianBackpacks", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"MiscMedical", 
+		"CivillianMagazines"
+	};
+	positions[] = {{1.20801,5.86035,-1.09302}};
+};
+
+class Land_HouseV_1I4 : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CivillianBackpacks", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"MiscMedical", 
+		"CivillianMagazines"
+	};
+	positions[] = {{-0.400146,-3.87891,-2.7688},{-3.67651,-2.51758,-2.76544},{-0.472412,3.19824,-2.72028}};
+};
+
+class Land_HouseV_1L2 : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CivillianBackpacks", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"MiscMedical", 
+		"CivillianMagazines"
+	};
+	positions[] = {{-0.448242,5.29883,-3.01697}};
+};
+
+class Land_HouseV2_01A : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CivillianBackpacks", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"MiscMedical", 
+		"CivillianMagazines"
+	};
+	positions[] = {{-3.37256,-3.34082,-5.58344},{-1.60547,-3.23535,-5.61884}};
+};
+
+class Land_HouseV2_01B : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CivillianBackpacks", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"MiscMedical", 
+		"CivillianMagazines"
+	};
+	positions[] = {{9.53711,3.39453,-6.11053}};
+};
+
+class Land_Hlidac_budka : Default {
+	zombieClothes = "civilian";
+	lootMin = 2;
+	lootCategories[] = {
+		"GeneralTools", 
+		"CivillianPistols", 
+		"CookingUtilities", 
+		"CivillianFoodStorage", 
+		"Industrial"
+	};
+	positions[] = {{-2.31836,1.5127,-0.78363},{2.02051,0.444336,-0.81366},{-0.460938,1.75879,-0.78363}};
+};
