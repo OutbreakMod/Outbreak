@@ -44,7 +44,9 @@ if (_count < _amount) then {
 					_x setVariable["helicrashMaxZeds", _maxZeds, true];
 				};
 				
+				_maxZeds = _x getVariable ["helicrashMaxZeds", 0];
 				_zombies = _x getVariable ["helicrashZedsSpawn", 0];
+				
 				_zombies = _zombies + 1;
 				_x setVariable["helicrashZedsSpawn", _zombies, true];
 				
