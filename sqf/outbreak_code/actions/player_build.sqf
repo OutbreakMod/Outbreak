@@ -108,7 +108,7 @@ if (_finished) then {
 		
 	// save to database
 	if (_persistent) then {
-		hive_newObject = [player, _type, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir];
+		hive_newObject = [player, _vehicle, _type, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir, ""];
 		publicVariableServer "hive_newObject";
 	};
 
