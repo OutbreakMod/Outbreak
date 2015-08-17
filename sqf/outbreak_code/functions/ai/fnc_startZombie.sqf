@@ -23,7 +23,7 @@ _agent setHit ["hands", 0.9];
 _isZombieWild = true;
 _cities = nearestLocations [getPosATL _agent, ["NameCityCapital", "NameCity", "NameVillage"], 80];
 _zombieClothes = "wild";
-_nearby = (getPosATL _agent) nearObjects ["building", 50];
+_nearby = (getPosATL _agent) nearObjects ["building", 100];
 
 {
 	_className = typeOf _x;
@@ -67,6 +67,16 @@ _this spawn {
 			
 			_unit forceSpeed 1;
 			_unit moveTo _walkTo;
+		};
+		
+		// delete zombie if no players nearby
+		if ((_timer % 60) == 0) then {
+			
+			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
+			
+			if (!(count _players > 0)) exitWith {
+				deleteVehicle (_unit);
+			};
 		};
 		
 		sleep 1; // loop timer every second
