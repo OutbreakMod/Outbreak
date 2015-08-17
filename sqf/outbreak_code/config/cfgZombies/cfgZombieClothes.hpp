@@ -39,6 +39,8 @@ class CfgClothes {
 		"U_O_OfficerUniform_ocamo"
 	};
 	
+	pilot[] = {};
+	
 	military_vests[] = {
 		"V_TacVest_blk", 
 		"V_TacVest_brk",

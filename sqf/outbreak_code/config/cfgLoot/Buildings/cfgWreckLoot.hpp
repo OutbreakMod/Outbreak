@@ -1,5 +1,5 @@
 class Land_Wreck_Heli_Attack_02_F : Default {
-	zombieClothes = "military";
+	zombieClothes = "pilot";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -12,7 +12,7 @@ class Land_Wreck_Heli_Attack_02_F : Default {
 };
 
 class MOD_UH1YWreck : Default {
-	zombieClothes = "military";
+	zombieClothes = "pilot";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -25,7 +25,7 @@ class MOD_UH1YWreck : Default {
 };	
 
 class MOD_Mi8Wreck : Default {
-	zombieClothes = "military";
+	zombieClothes = "pilot";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 
@@ -38,7 +38,7 @@ class MOD_Mi8Wreck : Default {
 };
 
 class Mi8Wreck : Default {
-	zombieClothes = "military";
+	zombieClothes = "pilot";
 	lootMin = 0;
 	lootCategories[] = {
 		"GeneralTools", 

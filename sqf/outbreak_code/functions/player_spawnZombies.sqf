@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePosition", "_zombieRange", "_infected", "_isZombie"];
+private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePosition", "_zombieRange", "_infected", "_isZombie", "_nearby"];
 
 diag_log format ["Spawn zombie request %1", _this];
 
@@ -33,8 +33,32 @@ if (_count < _amount) then {
 		
 		_zombiePosition = [(position _unit), ZOMBIE_SPAWN_RANGE_WILD_MIN, ZOMBIE_SPAWN_RANGE_WILD_MAX, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 		
-		_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-		[_agent] call fnc_startZombie;
+		_nearby = (getPosATL _unit) nearObjects ["building", 100];
+		_spawnZombie = true;
+		
+		{
+			if ((typeOf _x) in ["MOD_Mi8Wreck", "Mi8Wreck", "MOD_UH1YWreck", "Land_Wreck_Heli_Attack_02_F"]) then {
+				
+				if ((x getVariable ["helicrashMaxZeds", 0]) == 0) then {
+					_maxZeds = floor (random 6) + 3;
+					_x setVariable["helicrashMaxZeds", _maxZeds, true];
+				};
+				
+				_zombies = _x getVariable ["helicrashZedsSpawn", 0];
+				_zombies = _zombies + 1;
+				_x setVariable["helicrashZedsSpawn", _zombies, true];
+				
+				if (_zombies > _maxZeds) then {
+					_spawnZombie = false;
+				};
+			};
+			
+		} forEach _nearby;
+		
+		if (_spawnZombie) then {
+			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+			[_agent] call fnc_startZombie;
+		};
 		
 		diag_log format ["Spawning zombie at %1", _zombiePosition];
 	};
