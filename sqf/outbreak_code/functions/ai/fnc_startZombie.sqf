@@ -23,7 +23,7 @@ _agent setHit ["hands", 0.9];
 _isZombieWild = true;
 _cities = nearestLocations [getPosATL _agent, ["NameCityCapital", "NameCity", "NameVillage"], 80];
 _zombieClothes = "wild";
-_nearby = (getPosATL _agent) nearObjects ["building", 100];
+_nearby = (getPosATL _agent) nearObjects ["building", 80];
 
 {
 	_className = typeOf _x;
