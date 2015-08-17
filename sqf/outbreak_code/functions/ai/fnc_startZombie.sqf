@@ -21,7 +21,8 @@ _agent setHit ["hands", 0.9];
 //////////////////////
 
 _zombieClothes = "wild";
-_nearby = nearestObjects [_agent, ["building"], 30];
+_nearby = nearestObjects [_agent, ["House"], 30];
+_className = "wild";
 
 if (count _nearby > 0) then {
 	_nearestBuilding = _nearby select 0;
@@ -66,6 +67,7 @@ if (_zombieClothes == "pilot") then {
 	}; 
 };
 
+diag_log format ["Spawning zombie at %1 near %2 with clothes %3", getPos _agent, _className, _zombieClothes];
 _agent setVariable ["ZombieClothes", _zombieClothes];
 
 //////////////////////
@@ -87,7 +89,7 @@ _this spawn {
 			if ((_timer % 30) == 0 && !(_hasTarget)) then {
 			
 				_pos = _unit getVariable ["ZombieSpawned", 0];
-				_walkTo = [_pos, 20, 60, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+				_walkTo = [_pos, 30, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 				_unit forceSpeed 1;
 				_unit moveTo _walkTo;
 				

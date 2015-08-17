@@ -65,7 +65,5 @@ if (_count < _amount) then {
 			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
 			[_agent] call fnc_startZombie;
 		};
-		
-		diag_log format ["Spawning zombie at %1", _zombiePosition];
 	};
 };
