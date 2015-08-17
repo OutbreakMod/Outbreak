@@ -153,3 +153,18 @@ class Land_kulna : Default {
 	};
 	positions[] = {{0.504395,0.218262,-1.11643},{-0.496582,1.93262,-1.12826}};
 };
+
+class Land_A_Stationhouse : Default {
+	zombieClothes = "industrial";
+	lootMin = 1;
+	lootCategories[] = 
+	{
+		"GeneralTools",  
+		"MilitaryTools", 
+		"Firestation",  
+		"CivillianPistols", 
+		"CivillianBackpacks",
+		"CivillianFoodStorage"
+	};
+	positions[] =  {{-2.7,-7.57,-9.46},{-0.89,-5.72,-9.47},{-3.24,-6.62,-4.65},{-1.36,-8.36,-4.65},{-1.71,-7.85,-0.04},{-3.39,-7.88,-0.04},{-1.4,-7.8,4.41},{-1.38,-5.79,4.41},{1.51,1.96,-9.47},{18.91,-4.07,-9.47},{-14.4,3.29,-0.51},{1.33,0.89,-0.51},{-2.4,-6.64,8.49}};
+};

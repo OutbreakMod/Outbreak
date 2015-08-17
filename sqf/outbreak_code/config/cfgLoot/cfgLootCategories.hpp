@@ -235,6 +235,18 @@ class CfgLootCategories {
 			{"scrap","item", 0.06}
 		};
 	};
+
+	class Firestation {
+		
+		loot[] = {
+			{"fireaxe","single", 0.08},
+			{"axe","single", 0.06},
+			{"jerrycan","single", 0.08},
+			{"hammer","single", 0.09},
+			{"toolbox","single", 0.06},
+			{"scrap","item", 0.06}
+		};
+	};
 	
 	class Magazines {
 		
