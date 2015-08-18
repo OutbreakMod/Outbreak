@@ -31,7 +31,7 @@ if (_count < _amount) then {
 
 	for "_i" from 0 to _toSpawn - 1 do { 
 		
-		_zombiePosition = [(position _unit), ZOMBIE_SPAWN_RANGE_WILD_MIN, ZOMBIE_SPAWN_RANGE_WILD_MAX, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+		_zombiePosition = [(position _unit), _rangeMin, _rangeMax, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 		
 		_nearby = (getPosATL _unit) nearObjects ["building", 100];
 		_spawnZombie = true;

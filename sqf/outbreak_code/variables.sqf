@@ -10,12 +10,12 @@ CHOP_TREES = getArray(configFile >> "CfgGame" >> "trees");
 CHOP_TREES_WOOD_YIELD = getArray(configFile >> "CfgGame" >> "tree_wood_yield");
 
 ZOMBIE_SPAWN_RANGE_WILD_MAX = 120;
-ZOMBIE_SPAWN_RANGE_WILD_MIN = 35;
+ZOMBIE_SPAWN_RANGE_WILD_MIN = 40;
 ZOMBIE_SPAWN_WILD = 3;
 
 ZOMBIE_SPAWN_RANGE_CITY_MAX = 40;
-ZOMBIE_SPAWN_RANGE_CITY_MIN = 15;
-ZOMBIE_SPAWN_CITY = 8;
+ZOMBIE_SPAWN_RANGE_CITY_MIN = 20;
+ZOMBIE_SPAWN_CITY = 9;
 
 // reset actions
 action_gutAnimal = -1;
