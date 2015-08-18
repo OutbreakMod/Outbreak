@@ -54,8 +54,26 @@ if (_check == "loot") then {
 
 			_x setVariable ["lootarray", []];
 			_x call building_spawnLoot;
+			
+			if ((typeOf _x) in ["MOD_Mi8Wreck", "Mi8Wreck", "MOD_UH1YWreck", "Land_Wreck_Heli_Attack_02_F"]) then {
+				if ((_x getVariable ["helicrashSpawnZeds", true])) then {
+				
+					_maxZeds = floor (random 6) + 2;
+					
+					for "_i" from 0 to _maxZeds - 1 do {
+
+						_spawnMinRadius = 5;
+						_spawnMaxRadius = 8;
+						
+						_zombiePosition = [(position _x), (random _spawnMaxRadius) + _spawnMinRadius, random 360] call BIS_fnc_relPos;
+						_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+						[_agent] call fnc_startZombie;
+					};
+					
+					_x setVariable ["helicrashSpawnZeds", false, true];
+				};
+			};
 		};
-		
 	} foreach _nearby;
 };
 

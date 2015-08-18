@@ -29,17 +29,17 @@ if (count _nearby > 0) then {
 	_className = typeOf _nearestBuilding;
 	_building = configFile >> "CfgBuildingType" >> _className;
 
-	if (!(_nearestBuilding getVariable ["helicrashNoZeds", false])) then {
+	if ((_nearestBuilding getVariable ["helicrashSpawnZeds", true])) then {
 		
 		if (isClass(_building)) then {
 			_zombieClothes = getText (_building >> "zombieClothes");
 		};
 		
-		_agent setVariable ["ZombieSpawned", getPosATL _nearestBuilding, true];
+		_agent setVariable ["ZombieSpawned", position _nearestBuilding, true];
 	};
 	
 } else {
-	_agent setVariable ["ZombieSpawned", getPosATL _agent, true];
+	_agent setVariable ["ZombieSpawned", position _agent, true];
 };
 
 _clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
@@ -70,10 +70,6 @@ if (_zombieClothes == "pilot") then {
 
 diag_log format ["Spawning zombie at %1 near %2 with clothes %3 : %4", getPos _agent, _className, _zombieClothes, _uniform];
 _agent setVariable ["ZombieClothes", _zombieClothes];
-
-//////////////////////
-// End dress up zombie 
-//////////////////////
 
 _this spawn {
 	

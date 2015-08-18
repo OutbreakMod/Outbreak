@@ -7,11 +7,11 @@
 
 [] spawn {
 	
-	_timer = 0;
+	_timer = 1;
 	
 	_scheduled = [
 		["loot", 60],
-		["zombie", 30],
+		["zombie", 120],
 		["actions", 1],
 		["blood", 1],
 		["health", 1],
