@@ -21,7 +21,7 @@ _agent setHit ["hands", 0.9];
 //////////////////////
 
 _zombieClothes = "wild";
-_nearby = nearestObjects [_agent, ["House", "Wreck_Base"], 30];
+_nearby = nearestObjects [_agent, ["House", "Wreck_Base"], 20];
 _className = "wild";
 
 if (count _nearby > 0) then {
@@ -35,11 +35,11 @@ if (count _nearby > 0) then {
 			_zombieClothes = getText (_building >> "zombieClothes");
 		};
 		
-		_agent setVariable ["ZombieSpawned", getPos _nearestBuilding, true];
+		_agent setVariable ["ZombieSpawned", getPosATL _nearestBuilding, true];
 	};
 	
 } else {
-	_agent setVariable ["ZombieSpawned", getPos _agent, true];
+	_agent setVariable ["ZombieSpawned", getPosATL _agent, true];
 };
 
 _clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
