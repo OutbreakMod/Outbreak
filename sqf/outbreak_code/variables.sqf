@@ -10,7 +10,7 @@ CHOP_TREES = getArray(configFile >> "CfgGame" >> "trees");
 CHOP_TREES_WOOD_YIELD = getArray(configFile >> "CfgGame" >> "tree_wood_yield");
 
 ZOMBIE_SPAWN_RANGE_WILD_MAX = 120;
-ZOMBIE_SPAWN_RANGE_WILD_MIN = 40;
+ZOMBIE_SPAWN_RANGE_WILD_MIN = 60;
 ZOMBIE_SPAWN_WILD = 3;
 
 ZOMBIE_SPAWN_RANGE_CITY_MAX = 40;

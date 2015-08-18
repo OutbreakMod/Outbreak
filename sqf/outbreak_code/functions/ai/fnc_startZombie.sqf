@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_agent", "_isZombieWild", "_clothes", "_cities", "_vests", "_zombieClothes", "_nearby", "_building", "_vests", "_helmets"];
+private ["_agent", "_isZombieWild", "_clothes", "_cities", "_vests", "_zombieClothes", "_nearby", "_building", "_vests", "_helmets", "_uniform"];
 
 _agent = _this select 0;
 _agent setVariable ["isZombie", true, true];
@@ -43,7 +43,8 @@ if (count _nearby > 0) then {
 };
 
 _clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
-_agent addUniform (_clothes call BIS_fnc_selectRandom);
+_uniform = _clothes call BIS_fnc_selectRandom;
+_agent addUniform _uniform;
 
 if (_zombieClothes == "military") then {
 	
@@ -67,7 +68,7 @@ if (_zombieClothes == "pilot") then {
 	}; 
 };
 
-diag_log format ["Spawning zombie at %1 near %2 with clothes %3", getPos _agent, _className, _zombieClothes];
+diag_log format ["Spawning zombie at %1 near %2 with clothes %3 : %4", getPos _agent, _className, _zombieClothes, _uniform];
 _agent setVariable ["ZombieClothes", _zombieClothes];
 
 //////////////////////
@@ -89,7 +90,7 @@ _this spawn {
 			if ((_timer % 30) == 0 && !(_hasTarget)) then {
 			
 				_pos = _unit getVariable ["ZombieSpawned", 0];
-				_walkTo = [_pos, 30, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+				_walkTo = [_pos, 10, 20, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 				_unit forceSpeed 1;
 				_unit moveTo _walkTo;
 				
