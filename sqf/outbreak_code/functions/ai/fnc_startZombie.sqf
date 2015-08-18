@@ -21,7 +21,7 @@ _agent setHit ["hands", 0.9];
 //////////////////////
 
 _zombieClothes = "wild";
-_nearby = nearestObjects [_agent, ["House"], 30];
+_nearby = nearestObjects [_agent, ["House", "Wreck_Base"], 30];
 _className = "wild";
 
 if (count _nearby > 0) then {
