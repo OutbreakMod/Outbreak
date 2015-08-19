@@ -13,6 +13,66 @@ class CfgPatches {
 	};
 };
 
+class CfgVehicles {
+	class NATO_Box_Base;	// External class reference
+	
+	class Trixie_Rifle_equipbox : NATO_Box_Base {
+		scope = 2;
+		vehicleClass = "Ammo";
+		displayName = "Trixie's Rifle Supply Box";
+		model = "\A3\weapons_F\AmmoBoxes\WpnsBox_F";
+		icon = "iconCrateWpns";
+		
+		class TransportMagazines {
+			class Trixie_Enfield_Mag {
+				magazine = "Trixie_Enfield_Mag";
+				count = 99;
+			};
+			
+			class Trixie_CZ550_Mag {
+				magazine = "Trixie_CZ550_Mag";
+				count = 99;
+			};
+			
+			class Trixie_FNFAL_Mag {
+				magazine = "Trixie_FNFAL_Mag";
+				count = 99;
+			};
+			
+			class Trixie_FNFAL_Mag_T {
+				magazine = "Trixie_FNFAL_Mag_T";
+				count = 99;
+			};
+		};
+		
+		class TransportWeapons {
+			class _xx_Trixie_FNFAL_Rail {
+				weapon = "Trixie_FNFAL_Rail";
+				count = 10;
+			};
+			
+			class _xx_Trixie_Enfield {
+				weapon = "Trixie_Enfield";
+				count = 10;
+			};
+			
+			class _xx_Trixie_Enfield_Rail {
+				weapon = "Trixie_Enfield_Rail";
+				count = 10;
+			};
+			
+			class _xx_Trixie_CZ550 {
+				weapon = "Trixie_CZ550";
+				count = 10;
+			};
+			
+			class _xx_Trixie_CZ550_Rail {
+				weapon = "Trixie_CZ550_Rail";
+				count = 10;
+			};
+		};
+	};
+};
 class Mode_SemiAuto;	// External class reference
 class Mode_Burst;	// External class reference
 class Mode_FullAuto;	// External class reference
