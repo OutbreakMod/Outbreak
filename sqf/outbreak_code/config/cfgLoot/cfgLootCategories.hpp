@@ -38,19 +38,19 @@ class CfgLootCategories {
 		
 		loot[] = {
 			{"tent","single",0.1}, // 10% 
-			{"arifle_mas_m4","gun",0.05}, // @mas
-			{"arifle_mas_hk417c","gun",0.04}, // @mas
-			{"arifle_mas_m16","gun",0.05}, // @mas
-			{"arifle_mas_fal","gun",0.03} // @mas
+			{"arifle_mas_m4","gun",0.07}, // @mas
+			{"arifle_mas_hk417c","gun",0.06}, // @mas
+			{"arifle_mas_m16","gun",0.07}, // @mas
+			{"arifle_mas_fal","gun",0.05} // @mas
 		};
 	};
 	
 	class RUHelicrash {
 		
 		loot[] = {
-			{"arifle_mas_asval_h","gun",0.03}, // 10% 
-			{"LMG_mas_rpk_F","gun",0.05}, // @mas
-			{"LMG_mas_pkm_F","gun",0.04}, // @mas
+			{"arifle_mas_asval_h","gun",0.04}, // 10% 
+			{"LMG_mas_rpk_F","gun",0.08}, // @mas
+			{"LMG_mas_pkm_F","gun",0.07}, // @mas
 			{"srifle_mas_vss_h","gun",0.03} // @mas
 		};
 	};

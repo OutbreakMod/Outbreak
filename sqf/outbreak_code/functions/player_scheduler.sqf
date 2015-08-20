@@ -10,14 +10,13 @@
 	_timer = 1;
 	
 	_scheduled = [
-		["loot", 60],
+		["loot", 30],
 		["zombie", 120],
 		["actions", 1],
 		["blood", 1],
 		["health", 1],
 		["blood_level", 10],
 		["bones", 1],
-		//["debugmenu", 1],
 		["sync", 60]
 	];
 	
