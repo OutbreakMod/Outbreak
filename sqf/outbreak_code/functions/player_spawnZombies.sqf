@@ -32,7 +32,10 @@ if (_count < _amount) then {
 	for "_i" from 0 to _toSpawn - 1 do { 
 		
 		_zombiePosition = [(position _unit), _rangeMin, _rangeMax, 1, 0, 50, 0] call BIS_fnc_findSafePos;
-		_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-		[_agent] call fnc_startZombie;
+		
+		try {
+			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+			[_agent] call fnc_startZombie;
+		} catch { };
 	};
 };
