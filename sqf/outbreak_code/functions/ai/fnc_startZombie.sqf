@@ -85,7 +85,7 @@ _this spawn {
 	while {alive _unit} do {
 		
 		if (_zombieClothes == "wild") then {
-			if ((_timer % 30) == 0 && !(_hasTarget)) then {
+			if ((speed _unit) < 1 && !(_hasTarget)) then {
 			
 				_pos = _unit getVariable ["ZombieSpawned", 0];
 				_walkTo = [_pos, 10, 20, 1, 0, 50, 0] call BIS_fnc_findSafePos;
@@ -94,7 +94,7 @@ _this spawn {
 				
 			};
 		} else {
-			if ((_timer % 5) == 0 && !(_hasTarget)) then {
+			if ((speed _unit) < 1 && !(_hasTarget)) then {
 			
 				_pos = _unit getVariable ["ZombieSpawned", 0];
 				_walkTo = [_pos, 5, 10, 1, 0, 50, 0] call BIS_fnc_findSafePos;

@@ -29,7 +29,7 @@ if (_type == 7) then {
 
 if (_damage > 0.4) then {
 	
-	if (_ammo != "infected") then {
+	if (_ammo == "infected") then {
 		_scale = _scale + 50;
 		_unit setVariable ["deathmessage", format["His name was %1 and died from a zombie scratch", name _unit], true];
 	};
