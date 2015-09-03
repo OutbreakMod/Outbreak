@@ -8,7 +8,7 @@ private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePositio
 diag_log format ["Spawn zombie request %1", _this];
 
 _unit = _this select 0;
-_isCity = count (nearestObjects [position _unit, ["House"], 20]) > 4;
+_isCity = count (nearestObjects [position _unit, ["House"], 40]) > 3;
 
 _amount = ZOMBIE_SPAWN_WILD;
 _rangeMax = ZOMBIE_SPAWN_RANGE_WILD_MAX;
@@ -20,6 +20,8 @@ if (_isCity) then {
 	_rangeMin = ZOMBIE_SPAWN_RANGE_CITY_MIN;
 };
 
+hint format["is city: %1", _isCity];
+
 _infected = ([_unit, ZOMBIE_SPAWN_RANGE_WILD_MAX, "isZombie"] call player_findNearby);
 _count = (count _infected);
 	
@@ -30,12 +32,19 @@ if (_count < _amount) then {
 	diag_log format ["There needs to be (%1) more zombies to spawn!", _toSpawn];
 
 	for "_i" from 0 to _toSpawn - 1 do { 
+	
+		_zombiePosition = [];
+	
+		if (_isCity) then {
+			_debugBuilding = (nearestObjects [getPosATL _unit, ["House"], LOOT_SPAWN_RADIUS]) call fnc_selectRandom;
+			_zombiePosition = [(getPos _debugBuilding), _rangeMin, _rangeMax, 3] call fnc_selectRandomLocation;
+		} else {
+			_zombiePosition = [(position _unit), _rangeMin, _rangeMax, 3] call fnc_selectRandomLocation;
+		};
 		
-		_zombiePosition = [(position _unit), _rangeMin, _rangeMax, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+		diag_log format["LOCATION: %1, status: %2", _zombiePosition, _isCity];
 		
-		try {
-			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-			[_agent] call fnc_startZombie;
-		} catch { };
+		_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+		[_agent] call fnc_startZombie;
 	};
 };

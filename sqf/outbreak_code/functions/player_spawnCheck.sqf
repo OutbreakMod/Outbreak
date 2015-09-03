@@ -41,8 +41,7 @@ if (_check == "blood") then {
 
 if (_check == "loot") then {
 
-	_nearbyRadius = 120;
-	_nearby = (getPosATL _unit) nearObjects ["building", _nearbyRadius];
+	_nearby = (getPosATL _unit) nearObjects ["building", LOOT_SPAWN_RADIUS];
 		
 	{
 		if (serverTime > _x getVariable ["loottimer", 0]) then {

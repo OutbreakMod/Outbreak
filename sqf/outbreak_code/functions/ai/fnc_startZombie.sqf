@@ -16,6 +16,8 @@ _agent setSkill 0;
 _agent setHit ["body", 0.9];
 _agent setHit ["hands", 0.9];
 
+_agent playmove "walking_anim";
+
 //////////////////////
 // Dress up zombie 
 //////////////////////
