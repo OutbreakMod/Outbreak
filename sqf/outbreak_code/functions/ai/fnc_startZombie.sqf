@@ -12,11 +12,10 @@ _agent disableAI "FSM";
 _agent setBehaviour "CARELESS";	
 _agent setCombatMode "RED";
 _agent setSkill 0;
+_agent setFatigue 0;
 
 _agent setHit ["body", 0.9];
 _agent setHit ["hands", 0.9];
-
-_agent playmove "walking_anim";
 
 //////////////////////
 // Dress up zombie 
@@ -79,29 +78,49 @@ _this spawn {
 	_zombieClothes = _unit getVariable ["ZombieClothes", false];
 	
 	_hasTarget = false;
+	_walking = false;
 	_timer = 0;
-	
+	_walkPath = [];
 	
 	while {alive _unit} do {
 		
-		if (_zombieClothes == "wild") then {
-			if ((speed _unit) < 1 && !(_hasTarget)) then {
+		if (!(_hasTarget)) then { 
+			
+			// sprint test
+			if (!_walking) then {
 			
 				_pos = _unit getVariable ["ZombieSpawned", 0];
-				_walkTo = [_pos, 10, 20, 1, 0, 50, 0] call BIS_fnc_findSafePos;
-				_unit forceSpeed 1;
-				_unit moveTo _walkTo;
+				_walkPath = [_pos, 5, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 				
+				_unit moveTo _walkPath;
+				_unit forceSpeed (_unit getSpeed "FAST");
+				_walking = true;
 			};
-		} else {
-			if ((speed _unit) < 1 && !(_hasTarget)) then {
 			
-				_pos = _unit getVariable ["ZombieSpawned", 0];
-				_walkTo = [_pos, 5, 10, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+			if ((_unit distance _walkPath) < 1) then { 
 				_unit forceSpeed 1;
-				_unit moveTo _walkTo;
+				_walking = false;
 			};
+			
 		};
+		
+		/*/if ((speed _unit) < 1 && !(_hasTarget)) then {
+		
+			_pos = _unit getVariable ["ZombieSpawned", 0];
+			_walkTo = [_pos, 5, 10, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+			_unit moveTo _walkTo;
+			_unit forceSpeed 6;
+			_unit playMove "AmovPercMevaSnonWnonDf";
+		};
+		
+		if ((speed _unit) > 5) then {
+			_unit playMove "AmovPercMevaSnonWnonDf";
+		} else {
+			if (["AmovPercMstpSnonWnonDnon", animationState _unit] call fnc_inString) then {
+				_unit playMoveNow "";
+				_unit forceSpeed 0;
+			};
+		};*/
 		
 		if ((_timer % 60) == 0) then {
 			
@@ -112,8 +131,8 @@ _this spawn {
 			};
 		};
 		
-		sleep 1; // loop timer every second
-		_timer = _timer + 1;
+		sleep 0.25; // loop timer every 250m
+		_timer = _timer + 0.25;
 	};
 	
 };
