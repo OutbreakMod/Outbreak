@@ -11,9 +11,9 @@
 	
 	_scheduled = [
 		["loot", 30],
-		["zombie", 20],
 		["actions", 1],
 		["blood", 1],
+		["zombie", 200],
 		["health", 1],
 		["blood_level", 10],
 		["bones", 1],

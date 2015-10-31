@@ -3,7 +3,7 @@ class CfgLootCategories {
 	class GeneralTools {
 		
 		loot[] = {
-			{"ItemMap","single",0.07},
+			{"ItemMap","single",0.05},
 			{"ItemWatch","single",0.03},
 			{"Binocular","single",0.06},
 		};
@@ -23,6 +23,15 @@ class CfgLootCategories {
 		loot[] = {
 			{"NVGoggles","single",0.01},
 			{"Rangefinder","single",0.02}
+		};
+	};
+	
+		
+	class MilitaryPistols {
+		
+		loot[] = {
+			{"hgun_Pistol_heavy_01_F","gun",0.06}, // @mas makarov
+			{"muzzle_snds_L","item",0.01}
 		};
 	};
 
@@ -268,6 +277,7 @@ class CfgLootCategories {
 			{"hgun_mas_grach_F", "gun",0.04} // @mas russian mil pistol
 		};
 	};
+
 
 	class CivillianMagazines {
 		

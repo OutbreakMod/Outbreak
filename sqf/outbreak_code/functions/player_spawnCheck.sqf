@@ -9,7 +9,7 @@ _unit = _this select 0;
 _check = _this select 1;
 
 if (_check == "zombie") then {
-	[_unit] call player_spawnZombies;
+	//[_unit] call player_spawnZombies;
 };
 
 if (_check == "bones") then {

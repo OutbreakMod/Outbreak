@@ -45,14 +45,16 @@ if (_count < _amount) then {
 
 	for "_i" from 0 to _toSpawn - 1 do { 
 	
-		_zombiePosition = [];
+		/*_zombiePosition = [];
 	
 		if (_isCity) then {
 			_debugBuilding = (nearestObjects [getPosATL _unit, ["House"], LOOT_SPAWN_RADIUS]) call fnc_selectRandom;
 			_zombiePosition = [(getPos _debugBuilding), _rangeMin, _rangeMax, 3] call fnc_selectRandomLocation;
 		} else {
-			_zombiePosition = [(position _unit), _rangeMin, _rangeMax, 3] call fnc_selectRandomLocation;
-		};
+			
+		};*/
+		
+		_zombiePosition = [(position _unit), _rangeMin, _rangeMax, 3] call fnc_selectRandomLocation;
 		
 		if ((_unit distance _zombiePosition) > _rangeMin) then { // stop zombies spawning infront of players
 			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
