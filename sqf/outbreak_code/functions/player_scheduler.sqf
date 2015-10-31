@@ -10,7 +10,7 @@
 	_timer = 1;
 	
 	_scheduled = [
-		["loot", 30],
+		["loot", 60],
 		["actions", 1],
 		["blood", 1],
 		["zombie", 200],

@@ -3,15 +3,55 @@
 	@author: TheAmazingAussie
 */
 
+private ["_className", "_config", "_positions", "_posAmount", "_lootRespawn", "_lootMin", "_lootMax"];
+
 _className = typeOf _this;
 _config = configFile >> "CfgBuildingType" >> _className;
 
-_positions = [] + getArray(_config >> "positions");
-_posAmount = count _positions;
+_positions = [];
+_posAmount = 0;
 
-_lootRespawn = getNumber(_config >> "lootRespawnSeconds");
-_lootMin = 0 + getNumber(_config >> "lootMin");
-_lootMax = 0 + getNumber(_config >> "lootMax");
+_lootRespawn = 300;
+_lootMin = 0;
+_lootMax = 4;
+
+_positionConfg = true;
+
+if (isClass(_config)) then {
+
+	_positions = [] + getArray(_config >> "positions");
+	_posAmount = count _positions;
+
+	_lootRespawn = getNumber(_config >> "lootRespawnSeconds");
+	_lootMin = 0 + getNumber(_config >> "lootMin");
+	_lootMax = 0 + getNumber(_config >> "lootMax");
+
+	if (_lootMax == 0) then {
+		_lootMax = _posAmount;
+	};
+};
+
+// generate positons from building model
+if (count _positions < 1) then {
+
+	_cnt = 0;
+
+	while {format ["%1", _this buildingPos _cnt] != "[0,0,0]" } do {
+
+		_pos = _this buildingPos _cnt;		//select building position _cnt
+		_positions = _positions + [_pos];		//add the position to the list
+		_cnt = _cnt + 1;
+		sleep 0.01;
+	};
+	
+	if (count _positions > 0) then { 
+		hint format["%1 -- %2", _positions, _className];
+	};
+	
+	_posAmount = count _positions;
+	_positionConfg = false;
+
+};
 
 if (_lootMax == 0) then {
 	_lootMax = _posAmount;
@@ -53,7 +93,11 @@ if (_posAmount > 0) then {
 					};
 					
 					_usedPos = _usedPos + [_lootPos];						
-					_lootPos = _this modelToWorld _lootPos;
+					
+					// model pos from world if there's positions from config file
+					if (_positionConfg) then {
+						_lootPos = _this modelToWorld _lootPos;
+					};
 	
 					diag_log format ["Spawned item: %1 at building: %2", _itemClass, _className];
 					

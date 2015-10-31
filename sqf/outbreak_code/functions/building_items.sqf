@@ -4,15 +4,22 @@
 */
 
 _class = _this;
-
-_lootCategories = [] + getArray(configFile >> "CfgBuildingType" >> _class >> "lootCategories");
-_cfgLootCategories = configFile >> "CfgLootCategories";
-
+_lootCategories = [];
 _lootItems = [];
+_cfgLootCategories = "";
 
+if (isClass(configFile >> "CfgBuildingType" >> _class >> "lootCategories")) then {
+	_lootCategories = [] + getArray(configFile >> "CfgBuildingType" >> _class >> "lootCategories");
+} else {
+	_lootCategories = [] + ["GeneralTools", "CivillianPistols", "CivillianBackpacks", "CookingUtilities", "CivillianFoodStorage", "MiscMedical", "CivillianMagazines"];
+
+};
+
+//--------------------------------------------
 {
-	_lootItems = _lootItems + getArray(_cfgLootCategories >> _x >> "loot");
+	_lootItems = _lootItems + getArray(configFile >> "CfgLootCategories" >> _x >> "loot");
 } count _lootCategories;
+//--------------------------------------------
 
 /*
 	Function created by Killzone Kid
