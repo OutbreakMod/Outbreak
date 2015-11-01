@@ -36,7 +36,7 @@ if (_command == "medical") then {
 
 if (_command == "login") then {
 	
-	player addMagazine ["sc_knife", 1];
+	player addMagazineCargoGlobal ["knife", 1];
 
 	[] call player_missionLogin;
 	player setVariable ["outbreaklogin", 1, true];

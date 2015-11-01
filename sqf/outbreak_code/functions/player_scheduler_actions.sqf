@@ -47,9 +47,6 @@ if (_check == "loot") then {
 	
 	{
 		if (serverTime > _x getVariable ["loottimer", 0]) then {
-		
-			diag_log format["LOOT SPAWN: %1", typeOf _x];
-			
 			_lootArray = _x getVariable ["lootarray", []];
 		
 			for "_i" from 0 to count (_lootArray) - 1 do {

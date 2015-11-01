@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-private ["_className", "_config", "_positions", "_posAmount", "_lootRespawn", "_lootMin", "_lootMax"];
+private ["_className", "_config", "_positions", "_posAmount", "_lootRespawn", "_lootMin", "_lootMax", "_buildingLoot"];
 
 _className = typeOf _this;
 _config = configFile >> "CfgBuildingType" >> _className;
@@ -32,7 +32,7 @@ if (isClass(_config)) then {
 };
 
 // generate positons from building model
-if (count _positions < 1) then {
+if (count _positions == 0) then {
 
 	_cnt = 0;
 
@@ -99,7 +99,7 @@ if (_posAmount > 0) then {
 						_lootPos = _this modelToWorld _lootPos;
 					};
 	
-					diag_log format ["Spawned item: %1 at building: %2", _itemClass, _className];
+					diag_log format ["Spawned item: %1 at building: %2 with items: %3", _itemClass, _className, _buildingLoot];
 					
 					// flush loot every whatever respawn time is chosen
 					_this setVariable ["loottimer", serverTime + (_lootRespawn), true];
