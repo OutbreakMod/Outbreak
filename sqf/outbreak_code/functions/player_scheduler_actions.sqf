@@ -41,10 +41,15 @@ if (_check == "blood") then {
 
 if (_check == "loot") then {
 
-	_nearby = (getPosATL _unit) nearObjects ["building", LOOT_SPAWN_RADIUS];
-		
+	//_nearby = (getPosATL _unit) nearObjects ["building", LOOT_SPAWN_RADIUS];
+	
+	_nearby = (getPosATL _unit) nearObjects LOOT_SPAWN_RADIUS;
+	
 	{
 		if (serverTime > _x getVariable ["loottimer", 0]) then {
+		
+			diag_log format["LOOT SPAWN: %1", typeOf _x];
+			
 			_lootArray = _x getVariable ["lootarray", []];
 		
 			for "_i" from 0 to count (_lootArray) - 1 do {

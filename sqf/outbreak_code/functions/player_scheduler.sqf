@@ -27,7 +27,7 @@
 			_seconds = _x select 1;
 			
 			if ((_timer % _seconds) == 0) then {
-				null = [player, _task] spawn player_spawnCheck;
+				null = [player, _task] spawn player_scheduler_actions;
 			};
 			
 		} foreach _scheduled;
