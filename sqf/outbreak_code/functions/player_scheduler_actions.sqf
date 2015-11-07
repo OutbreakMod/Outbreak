@@ -33,12 +33,6 @@ if (_check == "health") then {
 	};
 };
 
-if (_check == "blood") then {
-	if (player getVariable ["blood", 6000] < 0) then {
-		player setDamage 1;
-	};
-};
-
 if (_check == "loot") then {
 
 	//_nearby = (getPosATL _unit) nearObjects ["building", LOOT_SPAWN_RADIUS];
@@ -65,10 +59,10 @@ if (_check == "debugmenu") then {
 	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
 };
 
-if (_check == "blood_level") then {
-	if (_unit setVariable ["blood_level", false]) then {
-		_unit setVariable ["blood_level", false];
-		_unit getVariable ["blood", MOD_FULL_BLOOD] call fnc_bloodEffect;
+if (_check == "health_level") then {
+	if (_unit setVariable ["health_level", false]) then {
+		_unit setVariable ["health_level", false];
+		_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
 	
 	};
 };

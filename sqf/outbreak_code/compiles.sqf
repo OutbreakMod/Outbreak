@@ -28,7 +28,7 @@ fnc_countItems = compile preProcessFileLineNumbers "addons\outbreak_code\functio
 object_speak = compile preProcessFileLineNumbers "addons\outbreak_code\functions\object_speak.sqf";
 fnc_damageType = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageType.sqf";
 fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageEffect.sqf";
-fnc_bloodEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_bloodEffect.sqf";
+fnc_simulateHealthEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_simulateHealthEffect.sqf";
 fnc_selectRandomLocation = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_selectRandomLocation.sqf";
 fnc_selectRandom = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_selectRandom.sqf";
 
