@@ -14,11 +14,6 @@ player_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\fu
 player_command = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_command.sqf";
 player_findNearby = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearby.sqf";
 
-// building
-building_items = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_items.sqf";
-building_spawnLoot = compile preProcessFileLineNumbers "addons\outbreak_code\functions\building_spawnLoot.sqf";
-loot_holder = compile preProcessFileLineNumbers "addons\outbreak_code\functions\loot_holder.sqf";
-
 // inventory
 player_clearInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_clearInventory.sqf";
 player_loadInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_loadInventory.sqf";

@@ -15,10 +15,6 @@ class CfgPatches {
 // Player music
 #include "config\cfgMusic.hpp"
 
-// building loot
-#include "config\cfgLoot\cfgBuildingType.hpp"
-#include "config\cfgLoot\cfgLootCategories.hpp"
-
 // weapons
 #include "config\cfgWeapons\cfgWeapons.hpp"
 
