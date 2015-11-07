@@ -60,9 +60,9 @@ if (_check == "debugmenu") then {
 };
 
 if (_check == "health_level") then {
-	if (_unit setVariable ["health_level", false]) then {
-		_unit setVariable ["health_level", false];
-		_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
-	
-	};
+	//if (_unit setVariable ["health_level", false]) then {
+	//	_unit setVariable ["health_level", false];
+	_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
+	//
+	//};
 };

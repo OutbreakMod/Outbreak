@@ -15,7 +15,7 @@
 		["blood", 1],
 		["zombie", 200],
 		["health", 1],
-		["blood_level", 10],
+		["health_level", 10],
 		["bones", 1],
 		["sync", 60]
 	];

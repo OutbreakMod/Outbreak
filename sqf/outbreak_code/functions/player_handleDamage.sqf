@@ -86,7 +86,7 @@ if (_effect) then {
 	1 call fnc_damageEffect;
 	
 	// update blood level
-	//_unit setVariable ["health_level", true];
+	//_unit setVariable ["blood_level", true];
 };
 
 // set new health

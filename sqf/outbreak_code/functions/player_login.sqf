@@ -35,8 +35,10 @@ player enableFatigue false;
 player call player_clearInventory;
 
 // medical
-player setVariable ["blood", MOD_FULL_BLOOD, true];
 player setVariable ["health", MOD_FULL_HEALTH, true];
+
+//if respawn from grey screen
+MOD_FULL_HEALTH call fnc_simulateHealthEffect;
 
 _LOGIN_TIMER = 10;
 while {_LOGIN_TIMER > 0} do {
