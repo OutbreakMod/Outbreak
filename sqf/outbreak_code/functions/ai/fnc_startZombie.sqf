@@ -7,12 +7,14 @@ private ["_agent", "_isZombieWild", "_clothes", "_cities", "_vests", "_zombieClo
 
 _agent = _this select 0;
 _agent setVariable ["isZombie", true, true];
+_agent setVariable ["health", 6000, true];
 _agent call player_clearInventory; // remove everything
 _agent disableAI "FSM";
 _agent setBehaviour "CARELESS";	
 _agent setCombatMode "RED";
 _agent setSkill 0;
 _agent setFatigue 0;
+_agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
 
 _agent setHit ["body", 0.9];
 _agent setHit ["hands", 0.9];
@@ -128,6 +130,14 @@ _this spawn {
 			
 			if (!(count _players > 0)) exitWith {
 				deleteVehicle (_unit);
+			};
+			
+			
+		};
+		
+		if ((_timer % 1) == 0) then {
+			if (_unit getVariable ["health", 6000] < 0) then {
+				_unit setDamage 1;
 			};
 		};
 		

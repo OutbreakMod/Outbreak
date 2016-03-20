@@ -9,34 +9,49 @@ _damage = _this select 0;
 _ammo = _this select 1;
 _type = 0;
 
-if ((_ammo isKindof "B_9x21_Ball")) then {
+if (["9x21", _ammo] call fnc_inString) then {
 	_type = 1;
 };
 
-if ((_ammo isKindof "B_45ACP_Ball")) then {
+if (["9x19", _ammo] call fnc_inString) then {
+	_type = 1;
+};
+
+if (["45ACP", _ammo] call fnc_inString) then {
 	_type = 2;
 };
 
-if ((_ammo isKindof "BB_556x45_Ball")) then {
+if (["556x45", _ammo] call fnc_inString) then {
 	_type = 3;
 };
 
-if ((_ammo isKindof "B_65x39_Caseless")) then {
+if (["545x39", _ammo] call fnc_inString) then {
+	_type = 3;
+};
+
+if (["65x39", _ammo] call fnc_inString) then {
 	_type = 4;
 };
 
-if (_ammo isKindof "B_762x51_Ball") then {
+if (["762x39", _ammo] call fnc_inString) then {
+	_type = 4;
+};
+
+if (["762x51", _ammo] call fnc_inString) then {
 	_type = 5;
 };
 
-if (_ammo isKindof "B_762x54_Ball") then {
+if (["762x54", _ammo] call fnc_inString) then {
 	_type = 6;
 };
 
-if ((_ammo isKindof "B_127x108_Ball") or (_ammo isKindof "B_408_Ball")) then {
+if (["127x99", _ammo] call fnc_inString) then {
 	_type = 7;
 };
 
+if (["127x108", _ammo] call fnc_inString) then {
+	_type = 7;
+};
 
 
 _type;

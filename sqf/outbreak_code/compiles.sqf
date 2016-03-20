@@ -11,6 +11,7 @@ player_scheduler_actions = compile preProcessFileLineNumbers "addons\outbreak_co
 player_hiveSync = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_hiveSync.sqf";
 player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_pressKey.sqf";
 player_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_handleDamage.sqf";
+zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_handleDamage.sqf";
 player_command = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_command.sqf";
 player_findNearby = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearby.sqf";
 
