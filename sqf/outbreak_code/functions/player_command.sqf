@@ -50,3 +50,8 @@ if (_command == "gear") then {
 if (_command == "hint") then {
 	hint format[_response select 1];
 };
+
+if (_command == "goggles") then {
+	removeGoggles player;
+	player addGoggles (_response select 1);
+};
