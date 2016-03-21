@@ -21,50 +21,48 @@ _health = _unit getVariable ["health", 6000];
 _effect = false;
 
 if (_type == 7) then {
-	_unit setVariable ["deathmessage", format["His name was %1 and died from from a high caliber bullet", name _unit], true];
 	_unit setDamage 1;
 	_effect = true;
 };
 
-if (_damage > 0.4) then {
+if (_ammo == "infected") then {
+	_scale = _scale + 50;
+};
 	
-	if (_ammo == "infected") then {
-		_scale = _scale + 50;
-	};
-	
-	switch (_type) do {
-		case 1: {
-			_scale = _scale + 200;
-		}; // 4% bleed
-		case 2: {
-			_scale = _scale + 250;
-		}; // 5% bleed
-		case 3: {
-			_scale = _scale + 390;
-		}; // 6% bleed
-		case 4: {
-			_scale = _scale + 400;
-		}; // 8% bleed
-		case 5: {
-			_scale = _scale + 460;
-			
-		}; // 9% bleed
-		case 6: {
-			_scale = _scale + 475;
-			
-		}; // 10% bleed
-	};
-	
-	if (_type > 2) then {
-		_scale = _scale * 2;
-	} else {
-		_scale = _scale * 4;
-	};
-	
+switch (_type) do {
+	case 1: {
+		_scale = _scale + 200;
+	}; // 4% bleed
+	case 2: {
+		_scale = _scale + 250;
+	}; // 5% bleed
+	case 3: {
+		_scale = _scale + 390;
+	}; // 6% bleed
+	case 4: {
+		_scale = _scale + 400;
+	}; // 8% bleed
+	case 5: {
+		_scale = _scale + 460;
+		
+	}; // 9% bleed
+	case 6: {
+		_scale = _scale + 475;
+		
+	}; // 10% bleed
+};
+
+if (_type > 0) then {
 	_effect = true;
 };
 
-if (_hit == "leg_l") then {
+if (_type > 2) then {
+	_scale = _scale * 2;
+} else {
+	_scale = _scale * 4;
+};
+
+if (["leg", _hit] call fnc_inString) then {
 
 	if (_damage > 0.3) then {
 		_effect = true;

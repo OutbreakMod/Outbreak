@@ -14,6 +14,10 @@ _agent setBehaviour "CARELESS";
 _agent setCombatMode "RED";
 _agent setSkill 0;
 _agent setFatigue 0;
+
+player removeAllEventHandlers "Killed";
+player removeAllEventHandlers "Respawn";
+player removeAllEventHandlers "HandleDamage";
 _agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
 
 _agent setHit ["body", 0.9];
@@ -86,27 +90,29 @@ _this spawn {
 	
 	while {alive _unit} do {
 		
-		if (!(_hasTarget)) then { 
-			
-			// sprint test
-			if (!_walking) then {
-			
-				_pos = _unit getVariable ["ZombieSpawned", 0];
-				_walkPath = [_pos, 5, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+		if ((_timer % 5) == 0) then {
+			if (!(_hasTarget)) then { 
 				
-				_unit moveTo _walkPath;
-				_unit forceSpeed (_unit getSpeed "FAST");
-				_walking = true;
+				// sprint test
+				if (!_walking) then {
+				
+					_pos = _unit getVariable ["ZombieSpawned", 0];
+					_walkPath = [_pos, 5, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+					
+					_unit moveTo _walkPath;
+					_unit forceSpeed (_unit getSpeed "FAST");
+					_walking = true;
+				};
+				
+				if ((_unit distance _walkPath) < 1) then { 
+					_unit forceSpeed 1;
+					_walking = false;
+				};
+				
 			};
-			
-			if ((_unit distance _walkPath) < 1) then { 
-				_unit forceSpeed 1;
-				_walking = false;
-			};
-			
 		};
 		
-		/*/if ((speed _unit) < 1 && !(_hasTarget)) then {
+		/*if ((speed _unit) < 1 && !(_hasTarget)) then {
 		
 			_pos = _unit getVariable ["ZombieSpawned", 0];
 			_walkTo = [_pos, 5, 10, 1, 0, 50, 0] call BIS_fnc_findSafePos;
