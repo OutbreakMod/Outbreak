@@ -20,6 +20,7 @@ player_clearInventory = compile preProcessFileLineNumbers "addons\outbreak_code\
 player_loadInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_loadInventory.sqf";
 player_serializeInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_serializeInventory.sqf";
 player_selectItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_selectItem.sqf";
+convert_magazines = compile preProcessFileLineNumbers "addons\outbreak_code\functions\convert_magazines.sqf";
 
 // fnc functions
 fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_inString.sqf";

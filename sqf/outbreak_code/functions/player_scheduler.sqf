@@ -7,7 +7,7 @@
 
 [] spawn {
 	
-	_timer = 1;
+	_timer = 0;
 	
 	_scheduled = [
 		["loot", 20],

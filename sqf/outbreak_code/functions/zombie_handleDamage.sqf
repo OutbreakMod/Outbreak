@@ -18,11 +18,8 @@ diag_log format ["ammo: %1, type:%3, damage: %2", _ammo, _damage, _type];
 _scale = 100;
 _health = _unit getVariable ["health", 6000];
 
-_effect = false;
-
 if (_type == 7) then {
 	_unit setDamage 1;
-	_effect = true;
 };
 
 if (_ammo == "infected") then {
@@ -34,7 +31,7 @@ switch (_type) do {
 		_scale = _scale + 200;
 	}; // 4% bleed
 	case 2: {
-		_scale = _scale + 250;
+		_scale = _scale + 300;
 	}; // 5% bleed
 	case 3: {
 		_scale = _scale + 390;
@@ -52,9 +49,6 @@ switch (_type) do {
 	}; // 10% bleed
 };
 
-if (_type > 0) then {
-	_effect = true;
-};
 
 if (_type > 2) then {
 	_scale = _scale * 2;
@@ -65,7 +59,6 @@ if (_type > 2) then {
 if (["leg", _hit] call fnc_inString) then {
 
 	if (_damage > 0.3) then {
-		_effect = true;
 		if (_damage > 0.76) then {
 			_unit setVariable ["leg_break", true, true];
 			_unit setVariable ["fracture_update", true, true];
@@ -73,10 +66,8 @@ if (["leg", _hit] call fnc_inString) then {
 	};
 };
 
-// notify player damage taken
-if (_effect) then {
+if (_type > 0) then {
 	_health = _health - (_damage * _scale);
-	1 call fnc_damageEffect;
 };
 
 // set new health
