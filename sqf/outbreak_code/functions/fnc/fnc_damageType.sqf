@@ -42,6 +42,10 @@ if (["762x39", _ammo] call fnc_inString) then {
 	_type = 4;
 };
 
+if (["12Gauge", _ammo] call fnc_inString) then {
+	_type = 4;
+};
+
 if (["762x51", _ammo] call fnc_inString) then {
 	_type = 5;
 };
