@@ -12,22 +12,17 @@ if (_check == "zombie") then {
 	//[_unit] call player_spawnZombies;
 };
 
-if (_check == "bones") then {
-	if (player getVariable ["leg_break", false] && player getVariable ["fracture_update", false]) then {
-		player setHit ["legs", 1];
-		player setVariable ["fracture_update", false, true];
-		player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
-	};
-	
-	if (!(player getVariable ["leg_break", false]) && player getVariable ["fracture_update", false]) then {
+if (_check == "reset_fracture") then {
+	if (player getVariable ["reset_fracture", false]) then {
 		player setHit ["legs", 0];
-		player setVariable ["fracture_update", false, true];
 	};
 };
 
-if (_check == "health") then {
-	if (player getVariable ["health", 6000] < 0) then {
-		player setDamage 1;
+if (_check == "fracture") then {
+	if (player getVariable ["update_legs", 0] > 0) then {
+		player setHit ["legs", (player getHit "legs") + (player getVariable ["update_legs", 0])];
+		player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+		player setVariable ["update_legs", 0, true];
 	};
 };
 
@@ -52,6 +47,12 @@ if (_check == "sync") then {
 
 if (_check == "debugmenu") then {
 	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
+};
+
+if (_check == "health") then {
+	if (player getVariable ["health", 6000] < 0) then {
+		player setDamage 1;
+	};
 };
 
 if (_check == "health_level") then {
