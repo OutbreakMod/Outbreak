@@ -3,9 +3,8 @@
 	@author: TheAmazingAussie
 */
 
-private ["_respawning", "_timer"];
+private ["_timer"];
 
-_respawning = _this select 0;
 _previousUnit = player;
 _newUnit = (createGroup west) createUnit ["b_survivor_F", getPosATL player, [], 0, "NONE"];
 
@@ -70,8 +69,4 @@ if (_NOT_LOGGED_IN) then {
 	
 	titleFadeOut 7;
 	[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
-	
-	if (!_respawning) then {
-		[] execVM "addons\outbreak_code\functions\player_scheduler.sqf";
-	};
 };

@@ -58,6 +58,10 @@ if (["762x54", _ammo] call fnc_inString) then {
 	_type = 6;
 };
 
+if (["762x67", _ammo] call fnc_inString) then {
+	_type = 6;
+};
+
 if (["127x99", _ammo] call fnc_inString) then {
 	_type = 7;
 };

@@ -68,10 +68,8 @@ if (_finished) then {
 	};
 	
 	player setVariable ["action_interrupt", false];
-	player removeItem "sc_morphine";
-	
-	_target setVariable ["leg_break", false, true];
-	_target setVariable ["fracture_update", true, true];
+	player setVariable ["reset_fracture", true, true];
+	player removeItem "morphine";
 	
 	if ((name _target) != (name player)) then {
 		cutText [format["I've successfully applied morphine to %1", name _target], "PLAIN DOWN"];

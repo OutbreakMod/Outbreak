@@ -8,4 +8,4 @@ private ["_unit", "_corpse"];
 _unit = _this select 0;
 _corpse = _this select 1;
 
-[true] execVM "addons\outbreak_code\functions\player_login.sqf";
+[] execVM "addons\outbreak_code\functions\player_login.sqf";

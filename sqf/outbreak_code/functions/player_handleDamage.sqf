@@ -16,8 +16,6 @@ _unitIsPlayer = _unit == player;
 
 if (!_unitIsPlayer) exitWith { 0 };
 
-hint format ["ammo: %1", _ammo];
-
 _scale = 100;
 _health = _unit getVariable ["health", 0];
 
@@ -75,15 +73,16 @@ if (_type > 2) then {
 	_scale = _scale * 4;
 };
 
-if (["leg", _hit] call fnc_inString) then {
+diag_log format["DAMAGE: %1", _this];
 
-	if (_damage > 0.3) then {
+if (_hit == "legs") then {
+	if (_ammo == "") then {
+	
 		_effect = true;
-		if (_damage > 0.76) then {
-			_unit setVariable ["leg_break", true, true];
-			_unit setVariable ["fracture_update", true, true];
-			_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
-		};
+		_scale = _scale + 3500;
+		
+		player setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
+		player setVariable ["update_legs", _damage];
 	};
 };
 

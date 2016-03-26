@@ -12,12 +12,13 @@
 	_scheduled = [
 		["loot", 20],
 		["actions", 1],
-		["blood", 1],
 		["zombie", 200],
 		["health", 1],
 		["health_level", 3],
 		["bones", 1],
-		["sync", 60]
+		["sync", 1],
+		["fracture", 1],
+		["reset_fracture", 1]
 	];
 	
 	while {true} do {

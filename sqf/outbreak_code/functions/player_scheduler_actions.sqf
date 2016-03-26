@@ -12,33 +12,27 @@ if (_check == "zombie") then {
 	//[_unit] call player_spawnZombies;
 };
 
-if (_check == "bones") then {
-	if (player getVariable ["leg_break", false] && player getVariable ["fracture_update", false]) then {
-		player setHit ["legs", 1];
-		player setVariable ["fracture_update", false, true];
-		player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
-	};
-	
-	if (!(player getVariable ["leg_break", false]) && player getVariable ["fracture_update", false]) then {
+if (_check == "reset_fracture") then {
+	if (player getVariable ["reset_fracture", false]) then {
+		player setVariable ["reset_fracture", false, true];
 		player setHit ["legs", 0];
-		player setVariable ["fracture_update", false, true];
 	};
-	
-	[player] call player_hiveSync; // force save
 };
 
-if (_check == "health") then {
-	if (player getVariable ["health", 6000] < 0) then {
-		player setDamage 1;
+if (_check == "fracture") then {
+	if (player getVariable ["update_legs", 0] > 0) then {
+		player setHit ["legs", (player getHit "legs") + (player getVariable ["update_legs", 0])];
+		player setVariable ["update_legs", 0, true];
+		
+		if ((player getHit "legs") > 0.58) then {
+			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+		};
 	};
 };
 
 if (_check == "loot") then {
 
-	//_nearby = (getPosATL _unit) nearObjects ["building", LOOT_SPAWN_RADIUS];
-	
 	_nearby = (getPosATL _unit) nearObjects LOOT_SPAWN_RADIUS;
-	
 	{
 		server_spawnLoot = [_x];
 		publicVariableServer "server_spawnLoot";
@@ -59,10 +53,12 @@ if (_check == "debugmenu") then {
 	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
 };
 
+if (_check == "health") then {
+	if (player getVariable ["health", 6000] < 0) then {
+		player setDamage 1;
+	};
+};
+
 if (_check == "health_level") then {
-	//if (_unit setVariable ["health_level", false]) then {
-	//	_unit setVariable ["health_level", false];
 	_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
-	//
-	//};
 };
