@@ -14,15 +14,6 @@ setPlayable _newUnit;
 selectPlayer _newUnit;
 deleteVehicle (_previousUnit);
 
-// new handlers
-player removeAllEventHandlers "Killed";
-player removeAllEventHandlers "Respawn";
-player removeAllEventHandlers "HandleDamage";
-
-player addEventHandler ["Killed", { _this call player_killed; }];
-player addEventHandler ["Respawn", { _this call player_respawn; }];
-player addEventHandler ["HandleDamage", { _this call player_handleDamage; }];
-
 // add variable
 player setVariable ["outbreaklogin", -1];
 player setVariable ["playeruuid", getPlayerUID player, true];
@@ -70,8 +61,4 @@ if (_NOT_LOGGED_IN) then {
 	
 	titleFadeOut 7;
 	[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
-	
-	if (!_respawning) then {
-		[] execVM "addons\outbreak_code\functions\player_scheduler.sqf";
-	};
 };
