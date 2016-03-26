@@ -14,6 +14,7 @@ if (_check == "zombie") then {
 
 if (_check == "reset_fracture") then {
 	if (player getVariable ["reset_fracture", false]) then {
+		player setVariable ["reset_fracture", false, true];
 		player setHit ["legs", 0];
 	};
 };
@@ -21,8 +22,11 @@ if (_check == "reset_fracture") then {
 if (_check == "fracture") then {
 	if (player getVariable ["update_legs", 0] > 0) then {
 		player setHit ["legs", (player getHit "legs") + (player getVariable ["update_legs", 0])];
-		player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
 		player setVariable ["update_legs", 0, true];
+		
+		if ((player getHit "legs") > 0.58) then {
+			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+		};
 	};
 };
 
