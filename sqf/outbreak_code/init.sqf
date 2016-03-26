@@ -9,9 +9,6 @@ call compile preprocessFileLineNumbers "addons\outbreak_code\variables.sqf";
 // create compiles
 call compile preprocessFileLineNumbers "addons\outbreak_code\compiles.sqf";
 
-// run schedule
-[] execVM "addons\outbreak_code\functions\player_scheduler.sqf";
-
 // new player tick loop
 [false] execVM "addons\outbreak_code\functions\player_login.sqf"; // true = start a tick loop
 

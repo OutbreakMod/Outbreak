@@ -5,8 +5,6 @@
 
 // register scheduled functions
 
-diag_log format["Scheduler started"];
-
 [] spawn {
 	
 	_timer = 0;

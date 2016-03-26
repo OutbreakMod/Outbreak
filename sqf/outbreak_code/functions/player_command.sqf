@@ -41,6 +41,7 @@ if (_command == "medical") then {
 		publicVariableServer "hive_playerLogin";
 	
 	} else {
+	
 		player setVariable ["health", _health, true];
 		player getVariable ["health", 0] call fnc_simulateHealthEffect;
 	};
@@ -48,16 +49,10 @@ if (_command == "medical") then {
 
 if (_command == "login") then {
 	
+	player addMagazineCargoGlobal ["knife", 1];
+
 	[] call player_missionLogin;
 	player setVariable ["outbreaklogin", 1, true];
-	
-	player removeAllEventHandlers "Killed";
-	player removeAllEventHandlers "Respawn";
-	player removeAllEventHandlers "HandleDamage";
-
-	player addEventHandler ["Killed", { _this call player_killed; }];
-	player addEventHandler ["Respawn", { _this call player_respawn; }];
-	player addEventHandler ["HandleDamage", { _this call player_handleDamage; }];
 };
 
 if (_command == "gear") then {
