@@ -10,7 +10,12 @@ Mods Used
 --------------------------
 
  1. Arma2Net by Scott_NZ for the server hive.
- 2. Scorch's Inventory Items - www.armaholic.com/page.php?id=21689
+ 2. Community Base addons A3 - http://www.armaholic.com/page.php?id=18767
+ 
+Community Upgrade Projects
+
+ 1. Weapon Pack  - http://www.armaholic.com/page.php?id=27489
+ 2. Terrains Complete v1.0.1 - http://www.armaholic.com/page.php?id=30045
 
 Thanks to these AMAZING mod creators <3
 
