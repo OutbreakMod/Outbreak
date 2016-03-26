@@ -22,16 +22,19 @@ if (_command == "tp") then {
 if (_command == "medical") then {
 
 	_medicalArray = _response select 1;
-	
-	_legStatus = _medicalArray select 0;
 	_health = _medicalArray select 1;
 	
-	player setHit ["legs", _legStatus];
-	
-	if (_legStatus >= 1) then {
-		player setVariable ["leg_break", true, true];
+	if (_health < 1) then {
+		hive_playerDelete = [_unit];
+		publicVariableServer "hive_playerDelete";
+
+		deleteVehicle (player);
+
+		hive_playerLogin = [player];
+		publicVariableServer "hive_playerLogin";
 	};
 	
+	player setHit ["legs", _medicalArray select 0];
 	player setVariable ["health", _health, true];
 	player getVariable ["health", 0] call fnc_simulateHealthEffect;
 };
