@@ -75,16 +75,25 @@ if (_type > 2) then {
 	_scale = _scale * 4;
 };
 
-if (["leg", _hit] call fnc_inString) then {
+diag_log format["DAMAGE: %1", _this];
 
-	if (_damage > 0.3) then {
+if (_hit == "legs") then {
+
+	_existingLegDamage = _unit getHit "legs";
+	_newDamage = _damage + _existingLegDamage;
+
+	if (_ammo == "") then {
 		_effect = true;
-		if (_damage > 0.76) then {
-			_unit setVariable ["leg_break", true, true];
-			_unit setVariable ["fracture_update", true, true];
-			_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
-		};
+		_scale = _scale + 1000;
+		_unit setHit [_hit, _newDamage];
 	};
+
+	if (_newDamage > 0.9) then {
+		_unit setVariable ["leg_break", true, true];
+		_unit setVariable ["fracture_update", true, true];
+		_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
+	};
+
 };
 
 // notify player damage taken
