@@ -22,15 +22,17 @@ if (_command == "tp") then {
 if (_command == "medical") then {
 
 	_medicalArray = _response select 1;
-	if ((_medicalArray select 0) == 1) then {
-		player setHit ["legs", 1];
+	
+	_legStatus = _medicalArray select 0;
+	_health = _medicalArray select 1;
+	
+	player setHit ["legs", _legStatus];
+	
+	if (_legStatus >= 1) then {
 		player setVariable ["leg_break", true, true];
 	};
 	
-	player setVariable ["health", (_medicalArray select 1), true];
-	player setVariable ["blood", (_medicalArray select 2), true];
-	
-	// low blood effect
+	player setVariable ["health", _health, true];
 	player getVariable ["health", 0] call fnc_simulateHealthEffect;
 };
 

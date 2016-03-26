@@ -16,8 +16,6 @@ _unitIsPlayer = _unit == player;
 
 if (!_unitIsPlayer) exitWith { 0 };
 
-hint format ["ammo: %1", _ammo];
-
 _scale = 100;
 _health = _unit getVariable ["health", 0];
 
@@ -85,12 +83,10 @@ if (_hit == "legs") then {
 	if (_ammo == "") then {
 		_effect = true;
 		_scale = _scale + 1000;
-		_unit setHit [_hit, _newDamage];
+		player setHit [_hit, _newDamage];
 	};
 
 	if (_newDamage > 0.9) then {
-		_unit setVariable ["leg_break", true, true];
-		_unit setVariable ["fracture_update", true, true];
 		_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
 	};
 
