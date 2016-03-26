@@ -13,8 +13,8 @@
 		["loot", 20],
 		["actions", 1],
 		["zombie", 200],
-		["health", 1],
-		["health_level", 3],
+		["health", 0],
+		["health_level", 1],
 		["bones", 1],
 		["sync", 1],
 		["fracture", 1],
@@ -27,14 +27,18 @@
 			_task = _x select 0;
 			_seconds = _x select 1;
 			
-			if ((_timer % _seconds) == 0) then {
+			if (_seconds > 0) then {
+				if ((_timer % _seconds) == 0) then {
+					null = [player, _task] spawn player_scheduler_actions;
+				};
+			} else {
 				null = [player, _task] spawn player_scheduler_actions;
 			};
 			
 		} foreach _scheduled;
 		
-		sleep 1; // loop timer every second
-		_timer = _timer + 1;
+		sleep 0.25; // loop timer every 250m
+		_timer = _timer + 0.25;
 	};
 };
 

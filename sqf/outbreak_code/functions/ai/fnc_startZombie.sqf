@@ -141,10 +141,8 @@ _this spawn {
 			
 		};
 		
-		if ((_timer % 1) == 0) then {
-			if (_unit getVariable ["health", 6000] < 0) then {
-				_unit setDamage 1;
-			};
+		if (_unit getVariable ["health", 6000] < 0) then {
+			_unit setDamage 1;
 		};
 		
 		sleep 0.25; // loop timer every 250m
