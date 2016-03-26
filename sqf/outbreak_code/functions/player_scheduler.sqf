@@ -17,7 +17,7 @@
 		["health", 1],
 		["health_level", 3],
 		["bones", 1],
-		["sync", 1]
+		["sync", 60]
 	];
 	
 	while {true} do {
