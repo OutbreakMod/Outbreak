@@ -82,8 +82,9 @@ if (_hit == "legs") then {
 		_scale = _scale + 3500;
 		
 		player setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
-		player setVariable ["update_legs", _damage];
 	};
+	
+	player setVariable ["update_legs", _damage];
 };
 
 // notify player damage taken
