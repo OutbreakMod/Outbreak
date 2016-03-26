@@ -12,17 +12,10 @@ _source = _this select 3;
 _ammo = _this select 4;
 
 _type = [_damage, _ammo] call fnc_damageType;
-_unitIsPlayer = _unit == player;
-
-if (!_unitIsPlayer) exitWith { 0 };
-
-hint format ["ammo: %1", _ammo];
 
 _scale = 100;
 _health = _unit getVariable ["health", 0];
-
 _effect = false;
-_legDamage = false;
 
 if (_type == 7) then {
 	_unit setVariable ["deathmessage", format["His name was %1 and died from from a high caliber bullet", name _unit], true];
@@ -76,20 +69,25 @@ if (_type > 2) then {
 	_scale = _scale * 4;
 };
 
-diag_log format["%1", _this];
+diag_log format["DAMAGE: %1", _this];
 
 if (_hit == "legs") then {
-	_effect = true;
-	_scale = _scale + 1000;
-	player setHit [_hit, _damage];
-};
 
-_existingLegDamage = player getHit "legs";
+	_existingLegDamage = _unit getHit "legs";
+	_newDamage = _damage + _existingLegDamage;
 
-if ((_existingLegDamage + _damage) > 1) then {
-	_unit setVariable ["leg_break", true, true];
-	_unit setVariable ["fracture_update", true, true];
-	_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
+	if (_ammo == "") then {
+		_effect = true;
+		_scale = _scale + 1000;
+		_unit setHit [_hit, _newDamage];
+	};
+
+	if (_newDamage > 0.9) then {
+		_unit setVariable ["leg_break", true, true];
+		_unit setVariable ["fracture_update", true, true];
+		_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
+	};
+
 };
 
 // notify player damage taken
