@@ -13,8 +13,6 @@ setPlayable _newUnit;
 selectPlayer _newUnit;
 deleteVehicle (_previousUnit);
 
-disableUserInput true;
-
 // new handlers
 player removeAllEventHandlers "Killed";
 player removeAllEventHandlers "Respawn";
@@ -70,6 +68,5 @@ if (_NOT_LOGGED_IN) then {
 } else {
 	
 	titleFadeOut 7;
-	disableUserInput false;
 	[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
 };
