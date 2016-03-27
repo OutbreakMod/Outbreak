@@ -99,14 +99,15 @@ _this spawn {
 		
 			_walkPath = _target getVariable ["last_position", []];
 		
-			if ((_unit distance _walkPath) > 1) then {
+			if ((_unit distance _walkPath) >= 3) then {
 				_unit moveTo _walkPath;
 				_unit forceSpeed (_unit getSpeed "FAST");
 			
 			} else {
+			
 				_unit forceSpeed 1;
 				
-				if ((_timer % 3) == 0) then {
+				if ((_timer % 2) == 0) then {
 					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
 				};
 			};

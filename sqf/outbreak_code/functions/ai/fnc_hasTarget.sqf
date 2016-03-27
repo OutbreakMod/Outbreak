@@ -9,7 +9,7 @@ _target = _unit getVariable ["zombieTarget", _unit];
 _hasTarget = (_target != _unit);
 
 if (_hasTarget) then {
-	if (!(alive _target) then {
+	if (!(alive _target)) then {
 		_hasTarget = false;
 	};
 };
