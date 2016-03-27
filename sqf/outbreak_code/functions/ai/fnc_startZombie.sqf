@@ -99,16 +99,42 @@ _this spawn {
 		
 			_walkPath = _target getVariable ["last_position", []];
 		
-			if ((_unit distance _walkPath) >= 3) then {
+			if ((_unit distance _walkPath) >= 2) then {
 				_unit moveTo _walkPath;
 				_unit forceSpeed (_unit getSpeed "FAST");
 			
-			} else {
+			};
 			
+			if (_unit distance _walkPath <= 2) then { 
 				_unit forceSpeed 1;
 				
 				if ((_timer % 2) == 0) then {
+				
 					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
+					
+					[_unit, _target] spawn {
+					
+						_unit = _this select 0;
+						_target = _this select 1;
+						_walkPath = _target getVariable ["last_position", []];
+						
+						sleep 1;
+						
+						if (_unit distance _walkPath <= 2) then {
+							
+							_targetHealth = _target getVariable ["health", 0];
+							_targetHealth = _targetHealth - 100;
+							_target setVariable ["health", _targetHealth, true];
+							
+							if (isServer) then {
+								[_target, ["camera_shake"]] call server_clientCommand;
+							} else {
+								1 call fnc_damageEffect;
+							};
+						} else {
+							_unit switchMove "";
+						};
+					};
 				};
 			};
 		
@@ -140,6 +166,7 @@ _this spawn {
 			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
 			
 			if (!(count _players > 0)) exitWith {
+				_unit setDamage 1;
 				deleteVehicle (_unit);
 			};
 		};

@@ -52,6 +52,10 @@ if (_command == "gear") then {
 	[player, _invArray] call player_loadInventory;
 };
 
+if (_command == "camera_shake") then {
+	1 call fnc_damageEffect;
+};
+
 if (_command == "hint") then {
 	hint format[_response select 1];
 };
