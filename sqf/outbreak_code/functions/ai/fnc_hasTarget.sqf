@@ -1,5 +1,5 @@
 /*
-	Returns entity if infected has target, will return self if there's no target
+	Returns entity if infected has target, will return false if there's no target
 	@author: TheAmazingAussie
 */
 

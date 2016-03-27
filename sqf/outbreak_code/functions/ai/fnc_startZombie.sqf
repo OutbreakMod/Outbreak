@@ -99,15 +99,19 @@ _this spawn {
 		
 			_walkPath = _target getVariable ["last_position", []];
 		
+			// if the distance between the target and zombie is too great then we run after target
 			if ((_unit distance _walkPath) >= 2) then {
 				_unit moveTo _walkPath;
 				_unit forceSpeed (_unit getSpeed "FAST");
 			
 			};
 			
+			// slow down to walking speed once close
 			if (_unit distance _walkPath <= 2) then { 
 				_unit forceSpeed 1;
 				
+				
+				// try hitting every 2 seconds
 				if ((_timer % 2) == 0) then {
 				
 					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
@@ -120,6 +124,8 @@ _this spawn {
 						sleep 1;
 						_walkPath = _target getVariable ["last_position", []];
 
+						// if target didn't move between zombie trying to hit
+						// then we carry on the damage
 						if (_unit distance _walkPath <= 2) then {
 							
 							_targetHealth = _target getVariable ["health", 0];
@@ -132,6 +138,7 @@ _this spawn {
 								1 call fnc_damageEffect;
 							};
 						} else {
+							// if target moved between zombie trying to hit, then we cancel
 							_unit switchMove "";
 						};
 					};
@@ -140,6 +147,7 @@ _this spawn {
 		
 		} else {
 			
+			// random wandering
 			if ((_timer % 5) == 0) then {
 			
 				if (!_walking) then {
