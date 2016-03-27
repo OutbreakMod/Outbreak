@@ -19,6 +19,7 @@ player removeAllEventHandlers "Killed";
 player removeAllEventHandlers "Respawn";
 player removeAllEventHandlers "HandleDamage";
 _agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
+_agent addEventHandler ["hit",{ [_agent, "zhurt" + str(round random 3)] call object_speak; }];
 
 _agent setHit ["body", 0.9];
 _agent setHit ["hands", 0.9];
