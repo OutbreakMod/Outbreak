@@ -96,17 +96,15 @@ _this spawn {
 		_target = _unit getVariable ["zombieTarget", _unit];
 		
 		if (_hasTarget) then { 
-			if (!_walking) then {
-			
-				_walkPath = _target getVariable ["last_position", []];
+		
+			_walkPath = _target getVariable ["last_position", []];
+		
+			if ((_unit distance _walkPath) > 1) then {
 				_unit moveTo _walkPath;
 				_unit forceSpeed (_unit getSpeed "FAST");
-				_walking = true;
-			};
 			
-			if ((_unit distance _walkPath) < 1) then { 
+			} else {
 				_unit forceSpeed 1;
-				_walking = false;
 			};
 		
 		} else {
@@ -120,6 +118,7 @@ _this spawn {
 					
 					_unit moveTo _walkPath;
 					_unit forceSpeed (_unit getSpeed "FAST");
+					
 					_walking = true;
 				};
 				

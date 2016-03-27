@@ -7,6 +7,7 @@ _unit = _this;
 
 _players = ([_unit, 20, "isPlayer"] call player_findNearby);
 _hasTarget = _unit call fnc_hasTarget;
+
 _target = _unit getVariable ["zombieTarget", _unit];
 
 if (count _players > 0) then {
@@ -22,7 +23,8 @@ if (count _players > 0) then {
 	if (_hasTarget) then {
 	
 		if (_target != _unit) then {
-			//_unit setVariable ["zombieSpawned", getPosATL _target, true];
+			_targetPosition = _target getVariable ["last_position", []];
+			_unit setVariable ["zombieSpawned", _targetPosition, true];
 		};
 		
 		_unit setVariable ["zombieTarget", _unit, true];
