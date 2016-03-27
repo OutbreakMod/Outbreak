@@ -21,10 +21,14 @@ if (_check == "reset_fracture") then {
 
 if (_check == "fracture") then {
 	if (player getVariable ["update_legs", 0] > 0) then {
-		player setHit ["legs", (player getHit "legs") + (player getVariable ["update_legs", 0])];
+	
+		_oldDamage = (player getHit "legs");
+		_newDamage = _oldDamage + (player getVariable ["update_legs", 0]);
+	
+		player setHit ["legs", _newDamage];
 		player setVariable ["update_legs", 0, true];
 		
-		if ((player getHit "legs") > 0.58) then {
+		if (_newDamage > 0.58) then {
 			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
 		};
 	};
@@ -32,11 +36,18 @@ if (_check == "fracture") then {
 
 if (_check == "loot") then {
 
-	_nearby = (getPosATL _unit) nearObjects LOOT_SPAWN_RADIUS;
+	_inVehicle = vehicle player != player;
+	_searchPosition = getPosATL _unit;
+	
+	if (_inVehicle) then {
+		_searchPosition = getPosATL (vehicle player);
+	};
+	
+	_nearby = _searchPosition nearObjects LOOT_SPAWN_RADIUS;
+	
 	{
 		server_spawnLoot = [_x];
 		publicVariableServer "server_spawnLoot";
-		
 	} foreach _nearby;
 };
 
