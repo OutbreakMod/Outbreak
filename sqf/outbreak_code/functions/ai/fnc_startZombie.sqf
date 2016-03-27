@@ -116,10 +116,10 @@ _this spawn {
 					
 						_unit = _this select 0;
 						_target = _this select 1;
-						_walkPath = _target getVariable ["last_position", []];
 						
 						sleep 1;
-						
+						_walkPath = _target getVariable ["last_position", []];
+
 						if (_unit distance _walkPath <= 2) then {
 							
 							_targetHealth = _target getVariable ["health", 0];
