@@ -42,11 +42,11 @@ if (count _nearby > 0) then {
 			_zombieClothes = getText (_building >> "zombieClothes");
 		};
 		
-		_agent setVariable ["ZombieSpawned", position _nearestBuilding, true];
+		_agent setVariable ["zombieSpawned", position _nearestBuilding, true];
 	};
 	
 } else {
-	_agent setVariable ["ZombieSpawned", position _agent, true];
+	_agent setVariable ["zombieSpawned", position _agent, true];
 };
 
 _clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
@@ -76,31 +76,89 @@ if (_zombieClothes == "pilot") then {
 };
 
 diag_log format ["Spawning zombie at %1 near %2 with clothes %3 : %4", getPos _agent, _className, _zombieClothes, _uniform];
-_agent setVariable ["ZombieClothes", _zombieClothes];
+_agent setVariable ["zombieClothes", _zombieClothes];
 
 _this spawn {
 	
 	_unit = _this select 0;
-	_zombieClothes = _unit getVariable ["ZombieClothes", false];
-	
-	_hasTarget = false;
+	_zombieClothes = _unit getVariable ["zombieClothes", false];
+
+	_target = _unit;
 	_walking = false;
 	_timer = 0;
 	_walkPath = [];
 	
 	while {alive _unit} do {
+
+		_unit call fnc_findTarget;
 		
-		if ((_timer % 5) == 0) then {
-			if (!(_hasTarget)) then { 
+		_hasTarget = _unit call fnc_hasTarget;
+		_target = _unit getVariable ["zombieTarget", _unit];
+		
+		if (_hasTarget) then { 
+		
+			_walkPath = _target getVariable ["last_position", []];
+		
+			// if the distance between the target and zombie is too great then we run after target
+			if ((_unit distance _walkPath) >= 2) then {
+				_unit moveTo _walkPath;
+				_unit forceSpeed (_unit getSpeed "FAST");
+			
+			};
+			
+			// slow down to walking speed once close
+			if (_unit distance _walkPath <= 2) then { 
+				_unit forceSpeed 1;
 				
-				// sprint test
+				
+				// try hitting every 2 seconds
+				if ((_timer % 2) == 0) then {
+				
+					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
+					[_unit, "zpunch" + (round random 4)] call object_speak;
+					
+					[_unit, _target] spawn {
+					
+						_unit = _this select 0;
+						_target = _this select 1;
+						
+						sleep 1;
+						_walkPath = _target getVariable ["last_position", []];
+
+						// if target didn't move between zombie trying to hit
+						// then we carry on the damage
+						if (_unit distance _walkPath <= 2) then {
+							
+							_targetHealth = _target getVariable ["health", 0];
+							_targetHealth = _targetHealth - 100;
+							_target setVariable ["health", _targetHealth, true];
+							
+							if (isServer) then {
+								[_target, ["camera_shake"]] call server_clientCommand;
+							} else {
+								1 call fnc_damageEffect;
+							};
+						} else {
+							// if target moved between zombie trying to hit, then we cancel
+							_unit switchMove "";
+						};
+					};
+				};
+			};
+		
+		} else {
+			
+			// random wandering
+			if ((_timer % 5) == 0) then {
+			
 				if (!_walking) then {
 				
-					_pos = _unit getVariable ["ZombieSpawned", 0];
+					_pos = _unit getVariable ["zombieSpawned", 0];
 					_walkPath = [_pos, 5, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 					
 					_unit moveTo _walkPath;
 					_unit forceSpeed (_unit getSpeed "FAST");
+					
 					_walking = true;
 				};
 				
@@ -108,8 +166,12 @@ _this spawn {
 					_unit forceSpeed 1;
 					_walking = false;
 				};
-				
+			
 			};
+		};
+		
+		if ((_timer % 3) == 0) then { 
+			[_unit, "zidle" + (round random 5)] call object_speak;
 		};
 		
 		if ((_timer % 60) == 0) then {
@@ -117,20 +179,22 @@ _this spawn {
 			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
 			
 			if (!(count _players > 0)) exitWith {
+				_unit setDamage 1;
 				deleteVehicle (_unit);
 			};
 		};
+
 		
-		if (player getVariable ["update_legs", 0] > 0) then {
+		if (_unit getVariable ["update_legs", 0] > 0) then {
 
-			_oldDamage = (player getHit "legs");
-			_newDamage = _oldDamage + (player getVariable ["update_legs", 0]);
+			_oldDamage = (_unit getHit "legs");
+			_newDamage = _oldDamage + (_unit getVariable ["update_legs", 0]);
 
-			player setHit ["legs", _newDamage];
-			player setVariable ["update_legs", 0, true];
+			_unit setHit ["legs", _newDamage];
+			_unit setVariable ["update_legs", 0, true];
 			
 			if (_newDamage > 0.58) then {
-				player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+				_unit switchMove "AmovPpneMstpSrasWrflDnon"; // prone
 			};
 		};
 		

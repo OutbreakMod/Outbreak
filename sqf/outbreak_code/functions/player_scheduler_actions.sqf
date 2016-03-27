@@ -65,6 +65,9 @@ if (_check == "debugmenu") then {
 };
 
 if (_check == "health") then {
+
+	player setVariable ["last_position", (getPosATL player), true];
+
 	if (player getVariable ["health", 6000] < 0) then {
 		player setDamage 1;
 	};
