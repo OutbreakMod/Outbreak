@@ -7,7 +7,6 @@ _unit = _this;
 
 _players = ([_unit, 20, "isPlayer"] call player_findNearby);
 _hasTarget = _unit call fnc_hasTarget;
-
 _target = _unit getVariable ["zombieTarget", _unit];
 
 // if there's players within range
@@ -20,6 +19,7 @@ if (count _players > 0) then {
 		_target = _players call BIS_fnc_selectRandom;
 		
 		// tell zombie our new target
+		[_unit, "zpunch" + (round random 4)] call object_speak;
 		_unit setVariable ["zombieTarget", _target, true];
 	};
 	
