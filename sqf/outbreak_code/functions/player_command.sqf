@@ -10,8 +10,9 @@ if (_command == "say") then {
 	
 	_unit = _response select 1;
 	_sfx = _response select 2;
+	_dist = _response select 3;
 	
-	[_unit, _sfx, true] call object_speak;
+	[_unit, _sfx, _dist, true] call object_speak;
 };
 
 if (_command == "findspawn") then { 

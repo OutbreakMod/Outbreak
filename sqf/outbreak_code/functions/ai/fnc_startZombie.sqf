@@ -115,7 +115,7 @@ _this spawn {
 				if ((_timer % 2) == 0) then {
 				
 					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
-					[_unit, "zpunch" + (round random 4)] call object_speak;
+					[_unit, "zpunch" + str(round random 4)] call object_speak;
 					
 					[_unit, _target] spawn {
 					
@@ -170,8 +170,8 @@ _this spawn {
 			};
 		};
 		
-		if ((_timer % 3) == 0) then { 
-			[_unit, "zidle" + (round random 5)] call object_speak;
+		if ((_timer % 6) == 0) then { 
+			[_unit, "zidle" + str(round random 5)] call object_speak;
 		};
 		
 		if ((_timer % 60) == 0) then {
