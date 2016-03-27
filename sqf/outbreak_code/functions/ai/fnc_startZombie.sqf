@@ -112,24 +112,6 @@ _this spawn {
 			};
 		};
 		
-		/*if ((speed _unit) < 1 && !(_hasTarget)) then {
-		
-			_pos = _unit getVariable ["ZombieSpawned", 0];
-			_walkTo = [_pos, 5, 10, 1, 0, 50, 0] call BIS_fnc_findSafePos;
-			_unit moveTo _walkTo;
-			_unit forceSpeed 6;
-			_unit playMove "AmovPercMevaSnonWnonDf";
-		};
-		
-		if ((speed _unit) > 5) then {
-			_unit playMove "AmovPercMevaSnonWnonDf";
-		} else {
-			if (["AmovPercMstpSnonWnonDnon", animationState _unit] call fnc_inString) then {
-				_unit playMoveNow "";
-				_unit forceSpeed 0;
-			};
-		};*/
-		
 		if ((_timer % 60) == 0) then {
 			
 			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
@@ -137,8 +119,19 @@ _this spawn {
 			if (!(count _players > 0)) exitWith {
 				deleteVehicle (_unit);
 			};
+		};
+		
+		if (player getVariable ["update_legs", 0] > 0) then {
+
+			_oldDamage = (player getHit "legs");
+			_newDamage = _oldDamage + (player getVariable ["update_legs", 0]);
+
+			player setHit ["legs", _newDamage];
+			player setVariable ["update_legs", 0, true];
 			
-			
+			if (_newDamage > 0.58) then {
+				player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+			};
 		};
 		
 		if (_unit getVariable ["health", 6000] < 0) then {

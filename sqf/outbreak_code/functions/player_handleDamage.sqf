@@ -73,18 +73,15 @@ if (_type > 2) then {
 	_scale = _scale * 4;
 };
 
-diag_log format["DAMAGE: %1", _this];
-
 if (_hit == "legs") then {
 	if (_ammo == "") then {
 	
 		_effect = true;
 		_scale = _scale + 3500;
-		
-		player setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
+		_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
 	};
 	
-	player setVariable ["update_legs", _damage];
+	_unit setVariable ["update_legs", _damage];
 };
 
 // notify player damage taken
