@@ -105,6 +105,10 @@ _this spawn {
 			
 			} else {
 				_unit forceSpeed 1;
+				
+				if ((_timer % 3) == 0) then {
+					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
+				};
 			};
 		
 		} else {
