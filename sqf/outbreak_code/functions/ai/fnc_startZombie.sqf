@@ -42,11 +42,11 @@ if (count _nearby > 0) then {
 			_zombieClothes = getText (_building >> "zombieClothes");
 		};
 		
-		_agent setVariable ["ZombieSpawned", position _nearestBuilding, true];
+		_agent setVariable ["zombieSpawned", position _nearestBuilding, true];
 	};
 	
 } else {
-	_agent setVariable ["ZombieSpawned", position _agent, true];
+	_agent setVariable ["zombieSpawned", position _agent, true];
 };
 
 _clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
@@ -76,27 +76,46 @@ if (_zombieClothes == "pilot") then {
 };
 
 diag_log format ["Spawning zombie at %1 near %2 with clothes %3 : %4", getPos _agent, _className, _zombieClothes, _uniform];
-_agent setVariable ["ZombieClothes", _zombieClothes];
+_agent setVariable ["zombieClothes", _zombieClothes];
 
 _this spawn {
 	
 	_unit = _this select 0;
-	_zombieClothes = _unit getVariable ["ZombieClothes", false];
-	
-	_hasTarget = false;
+	_zombieClothes = _unit getVariable ["zombieClothes", false];
+
+	_target = _unit;
 	_walking = false;
 	_timer = 0;
 	_walkPath = [];
 	
 	while {alive _unit} do {
+
+		_unit call fnc_findTarget;
 		
-		if ((_timer % 5) == 0) then {
-			if (!(_hasTarget)) then { 
-				
-				// sprint test
+		_hasTarget = _unit call fnc_hasTarget;
+		_target = _unit getVariable ["zombieTarget", _unit];
+		
+		if (_hasTarget) then { 
+			if (!_walking) then {
+			
+				_walkPath = _target getVariable ["last_position", []];
+				_unit moveTo _walkPath;
+				_unit forceSpeed (_unit getSpeed "FAST");
+				_walking = true;
+			};
+			
+			if ((_unit distance _walkPath) < 1) then { 
+				_unit forceSpeed 1;
+				_walking = false;
+			};
+		
+		} else {
+			
+			if ((_timer % 5) == 0) then {
+			
 				if (!_walking) then {
 				
-					_pos = _unit getVariable ["ZombieSpawned", 0];
+					_pos = _unit getVariable ["zombieSpawned", 0];
 					_walkPath = [_pos, 5, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
 					
 					_unit moveTo _walkPath;
@@ -108,7 +127,7 @@ _this spawn {
 					_unit forceSpeed 1;
 					_walking = false;
 				};
-				
+			
 			};
 		};
 		
@@ -120,17 +139,18 @@ _this spawn {
 				deleteVehicle (_unit);
 			};
 		};
+
 		
-		if (player getVariable ["update_legs", 0] > 0) then {
+		if (_unit getVariable ["update_legs", 0] > 0) then {
 
-			_oldDamage = (player getHit "legs");
-			_newDamage = _oldDamage + (player getVariable ["update_legs", 0]);
+			_oldDamage = (_unit getHit "legs");
+			_newDamage = _oldDamage + (_unit getVariable ["update_legs", 0]);
 
-			player setHit ["legs", _newDamage];
-			player setVariable ["update_legs", 0, true];
+			_unit setHit ["legs", _newDamage];
+			_unit setVariable ["update_legs", 0, true];
 			
 			if (_newDamage > 0.58) then {
-				player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+				_unit switchMove "AmovPpneMstpSrasWrflDnon"; // prone
 			};
 		};
 		
