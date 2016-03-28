@@ -111,19 +111,20 @@ _this spawn {
 			if (_unit distance _walkPath <= 2) then { 
 				_unit forceSpeed 1;
 				
-				
 				// try hitting every 2 seconds
 				if ((_timer % 2) == 0) then {
 				
-					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
-					[_unit, "zpunch" + str(round random 3)] call object_speak;
+					// attack animation
+					_unit playMoveNow "AwopPercMstpSgthWnonDnon_end";
 					
+					// tell player zombie is about to attack
+					[_unit, "zpunch" + str(round random 3)] call object_speak;
 					[_unit, _target] spawn {
 					
 						_unit = _this select 0;
 						_target = _this select 1;
 						
-						sleep 1;
+						sleep 2;
 						_walkPath = _target getVariable ["last_position", []];
 
 						// if target didn't move between zombie trying to hit
@@ -139,6 +140,7 @@ _this spawn {
 							} else {
 								1 call fnc_damageEffect;
 							};
+							
 						} else {
 							// if target moved between zombie trying to hit, then we cancel
 							_unit switchMove "";
