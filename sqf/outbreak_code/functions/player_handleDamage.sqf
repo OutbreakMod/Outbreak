@@ -12,9 +12,13 @@ _source = _this select 3;
 _ammo = _this select 4;
 
 _type = [_damage, _ammo] call fnc_damageType;
-_unitIsPlayer = _unit == player;
 
+_unitIsPlayer = _unit == player;
 if (!_unitIsPlayer) exitWith { 0 };
+
+// no damage if not logged in
+_loginStatus = player getVariable ["outbreaklogin", -1];
+if (_loginStatus < 1) exitWith { 0 };
 
 _scale = 100;
 _health = _unit getVariable ["health", 0];

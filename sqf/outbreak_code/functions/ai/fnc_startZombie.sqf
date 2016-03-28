@@ -15,10 +15,12 @@ _agent setCombatMode "RED";
 _agent setSkill 0;
 _agent setFatigue 0;
 
-player removeAllEventHandlers "Killed";
-player removeAllEventHandlers "Respawn";
-player removeAllEventHandlers "HandleDamage";
+_agent removeAllEventHandlers "Killed";
+_agent removeAllEventHandlers "Respawn";
+_agent removeAllEventHandlers "HandleDamage";
+
 _agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
+_agent addEventHandler ["Hit",{ [_this select 0, "zhurt" + str(round random 3)] call object_speak; }];
 
 _agent setHit ["body", 0.9];
 _agent setHit ["hands", 0.9];
@@ -88,6 +90,8 @@ _this spawn {
 	_timer = 0;
 	_walkPath = [];
 	
+	_nextIdleSpeak = 0;
+	
 	while {alive _unit} do {
 
 		_unit call fnc_findTarget;
@@ -110,39 +114,9 @@ _this spawn {
 			if (_unit distance _walkPath <= 2) then { 
 				_unit forceSpeed 1;
 				
-				
 				// try hitting every 2 seconds
 				if ((_timer % 2) == 0) then {
-				
-					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
-					[_unit, "zpunch" + (round random 4)] call object_speak;
-					
-					[_unit, _target] spawn {
-					
-						_unit = _this select 0;
-						_target = _this select 1;
-						
-						sleep 1;
-						_walkPath = _target getVariable ["last_position", []];
-
-						// if target didn't move between zombie trying to hit
-						// then we carry on the damage
-						if (_unit distance _walkPath <= 2) then {
-							
-							_targetHealth = _target getVariable ["health", 0];
-							_targetHealth = _targetHealth - 100;
-							_target setVariable ["health", _targetHealth, true];
-							
-							if (isServer) then {
-								[_target, ["camera_shake"]] call server_clientCommand;
-							} else {
-								1 call fnc_damageEffect;
-							};
-						} else {
-							// if target moved between zombie trying to hit, then we cancel
-							_unit switchMove "";
-						};
-					};
+					[_unit, _target] spawn fnc_zombiePunch;
 				};
 			};
 		
@@ -170,13 +144,27 @@ _this spawn {
 			};
 		};
 		
-		if ((_timer % 3) == 0) then { 
-			[_unit, "zidle" + (round random 5)] call object_speak;
+		// handle idle talking
+		if ((_timer % 1) == 0) then { 
+			
+			if (_nextIdleSpeak > 0) then {
+				_nextIdleSpeak = _nextIdleSpeak - 1;
+			} else {
+				
+				if (_hasTarget) then {
+					[_unit, "zalert" + str((floor random 3) + 1)] call object_speak;
+				} else {
+					[_unit, "zidle" + str((floor random 5) + 1)] call object_speak;
+				};
+				
+				_nextIdleSpeak = round (random 20);
+			}
 		};
 		
+		// check if players nearby, if no players then we terminate zombie
 		if ((_timer % 60) == 0) then {
 			
-			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
+			_players = ([_unit, 100, "isPlayer"] call player_findNearby);
 			
 			if (!(count _players > 0)) exitWith {
 				_unit setDamage 1;
@@ -184,7 +172,7 @@ _this spawn {
 			};
 		};
 
-		
+		// leg breaking
 		if (_unit getVariable ["update_legs", 0] > 0) then {
 
 			_oldDamage = (_unit getHit "legs");
@@ -198,6 +186,7 @@ _this spawn {
 			};
 		};
 		
+		// check health
 		if (_unit getVariable ["health", 6000] < 0) then {
 			_unit setDamage 1;
 		};

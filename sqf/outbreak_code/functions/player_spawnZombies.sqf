@@ -8,57 +8,49 @@ private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePositio
 diag_log format ["Spawn zombie request %1", _this];
 
 _unit = _this select 0;
-_isCity = false;
+_building = _this select 1;
+_position = getPosATL _building;
 
-_amount = ZOMBIE_SPAWN_WILD;
-_rangeMax = ZOMBIE_SPAWN_RANGE_WILD_MAX;
-_rangeMin = ZOMBIE_SPAWN_RANGE_WILD_MIN;
+_rangeMin = 20; // must allow 20 metres before spawning in front of players
+_amount = 3;
 
-_nearCities = nearestLocations [getPosATL _unit, ["NameCityCapital","NameCity"], 200];
-_nearVillages = nearestLocations [getPosATL _unit, ["NameVillage"], 100];
-
-if ((count _nearCities) > 0) then {
-
-	_amount = ZOMBIE_SPAWN_CITY;
-	_rangeMax = ZOMBIE_SPAWN_RANGE_CITY_MAX;
-	_rangeMin = ZOMBIE_SPAWN_RANGE_CITY_MIN;
-	_isCity = true;
-};
-
-if ((count _nearVillages) > 0) then {
-
-	_amount = ZOMBIE_SPAWN_VILLAGE;
-	_rangeMax = ZOMBIE_SPAWN_RANGE_VILLAGE_MAX;
-	_rangeMin = ZOMBIE_SPAWN_RANGE_VILLAGE_MIN;
-	_isCity = true;
-	
-};
-
-_infected = ([_unit, _rangeMax, "isZombie"] call player_findNearby);
+// number of infected around house
+_infected = [_position, 10, "isZombie"] call player_findNearby;
 _count = (count _infected);
-	
-// if the amount of current zeds is less than amount threshold, we spawn more infected
-if (_count < _amount) then {
 
-	_toSpawn = _amount - _count;
-	diag_log format ["There needs to be (%1) more zombies to spawn!", _toSpawn];
+// limit zombies per city
+_globalinfected = [_unit, LOOT_SPAWN_RADIUS, "isZombie"] call player_findNearby;
 
-	for "_i" from 0 to _toSpawn - 1 do { 
+// check for max amount within city
+if (count _globalinfected < MAX_INFECTED_CITY) then {
 	
-		/*_zombiePosition = [];
-	
-		if (_isCity) then {
-			_debugBuilding = (nearestObjects [getPosATL _unit, ["House"], LOOT_SPAWN_RADIUS]) call fnc_selectRandom;
-			_zombiePosition = [(getPos _debugBuilding), _rangeMin, _rangeMax, 3] call fnc_selectRandomLocation;
-		} else {
+	// if the amount of current zeds is less than amount threshold, we spawn more infected
+	if (_count < _amount) then {
+
+		_toSpawn = _amount - _count;
+		diag_log format ["There needs to be (%1) more zombies to spawn!", _toSpawn];
+
+		for "_i" from 0 to _toSpawn - 1 do { 
+		
+			_zombiePosition = [];
+			_needsRelocated = true;
 			
-		};*/
-		
-		_zombiePosition = [(position _unit), _rangeMin, _rangeMax, 3] call fnc_selectRandomLocation;
-		
-		if ((_unit distance _zombiePosition) > _rangeMin) then { // stop zombies spawning infront of players
-			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-			[_agent] call fnc_startZombie;	
+			while {_needsRelocated} do {
+				
+				_zombiePosition = [_position, 3, 10, 3] call fnc_selectRandomLocation;
+				_players = [_zombiePosition, _rangeMin, "isPlayer"] call player_findNearby;
+				
+				if ((count _players) == 0) then {
+					_needsRelocated = false;
+				};
+			};
+			
+			if (count _zombiePosition > 0) then {
+				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+				[_agent] call fnc_startZombie;
+			};
 		};
 	};
 };
+
+_building setVariable ["zombieSpawnTimer", serverTime + 300];

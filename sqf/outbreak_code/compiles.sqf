@@ -43,6 +43,7 @@ player_spawnZombies = compile preProcessFileLineNumbers "addons\outbreak_code\fu
 fnc_startZombie = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\fnc_startZombie.sqf";
 fnc_findTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\fnc_findTarget.sqf";
 fnc_hasTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\fnc_hasTarget.sqf";
+fnc_zombiePunch = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\fnc_zombiePunch.sqf";
 
 obj_getModelName = {
 	_objInfo = toArray(str(_this));

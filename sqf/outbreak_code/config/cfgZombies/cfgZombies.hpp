@@ -8,7 +8,7 @@ class CfgFaces {
 	class ZombieFace : Man_A3 {
 		class Default {
 			displayname = "Zombie Face";
-			texture = "\outbreak_assets\textures\faces\zombie_face_01.paa";
+			texture = "addons\outbreak_assets\textures\faces\zombie_face_01.paa";
 			head = "DefaultHead_A3";
 			identityTypes[] = {};
 			material = "A3\Characters_F\Heads\Data\m_White_01.rvmat";
