@@ -6,6 +6,6 @@ class fire_extinguisher: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\textures\items\fireextinguisher.paa";
+	picture = "addons\outbreak_assets\textures\items\fireextinguisher.paa";
 	descriptionShort = "";
 };

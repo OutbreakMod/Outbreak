@@ -6,6 +6,6 @@ class marijuana: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\marijuana.paa";
+	picture = "addons\outbreak_assets\textures\items\marijuana.paa";
 	descriptionShort = "";
 };

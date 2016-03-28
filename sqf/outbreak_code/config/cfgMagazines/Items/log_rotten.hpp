@@ -6,6 +6,6 @@ class log_rotten: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\textures\items\log_rotten.paa";
+	picture = "addons\outbreak_assets\textures\items\log_rotten.paa";
 	descriptionShort = "A piece of rotten wood, it's old and falls apart easily, useless for any crafting";
 };

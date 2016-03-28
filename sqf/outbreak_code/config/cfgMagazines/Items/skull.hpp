@@ -6,6 +6,6 @@ class skull: CA_Magazine
 		{
 				mass = 3;
 		}; 
-	picture = "\outbreak_assets\textures\items\skull.paa";
+	picture = "addons\outbreak_assets\textures\items\skull.paa";
 	descriptionShort = "";
 };

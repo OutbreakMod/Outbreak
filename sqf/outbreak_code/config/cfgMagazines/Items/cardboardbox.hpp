@@ -6,6 +6,6 @@ class cardboardbox: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\textures\items\cardboardbox.paa";
+	picture = "addons\outbreak_assets\textures\items\cardboardbox.paa";
 	descriptionShort = "";
 };

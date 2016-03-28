@@ -6,6 +6,6 @@ class twinkies: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\textures\items\twinkies.paa";
+	picture = "addons\outbreak_assets\textures\items\twinkies.paa";
 	descriptionShort = "";
 };

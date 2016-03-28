@@ -2,7 +2,7 @@ class tent: CA_Magazine
 {
 	displayName = "Pitchable Tent";
 	count = 1;
-	picture = "\outbreak_assets\textures\items\outbreak_sleeping_bag.paa";
+	picture = "addons\outbreak_assets\textures\items\outbreak_sleeping_bag.paa";
 	model = "\a3\structures_f\Civ\Camping\Sleeping_bag_folded_F";
 	descriptionShort = "";
 	

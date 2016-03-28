@@ -6,6 +6,6 @@ class bulletcasings: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\bulletcasings.paa";
+	picture = "addons\outbreak_assets\textures\items\bulletcasings.paa";
 	descriptionShort = "";
 };

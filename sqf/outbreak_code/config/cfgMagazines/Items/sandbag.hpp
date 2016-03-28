@@ -6,6 +6,6 @@ class sandbag: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\textures\items\sandbag.paa";
+	picture = "addons\outbreak_assets\textures\items\sandbag.paa";
 	descriptionShort = "";
 };

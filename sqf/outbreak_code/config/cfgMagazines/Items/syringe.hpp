@@ -6,6 +6,6 @@ class syringe: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\syringe.paa";
+	picture = "addons\outbreak_assets\textures\items\syringe.paa";
 	descriptionShort = "";
 };

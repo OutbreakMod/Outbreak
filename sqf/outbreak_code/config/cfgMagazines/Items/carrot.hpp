@@ -6,6 +6,6 @@ class carrot: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\carrot.paa";
+	picture = "addons\outbreak_assets\textures\items\carrot.paa";
 	descriptionShort = "";
 };

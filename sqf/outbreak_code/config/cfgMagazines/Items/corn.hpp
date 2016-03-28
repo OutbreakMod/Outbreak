@@ -6,6 +6,6 @@ class corn: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\textures\items\corn.paa";
+	picture = "addons\outbreak_assets\textures\items\corn.paa";
 	descriptionShort = "";
 };

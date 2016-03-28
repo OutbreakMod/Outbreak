@@ -6,6 +6,6 @@ class frying_pan: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\textures\items\fryingpan.paa";
+	picture = "addons\outbreak_assets\textures\items\fryingpan.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class clacker: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\clacker.paa";
+	picture = "addons\outbreak_assets\textures\items\clacker.paa";
 	descriptionShort = "";
 };
