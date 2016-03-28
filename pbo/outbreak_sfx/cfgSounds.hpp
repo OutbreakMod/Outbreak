@@ -9,14 +9,21 @@ class CfgSounds
 	class zalert1
 	{
 		name = "zombie_alert1";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert1.ogg",0.3,1};
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert1.ogg",0.6,1};
 		titles[] = {};
 	};
 	
 	class zalert2
 	{
 		name = "zombie_alert2";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert2.ogg",0.3,1};
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert2.ogg",0.6,1};
+		titles[] = {};
+	};	
+
+	class zalert3
+	{
+		name = "zombie_alert3";
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert3.ogg",0.6,1};
 		titles[] = {};
 	};	
 	

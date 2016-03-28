@@ -89,6 +89,8 @@ _this spawn {
 	_timer = 0;
 	_walkPath = [];
 	
+	_nextIdleSpeak = 0;
+	
 	while {alive _unit} do {
 
 		_unit call fnc_findTarget;
@@ -173,8 +175,15 @@ _this spawn {
 			};
 		};
 		
-		if ((_timer % 6) == 0) then { 
-			[_unit, "zidle" + str(round random 5)] call object_speak;
+		// handle idle talking
+		if ((_timer % 1) == 0) then { 
+			
+			if (_nextIdleSpeak > 0) then {
+				_nextIdleSpeak = _nextIdleSpeak - 1;
+			} else {					
+				[_unit, "zidle" + str(round random 5)] call object_speak;
+				_nextIdleSpeak = round (random 10);
+			}
 		};
 		
 		if ((_timer % 60) == 0) then {

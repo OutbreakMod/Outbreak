@@ -79,6 +79,6 @@ if (_check == "health_level") then {
 	
 	_health = _unit getVariable ["health", 0];
 	_health = _health + 1;
-	_health setVariable ["health", _health, true];
+	_unit setVariable ["health", _health, true];
 
 };
