@@ -5,6 +5,20 @@ class CfgSounds
 		sound[] = {"addons\outbreak_sfx\effects\effects_guts",0.3,1};
 		titles[] = {};
 	};
+
+	class zalert1
+	{
+		name = "zombie_alert1";
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert1.ogg",0.3,1};
+		titles[] = {};
+	};
+	
+	class zalert2
+	{
+		name = "zombie_alert2";
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert2.ogg",0.3,1};
+		titles[] = {};
+	};	
 	
 	class zhurt1
 	{
@@ -40,12 +54,6 @@ class CfgSounds
 	{
 		name = "zombie_punch3";
 		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch3.ogg",0.3,1};
-		titles[] = {};
-	};
-	class zpunch4
-	{
-		name = "zombie_punch4";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch4.ogg",0.3,1};
 		titles[] = {};
 	};
 	class zidle1

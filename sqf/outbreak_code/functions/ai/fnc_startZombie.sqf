@@ -116,7 +116,7 @@ _this spawn {
 				if ((_timer % 2) == 0) then {
 				
 					_unit switchMove "AwopPercMstpSgthWnonDnon_end";
-					[_unit, "zpunch" + str(round random 4)] call object_speak;
+					[_unit, "zpunch" + str(round random 3)] call object_speak;
 					
 					[_unit, _target] spawn {
 					
