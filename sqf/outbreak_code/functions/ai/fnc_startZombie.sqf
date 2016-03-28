@@ -15,9 +15,10 @@ _agent setCombatMode "RED";
 _agent setSkill 0;
 _agent setFatigue 0;
 
-player removeAllEventHandlers "Killed";
-player removeAllEventHandlers "Respawn";
-player removeAllEventHandlers "HandleDamage";
+_agent removeAllEventHandlers "Killed";
+_agent removeAllEventHandlers "Respawn";
+_agent removeAllEventHandlers "HandleDamage";
+
 _agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
 _agent addEventHandler ["Hit",{ [_this select 0, "zhurt" + str(round random 3)] call object_speak; }];
 
