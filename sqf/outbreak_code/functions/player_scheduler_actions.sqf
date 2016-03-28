@@ -46,8 +46,15 @@ if (_check == "loot") then {
 	_nearby = _searchPosition nearObjects LOOT_SPAWN_RADIUS;
 	
 	{
+		_building = _x;
+		
+		if (serverTime > _building getVariable ["loottimer", 0]) then {
+			[_unit, _building] call player_spawnZombies;
+		};
+	
 		server_spawnLoot = [_x];
 		publicVariableServer "server_spawnLoot";
+		
 	} foreach _nearby;
 };
 
