@@ -10,9 +10,10 @@ if (_command == "say") then {
 	
 	_unit = _response select 1;
 	_sfx = _response select 2;
-	
-	[_unit, _sfx, true] call object_speak;
+	_dist = _response select 3;
+	_unit say3D [_sfx, _dist];
 };
+
 
 if (_command == "findspawn") then { 
 	_pos = [] call player_findSpawn;
