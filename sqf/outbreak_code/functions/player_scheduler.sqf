@@ -44,7 +44,7 @@
 
 [] spawn {
 	while {true} do {
-		_sound = format["ambient_%1", floor(random 8) + 1];
+		_sound = format["ambient_%1", floor(random 7) + 1];
 		_length = getNumber(configFile >> "cfgMusic" >> _sound >> "duration");
 		_pause = ((random 5) + 2) + _length;
 		playMusic _sound;

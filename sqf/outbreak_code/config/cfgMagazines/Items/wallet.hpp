@@ -6,6 +6,6 @@ class wallet: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\wallet.paa";
+	picture = "\outbreak_assets\textures\items\wallet.paa";
 	descriptionShort = "";
 };

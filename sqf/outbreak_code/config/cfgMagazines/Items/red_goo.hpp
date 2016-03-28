@@ -6,6 +6,6 @@ class red_goo: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\redgoo.paa";
+	picture = "\outbreak_assets\textures\items\redgoo.paa";
 	descriptionShort = "";
 };

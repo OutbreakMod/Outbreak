@@ -6,6 +6,6 @@ class c4: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\c4.paa";
+	picture = "\outbreak_assets\textures\items\c4.paa";
 	descriptionShort = "";
 };

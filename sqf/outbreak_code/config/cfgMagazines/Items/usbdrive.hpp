@@ -6,6 +6,6 @@ class usbdrive: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\usbdrive.paa";
+	picture = "\outbreak_assets\textures\items\usbdrive.paa";
 	descriptionShort = "";
 };

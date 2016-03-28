@@ -6,6 +6,6 @@ class disinfectant: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\disinfectant.paa";
+	picture = "\outbreak_assets\textures\items\disinfectant.paa";
 	descriptionShort = "";
 };

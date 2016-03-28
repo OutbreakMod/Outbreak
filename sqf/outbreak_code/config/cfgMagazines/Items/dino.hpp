@@ -6,6 +6,6 @@ class dino: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\dino.paa";
+	picture = "\outbreak_assets\textures\items\dino.paa";
 	descriptionShort = "";
 };

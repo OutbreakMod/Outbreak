@@ -6,6 +6,6 @@ class lighter: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\lighter.paa";
+	picture = "\outbreak_assets\textures\items\lighter.paa";
 	descriptionShort = "";
 };

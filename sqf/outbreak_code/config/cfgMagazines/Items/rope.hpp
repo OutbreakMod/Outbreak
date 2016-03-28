@@ -6,6 +6,6 @@ class rope: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\rope.paa";
+	picture = "\outbreak_assets\textures\items\rope.paa";
 	descriptionShort = "";
 };

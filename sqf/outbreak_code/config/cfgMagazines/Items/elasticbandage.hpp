@@ -6,6 +6,6 @@ class elasticbandage: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\elasticbandage.paa";
+	picture = "\outbreak_assets\textures\items\elasticbandage.paa";
 	descriptionShort = "";
 };

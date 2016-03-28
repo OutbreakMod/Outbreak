@@ -6,6 +6,6 @@ class tourniquet: CA_Magazine
 		{
 				mass = 3;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\tourniquet.paa";
+	picture = "\outbreak_assets\textures\items\tourniquet.paa";
 	descriptionShort = "";
 };

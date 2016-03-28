@@ -6,6 +6,6 @@ class microphone: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\microphone.paa";
+	picture = "\outbreak_assets\textures\items\microphone.paa";
 	descriptionShort = "";
 };

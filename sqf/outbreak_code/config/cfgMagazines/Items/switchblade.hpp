@@ -6,6 +6,6 @@ class switchblade: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\switchblade.paa";
+	picture = "\outbreak_assets\textures\items\switchblade.paa";
 	descriptionShort = "";
 };

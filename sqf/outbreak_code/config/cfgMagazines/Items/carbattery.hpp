@@ -6,6 +6,6 @@ class carbattery: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\carbattery.paa";
+	picture = "\outbreak_assets\textures\items\carbattery.paa";
 	descriptionShort = "";
 };

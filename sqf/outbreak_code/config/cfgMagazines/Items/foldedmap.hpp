@@ -6,6 +6,6 @@ class foldedmap: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\foldedmap.paa";
+	picture = "\outbreak_assets\textures\items\foldedmap.paa";
 	descriptionShort = "";
 };

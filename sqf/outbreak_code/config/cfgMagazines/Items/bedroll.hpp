@@ -6,6 +6,6 @@ class bedroll: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\bedroll.paa";
+	picture = "\outbreak_assets\textures\items\bedroll.paa";
 	descriptionShort = "";
 };

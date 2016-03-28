@@ -6,6 +6,6 @@ class cloth: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\cloth.paa";
+	picture = "\outbreak_assets\textures\items\cloth.paa";
 	descriptionShort = "";
 };

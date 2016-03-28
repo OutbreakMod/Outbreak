@@ -6,6 +6,6 @@ class combat_boots: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\combatboots.paa";
+	picture = "\outbreak_assets\textures\items\combatboots.paa";
 	descriptionShort = "";
 };

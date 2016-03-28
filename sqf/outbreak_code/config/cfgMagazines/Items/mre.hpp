@@ -6,6 +6,6 @@ class mre: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\mre.paa";
+	picture = "\outbreak_assets\textures\items\mre.paa";
 	descriptionShort = "";
 };

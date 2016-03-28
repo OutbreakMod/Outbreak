@@ -6,6 +6,6 @@ class tire_iron: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\tireiron.paa";
+	picture = "\outbreak_assets\textures\items\tireiron.paa";
 	descriptionShort = "";
 };

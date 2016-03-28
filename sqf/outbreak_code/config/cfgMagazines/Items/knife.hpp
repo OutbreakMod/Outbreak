@@ -6,7 +6,7 @@ class knife: CA_Magazine
 		{
 				mass = 3;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\knife.paa";
+	picture = "\outbreak_assets\textures\items\knife.paa";
 	model = "a3\structures_f\Items\Tools\Screwdriver_V1_F";
 	descriptionShort = "";
 };

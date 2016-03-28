@@ -115,39 +115,7 @@ _this spawn {
 				
 				// try hitting every 2 seconds
 				if ((_timer % 2) == 0) then {
-				
-					// attack animation
-					_unit playMoveNow "AwopPercMstpSgthWnonDnon_end";
-					
-					// tell player zombie is about to attack
-					[_unit, "zpunch" + str(round random 3)] call object_speak;
-					[_unit, _target] spawn {
-					
-						_unit = _this select 0;
-						_target = _this select 1;
-						
-						sleep 2;
-						_walkPath = _target getVariable ["last_position", []];
-
-						// if target didn't move between zombie trying to hit
-						// then we carry on the damage
-						if (_unit distance _walkPath <= 2) then {
-							
-							_targetHealth = _target getVariable ["health", 0];
-							_targetHealth = _targetHealth - 100;
-							_target setVariable ["health", _targetHealth, true];
-							
-							if (isServer) then {
-								[_target, ["camera_shake"]] call server_clientCommand;
-							} else {
-								1 call fnc_damageEffect;
-							};
-							
-						} else {
-							// if target moved between zombie trying to hit, then we cancel
-							_unit switchMove "";
-						};
-					};
+					[_unit, _target] spawn fnc_zombiePunch;
 				};
 			};
 		
@@ -180,15 +148,22 @@ _this spawn {
 			
 			if (_nextIdleSpeak > 0) then {
 				_nextIdleSpeak = _nextIdleSpeak - 1;
-			} else {					
-				[_unit, "zidle" + str(round random 5)] call object_speak;
-				_nextIdleSpeak = round (random 10);
+			} else {
+				
+				if (_hasTarget) then {
+					[_unit, "zalert" + str((floor random 3) + 1)] call object_speak;
+				} else {
+					[_unit, "zidle" + str((floor random 5) + 1)] call object_speak;
+				};
+				
+				_nextIdleSpeak = round (random 20);
 			}
 		};
 		
+		// check if players nearby, if no players then we terminate zombie
 		if ((_timer % 60) == 0) then {
 			
-			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
+			_players = ([_unit, 100, "isPlayer"] call player_findNearby);
 			
 			if (!(count _players > 0)) exitWith {
 				_unit setDamage 1;
@@ -196,7 +171,7 @@ _this spawn {
 			};
 		};
 
-		
+		// leg breaking
 		if (_unit getVariable ["update_legs", 0] > 0) then {
 
 			_oldDamage = (_unit getHit "legs");
@@ -210,6 +185,7 @@ _this spawn {
 			};
 		};
 		
+		// check health
 		if (_unit getVariable ["health", 6000] < 0) then {
 			_unit setDamage 1;
 		};

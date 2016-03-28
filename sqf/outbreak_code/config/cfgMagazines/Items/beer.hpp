@@ -6,6 +6,6 @@ class beer: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\beer.paa";
+	picture = "\outbreak_assets\textures\items\beer.paa";
 	descriptionShort = "";
 };

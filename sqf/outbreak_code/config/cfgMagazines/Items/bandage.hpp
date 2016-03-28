@@ -6,7 +6,7 @@ class bandage: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\bandage.paa";
+	picture = "\outbreak_assets\textures\items\bandage.paa";
 	descriptionShort = "Stops bleeding open wounds and potential infection";
 	
 	class cfgItemActions {

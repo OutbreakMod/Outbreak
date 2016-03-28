@@ -6,6 +6,6 @@ class moonshine: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\moonshine.paa";
+	picture = "\outbreak_assets\textures\items\moonshine.paa";
 	descriptionShort = "";
 };

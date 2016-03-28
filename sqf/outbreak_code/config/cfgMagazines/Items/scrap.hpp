@@ -6,6 +6,6 @@ class scrap: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\scrap.paa";
+	picture = "\outbreak_assets\textures\items\scrap.paa";
 	descriptionShort = "Spare recycled metal to create other objects out of metal";
 };

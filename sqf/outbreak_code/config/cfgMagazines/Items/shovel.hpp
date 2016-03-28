@@ -6,6 +6,6 @@ class shovel: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\shovel.paa";
+	picture = "\outbreak_assets\textures\items\shovel.paa";
 	descriptionShort = "";
 };

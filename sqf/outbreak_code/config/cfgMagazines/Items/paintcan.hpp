@@ -6,6 +6,6 @@ class paintcan: CA_Magazine
 		{
 				mass = 5;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\paintcan.paa";
+	picture = "\outbreak_assets\textures\items\paintcan.paa";
 	descriptionShort = "";
 };

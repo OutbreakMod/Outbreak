@@ -9,7 +9,7 @@ if (isNil 'debugMenu') then {
 
 if (debugMenu) then {
 
-	_time = (round(360-(serverTime)/60));
+	_time = (round(180-(serverTime)/60));
 	_hours = (floor(_time/60));
 	_minutes = (_time - (_hours * 60));
 	
@@ -34,14 +34,16 @@ if (debugMenu) then {
 		<t size='0.95' align='left' color='#FFFFFF'>Players Online: </t><t size='0.95' align='right'>%1</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'>Zombies killed: </t><t size='0.95' align='right'>%2</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'>Murders: </t><t size='0.95' align='right'>%3</t><br/>
-		<t size='0.95' align='left' color='#FFFFFF'>Health: </t><t size='0.95' align='right'>%4</t><br/>
-		<t size='0.95' align='left' color='#FFFFFF'>FPS: </t><t size='0.95' align='right'>%5</t><br/>
+		<t size='0.95' align='left' color='#FFFFFF'>Blood: </t><t size='0.95' align='right'>%4</t><br/>
+		<t size='0.95' align='left' color='#FFFFFF'>Health: </t><t size='0.95' align='right'>%5</t><br/>
+		<t size='0.95' align='left' color='#FFFFFF'>FPS: </t><t size='0.95' align='right'>%6</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'></t><t size='0.95' align='right'></t><br/>
-		<t size='1.15' align='center' color='#5882FA'>Server restart in %6:%7</t><br/>",
+		<t size='1.15' align='center' color='#5882FA'>Server restart in %7:%8</t><br/>",
 			
 		(count playableUnits),
 		(0), // zed kills
 		(0), // murders
+		(player getVariable['blood', 6000]),
 		(player getVariable['health', 6000]),
 		(round diag_fps),
 		_hours,

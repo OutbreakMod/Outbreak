@@ -74,11 +74,5 @@ if (_check == "health") then {
 };
 
 if (_check == "health_level") then {
-	
 	_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
-	
-	_health = _unit getVariable ["health", 0];
-	_health = _health + 1;
-	_unit setVariable ["health", _health, true];
-
 };

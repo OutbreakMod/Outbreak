@@ -6,6 +6,6 @@ class tablet: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\tablet.paa";
+	picture = "\outbreak_assets\textures\items\tablet.paa";
 	descriptionShort = "";
 };

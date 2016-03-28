@@ -6,6 +6,6 @@ class iphone: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\iphone.paa";
+	picture = "\outbreak_assets\textures\items\iphone.paa";
 	descriptionShort = "";
 };

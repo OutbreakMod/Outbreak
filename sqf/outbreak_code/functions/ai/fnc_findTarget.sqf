@@ -19,7 +19,7 @@ if (count _players > 0) then {
 		_target = _players call BIS_fnc_selectRandom;
 		
 		// tell zombie our new target
-		[_unit, "zalert" + str(round random 3)] call object_speak;
+		[_unit, "zalert" + str((floor random 3) + 1)] call object_speak;
 		_unit setVariable ["zombieTarget", _target, true];
 	};
 	

@@ -6,6 +6,6 @@ class scalpel: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\scalpel.paa";
+	picture = "\outbreak_assets\textures\items\scalpel.paa";
 	descriptionShort = "";
 };

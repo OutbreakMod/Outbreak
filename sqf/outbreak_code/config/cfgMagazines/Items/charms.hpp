@@ -6,6 +6,6 @@ class charms: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\charms.paa";
+	picture = "\outbreak_assets\textures\items\charms.paa";
 	descriptionShort = "";
 };

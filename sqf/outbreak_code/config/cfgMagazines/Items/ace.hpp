@@ -6,6 +6,6 @@ class ace: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\ace.paa";
+	picture = "\outbreak_assets\textures\items\ace.paa";
 	descriptionShort = "";
 };

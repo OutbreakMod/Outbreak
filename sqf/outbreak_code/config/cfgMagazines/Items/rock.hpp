@@ -6,6 +6,6 @@ class rock: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\rock.paa";
+	picture = "\outbreak_assets\textures\items\rock.paa";
 	descriptionShort = "";
 };

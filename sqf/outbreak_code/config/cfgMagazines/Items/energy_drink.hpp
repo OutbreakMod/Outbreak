@@ -6,7 +6,7 @@ class energy_drink: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\energydrink.paa"; 
+	picture = "\outbreak_assets\textures\items\energydrink.paa"; 
 	model = "a3\structures_f\Items\Food\Can_V3_F";
 	descriptionShort = "";
 };

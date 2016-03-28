@@ -6,6 +6,6 @@ class guitar: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\guitar.paa";
+	picture = "\outbreak_assets\textures\items\guitar.paa";
 	descriptionShort = "";
 };

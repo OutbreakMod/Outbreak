@@ -6,6 +6,6 @@ class donut: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\donut.paa";
+	picture = "\outbreak_assets\textures\items\donut.paa";
 	descriptionShort = "";
 };

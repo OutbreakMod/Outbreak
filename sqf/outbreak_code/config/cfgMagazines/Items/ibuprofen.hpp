@@ -6,6 +6,6 @@ class ibuprofen: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\ibuprofen.paa";
+	picture = "\outbreak_assets\textures\items\ibuprofen.paa";
 	descriptionShort = "";
 };

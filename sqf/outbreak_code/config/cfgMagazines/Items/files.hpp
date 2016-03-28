@@ -6,6 +6,6 @@ class files: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\files.paa";
+	picture = "\outbreak_assets\textures\items\files.paa";
 	descriptionShort = "";
 };

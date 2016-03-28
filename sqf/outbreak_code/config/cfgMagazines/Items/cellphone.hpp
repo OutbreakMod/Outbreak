@@ -6,6 +6,6 @@ class cellphone: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\cellphone.paa";
+	picture = "\outbreak_assets\textures\items\cellphone.paa";
 	descriptionShort = "";
 };

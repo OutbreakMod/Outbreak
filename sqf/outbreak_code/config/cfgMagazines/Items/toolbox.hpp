@@ -6,7 +6,7 @@ class toolbox: CA_Magazine
 		{
 				mass = 10;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\toolbox.paa";
+	picture = "\outbreak_assets\textures\items\toolbox.paa";
 	model = "a3\structures_f\Items\Luggage\Suitcase_F";
 	descriptionShort = "Used for replacing car parts";
 };

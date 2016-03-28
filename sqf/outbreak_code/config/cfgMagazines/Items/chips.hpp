@@ -6,6 +6,6 @@ class chips: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\chips.paa";
+	picture = "\outbreak_assets\textures\items\chips.paa";
 	descriptionShort = "A bag of potato chips";
 };

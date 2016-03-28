@@ -6,6 +6,6 @@ class surgical_tubing: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\surgicaltubing.paa";
+	picture = "\outbreak_assets\textures\items\surgicaltubing.paa";
 	descriptionShort = "";
 };

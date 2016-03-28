@@ -6,6 +6,6 @@ class pbj: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\pbj.paa";
+	picture = "\outbreak_assets\textures\items\pbj.paa";
 	descriptionShort = "";
 };

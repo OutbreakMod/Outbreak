@@ -6,6 +6,6 @@ class combat_shirt: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\combatshirt.paa";
+	picture = "\outbreak_assets\textures\items\combatshirt.paa";
 	descriptionShort = "";
 };
