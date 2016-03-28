@@ -18,6 +18,6 @@ _infected = [];
 		_infected = _infected + [_x];
 	};
 	
-} forEach ((getPosATL _unit) nearEntities ["Man", _range]);
+} forEach (_unit nearEntities ["Man", _range]);
 
 _infected;

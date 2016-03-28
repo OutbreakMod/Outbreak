@@ -48,8 +48,10 @@ if (_check == "loot") then {
 	{
 		_building = _x;
 		
-		if (serverTime > _building getVariable ["loottimer", 0]) then {
-			[_unit, _building] call player_spawnZombies;
+		if (_building isKindOf "House") then {
+			if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
+				[_unit, _building] call player_spawnZombies;
+			};
 		};
 	
 		server_spawnLoot = [_x];
