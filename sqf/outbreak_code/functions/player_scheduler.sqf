@@ -11,6 +11,7 @@
 	
 	_scheduled = [
 		["loot", 20],
+		["zombie_spawn", 300],
 		["actions", 1],
 		["zombie", 200],
 		["health", 0],

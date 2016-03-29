@@ -12,6 +12,9 @@ CHOP_TREES_WOOD_YIELD = getArray(configFile >> "CfgGame" >> "tree_wood_yield");
 MAX_INFECTED_CITY = 10;
 LOOT_SPAWN_RADIUS = 150;
 
+MIN_LOOT_SPAWN_DISTANCE = 30;
+MIN_ZOMBIE_SPAWN_DISTANCE = 40;
+
 // reset actions
 action_gutAnimal = -1;
 action_cookMeat = -1;

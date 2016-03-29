@@ -46,18 +46,28 @@ if (_check == "loot") then {
 	_nearby = _searchPosition nearObjects LOOT_SPAWN_RADIUS;
 	
 	{
-		_building = _x;
 		
-		if (_building isKindOf "House") then {
-			if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
-				[_unit, _building] call player_spawnZombies;
+		_building = _x;
+		_distance = _building distance _unit;
+		
+		if (_distance >= MIN_LOOT_SPAWN_DISTANCE) then {
+			server_spawnLoot = [_building];
+			publicVariableServer "server_spawnLoot";
+		};
+		
+		if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
+			if (_building isKindOf "House") then {
+				if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
+					[_unit, _building] call player_spawnZombies;
+				};
 			};
 		};
-	
-		server_spawnLoot = [_x];
-		publicVariableServer "server_spawnLoot";
 		
 	} foreach _nearby;
+};
+
+if (_check == "zombie_spawn") then {
+
 };
 
 if (_check == "actions") then {
