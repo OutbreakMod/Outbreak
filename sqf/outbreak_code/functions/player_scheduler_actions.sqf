@@ -12,28 +12,6 @@ if (_check == "zombie") then {
 	//[_unit] call player_spawnZombies;
 };
 
-if (_check == "reset_fracture") then {
-	if (player getVariable ["reset_fracture", false]) then {
-		player setVariable ["reset_fracture", false, true];
-		player setHit ["legs", 0];
-	};
-};
-
-if (_check == "fracture") then {
-	if (player getVariable ["update_legs", 0] > 0) then {
-	
-		_oldDamage = (player getHit "legs");
-		_newDamage = _oldDamage + (player getVariable ["update_legs", 0]);
-	
-		player setHit ["legs", _newDamage];
-		player setVariable ["update_legs", 0, true];
-		
-		if (_newDamage > 0.58) then {
-			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
-		};
-	};
-};
-
 if (_check == "loot") then {
 
 	_inVehicle = vehicle player != player;
@@ -58,7 +36,7 @@ if (_check == "loot") then {
 		if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
 			if (_building isKindOf "House") then {
 				if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
-					[_unit, _building] call player_spawnZombies;
+					//[_unit, _building] call player_spawnZombies;
 				};
 			};
 		};
@@ -105,5 +83,40 @@ if (_check == "health_level") then {
 	if (_health < 6000) then {
 		_health = _health + 1;
 		player setVariable ["health", _health, true];
+	};
+};
+
+if (_check == "reset_fracture") then {
+	if (player getVariable ["reset_fracture", false]) then {
+		player setVariable ["reset_fracture", false, true];
+		player setHit ["legs", 0];
+	};
+};
+
+if (_check == "fracture") then {
+	if (player getVariable ["update_legs", 0] > 0) then {
+	
+		_oldDamage = (player getHit "legs");
+		_newDamage = _oldDamage + (player getVariable ["update_legs", 0]);
+	
+		player setHit ["legs", _newDamage];
+		player setVariable ["update_legs", 0, true];
+		
+		if (_newDamage > 0.58) then {
+			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+		};
+	};
+};
+
+if (_check == "leg_damage") then {
+	
+	_damage = (player getHit "legs");
+	
+	if (_damage > 0.6) then {
+		_state = format["%1", animationState player];
+		
+		if (_state in STANDING_STANCES) then {
+			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+		};
 	};
 };

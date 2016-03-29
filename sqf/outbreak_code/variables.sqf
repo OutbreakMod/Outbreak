@@ -26,3 +26,12 @@ action_build = -1;
 player_performingAction = false;
 player_noWeapon = nil;
 player_primaryWeapon = nil;
+
+STANDING_STANCES = [
+	"amovpercmstpsraswrfldnon",
+	"amovpercmrunslowwrfldf",
+	"amovpercmrunsraswrfldf",
+	"ainvpercmstpsraswrfldnon",
+	"amovpercmrunsnonwnondf",
+	"amovpercmrunsnonwnondl"
+];
