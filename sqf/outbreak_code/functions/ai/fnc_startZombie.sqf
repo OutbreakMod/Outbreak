@@ -21,7 +21,7 @@ _agent removeAllEventHandlers "Hit";
 _agent removeAllEventHandlers "Respawn";
 _agent removeAllEventHandlers "HandleDamage";
 
-_agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
+//_agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
 
 _agent setHit ["body", 0.9];
 _agent setHit ["hands", 0.9];
