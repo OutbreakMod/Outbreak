@@ -11,7 +11,6 @@ _unit = _this select 0;
 _building = _this select 1;
 _position = getPosATL _building;
 
-_rangeMin = 20; // must allow 20 metres before spawning in front of players
 _amount = 3;
 
 // number of infected around house
@@ -34,23 +33,34 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 		
 			_zombiePosition = [];
 			_needsRelocated = true;
+			_counter = 0;
 			
 			while {_needsRelocated} do {
 				
-				_zombiePosition = [_position, 3, 10, 3] call fnc_selectRandomLocation;
-				_players = [_zombiePosition, _rangeMin, "isPlayer"] call player_findNearby;
+				_zombiePosition = [_position, 3, 15, 3] call fnc_selectRandomLocation;
+				_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
 				
 				if ((count _players) == 0) then {
+					_needsRelocated = false;
+				};
+				
+				_counter = _counter + 1;
+				
+				if (_counter > 20) then {
 					_needsRelocated = false;
 				};
 			};
 			
 			if (count _zombiePosition > 0) then {
 				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-				[_agent] call fnc_startZombie;
+				[_agent, _building] call fnc_startZombie;
 			};
+			
+			/*_zombiePosition = [_position, 5, 15, 5] call fnc_selectRandomLocation;
+			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+			[_agent, _building] call fnc_startZombie;*/
 		};
 	};
 };
 
-_building setVariable ["zombieSpawnTimer", serverTime + 300];
+_building setVariable ["zombieSpawnTimer", serverTime + 600];

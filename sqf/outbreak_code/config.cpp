@@ -7,6 +7,9 @@ class CfgPatches {
 	};
 };
 
+// zombie loot
+#include "config\cfgLoot\cfgBuildingType.hpp"
+
 // configuration files
 #include "config\cfgGame\cfgGame.hpp"
 #include "config\cfgVehicles\cfgVehicles.hpp"

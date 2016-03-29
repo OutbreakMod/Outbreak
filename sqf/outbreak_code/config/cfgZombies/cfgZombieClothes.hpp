@@ -17,6 +17,12 @@ class CfgClothes {
 		"U_C_WorkerCoveralls"
 	};
 	
+	industrial[] = {
+		"U_KerryBody",
+		"U_Competitor",
+		"U_C_WorkerCoveralls"
+	};
+	
 	wild[] = {
 		"U_IG_Guerilla3_1",
 		"U_IG_Guerilla3_2",

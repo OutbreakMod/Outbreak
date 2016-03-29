@@ -11,14 +11,17 @@
 	
 	_scheduled = [
 		["loot", 20],
+		["zombie_spawn", 300],
 		["actions", 1],
+		["debugmenu", 1],
 		["zombie", 200],
 		["health", 0],
 		["health_level", 1],
 		["bones", 1],
 		["sync", 1],
 		["fracture", 1],
-		["reset_fracture", 1]
+		["reset_fracture", 1],
+		["leg_damage", 0]
 	];
 	
 	while {true} do {

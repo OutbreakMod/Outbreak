@@ -12,12 +12,6 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
 
-	_type = format["%1", typeOf _cursorTarget];
-	
-	if (_type == "Zombie") then {
-		hintSilent format["Health: %1", _cursorTarget getVariable["health", 6000]];
-	};
-	
 	if (_dist < 4) then {
 		
 		_type = typeOf _cursorTarget;
