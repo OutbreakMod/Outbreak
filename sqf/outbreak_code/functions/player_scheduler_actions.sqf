@@ -76,12 +76,24 @@ if (_check == "debugmenu") then {
 if (_check == "health") then {
 
 	player setVariable ["last_position", (getPosATL player), true];
-
-	if (player getVariable ["health", 6000] < 0) then {
+	_health = player getVariable ["health", 6000];
+	
+	if (_health < 0) then {
 		player setDamage 1;
+	};
+	
+	if (_health < 6000) then {
+		_health = _health + 1;
 	};
 };
 
 if (_check == "health_level") then {
+	
 	_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
+	_health = player getVariable ["health", 6000];
+	
+	if (_health < 6000) then {
+		_health = _health + 1;
+		player setVariable ["health", _health, true];
+	};
 };

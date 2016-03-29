@@ -34,6 +34,7 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 		
 			_zombiePosition = [];
 			_needsRelocated = true;
+			_counter = 0;
 			
 			while {_needsRelocated} do {
 				
@@ -41,6 +42,12 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 				_players = [_zombiePosition, _rangeMin, "isPlayer"] call player_findNearby;
 				
 				if ((count _players) == 0) then {
+					_needsRelocated = false;
+				};
+				
+				_counter = _counter + 1;
+				
+				if (_counter > 20) then {
 					_needsRelocated = false;
 				};
 			};
