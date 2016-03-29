@@ -13,6 +13,7 @@
 		["loot", 20],
 		["zombie_spawn", 300],
 		["actions", 1],
+		["debugmenu", 1],
 		["zombie", 200],
 		["health", 0],
 		["health_level", 1],
