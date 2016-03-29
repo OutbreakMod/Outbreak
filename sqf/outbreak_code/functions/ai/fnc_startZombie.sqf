@@ -180,7 +180,7 @@ _this spawn {
 		// check if players nearby, if no players then we terminate zombie
 		if ((_timer % 60) == 0) then {
 			
-			_players = ([_unit, 100, "isPlayer"] call player_findNearby);
+			_players = ([_unit, 300, "isPlayer"] call player_findNearby);
 			
 			if (!(count _players > 0)) exitWith {
 				_unit setDamage 1;
