@@ -54,10 +54,10 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 			
 			if (count _zombiePosition > 0) then {
 				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-				[_agent] call fnc_startZombie;
+				[_agent, _building] call fnc_startZombie;
 			};
 		};
 	};
 };
 
-_building setVariable ["zombieSpawnTimer", serverTime + 300];
+_building setVariable ["zombieSpawnTimer", serverTime + 600];

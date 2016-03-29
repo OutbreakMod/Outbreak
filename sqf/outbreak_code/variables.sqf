@@ -9,7 +9,7 @@ MOD_FULL_HEALTH = getNumber(configFile >> "CfgGame" >> "MOD_FULL_HEALTH");
 CHOP_TREES = getArray(configFile >> "CfgGame" >> "trees");
 CHOP_TREES_WOOD_YIELD = getArray(configFile >> "CfgGame" >> "tree_wood_yield");
 
-MAX_INFECTED_CITY = 20;
+MAX_INFECTED_CITY = 10;
 LOOT_SPAWN_RADIUS = 150;
 
 // reset actions

@@ -6,6 +6,7 @@
 private ["_agent", "_isZombieWild", "_clothes", "_cities", "_vests", "_zombieClothes", "_nearby", "_building", "_vests", "_helmets", "_uniform"];
 
 _agent = _this select 0;
+
 _agent setVariable ["isZombie", true, true];
 _agent setVariable ["health", 6000, true];
 _agent call player_clearInventory; // remove everything
@@ -33,22 +34,37 @@ _zombieClothes = "wild";
 _nearby = nearestObjects [_agent, ["House", "Wreck_Base"], 20];
 _className = "wild";
 
-if (count _nearby > 0) then {
-	_nearestBuilding = _nearby select 0;
-	_className = typeOf _nearestBuilding;
-	_building = configFile >> "CfgBuildingType" >> _className;
-
-	if ((_nearestBuilding getVariable ["helicrashSpawnZeds", true])) then {
-		
-		if (isClass(_building)) then {
-			_zombieClothes = getText (_building >> "zombieClothes");
-		};
-		
-		_agent setVariable ["zombieSpawned", position _nearestBuilding, true];
+if (count _this > 1) then {
+	
+	_building = _this select 1;
+	_className = typeOf _building;
+	_buildingCfg = configFile >> "CfgBuildingType" >> _className;
+	
+	if (isClass(_buildingCfg)) then {
+		_zombieClothes = getText (_buildingCfg >> "zombieClothes");
 	};
 	
+	_agent setVariable ["zombieSpawned", position _building, true];
+
 } else {
-	_agent setVariable ["zombieSpawned", position _agent, true];
+	
+	if (count _nearby > 0) then {
+		_nearestBuilding = _nearby select 0;
+		_className = typeOf _nearestBuilding;
+		_building = configFile >> "CfgBuildingType" >> _className;
+
+		if ((_nearestBuilding getVariable ["helicrashSpawnZeds", true])) then {
+			
+			if (isClass(_building)) then {
+				_zombieClothes = getText (_building >> "zombieClothes");
+			};
+			
+			_agent setVariable ["zombieSpawned", position _nearestBuilding, true];
+		};
+		
+	} else {
+		_agent setVariable ["zombieSpawned", position _agent, true];
+	};
 };
 
 _clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
