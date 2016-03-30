@@ -6,7 +6,7 @@ class juicebox: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\juicebox.paa";
+	picture = "addons\outbreak_assets\textures\items\juicebox.paa";
 	model = "a3\structures_f\Items\Food\Can_V2_F";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class suitcase: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\textures\items\suitcase.paa";
+	picture = "addons\outbreak_assets\textures\items\suitcase.paa";
 	descriptionShort = "";
 };

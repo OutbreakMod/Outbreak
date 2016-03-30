@@ -6,7 +6,7 @@ class boltcutters: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\textures\items\boltcutters.paa";
+	picture = "addons\outbreak_assets\textures\items\boltcutters.paa";
 	model = "a3\structures_f\Items\Tools\Pliers_F";
 	descriptionShort = "";
 };

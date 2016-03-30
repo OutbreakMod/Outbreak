@@ -6,6 +6,6 @@ class nvidiashield: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "\outbreak_assets\textures\items\nvidiashield.paa";
+	picture = "addons\outbreak_assets\textures\items\nvidiashield.paa";
 	descriptionShort = "";
 };

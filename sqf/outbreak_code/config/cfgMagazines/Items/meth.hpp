@@ -6,6 +6,6 @@ class meth: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\meth.paa";
+	picture = "addons\outbreak_assets\textures\items\meth.paa";
 	descriptionShort = "";
 };

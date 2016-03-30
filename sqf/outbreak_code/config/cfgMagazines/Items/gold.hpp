@@ -6,6 +6,6 @@ class gold: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\textures\items\gold.paa";
+	picture = "addons\outbreak_assets\textures\items\gold.paa";
 	descriptionShort = "";
 };

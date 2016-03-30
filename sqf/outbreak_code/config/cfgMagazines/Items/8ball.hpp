@@ -6,6 +6,6 @@ class 8ball: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\8ball.paa";
+	picture = "addons\outbreak_assets\textures\items\8ball.paa";
 	descriptionShort = "";
 };

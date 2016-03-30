@@ -9,4 +9,4 @@ class CfgPatches {
 	};
 };
 
-#include "cfgSounds.hpp"
+#include "config\cfgSounds.cpp"

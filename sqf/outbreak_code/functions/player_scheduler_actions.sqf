@@ -28,10 +28,10 @@ if (_check == "loot") then {
 		_building = _x;
 		_distance = _building distance _unit;
 		
-		if (_distance >= MIN_LOOT_SPAWN_DISTANCE) then {
+		//if (_distance >= MIN_LOOT_SPAWN_DISTANCE) then {
 			server_spawnLoot = [_building];
 			publicVariableServer "server_spawnLoot";
-		};
+		//};
 		
 		if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
 			if (_building isKindOf "House") then {

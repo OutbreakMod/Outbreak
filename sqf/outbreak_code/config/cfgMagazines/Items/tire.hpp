@@ -6,6 +6,6 @@ class tire: CA_Magazine
 		{
 				mass = 10;
 		}; 
-	picture = "\outbreak_assets\textures\items\tire.paa";
+	picture = "addons\outbreak_assets\textures\items\tire.paa";
 	descriptionShort = "";
 };

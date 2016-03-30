@@ -6,6 +6,6 @@ class snoballs: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\textures\items\snoballs.paa";
+	picture = "addons\outbreak_assets\textures\items\snoballs.paa";
 	descriptionShort = "";
 };
