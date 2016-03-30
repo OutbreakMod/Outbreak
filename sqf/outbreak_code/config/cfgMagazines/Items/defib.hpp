@@ -6,6 +6,6 @@ class defib: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\textures\items\defib.paa";
+	picture = "addons\outbreak_assets\textures\items\defib.paa";
 	descriptionShort = "";
 };

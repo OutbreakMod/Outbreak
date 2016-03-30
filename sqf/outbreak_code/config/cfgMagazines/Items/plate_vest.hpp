@@ -6,6 +6,6 @@ class plate_vest: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\textures\items\platevest.paa";
+	picture = "addons\outbreak_assets\textures\items\platevest.paa";
 	descriptionShort = "";
 };

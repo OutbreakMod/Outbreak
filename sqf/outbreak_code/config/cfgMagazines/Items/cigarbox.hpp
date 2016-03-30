@@ -6,6 +6,6 @@ class cigarbox: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\textures\items\cigarbox.paa";
+	picture = "addons\outbreak_assets\textures\items\cigarbox.paa";
 	descriptionShort = "";
 };

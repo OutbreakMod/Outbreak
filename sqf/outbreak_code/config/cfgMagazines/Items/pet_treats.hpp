@@ -6,6 +6,6 @@ class pet_treats: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\textures\items\pettreats.paa";
+	picture = "addons\outbreak_assets\textures\items\pettreats.paa";
 	descriptionShort = "";
 };

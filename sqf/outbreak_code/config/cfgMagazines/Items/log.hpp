@@ -6,6 +6,6 @@ class log: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "\outbreak_assets\textures\items\log.paa";
+	picture = "addons\outbreak_assets\textures\items\log.paa";
 	descriptionShort = "A piece of wood, used for building material and burning";
 };

@@ -6,6 +6,6 @@ class psvita: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\textures\items\psvita.paa";
+	picture = "addons\outbreak_assets\textures\items\psvita.paa";
 	descriptionShort = "";
 };

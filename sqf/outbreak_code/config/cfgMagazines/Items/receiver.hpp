@@ -6,6 +6,6 @@ class receiver: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\textures\items\receiver.paa";
+	picture = "addons\outbreak_assets\textures\items\receiver.paa";
 	descriptionShort = "";
 };

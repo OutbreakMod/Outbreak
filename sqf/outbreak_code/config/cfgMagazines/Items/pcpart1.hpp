@@ -6,6 +6,6 @@ class pcpart1: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "\outbreak_assets\textures\items\pcpart1.paa";
+	picture = "addons\outbreak_assets\textures\items\pcpart1.paa";
 	descriptionShort = "";
 };

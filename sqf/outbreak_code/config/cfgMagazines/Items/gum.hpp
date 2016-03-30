@@ -6,6 +6,6 @@ class gum: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\gum.paa";
+	picture = "addons\outbreak_assets\textures\items\gum.paa";
 	descriptionShort = "";
 };

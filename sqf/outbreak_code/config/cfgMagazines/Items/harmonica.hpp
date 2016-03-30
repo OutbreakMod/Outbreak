@@ -6,6 +6,6 @@ class harmonica: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "\outbreak_assets\textures\items\harmonica.paa";
+	picture = "addons\outbreak_assets\textures\items\harmonica.paa";
 	descriptionShort = "";
 };

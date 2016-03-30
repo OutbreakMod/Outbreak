@@ -6,6 +6,6 @@ class human_flesh: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\textures\items\humanflesh.paa";
+	picture = "addons\outbreak_assets\textures\items\humanflesh.paa";
 	descriptionShort = "";
 };

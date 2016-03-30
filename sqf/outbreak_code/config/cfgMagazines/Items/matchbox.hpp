@@ -2,7 +2,7 @@ class matchbox: CA_Magazine
 {
 	displayName = "Matchbox";
 	count = 1;
-	picture = "\outbreak_assets\textures\items\matchbook.paa";
+	picture = "addons\outbreak_assets\textures\items\matchbook.paa";
 	descriptionShort = "A box that holds matches, used for creating starting fires";
 		
 	class ItemInfo {

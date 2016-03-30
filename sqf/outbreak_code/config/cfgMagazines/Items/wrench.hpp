@@ -6,6 +6,6 @@ class wrench: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "\outbreak_assets\textures\items\wrench.paa";
+	picture = "addons\outbreak_assets\textures\items\wrench.paa";
 	descriptionShort = "";
 };
