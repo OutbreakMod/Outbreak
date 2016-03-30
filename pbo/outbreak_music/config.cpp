@@ -8,3 +8,6 @@ class CfgPatches {
 		ammo[] = {};
 	};
 };
+
+// Player music
+#include "cfgMusic.cpp"
