@@ -15,9 +15,6 @@ class CfgPatches {
 #include "config\cfgVehicles\cfgVehicles.hpp"
 #include "config\cfgMagazines\cfgMagazines.hpp"
 
-// Player music
-#include "config\cfgMusic.hpp"
-
 // weapons
 #include "config\cfgWeapons\cfgWeapons.hpp"
 
