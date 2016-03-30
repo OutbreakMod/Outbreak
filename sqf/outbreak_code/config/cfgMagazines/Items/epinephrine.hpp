@@ -6,7 +6,7 @@ class epinephrine: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\epinephrine.paa";
+	picture = "\addons\outbreak_assets\textures\items\epinephrine.paa";
 	model = "a3\structures_f\Items\Stationery\PencilGreen_F";
 	descriptionShort = "Helps coming back into conciousness";
 };

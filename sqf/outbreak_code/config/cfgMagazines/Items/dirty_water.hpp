@@ -6,6 +6,6 @@ class dirty_water: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\dirtywater.paa";
+	picture = "\addons\outbreak_assets\textures\items\dirtywater.paa";
 	descriptionShort = "";
 };

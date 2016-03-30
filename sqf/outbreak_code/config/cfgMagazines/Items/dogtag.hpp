@@ -6,6 +6,6 @@ class dogtag: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\dogtag.paa";
+	picture = "\addons\outbreak_assets\textures\items\dogtag.paa";
 	descriptionShort = "";
 };

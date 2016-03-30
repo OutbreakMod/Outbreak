@@ -6,6 +6,6 @@ class rawmeat: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\rawmeat.paa";
+	picture = "\addons\outbreak_assets\textures\items\rawmeat.paa";
 	descriptionShort = "";
 };

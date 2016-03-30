@@ -6,6 +6,6 @@ class barbedwire: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\barbedwire.paa";
+	picture = "\addons\outbreak_assets\textures\items\barbedwire.paa";
 	descriptionShort = "";
 };

@@ -6,6 +6,6 @@ class cigarette: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\cigarette.paa";
+	picture = "\addons\outbreak_assets\textures\items\cigarette.paa";
 	descriptionShort = "";
 };

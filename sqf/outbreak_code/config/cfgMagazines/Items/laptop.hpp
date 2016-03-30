@@ -6,6 +6,6 @@ class laptop: CA_Magazine
 		{
 				mass = 10;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\laptop.paa";
+	picture = "\addons\outbreak_assets\textures\items\laptop.paa";
 	descriptionShort = "";
 };

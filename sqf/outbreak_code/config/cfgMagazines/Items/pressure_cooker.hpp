@@ -6,6 +6,6 @@ class pressure_cooker: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\pressurecooker.paa";
+	picture = "\addons\outbreak_assets\textures\items\pressurecooker.paa";
 	descriptionShort = "";
 };

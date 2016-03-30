@@ -6,6 +6,6 @@ class razor: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\razor.paa";
+	picture = "\addons\outbreak_assets\textures\items\razor.paa";
 	descriptionShort = "";
 };

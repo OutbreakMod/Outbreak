@@ -6,6 +6,6 @@ class brace: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\brace.paa";
+	picture = "\addons\outbreak_assets\textures\items\brace.paa";
 	descriptionShort = "";
 };

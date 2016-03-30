@@ -6,6 +6,6 @@ class gasmask: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\gasmask.paa";
+	picture = "\addons\outbreak_assets\textures\items\gasmask.paa";
 	descriptionShort = "";
 };
