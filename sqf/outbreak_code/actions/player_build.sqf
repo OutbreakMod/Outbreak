@@ -104,10 +104,11 @@ if (_finished) then {
 	
 	_vehicle = createVehicle [_type, _location, [], 0, "CAN_COLLIDE"];
 	_vehicle setDir _dir;
-	_vehicle setPosATL _location;
+	_vehicle setPos _location;
 	
-	// Add temporary object ID (if it's zero, it will automatically be inserted)
-	_vehicle setVariable ["ObjectID", -1, true];
+	// Add object ID (if it's zero, it will automatically be inserted)
+	_objectID = _location call create_uid;
+	_vehicle setVariable ["ObjectID", _objectID, true];
 	
 	// save to database
 	if (_persistent) then {

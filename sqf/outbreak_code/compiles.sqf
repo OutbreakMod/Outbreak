@@ -33,6 +33,7 @@ fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 fnc_simulateHealthEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_simulateHealthEffect.sqf";
 fnc_selectRandomLocation = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_selectRandomLocation.sqf";
 fnc_selectRandom = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_selectRandom.sqf";
+create_uid = compile preProcessFileLineNumbers "addons\outbreak_code\functions\create_uid.sqf";
 
 // actions
 player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
