@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-//private ["_type", "_animation", "_check", "_interrupt", "_animState", "_loop", "_started", "_finished", "_vehicle", "_location", "_class", "_cities"];
+private ["_type", "_animation", "_check", "_interrupt", "_animState", "_loop", "_started", "_finished", "_vehicle", "_location", "_class", "_cities"];
 
 _class = _this select 0;
 _type = _this select 1;
@@ -104,7 +104,7 @@ if (_finished) then {
 	
 	_vehicle = createVehicle [_type, _location, [], 0, "CAN_COLLIDE"];
 	_vehicle setDir _dir;
-	_vehicle setPos _location;
+	_vehicle setPosATL _location;
 		
 	// save to database
 	if (_persistent) then {
@@ -112,6 +112,8 @@ if (_finished) then {
 		publicVariableServer "hive_newObject";
 	};
 
+		_vehicle setPos _location;
+	
 	// remove consumable ingredients
 	{
 		_ingredient = _x select 0;
