@@ -9,9 +9,9 @@ class CfgBuildingType
 		enabled = true; // override to false to stop loot
 	}
 	
-	#include "Buildings\cfgMilitaryLoot.hpp"
-	#include "Buildings\cfgResidentialLoot.hpp"
-	#include "Buildings\cfgIndustrialLoot.hpp"
-	#include "Buildings\cfgWreckLoot.hpp"
-	#include "Buildings\cfgFarmLoot.hpp"
+	#include "Buildings\cfgMilitaryLoot.cpp"
+	#include "Buildings\cfgResidentialLoot.cpp"
+	#include "Buildings\cfgIndustrialLoot.cpp"
+	#include "Buildings\cfgWreckLoot.cpp"
+	#include "Buildings\cfgFarmLoot.cpp"
 }

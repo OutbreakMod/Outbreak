@@ -3,17 +3,19 @@
 	@author: TheAmazingAussie
 */
 
-MOD_FULL_BLOOD = getNumber(configFile >> "CfgGame" >> "MOD_FULL_BLOOD");
-MOD_FULL_HEALTH = getNumber(configFile >> "CfgGame" >> "MOD_FULL_HEALTH");
+MOD_FULL_HEALTH = getNumber(configFile >> "CfgGame" >> "FULL_HEALTH");
 
-CHOP_TREES = getArray(configFile >> "CfgGame" >> "trees");
-CHOP_TREES_WOOD_YIELD = getArray(configFile >> "CfgGame" >> "tree_wood_yield");
+CHOP_TREES = getArray(configFile >> "CfgGame" >> "CHOPPABLE_TREES");
+CHOP_TREES_WOOD_YIELD = getArray(configFile >> "CfgGame" >> "TREES_WOOD_YIELD");
 
-MAX_INFECTED_CITY = 10;
-LOOT_SPAWN_RADIUS = 150;
+MAX_INFECTED_CITY = getNumber(configFile >> "CfgGame" >> "MAX_INFECTED_CITY");
+LOOT_SPAWN_RADIUS = getNumber(configFile >> "CfgGame" >> "LOOT_SPAWN_RADIUS");
 
-MIN_LOOT_SPAWN_DISTANCE = 30;
-MIN_ZOMBIE_SPAWN_DISTANCE = 30;
+MIN_LOOT_SPAWN_DISTANCE = getNumber(configFile >> "CfgGame" >> "MIN_LOOT_SPAWN_DISTANCE");
+MIN_ZOMBIE_SPAWN_DISTANCE = getNumber(configFile >> "CfgGame" >> "MIN_ZOMBIE_SPAWN_DISTANCE");
+
+STANDING_POSES = getArray(configFile >> "CfgGame" >> "STANDING_POSES");
+STORAGE_UNITS = getArray(configFile >> "CfgGame" >> "STORAGE_UNITS");
 
 // reset actions
 action_gutAnimal = -1;
@@ -26,12 +28,3 @@ action_build = -1;
 player_performingAction = false;
 player_noWeapon = nil;
 player_primaryWeapon = nil;
-
-STANDING_STANCES = [
-	"amovpercmstpsraswrfldnon",
-	"amovpercmrunslowwrfldf",
-	"amovpercmrunsraswrfldf",
-	"ainvpercmstpsraswrfldnon",
-	"amovpercmrunsnonwnondf",
-	"amovpercmrunsnonwnondl"
-];

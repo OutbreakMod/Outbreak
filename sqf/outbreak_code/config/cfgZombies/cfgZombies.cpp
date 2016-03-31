@@ -1,6 +1,6 @@
 class CfgZombies {
 	
-	#include "cfgZombieClothes.hpp"
+	#include "cfgZombieClothes.cpp"
 };
 
 class CfgFaces {
