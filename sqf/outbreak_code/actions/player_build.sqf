@@ -105,15 +105,16 @@ if (_finished) then {
 	_vehicle = createVehicle [_type, _location, [], 0, "CAN_COLLIDE"];
 	_vehicle setDir _dir;
 	_vehicle setPosATL _location;
-		
+	
+	// Add temporary object ID (if it's zero, it will automatically be inserted)
+	_vehicle setVariable ["ObjectID", -1, true];
+	
 	// save to database
 	if (_persistent) then {
 		hive_newObject = [player, _vehicle, _type, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir, ""];
 		publicVariableServer "hive_newObject";
 	};
 
-		_vehicle setPos _location;
-	
 	// remove consumable ingredients
 	{
 		_ingredient = _x select 0;
@@ -122,7 +123,6 @@ if (_finished) then {
 		for "_i" from 1 to _amount do {
 			player removeItem _ingredient;
 		};
-		
 	} forEach _consumes;
 }; 
 
