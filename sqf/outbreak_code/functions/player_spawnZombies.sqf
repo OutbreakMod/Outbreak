@@ -47,7 +47,7 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 				_counter = _counter + 1;
 				
 				if (_counter > 20) then {
-			_zombiePosition = [];
+					_zombiePosition = [];
 					_needsRelocated = false;
 				};
 			};
