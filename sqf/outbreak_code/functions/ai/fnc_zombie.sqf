@@ -44,7 +44,7 @@ if (count _this > 1) then {
 	
 	_building = _this select 1;
 	_className = typeOf _building;
-	_buildingCfg = configFile >> "CfgBuildingType" >> _className;
+	_buildingCfg = configFile >> "cfgBuildingClothes" >> _className;
 	
 	if (isClass(_buildingCfg)) then {
 		_zombieClothes = getText (_buildingCfg >> "zombieClothes");
@@ -57,7 +57,7 @@ if (count _this > 1) then {
 	if (count _nearby > 0) then {
 		_nearestBuilding = _nearby select 0;
 		_className = typeOf _nearestBuilding;
-		_building = configFile >> "CfgBuildingType" >> _className;
+		_building = configFile >> "cfgBuildingClothes" >> _className;
 
 		if ((_nearestBuilding getVariable ["helicrashSpawnZeds", true])) then {
 			
