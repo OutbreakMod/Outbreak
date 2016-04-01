@@ -7,13 +7,6 @@ private ["_radius", "_near"];
 
 _radius = 200;
 
-// find near zombies
-_near = [player, _radius, "isZombie"] call player_findNearby;
-
-// delete all things
 {
-	if (alive _x) then {
-		deleteVehicle _x;
-	};
-	
-} forEach _near;
+	deleteVehicle _x;
+} forEach ([player, _radius, "isZombie"] call player_findNearby);
