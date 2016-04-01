@@ -7,7 +7,7 @@ _unit = _this select 0;
 _target = _this select 1;
 
 // zombie attack sound
-_dir = round(direction player);
+_dir = round(direction player) + 180;
 _unit setDir _dir;
 
 [_unit, "zpunch" + str((floor random 3) + 1)] call object_speak;
