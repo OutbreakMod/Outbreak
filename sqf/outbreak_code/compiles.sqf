@@ -14,6 +14,9 @@ player_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\fu
 player_command = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_command.sqf";
 player_findNearby = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearby.sqf";
 
+// objects
+object_speak = compile preProcessFileLineNumbers "addons\outbreak_code\functions\object_speak.sqf";
+
 // inventory
 player_clearInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_clearInventory.sqf";
 player_loadInventory = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_loadInventory.sqf";
