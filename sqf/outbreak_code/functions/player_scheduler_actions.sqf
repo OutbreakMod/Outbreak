@@ -22,6 +22,7 @@ if (_check == "loot") then {
 	};
 	
 	_nearby = _searchPosition nearObjects LOOT_SPAWN_RADIUS;
+	_nearly = _nearby call KK_fnc_arrayShuffle; // Spice it up :D
 	
 	{
 		
