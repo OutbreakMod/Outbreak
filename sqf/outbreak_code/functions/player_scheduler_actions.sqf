@@ -36,7 +36,7 @@ if (_check == "loot") then {
 		if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
 			if (_building isKindOf "House") then {
 				if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
-					//[_unit, _building] call player_spawnZombies;
+					[_unit, _building] call player_spawnZombies;
 				};
 			};
 		};

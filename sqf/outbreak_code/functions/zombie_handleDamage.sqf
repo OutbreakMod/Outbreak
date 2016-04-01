@@ -32,29 +32,22 @@ if (_ammo == "infected") then {
 switch (_type) do {
 	case 1: {
 		_scale = _scale + 200;
-		_unit setVariable ["deathmessage", format["His name was %1 and died from a weak caliber", name _unit], true];
-		
 	}; // 4% bleed
 	case 2: {
 		_scale = _scale + 300;
-		_unit setVariable ["deathmessage", format["His name was %1 and died from a pistol", name _unit], true];
 	}; // 5% bleed
 	case 3: {
 		_scale = _scale + 390;
-		_unit setVariable ["deathmessage", format["His name was %1 and died from an assault rifle", name _unit], true];
 	}; // 6% bleed
 	case 4: {
 		_scale = _scale + 400;
-		_unit setVariable ["deathmessage", format["His name was %1 and died from a slightly higher assault rifle round", name _unit], true];
 	}; // 8% bleed
 	case 5: {
 		_scale = _scale + 460;
-		_unit setVariable ["deathmessage", format["His name was %1 and died from a sniper round", name _unit], true];
 		
 	}; // 9% bleed
 	case 6: {
 		_scale = _scale + 475;
-		_unit setVariable ["deathmessage", format["His name was %1 and died from a type of sniper round", name _unit], true];
 		
 	}; // 10% bleed
 };
@@ -75,7 +68,6 @@ if (_hit == "legs") then {
 	
 		_effect = true;
 		_scale = _scale + 3500;
-		_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
 	};
 	
 	_unit setVariable ["update_legs", _damage];
@@ -87,6 +79,6 @@ if (_effect) then {
 };
 
 // set new health
-_unit setVariable ["health", _health, true];
+_unit setVariable ["health", _health];
 
 0;
