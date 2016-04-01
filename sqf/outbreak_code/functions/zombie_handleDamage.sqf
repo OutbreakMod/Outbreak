@@ -19,37 +19,33 @@ _health = _unit getVariable ["health", 0];
 _effect = false;
 
 if (_type == 7) then {
-	_unit setVariable ["deathmessage", format["His name was %1 and died from from a high caliber bullet", name _unit], true];
 	_unit setDamage 1;
 	_effect = true;
 };
 
 if (_ammo == "infected") then {
 	_scale = _scale + 50;
-	_unit setVariable ["deathmessage", format["His name was %1 and died from a zombie scratch", name _unit], true];
 };
 
 switch (_type) do {
 	case 1: {
 		_scale = _scale + 200;
-	}; // 4% bleed
+	};
 	case 2: {
 		_scale = _scale + 300;
-	}; // 5% bleed
+	};
 	case 3: {
 		_scale = _scale + 390;
-	}; // 6% bleed
+	};
 	case 4: {
 		_scale = _scale + 400;
-	}; // 8% bleed
+	};
 	case 5: {
 		_scale = _scale + 460;
-		
-	}; // 9% bleed
+	};
 	case 6: {
 		_scale = _scale + 475;
-		
-	}; // 10% bleed
+	};
 };
 
 if (_type > 0) then {
@@ -65,7 +61,6 @@ if (_type > 2) then {
 
 if (_hit == "legs") then {
 	if (_ammo == "") then {
-	
 		_effect = true;
 		_scale = _scale + 3500;
 	};
@@ -73,12 +68,10 @@ if (_hit == "legs") then {
 	_unit setVariable ["update_legs", _damage];
 };
 
-// notify player damage taken
 if (_effect) then {
 	_health = _health - (_damage * _scale);
 };
 
-// set new health
 _unit setVariable ["health", _health];
 
 0;

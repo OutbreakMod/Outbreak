@@ -21,7 +21,7 @@ _agent removeAllEventHandlers "Hit";
 _agent removeAllEventHandlers "Respawn";
 _agent removeAllEventHandlers "HandleDamage";
 
-_agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
+_agent addEventHandler ["HandleDamage", { _this spawn zombie_handleDamage; 0; }];
 _agent addEventHandler ["Killed",
  { 
 	_unit = _this select 0;
