@@ -46,7 +46,7 @@ while {alive _unit} do {
 				_walkPath = [_pos, 5, 30, 3] call fnc_selectRandomLocation;
 				
 				_unit moveTo _walkPath;
-				_unit forceSpeed (_unit getSpeed "FAST");
+				//_unit forceSpeed (_unit getSpeed "FAST");
 				
 				_walking = true;
 			};
