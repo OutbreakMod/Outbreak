@@ -11,7 +11,9 @@ _cursorTarget = cursorTarget;
 if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
-
+	hint format["%1", typeOf _cursorTarget];
+	diag_log format["CURSOR TARGET: %1", typeOf _cursorTarget];
+	
 	if (_dist < 4) then {
 		
 		_type = typeOf _cursorTarget;
@@ -21,7 +23,7 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		///////////////////
 		if ((_type in ["Sheep_random_F"] || _cursorTarget isKindOf "Man") && (!alive _cursorTarget)) then {
 			if (action_gutAnimal < 0) then {
-				action_gutAnimal = player addAction ["Gut Animal", "addons\outbreak_code\actions\gut_animal.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+				action_gutAnimal = player addAction ["Gut Body", "addons\outbreak_code\actions\gut_animal.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_gutAnimal;
