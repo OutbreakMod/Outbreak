@@ -14,7 +14,7 @@ _infected = [];
 {
 	_isZombie = (_x getVariable [_variable, false]);
 	
-	if (_isZombie) then {
+	if (_isZombie && alive _x) then {
 		_infected = _infected + [_x];
 	};
 	
