@@ -79,8 +79,8 @@ _agent addUniform _uniform;
 
 if (_zombieClothes == "military") then {
 	
-	_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
-	_agent addVest (_vests call BIS_fnc_selectRandom);
+	//_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
+	//_agent addVest (_vests call BIS_fnc_selectRandom);
 	
 	if (30 > random 100) then {
 		_helmets = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets");
@@ -88,7 +88,7 @@ if (_zombieClothes == "military") then {
 	}; 
 };
 
-if (_zombieClothes == "pilot") then {
+if (_zombieClothes == "helicopter") then {
 	
 	_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
 	_agent addVest (_vests call BIS_fnc_selectRandom);

@@ -43,7 +43,7 @@ while {alive _unit} do {
 			if (!_walking) then {
 			
 				_pos = _unit getVariable ["zombieSpawned", 0];
-				_walkPath = [_pos, 5, 30, 1, 0, 50, 0] call BIS_fnc_findSafePos;
+				_walkPath = [_pos, 5, 30, 3] call fnc_selectRandomLocation;
 				
 				_unit moveTo _walkPath;
 				_unit forceSpeed (_unit getSpeed "FAST");
@@ -86,6 +86,13 @@ while {alive _unit} do {
 			deleteVehicle (_unit);
 		};
 	};
+	
+	// update the zombie wandering position every 30 secs
+	if ((_timer % 30) == 0) then {
+		_newPosition = [(getPosATL _unit), 5, 30, 3] call fnc_selectRandomLocation;
+		_unit setVariable ["zombieSpawned", _newPosition];
+	};
+	
 
 	// leg breaking
 	if (_unit getVariable ["update_legs", 0] > 0) then {

@@ -8,7 +8,7 @@ class CfgPatches {
 };
 
 // zombie loot
-#include "config\cfgLoot\cfgBuildingType.cpp"
+#include "config\cfgBuildingClothes\cfgBuildingClothes.cpp"
 
 // configuration files
 #include "config\cfgGame\cfgGame.cpp"
