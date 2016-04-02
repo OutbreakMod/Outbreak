@@ -2,9 +2,9 @@
 Outbreak Mod
 --------------------------
 
-Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod created for Arma 3.
+Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod created for Arma 3, is a multiplayer survival mod that aims for realism in world where infection has taken over and turned people into monsters.
 
-The master repository is the stable branch, if you want to test the newest updates then go to [here](https://github.com/OutbreakMod/Outbreak/tree/unstable) however I cannot gurantee that you won't experience problems with client performance and you will most likely experience error warnings and bugs.
+The master repository is the stable branch, if you want to test the newest updates then go to [here](https://github.com/OutbreakMod/Outbreak/tree/unstable) however **I cannot gurantee** that you won't experience problems with client performance and you will *most likely* experience error warnings and bugs.
 
 Server data located here: https://github.com/OutbreakMod/OutbreakServer
 
@@ -18,7 +18,7 @@ Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG
 - Permadeath system (lose all your gear when dying, respawn starts a fresh character)
 - Clothes are randomised when respawning
 - Loot spawning in different buildings, different types of loot depending on which buildings
-- The mod is very optimised to deliver performance found in single-player Arma 3.
+- FPS optimised, high performance
 - Persistent object storage
 - Object spawns across the map
 - Basic crafting, wood shack, etc
@@ -32,6 +32,18 @@ Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG
 - Zombie clothing changes depending on where zombies spawned
 - Dynamic server events, such as helicopter crash sites, which can be custom changed to rotate around the map every x minutes or just run once when server restarts.
 - Chop trees down
+
+--------------------------
+Peformance
+--------------------------
+
+This has been tested on my own personal computer. Client performance is at 55-60 fps (in a city) and 80+ fps in the wilderness, along with zombies and loot, at ultra settings with 1200 metre view distance.
+
+- i5 4690k
+- EVGA GTX 970 ACX
+- 8 GB RAM @ 1333 Hz
+- 250 GB SSD
+- 500 GB HDD
 
 --------------------------
 Mods Used
