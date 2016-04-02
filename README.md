@@ -4,7 +4,7 @@ Outbreak Mod
 
 Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod created for Arma 3, is a multiplayer survival mod that aims for realism in world where infection has taken over and turned people into monsters.
 
-The master repository is the stable branch, if you want to test the newest updates then go to [here](https://github.com/OutbreakMod/Outbreak/tree/unstable) however **I cannot gurantee** that you won't experience problems with client performance and you will *most likely* experience error warnings and bugs.
+The master repository is the stable branch, if you want to test the newest updates then go to [here](https://github.com/OutbreakMod/Outbreak/tree/unstable) however **I cannot guarantee** that you won't experience problems with client performance and you will *most likely* experience error warnings and bugs.
 
 Server data located here: https://github.com/OutbreakMod/OutbreakServer
 
