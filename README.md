@@ -30,8 +30,11 @@ Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG
 - Heal legs with morphine
 - Study body (tell what caliber they were shot by, how they died etc)
 - Zombies with custom AI written by me
+- Zombie sounds
+- Zombie attacking (checking if player is nearby)
 - Zombie clothing changes depending on where zombies spawned
 - Dynamic server events, such as helicopter crash sites, which can be custom changed to rotate around the map every x minutes or just run once when server restarts.
+- Zombies spawning at dynamic events
 - Chop trees down
 
 --------------------------
