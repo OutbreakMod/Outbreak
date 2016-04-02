@@ -5,8 +5,6 @@
 
 private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePosition", "_zombieRange", "_infected", "_isZombie", "_nearby", "_agent"];
 
-diag_log format ["Spawn zombie request %1", _this];
-
 _unit = _this select 0;
 _building = _this select 1;
 _position = getPosATL _building;

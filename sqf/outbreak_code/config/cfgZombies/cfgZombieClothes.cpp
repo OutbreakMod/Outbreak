@@ -35,7 +35,7 @@ class CfgClothes {
 		"U_O_OfficerUniform_ocamo"
 	};
 	
-	pilot[] = {
+	helicopter[] = {
 		"U_I_OfficerUniform",
 		"U_O_SpecopsUniform_ocamo",
 		"U_O_SpecopsUniform_blk",

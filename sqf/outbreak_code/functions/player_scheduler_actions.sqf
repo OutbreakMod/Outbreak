@@ -35,12 +35,12 @@ if (_check == "loot") then {
 		//};
 		
 		if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
-			//_type = typeOf _building;
-			//if (isClass (configFile >> "cfgBuildingClothes" >> _type)) then {
+			_type = typeOf _building;
+			if (isClass (configFile >> "cfgBuildingClothes" >> _type)) then {
 				if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
 					[_unit, _building] call player_spawnZombies;
 				};
-			//};
+			};
 		};
 		
 	} foreach _nearby;
@@ -48,15 +48,37 @@ if (_check == "loot") then {
 
 if (_check == "wild_zombies") then {
 
-	_zombies = ([player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
-	
-	if (!(count zombies > 0) then {
-		
+	_zombies = ([getPosATL player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
+
+	if (count _zombies == 0) then {
 		for "_i" from 1 to 3 do {
-			_position = [(getPosATL player), MIN_WILD_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
-			
-			_agent = createAgent ["Zombie", _position, [], 0, "NONE"];
-			[_agent] call fnc_zombie;
+
+			_zombiePosition = [];
+			_needsRelocated = true;
+			_counter = 0;
+
+			while {_needsRelocated} do {
+
+				_zombiePosition = [getPosATL player, MIN_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
+				_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
+
+				if ((count _players) == 0) then {
+					_needsRelocated = false;
+				};
+
+				_counter = _counter + 1;
+
+				if (_counter > 20) then {
+					_zombiePosition = [];
+					_needsRelocated = false;
+				};
+			};
+
+			if (count _zombiePosition > 0) then {
+				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+				[_agent] call fnc_zombie;
+			};
+
 		};
 		
 	};
@@ -72,7 +94,7 @@ if (_check == "sync") then {
 };
 
 if (_check == "debugmenu") then {
-	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
+	//[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
 };
 
 if (_check == "health") then {

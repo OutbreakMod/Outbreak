@@ -11,8 +11,8 @@ _cursorTarget = cursorTarget;
 if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 
 	_dist = player distance _cursorTarget;
-	hint format["%1", typeOf _cursorTarget];
-	diag_log format["CURSOR TARGET: %1", typeOf _cursorTarget];
+	//hint format["%1", typeOf _cursorTarget];
+	//diag_log format["CURSOR TARGET: %1", typeOf _cursorTarget];
 	
 	if (_dist < 4) then {
 		

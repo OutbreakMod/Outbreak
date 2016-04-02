@@ -72,7 +72,6 @@
 [] spawn {
 
 	while {true} do {
-		
 		if (LOGGED_IN) then {
 			 waitUntil {!(isNull (findDisplay 602))};
 			 {	

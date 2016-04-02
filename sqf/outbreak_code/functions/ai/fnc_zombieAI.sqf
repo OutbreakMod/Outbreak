@@ -17,23 +17,28 @@ while {alive _unit} do {
 	if (_hasTarget) then { 
 	
 		_walkPath = _target getVariable ["last_position", []];
-	
-		// if the distance between the target and zombie is too great then we run after target
-		if ((_unit distance _walkPath) >= 2) then {
-			_unit moveTo _walkPath;
-			_unit forceSpeed (_unit getSpeed "FAST");
 		
-		};
-		
-		// slow down to walking speed once close
-		if (_unit distance _walkPath <= 2) then { 
-			_unit forceSpeed 1;
+		if (count _walkPath > 0) then {
+
+			// if the distance between the target and zombie is too great then we run after target
+			if ((_unit distance _walkPath) >= 2) then {
+				_unit moveTo _walkPath;
+				_unit forceSpeed (_unit getSpeed "FAST");
 			
-			// try hitting every 2 seconds
-			if ((_timer % 2) == 0) then {
-				[_unit, _target] spawn fnc_targetAttack;
 			};
-		};
+			
+			// slow down to walking speed once close
+			if (_unit distance _walkPath <= 2) then { 
+				_unit forceSpeed 1;
+				
+				// try hitting every 2 seconds
+				if ((_timer % 2) == 0) then {
+					[_unit, _target] spawn fnc_targetAttack;
+				};
+			};
+		} else {
+			_unit setVariable ["zombieTarget", _unit];
+		}
 	
 	} else {
 		
