@@ -6,6 +6,6 @@ class teddybear: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\teddybear.paa";
+	picture = "\addons\outbreak_assets\textures\items\teddybear.paa";
 	descriptionShort = "";
 };

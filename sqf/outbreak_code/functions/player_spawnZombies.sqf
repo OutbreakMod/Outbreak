@@ -5,8 +5,6 @@
 
 private ["_range", "_amount", "_infected", "_count", "_toSpawn", "_zombiePosition", "_zombieRange", "_infected", "_isZombie", "_nearby", "_agent"];
 
-diag_log format ["Spawn zombie request %1", _this];
-
 _unit = _this select 0;
 _building = _this select 1;
 _position = getPosATL _building;
@@ -47,13 +45,14 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 				_counter = _counter + 1;
 				
 				if (_counter > 20) then {
+					_zombiePosition = [];
 					_needsRelocated = false;
 				};
 			};
 			
 			if (count _zombiePosition > 0) then {
 				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-				[_agent, _building] call fnc_startZombie;
+				[_agent, _building] call fnc_zombie;
 			};
 			
 			/*_zombiePosition = [_position, 5, 15, 5] call fnc_selectRandomLocation;

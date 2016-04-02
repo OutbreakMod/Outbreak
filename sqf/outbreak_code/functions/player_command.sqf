@@ -16,13 +16,22 @@ if (_command == "say") then {
 
 
 if (_command == "findspawn") then { 
-	_pos = [] call player_findSpawn;
-	player setPos _pos;	
-	player setVariable ["outbreaklogin", 1, true];
 	
-	[] call player_missionSpawn;
-	[] call player_missionLogin;
+	_pos = call player_findSpawn;
+	player setPos _pos;	
+	call player_missionSpawn;
 };
+
+if (_command == "login") then {
+	
+	LOGGED_IN = true;
+	call player_missionLogin;
+	
+	setAperture -1;
+	1 fadeSound 1;
+	1 fadeSpeech 1;
+};
+
 
 if (_command == "tp") then {
 	player setPosATL (_response select 1);
@@ -46,14 +55,6 @@ if (_command == "medical") then {
 	player setHit ["legs", _medicalArray select 0];
 	player setVariable ["health", _health, true];
 	player getVariable ["health", 0] call fnc_simulateHealthEffect;
-};
-
-if (_command == "login") then {
-	
-	player addMagazineCargoGlobal ["knife", 1];
-
-	[] call player_missionLogin;
-	player setVariable ["outbreaklogin", 1, true];
 };
 
 if (_command == "gear") then {

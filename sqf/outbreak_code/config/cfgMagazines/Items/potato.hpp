@@ -6,6 +6,6 @@ class potato: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\potato.paa";
+	picture = "\addons\outbreak_assets\textures\items\potato.paa";
 	descriptionShort = "";
 };

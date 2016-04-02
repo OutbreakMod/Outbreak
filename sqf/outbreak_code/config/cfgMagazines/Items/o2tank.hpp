@@ -6,6 +6,6 @@ class o2tank: CA_Magazine
 		{
 				mass = 8;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\o2tank.paa";
+	picture = "\addons\outbreak_assets\textures\items\o2tank.paa";
 	descriptionShort = "";
 };

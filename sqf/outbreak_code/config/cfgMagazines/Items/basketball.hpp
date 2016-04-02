@@ -6,6 +6,6 @@ class basketball: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\basketball.paa";
+	picture = "\addons\outbreak_assets\textures\items\basketball.paa";
 	descriptionShort = "";
 };

@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-//private ["_type", "_animation", "_check", "_interrupt", "_animState", "_loop", "_started", "_finished", "_vehicle", "_location", "_class", "_cities"];
+private ["_type", "_animation", "_check", "_interrupt", "_animState", "_loop", "_started", "_finished", "_vehicle", "_location", "_class", "_cities"];
 
 _class = _this select 0;
 _type = _this select 1;
@@ -105,7 +105,11 @@ if (_finished) then {
 	_vehicle = createVehicle [_type, _location, [], 0, "CAN_COLLIDE"];
 	_vehicle setDir _dir;
 	_vehicle setPos _location;
-		
+	
+	// Add object ID (if it's zero, it will automatically be inserted)
+	_objectID = _location call create_uid;
+	_vehicle setVariable ["ObjectID", _objectID, true];
+	
 	// save to database
 	if (_persistent) then {
 		hive_newObject = [player, _vehicle, _type, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir, ""];
@@ -120,7 +124,6 @@ if (_finished) then {
 		for "_i" from 1 to _amount do {
 			player removeItem _ingredient;
 		};
-		
 	} forEach _consumes;
 }; 
 

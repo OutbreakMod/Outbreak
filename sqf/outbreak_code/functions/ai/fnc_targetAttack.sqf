@@ -6,7 +6,10 @@
 _unit = _this select 0;
 _target = _this select 1;
 
-// throw punch sound
+// zombie attack sound
+_dir = round(direction player) + 180;
+_unit setDir _dir;
+
 [_unit, "zpunch" + str((floor random 3) + 1)] call object_speak;
 
 // attack animation
@@ -19,7 +22,7 @@ _walkPath = _target getVariable ["last_position", []];
 
 // if target didn't move between zombie trying to hit
 // then we carry on the damage
-if (_unit distance _walkPath <= 2) then {
+if (_unit distance _walkPath <= 2 && alive _unit) then {
 	
 	_targetHealth = _target getVariable ["health", 0];
 	_targetHealth = _targetHealth - 100;

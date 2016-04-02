@@ -1,9 +1,9 @@
-// health
-MOD_FULL_BLOOD = 6000;
-MOD_FULL_HEALTH = 6000;
+/*
+	Contains a list of trees (needed for when a player wants to chop wood)
+	@author: TheAmazingAussie
+*/
 
-// tree list to cut wood from
-trees[] = {
+CHOPPABLE_TREES[] = {
 	"t_acer2s.p3d",
 	"t_alnus2s.p3d",
 	"t_betula1f.p3d",
@@ -55,8 +55,7 @@ trees[] = {
 	"t_quercus2f_summer.p3d"
 };
 
-// wood random to yeild from
-tree_wood_yield[] = {
+TREES_WOOD_YIELD[] = {
 	{"t_acer2s.p3d", 3},
 	{"t_alnus2s.p3d", 3},
 	{"t_betula1f.p3d", 3},

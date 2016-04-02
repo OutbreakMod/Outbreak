@@ -6,6 +6,6 @@ class salisbury_steak: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\salisburysteak.paa";
+	picture = "\addons\outbreak_assets\textures\items\salisburysteak.paa";
 	descriptionShort = "";
 };

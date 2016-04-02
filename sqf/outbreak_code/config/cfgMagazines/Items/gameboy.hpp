@@ -6,6 +6,6 @@ class gameboy: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\gameboy.paa";
+	picture = "\addons\outbreak_assets\textures\items\gameboy.paa";
 	descriptionShort = "";
 };

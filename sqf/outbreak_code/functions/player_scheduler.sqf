@@ -11,7 +11,7 @@
 	
 	_scheduled = [
 		["loot", 20],
-		["zombie_spawn", 300],
+		["wild_zombies", 30],
 		["actions", 1],
 		["debugmenu", 1],
 		["zombie", 200],
@@ -27,15 +27,17 @@
 	while {true} do {
 	
 		{
-			_task = _x select 0;
-			_seconds = _x select 1;
-			
-			if (_seconds > 0) then {
-				if ((_timer % _seconds) == 0) then {
+			if (LOGGED_IN) then {
+				_task = _x select 0;
+				_seconds = _x select 1;
+				
+				if (_seconds > 0) then {
+					if ((_timer % _seconds) == 0) then {
+						null = [player, _task] spawn player_scheduler_actions;
+					};
+				} else {
 					null = [player, _task] spawn player_scheduler_actions;
 				};
-			} else {
-				null = [player, _task] spawn player_scheduler_actions;
 			};
 			
 		} foreach _scheduled;
@@ -47,33 +49,35 @@
 
 [] spawn {
 	while {true} do {
-		_sound = format["ambient_%1", floor(random 7) + 1];
-		_length = getNumber(configFile >> "cfgMusic" >> _sound >> "duration");
-		_pause = ((random 5) + 2) + _length;
-		playMusic _sound;
-		sleep _pause;
+		if (LOGGED_IN) then {
+			_sound = format["ambient_%1", floor(random 7) + 1];
+			_length = getNumber(configFile >> "cfgMusic" >> _sound >> "duration");
+			_pause = ((random 5) + 2) + _length;
+			playMusic _sound;
+			sleep _pause;
+		};
 	};
 };
 
 [] spawn {
 	while {true} do {
-		waitUntil {!(isNull (findDisplay 46))};
-		(findDisplay 46) displayAddEventHandler ["KeyDown", "null = [_this select 1] execVM 'addons\outbreak_code\functions\player_pressKey.sqf'"];
-		waituntil {isNull (finddisplay 46)};
+		if (LOGGED_IN) then {
+			waitUntil {!(isNull (findDisplay 46))};
+			(findDisplay 46) displayAddEventHandler ["KeyDown", "null = [_this select 1] execVM 'addons\outbreak_code\functions\player_pressKey.sqf'"];
+			waituntil {isNull (finddisplay 46)};
+		};
 	};
 };
 
 [] spawn {
 
 	while {true} do {
-		 waitUntil {!(isNull (findDisplay 602))};
-		 
-		 _idHandle = [633, 638, 619]; 
-		 
-		 {	
-			((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call player_selectItem"];
-		 } forEach _idHandle;
-		
-		 waitUntil {isNull (findDisplay 602)};
+		if (LOGGED_IN) then {
+			 waitUntil {!(isNull (findDisplay 602))};
+			 {	
+				((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call player_selectItem"];
+			 } forEach [633, 638, 619];
+			 waitUntil {isNull (findDisplay 602)};
+		};
 	};
 };

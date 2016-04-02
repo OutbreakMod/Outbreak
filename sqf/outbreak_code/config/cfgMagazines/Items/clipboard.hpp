@@ -6,6 +6,6 @@ class clipboard: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\clipboard.paa";
+	picture = "\addons\outbreak_assets\textures\items\clipboard.paa";
 	descriptionShort = "";
 };

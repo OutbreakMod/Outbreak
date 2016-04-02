@@ -8,15 +8,15 @@ class CfgPatches {
 };
 
 // zombie loot
-#include "config\cfgLoot\cfgBuildingType.hpp"
+#include "config\cfgBuildingClothes\cfgBuildingClothes.cpp"
 
 // configuration files
-#include "config\cfgGame\cfgGame.hpp"
-#include "config\cfgVehicles\cfgVehicles.hpp"
-#include "config\cfgMagazines\cfgMagazines.hpp"
+#include "config\cfgGame\cfgGame.cpp"
+#include "config\cfgVehicles\cfgVehicles.cpp"
+#include "config\cfgMagazines\cfgMagazines.cpp"
 
 // weapons
-#include "config\cfgWeapons\cfgWeapons.hpp"
+#include "config\cfgWeapons\cfgWeapons.cpp"
 
 // zombies
-#include "config\cfgZombies\cfgZombies.hpp"
+#include "config\cfgZombies\cfgZombies.cpp"

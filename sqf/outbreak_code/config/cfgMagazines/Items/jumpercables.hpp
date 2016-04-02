@@ -6,6 +6,6 @@ class jumpercables: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\jumpercables.paa";
+	picture = "\addons\outbreak_assets\textures\items\jumpercables.paa";
 	descriptionShort = "";
 };

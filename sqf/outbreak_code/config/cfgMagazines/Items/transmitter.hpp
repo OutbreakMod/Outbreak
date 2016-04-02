@@ -6,6 +6,6 @@ class transmitter: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\transmitter.paa";
+	picture = "\addons\outbreak_assets\textures\items\transmitter.paa";
 	descriptionShort = "";
 };

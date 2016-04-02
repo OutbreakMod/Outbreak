@@ -12,4 +12,4 @@ _unit = _this select 0;
 //terminate _itemInteractThread;
 
 // no more hive sync
-_unit setVariable ["outbreaklogin", -1];
+LOGGED_IN = false;

@@ -6,6 +6,6 @@ class cereal: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\cereal.paa";
+	picture = "\addons\outbreak_assets\textures\items\cereal.paa";
 	descriptionShort = "";
 };

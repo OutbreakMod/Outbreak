@@ -6,6 +6,6 @@ class blood: CA_Magazine
 		{
 				mass = 6;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\blood.paa";
+	picture = "\addons\outbreak_assets\textures\items\blood.paa";
 	descriptionShort = "";
 };

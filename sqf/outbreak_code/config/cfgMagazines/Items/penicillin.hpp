@@ -6,6 +6,6 @@ class penicillin: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\penicillin.paa";
+	picture = "\addons\outbreak_assets\textures\items\penicillin.paa";
 	descriptionShort = "";
 };

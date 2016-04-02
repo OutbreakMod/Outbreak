@@ -6,6 +6,6 @@ class headset: CA_Magazine
 		{
 				mass = 3;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\headset.paa";
+	picture = "\addons\outbreak_assets\textures\items\headset.paa";
 	descriptionShort = "";
 };

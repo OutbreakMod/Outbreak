@@ -6,6 +6,6 @@ class coffee: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\coffee.paa";
+	picture = "\addons\outbreak_assets\textures\items\coffee.paa";
 	descriptionShort = "";
 };

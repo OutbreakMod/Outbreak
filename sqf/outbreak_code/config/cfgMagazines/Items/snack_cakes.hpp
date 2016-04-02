@@ -6,6 +6,6 @@ class snack_cakes: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\snackcakes.paa";
+	picture = "\addons\outbreak_assets\textures\items\snackcakes.paa";
 	descriptionShort = "";
 };

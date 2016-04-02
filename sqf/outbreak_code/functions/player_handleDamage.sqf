@@ -17,8 +17,7 @@ _unitIsPlayer = _unit == player;
 if (!_unitIsPlayer) exitWith { 0 };
 
 // no damage if not logged in
-_loginStatus = player getVariable ["outbreaklogin", -1];
-if (_loginStatus < 1) exitWith { 0 };
+if (!LOGGED_IN) exitWith { 0 };
 
 _scale = 100;
 _health = _unit getVariable ["health", 0];

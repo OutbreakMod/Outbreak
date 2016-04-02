@@ -6,6 +6,6 @@ class note: CA_Magazine
 		{
 				mass = 1;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\note.paa";
+	picture = "\addons\outbreak_assets\textures\items\note.paa";
 	descriptionShort = "";
 };

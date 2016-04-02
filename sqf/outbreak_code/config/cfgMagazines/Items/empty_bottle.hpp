@@ -6,6 +6,6 @@ class empty_bottle: CA_Magazine
 		{
 				mass = 2;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\emptybottle.paa";
+	picture = "\addons\outbreak_assets\textures\items\emptybottle.paa";
 	descriptionShort = "";
 };

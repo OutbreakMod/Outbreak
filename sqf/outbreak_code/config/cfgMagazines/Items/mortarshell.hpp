@@ -6,6 +6,6 @@ class mortarshell: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\mortarshell.paa";
+	picture = "\addons\outbreak_assets\textures\items\mortarshell.paa";
 	descriptionShort = "";
 };

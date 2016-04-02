@@ -6,6 +6,6 @@ class green_goo: CA_Magazine
 		{
 				mass = 4;
 		}; 
-	picture = "addons\outbreak_assets\textures\items\greengoo.paa";
+	picture = "\addons\outbreak_assets\textures\items\greengoo.paa";
 	descriptionShort = "";
 };

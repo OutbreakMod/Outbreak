@@ -22,6 +22,7 @@ if (_check == "loot") then {
 	};
 	
 	_nearby = _searchPosition nearObjects LOOT_SPAWN_RADIUS;
+	_nearly = _nearby call KK_fnc_arrayShuffle; // Spice it up :D
 	
 	{
 		
@@ -34,9 +35,10 @@ if (_check == "loot") then {
 		//};
 		
 		if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
-			if (_building isKindOf "House") then {
+			_type = typeOf _building;
+			if (isClass (configFile >> "cfgBuildingClothes" >> _type)) then {
 				if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
-					//[_unit, _building] call player_spawnZombies;
+					[_unit, _building] call player_spawnZombies;
 				};
 			};
 		};
@@ -44,8 +46,42 @@ if (_check == "loot") then {
 	} foreach _nearby;
 };
 
-if (_check == "zombie_spawn") then {
+if (_check == "wild_zombies") then {
 
+	_zombies = ([getPosATL player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
+
+	if (count _zombies == 0) then {
+		for "_i" from 1 to 3 do {
+
+			_zombiePosition = [];
+			_needsRelocated = true;
+			_counter = 0;
+
+			while {_needsRelocated} do {
+
+				_zombiePosition = [getPosATL player, MIN_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
+				_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
+
+				if ((count _players) == 0) then {
+					_needsRelocated = false;
+				};
+
+				_counter = _counter + 1;
+
+				if (_counter > 20) then {
+					_zombiePosition = [];
+					_needsRelocated = false;
+				};
+			};
+
+			if (count _zombiePosition > 0) then {
+				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
+				[_agent] call fnc_zombie;
+			};
+
+		};
+		
+	};
 };
 
 if (_check == "actions") then {
@@ -58,7 +94,7 @@ if (_check == "sync") then {
 };
 
 if (_check == "debugmenu") then {
-	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
+	//[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
 };
 
 if (_check == "health") then {
@@ -77,7 +113,7 @@ if (_check == "health") then {
 
 if (_check == "health_level") then {
 	
-	_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
+	_unit getVariable ["health", FULL_HEALTH] call fnc_simulateHealthEffect;
 	_health = player getVariable ["health", 6000];
 	
 	if (_health < 6000) then {
