@@ -15,7 +15,19 @@ class zalert3
 	name = "zombie_alert3";
 	sound[] = {"addons\outbreak_sfx\sfx\zombies\alert3.ogg",0.6,1};
 	titles[] = {};
+};
+class zalert4
+{
+	name = "zombie_alert4";
+	sound[] = {"addons\outbreak_sfx\sfx\zombies\alert4.ogg",0.6,1};
+	titles[] = {};
 };	
+class zalert5
+{
+	name = "zombie_alert5";
+	sound[] = {"addons\outbreak_sfx\sfx\zombies\alert5.ogg",0.6,1};
+	titles[] = {};
+};		
 class zhurt1
 {
 	name = "zombie_hurt1";
