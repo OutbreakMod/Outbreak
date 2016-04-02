@@ -1,6 +1,7 @@
---------------------------
-Outbreak Mod
---------------------------
+<p align="center">
+  <img src="http://i.imgur.com/NFMPQPe.png" alt="Outbreak Mod"/>
+</p>
+
 
 Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod created for Arma 3, is a multiplayer survival mod that aims for realism in world where infection has taken over and turned people into monsters.
 
