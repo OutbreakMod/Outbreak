@@ -6,11 +6,11 @@ Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod created fo
 
 The master repository is the stable branch, if you want to test the newest updates then go to [here](https://github.com/OutbreakMod/Outbreak/tree/unstable) however I cannot gurantee that you won't experience problems with client performance and you will most likely experience error warnings and bugs.
 
+Server data located here: https://github.com/OutbreakMod/OutbreakServer
+
 --------------------------
 Features
 --------------------------
-
-Server data located here: https://github.com/OutbreakMod/OutbreakServer
 
 - All data is saved through the server which utilises MySQL and ArmaHive.
 - Permadeath system (lose all your gear when dying, respawn starts a fresh character)
