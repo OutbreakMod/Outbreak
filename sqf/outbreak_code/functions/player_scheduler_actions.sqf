@@ -35,18 +35,31 @@ if (_check == "loot") then {
 		//};
 		
 		if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
-			if (_building isKindOf "House") then {
+			//_type = typeOf _building;
+			//if (isClass (configFile >> "cfgBuildingClothes" >> _type)) then {
 				if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
 					[_unit, _building] call player_spawnZombies;
 				};
-			};
+			//};
 		};
 		
 	} foreach _nearby;
 };
 
-if (_check == "zombie_spawn") then {
+if (_check == "wild_zombies") then {
 
+	_zombies = ([player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
+	
+	if (!(count zombies > 0) then {
+		
+		for "_i" from 1 to 3 do {
+			_position = [(getPosATL player), MIN_WILD_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
+			
+			_agent = createAgent ["Zombie", _position, [], 0, "NONE"];
+			[_agent] call fnc_zombie;
+		};
+		
+	};
 };
 
 if (_check == "actions") then {
@@ -78,7 +91,7 @@ if (_check == "health") then {
 
 if (_check == "health_level") then {
 	
-	_unit getVariable ["health", MOD_FULL_HEALTH] call fnc_simulateHealthEffect;
+	_unit getVariable ["health", FULL_HEALTH] call fnc_simulateHealthEffect;
 	_health = player getVariable ["health", 6000];
 	
 	if (_health < 6000) then {
