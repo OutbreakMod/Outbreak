@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://i.imgur.com/NFMPQPe.png" alt="Outbreak Mod"/>
+  <img src="http://i.imgur.com/nQHWgbp.png" alt="Outbreak Mod"/>
 </p>
 
 
