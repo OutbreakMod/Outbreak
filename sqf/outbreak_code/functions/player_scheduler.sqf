@@ -11,7 +11,7 @@
 	
 	_scheduled = [
 		["loot", 20],
-		["zombie_spawn", 300],
+		["wild_zombies", 30],
 		["actions", 1],
 		["debugmenu", 1],
 		["zombie", 200],
@@ -27,7 +27,7 @@
 	while {true} do {
 	
 		{
-			if (player getVariable ["outbreaklogin", -1] > 0) then {
+			if (LOGGED_IN) then {
 				_task = _x select 0;
 				_seconds = _x select 1;
 				
@@ -49,7 +49,7 @@
 
 [] spawn {
 	while {true} do {
-		if (player getVariable ["outbreaklogin", -1] > 0) then {
+		if (LOGGED_IN) then {
 			_sound = format["ambient_%1", floor(random 7) + 1];
 			_length = getNumber(configFile >> "cfgMusic" >> _sound >> "duration");
 			_pause = ((random 5) + 2) + _length;
@@ -61,7 +61,7 @@
 
 [] spawn {
 	while {true} do {
-		if (player getVariable ["outbreaklogin", -1] > 0) then {
+		if (LOGGED_IN) then {
 			waitUntil {!(isNull (findDisplay 46))};
 			(findDisplay 46) displayAddEventHandler ["KeyDown", "null = [_this select 1] execVM 'addons\outbreak_code\functions\player_pressKey.sqf'"];
 			waituntil {isNull (finddisplay 46)};
@@ -73,16 +73,11 @@
 
 	while {true} do {
 		
-		if (player getVariable ["outbreaklogin", -1] > 0) then {
-		
+		if (LOGGED_IN) then {
 			 waitUntil {!(isNull (findDisplay 602))};
-			 
-			 _idHandle = [633, 638, 619]; 
-			 
 			 {	
 				((findDisplay 602) displayCtrl _x) ctrlSetEventHandler ["LBDblClick", "_this call player_selectItem"];
-			 } forEach _idHandle;
-			
+			 } forEach [633, 638, 619];
 			 waitUntil {isNull (findDisplay 602)};
 		};
 	};

@@ -11,7 +11,7 @@ _pos = getPosATL _unit;
 _unit setVariable ["lastpos", _pos];
 
 if (_unit getVariable ["alive", false]) then {
-	if ((_unit getVariable ["outbreaklogin", -1]) == 1) then {
+	if (LOGGED_IN) then {
 		hive_playerSave = [_unit, name _unit, _pos, _unit call player_serializeInventory, (player getHit "legs"), _unit getVariable ["health", 6000]];
 		publicVariableServer "hive_playerSave";
 	};

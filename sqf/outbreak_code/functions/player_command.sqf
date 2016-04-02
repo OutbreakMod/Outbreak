@@ -24,7 +24,7 @@ if (_command == "findspawn") then {
 
 if (_command == "login") then {
 	
-	player setVariable ["outbreaklogin", 1, true];
+	LOGGED_IN = true;
 	call player_missionLogin;
 	
 	setAperture -1;

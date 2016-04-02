@@ -67,7 +67,7 @@ while {alive _unit} do {
 		} else {
 			
 			if (_hasTarget) then {
-				[_unit, "zalert" + str((floor random 3) + 1)] call object_speak;
+				[_unit, "zalert" + str((floor random 5) + 1)] call object_speak;
 			} else {
 				[_unit, "zidle" + str((floor random 5) + 1)] call object_speak;
 			};
