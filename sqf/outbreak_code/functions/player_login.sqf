@@ -13,14 +13,20 @@ setPlayable _newUnit;
 selectPlayer _newUnit;
 deleteVehicle (_previousUnit);
 
+setAperture 10000;
+1 fadeSound 0;
+1 fadeSpeech 0;
+
 // new handlers
 player removeAllEventHandlers "Killed";
 player removeAllEventHandlers "Respawn";
 player removeAllEventHandlers "HandleDamage";
+player removeAllEventHandlers "Fired";
 
 player addEventHandler ["Killed", { _this call player_killed; }];
 player addEventHandler ["Respawn", { _this call player_respawn; }];
 player addEventHandler ["HandleDamage", { _this call player_handleDamage; }];
+player addEventHandler ["Fired", { _this call player_fired; }];
 
 // add variable
 player setVariable ["outbreaklogin", -1];
