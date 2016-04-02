@@ -12,6 +12,8 @@ Server data located here: https://github.com/OutbreakMod/OutbreakServer
 Features
 --------------------------
 
+Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG.md
+
 - All data is saved through the server which utilises MySQL and ArmaHive.
 - Permadeath system (lose all your gear when dying, respawn starts a fresh character)
 - Clothes are randomised when respawning
