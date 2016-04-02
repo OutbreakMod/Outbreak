@@ -21,7 +21,11 @@ _agent removeAllEventHandlers "Hit";
 _agent removeAllEventHandlers "Respawn";
 _agent removeAllEventHandlers "HandleDamage";
 
-_agent addEventHandler ["HandleDamage", { _this call zombie_handleDamage; }];
+_agent addEventHandler ["HandleDamage", 
+{
+	_this call zombie_handleDamage; 
+}];
+
 _agent addEventHandler ["Killed",
  { 
 	_unit = _this select 0;
@@ -90,8 +94,10 @@ if (_zombieClothes == "military") then {
 
 if (_zombieClothes == "helicopter") then {
 	
-	_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
-	_agent addVest (_vests call BIS_fnc_selectRandom);
+	if (50 > random 100) then {
+		_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
+		_agent addVest (_vests call BIS_fnc_selectRandom);
+	};
 	
 	if (30 > random 100) then {
 		_helmets = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets");

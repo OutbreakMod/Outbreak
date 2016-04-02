@@ -13,6 +13,7 @@ player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functi
 player_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_handleDamage.sqf";
 player_command = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_command.sqf";
 player_findNearby = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findNearby.sqf";
+player_fired = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_fired.sqf";
 
 // objects
 object_speak = compile preProcessFileLineNumbers "addons\outbreak_code\functions\object_speak.sqf";
