@@ -1,85 +1,45 @@
-***Outbreak Mod***
-================
+--------------------------
+Outbreak Mod
+--------------------------
 
-Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod.
+Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod created for Arma 3.
 
-Created for Arma 3 (Zeus).
+The master repository is the stable branch, if you want to test the newest updates then go to [here](https://github.com/OutbreakMod/Outbreak/tree/unstable) however I cannot gurantee that you won't experience problems with client performance and you will most likely experience error warnings and bugs.
+
+--------------------------
+Features
+--------------------------
+
+Server data located here: https://github.com/OutbreakMod/OutbreakServer
+
+- All data is saved through the server which utilises MySQL and ArmaHive.
+- Permadeath system (lose all your gear when dying, respawn starts a fresh character)
+- Clothes are randomised when respawning
+- Loot spawning in different buildings, different types of loot depending on which buildings
+- The mod is very optimised to deliver performance found in single-player Arma 3.
+- Persistent object storage
+- Object spawns across the map
+- Basic crafting, wood shack, etc
+- Convert magazine typee
+- Medical system such as blood count
+- Colour the screen depending on your blood level
+- Breaking legs
+- Heal legs with morphine
+- Study body (tell what caliber they were shot by, how they died etc)
+- Zombies with custom AI written by me
+- Zombie clothing changes depending on where zombies spawned
+- Dynamic server events, such as helicopter crash sites, which can be custom changed to rotate around the map every x minutes or just run once when server restarts.
+- Chop trees down
 
 --------------------------
 Mods Used
 --------------------------
 
- 1. Arma2Net by Scott_NZ for the server hive.
- 2. Community Base addons A3 - http://www.armaholic.com/page.php?id=18767
- 
-Community Upgrade Projects
-
- 1. Weapon Pack  - http://www.armaholic.com/page.php?id=27489
- 2. Terrains Complete v1.0.1 - http://www.armaholic.com/page.php?id=30045
+ 1. Community Base addons A3 - http://www.armaholic.com/page.php?id=18767
+ 2. Weapon Pack  - http://www.armaholic.com/page.php?id=27489
+ 3. Terrains Complete v1.0.1 - http://www.armaholic.com/page.php?id=30045
 
 Thanks to these AMAZING mod creators <3
-
---------------------------
-Changelog
---------------------------
-
-Commits on Apr 2, 2016
-- Added wild zombie spawns
-- Fixed wild zombie spawns
-- Added more zombie sounds
-- Variable refactor (login, min max wild z spawn)
-- Delete magazine when it's empty
-- Mute sound when logging in
-- Zombies sprint after pursuit and not invincible
-
-**Apr 1, 2016**
-- Added extra military areas
-- Only run tasks when logged in
-- Zombie clothes and wandering fixes
-- BUG FIX: FindNearby checks for alive units only
-- BUG FIX: Zombies faced opposite way when attacking
-- BUG FIX: Zombies spawned too close
-- Zombie now faces player
-- Fixed FPS drop when shooting zombies
-- Dynamic zed spawning (instead of one area in city)
-- Renamed and refactored functions
-- Fixed persistent item placement (when placed, it would hover 2 feet)
-
-**March 29, 2016**
-- Removed ability to stand when legs are broken
-- Fixed bug where dmg handlers were unregistered
-
-
-**Mar 28, 2016**
-- Fixed missing "fnc_zombiePunch"
-- Object_say is now 3D and global
-- Asset path changes
-- Zombie idle sounds no longer synced together
-- Health regenerate
-- New zombie sounds
-- Fixed zombies getting hurt sound
-- Lowered zombie sound volume
-- Added zombie sounds
-- Zombie AI: Update path after waiting 1 second fix
-- Zombie hit detection nerf
-- Hitting player detection
-- Hitting and only find alive targets
-
-**Mar 27, 2016**
-- Zombies now chase player
-- Started zombie AI
-- SVD/PKM weapon damage nerf
-- Forgot to disable Arma 3 dmg system
-- TheAmazingAussie committed 6 days ago
-- Added zombie leg breaking
-
-**Aug 18, 2015**
-- Added more loot spawns to houses and enterable buildings
-- Added new "Firestation" loot tag
-- Wild zombies will can spawn with civilian clothes along with their raggy clothes
-- Pilot zombies will spawn around helicopter crash sites with their helmets and gear
-- Zombies spawned around buildings will no longer wonder off into the forest (this was needed for the zombies to stay around the crash site).
-- Zombies that don't have players within 200m of them will be deleted/cleaned up by server
 
 --------------------------
 Contact
