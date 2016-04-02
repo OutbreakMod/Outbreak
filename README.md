@@ -60,7 +60,7 @@ Thanks to these AMAZING mod creators <3
 Contact
 --------------------------
 
-Email: alex.daniel.97@gmail.com
+Email: alex.daniel.97[at]gmail.com
 
 Twitter: http://twitter.com/TheAmazingAussie
 
