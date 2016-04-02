@@ -46,3 +46,14 @@
 - Forgot to disable Arma 3 dmg system
 - TheAmazingAussie committed 6 days ago
 - Added zombie leg breaking
+
+**Mar 26, 2016**
+- Health update is instant now
+- Convert FNFAL/DMR magazines
+- Ability to convert magazines by double clicking
+
+**Nov 8, 2015**
+- Server-side loot spawn
+- TheAmazingAussie committed on Nov 8, 2015
+
+
