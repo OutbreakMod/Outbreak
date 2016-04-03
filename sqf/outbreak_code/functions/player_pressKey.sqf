@@ -20,16 +20,9 @@ if (_keyCode == 210) then {
 	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
 };
 
-if (_keyCode == 21) then {
-
-	_dialog = _idc = uiNamespace getVariable "rscCraftingMenu";
-		
-	if (!isNull _dialog) then {
-		[] execVM "addons\outbreak_code\functions\gui\fn_createCraftingGUI.sqf";
-		
-	};
+if (_keyCode == 22) then {
+	[] execVM "addons\outbreak_code\functions\gui\fn_createCraftingGUI.sqf";
 };
-
 
 // Interrupt actions, ie, searching for logs etc
 
