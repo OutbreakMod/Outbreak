@@ -1,0 +1,134 @@
+class rscCraftingMenu
+{
+	idd = 35900;
+	onLoad="uiNamespace setVariable ['rscCraftingMenu', _this select 0]";
+	movingEnable = false;
+	enableSimulation = true;
+
+	class controls
+	{
+		class mainMenu: RscPicture
+		{
+			idc = 35901;
+			text = "#(argb,8,8,3)color(0,0,0,0.5)";
+			x = 0.30875 * safezoneW + safezoneX;
+			y = 0.262 * safezoneH + safezoneY;
+			w = 0.398438 * safezoneW;
+			h = 0.34 * safezoneH;
+		};
+		class itemComboSelection: RscCombo
+		{
+			idc = 35902;
+			text = "SELECT AN ITEM"; //--- ToDo: Localize;
+			x = 0.329469 * safezoneW + safezoneX;
+			y = 0.313 * safezoneH + safezoneY;
+			w = 0.357 * safezoneW;
+			h = 0.03825 * safezoneH;
+		};
+		class itemPicture1: RscPicture
+		{
+			idc = 35903;
+			text = "#(argb,8,8,3)color(0,0,0,0.5)";
+			x = 0.340625 * safezoneW + safezoneX;
+			y = 0.364 * safezoneH + safezoneY;
+			w = 0.06375 * safezoneW;
+			h = 0.085 * safezoneH;
+		};
+		class itemPicture2: RscPicture
+		{
+			idc = 35904;
+			text = "#(argb,8,8,3)color(0,0,0,0.5)";
+			x = 0.423499 * safezoneW + safezoneX;
+			y = 0.364 * safezoneH + safezoneY;
+			w = 0.06375 * safezoneW;
+			h = 0.085 * safezoneH;
+		};
+		class itemPicture3: RscPicture
+		{
+			idc = 35905;
+			text = "#(argb,8,8,3)color(0,0,0,0.5)";
+			x = 0.511156 * safezoneW + safezoneX;
+			y = 0.364 * safezoneH + safezoneY;
+			w = 0.06375 * safezoneW;
+			h = 0.085 * safezoneH;
+		};
+		class itemPicture4: RscPicture
+		{
+			idc = 35906;
+			text = "#(argb,8,8,3)color(0,0,0,0.5)";
+			x = 0.595625 * safezoneW + safezoneX;
+			y = 0.364 * safezoneH + safezoneY;
+			w = 0.06375 * safezoneW;
+			h = 0.085 * safezoneH;
+		};
+		class itemDisplayText: RscText
+		{
+			idc = 35907;
+			text = "Select the item you want to craft"; //--- ToDo: Localize;
+			x = 0.329468 * safezoneW + safezoneX;
+			y = 0.2722 * safezoneH + safezoneY;
+			w = 0.357 * safezoneW;
+			h = 0.03825 * safezoneH;
+		};
+		class itemText1: RscText
+		{
+			idc = 35908;
+			text = "ITEM 1"; //--- ToDo: Localize;
+			x = 0.337437 * safezoneW + safezoneX;
+			y = 0.4558 * safezoneH + safezoneY;
+			w = 0.069 * safezoneW;
+			h = 0.01825 * safezoneH;
+			sizeEx = 0.56;
+			colorBackground[] = {0, 0, 0, 0};        
+			colorText[] = {1, 1, 1, 1};
+		};
+		class itemText2: RscText
+		{
+			idc = 35909;
+			text = "ITEM 2"; //--- ToDo: Localize;
+			x = 0.420312 * safezoneW + safezoneX;
+			y = 0.4558 * safezoneH + safezoneY;
+			w = 0.069 * safezoneW;
+			h = 0.01825 * safezoneH;
+			sizeEx = 0.56;
+		};
+		class itemText3: RscText
+		{
+			idc = 35910;
+			text = "ITEM 3"; //--- ToDo: Localize;
+			x = 0.507969 * safezoneW + safezoneX;
+			y = 0.4558 * safezoneH + safezoneY;
+			w = 0.069 * safezoneW;
+			h = 0.01825 * safezoneH;
+			sizeEx = 0.56;
+		};
+		class itemText4: RscText
+		{
+			idc = 35911;
+			text = "ITEM 4"; //--- ToDo: Localize;
+			x = 0.592438 * safezoneW + safezoneX;
+			y = 0.4558 * safezoneH + safezoneY;
+			w = 0.069 * safezoneW;
+			h = 0.01825 * safezoneH;
+			sizeEx = 0.56;
+		};
+		class cancelButton: RscButtonMenuCancel
+		{
+			idc = 35912;
+			x = 0.6275 * safezoneW + safezoneX;
+			y = 0.551 * safezoneH + safezoneY;
+			w = 0.06875 * safezoneW;
+			h = 0.04 * safezoneH;
+			action = "closeDialog 0";
+		};
+		class craftItemButton: RscButtonMenuCancel
+		{
+			idc = 35913;
+			text = "craft item"; //--- ToDo: Localize;
+			x = 0.523906 * safezoneW + safezoneX;
+			y = 0.551 * safezoneH + safezoneY;
+			w = 0.0935 * safezoneW;
+			h = 0.04 * safezoneH;
+		};
+	};
+};

@@ -30,6 +30,12 @@ if (_command == "login") then {
 	setAperture -1;
 	1 fadeSound 1;
 	1 fadeSpeech 1;
+	
+	_dialog = createDialog "rscCraftingMenu";
+	_idc = uiNamespace getVariable "rscCraftingMenu";
+	_textBox1 = _idc displayCtrl 35902;
+	_textBox1 ctrlSetText ("Hammer x1");
+	_textBox1 ctrlCommit 0;
 };
 
 
