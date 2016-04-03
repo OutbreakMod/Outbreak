@@ -36,9 +36,11 @@ fnc_createCraftingDialog = {
 };
 
 disableSerialization;
-
 _dialog = uiNamespace getVariable ["rscCraftingMenu", displayNull];
-	
+
 if (isNull _dialog) then {
 	call fnc_createCraftingDialog;
-};
+} else {
+	closeDialog 0;
+}
+	
