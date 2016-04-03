@@ -1,3 +1,8 @@
+**Apr 3, 2016**
+- Crafting GUI by pressing U is now added
+- Reading from configuration with different types of recipes is added.
+- Removed deprecated ArmA 2 (getNumber, getArray, getText) calls and replaced with BIS_fnc_getCfgData
+
 **Apr 2, 2016**
 - Added wild zombie spawns
 - Fixed wild zombie spawns
