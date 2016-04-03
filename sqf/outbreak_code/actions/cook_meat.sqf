@@ -12,7 +12,7 @@ player removeAction action_cookMeat;
 action_cookMeat = -1;
 
 player playActionNow "Medic";
-player setVariable ["action_interrupt", false];
+INTERRUPT_ACTION = false;
 
 _animState = animationState player;
 _loop = true;
@@ -38,7 +38,7 @@ while {_loop} do {
 		_finished = true;
 	};
 	
-	if (player getVariable ["action_interrupt", false]) then {
+	if (INTERRUPT_ACTION) then {
 		_loop = false;
 	};
 	
@@ -49,7 +49,7 @@ _loop = false;
 
 if (!_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
 		player switchmove "";
@@ -61,7 +61,7 @@ if (!_finished) then {
 
 if (_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 	cutText ["I've cooked all meat", "PLAIN DOWN"];
 	
 	_meat = ["sc_rawmutton"];

@@ -14,7 +14,7 @@ action_applyMorphine = -1;
 player_performingAction = true;
 
 player playActionNow "Medic";
-player setVariable ["action_interrupt", false];
+INTERRUPT_ACTION = false;
 
 _animState = animationState player;
 _started = false;
@@ -38,7 +38,7 @@ while {_loop} do {
 		_finished = true;
 	};
 	
-	if (player getVariable ["action_interrupt", false]) then {
+	if (INTERRUPT_ACTION) then {
 		_loop = false;
 	};
 	
@@ -49,7 +49,7 @@ _loop = false;
 
 if (!_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
 		player switchmove "";
@@ -67,7 +67,7 @@ if (_finished) then {
 		_location set [2,0];
 	};
 	
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 	player setVariable ["reset_fracture", true, true];
 	player removeItem "morphine";
 	

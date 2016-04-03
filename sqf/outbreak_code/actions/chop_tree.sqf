@@ -16,7 +16,7 @@ _finished = false;
 _loop = true;
 
 player playActionNow "Medic";
-player setVariable ["action_interrupt", false];
+INTERRUPT_ACTION = false;
 
 while {_loop} do {
 
@@ -36,7 +36,7 @@ while {_loop} do {
 		_finished = true;
 	};
 	
-	if (player getVariable ["action_interrupt", false]) then {
+	if (INTERRUPT_ACTION) then {
 		_loop = false;
 	};
 	
@@ -45,7 +45,7 @@ while {_loop} do {
 
 if (!_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
 		player switchmove "";
