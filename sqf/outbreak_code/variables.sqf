@@ -18,7 +18,9 @@ MAX_WILD_ZOMBIE_SPAWN_DISTANCE = 200;
 
 STANDING_POSES = getArray(configFile >> "CfgGame" >> "STANDING_POSES");
 STORAGE_UNITS = getArray(configFile >> "CfgGame" >> "STORAGE_UNITS");
+
 LOGGED_IN = false;
+INTERRUPT_ACTION = false;
 
 // reset actions
 action_gutAnimal = -1;

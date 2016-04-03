@@ -17,7 +17,7 @@ if (_type == "ground") then {
 	_check = "medic";
 
 	player playActionNow _animation;
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 	
 	_animState = animationState player;
 	_loop = true;
@@ -39,7 +39,7 @@ if (_type == "ground") then {
 			_finished = true;
 		};
 		
-		if (player getVariable ["action_interrupt", false]) then {
+		if (INTERRUPT_ACTION) then {
 			_loop = false;
 		};
 		
@@ -50,7 +50,7 @@ if (_type == "ground") then {
 
 	if (!_finished) then {
 	
-		player setVariable ["action_interrupt", false];
+		INTERRUPT_ACTION = false;
 
 		if (vehicle player == player) then {
 			player switchmove "";
@@ -62,7 +62,7 @@ if (_type == "ground") then {
 
 	if (_finished) then {
 	
-		player setVariable ["action_interrupt", false];
+		INTERRUPT_ACTION = false;
 		player addItem "log";
 		
 		// TODO: Add chance

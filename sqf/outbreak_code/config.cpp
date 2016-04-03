@@ -7,16 +7,10 @@ class CfgPatches {
 	};
 };
 
-// zombie loot
 #include "config\cfgBuildingClothes\cfgBuildingClothes.cpp"
-
-// configuration files
 #include "config\cfgGame\cfgGame.cpp"
 #include "config\cfgVehicles\cfgVehicles.cpp"
 #include "config\cfgMagazines\cfgMagazines.cpp"
-
-// weapons
 #include "config\cfgWeapons\cfgWeapons.cpp"
-
-// zombies
 #include "config\cfgZombies\cfgZombies.cpp"
+#include "config\RscDisplay\includes.cpp"

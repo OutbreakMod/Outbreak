@@ -22,7 +22,7 @@ if (!([player, "sc_knife"] call fnc_hasItem)) exitWith {
 player_performingAction = true;
 
 player playActionNow "Medic";
-player setVariable ["action_interrupt", false];
+INTERRUPT_ACTION = false;
 
 _animState = animationState player;
 _started = false;
@@ -49,7 +49,7 @@ while {_loop} do {
 		_finished = true;
 	};
 	
-	if (player getVariable ["action_interrupt", false]) then {
+	if (INTERRUPT_ACTION) then {
 		_loop = false;
 	};
 	
@@ -60,7 +60,7 @@ _loop = false;
 
 if (!_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
 		player switchmove "";
@@ -74,7 +74,7 @@ _basket = objNull;
 
 if (_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 	cutText ["I have successfully gutted the animal, meat is next to the carcass", "PLAIN DOWN"];
 	
 	_configMeat = configFile >> "cfgGame" >> "cfgGutAnimal" >> _type;

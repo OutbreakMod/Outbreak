@@ -44,7 +44,7 @@ if (!_canBuild) exitWith {};
 player_performingAction = true;
 
 player playActionNow "Medic";
-player setVariable ["action_interrupt", false];
+INTERRUPT_ACTION = false;
 
 _loop = true;
 _animState = animationState player;
@@ -69,7 +69,7 @@ while {_loop} do {
 		_finished = true;
 	};
 	
-	if (player getVariable ["action_interrupt", false]) then {
+	if (INTERRUPT_ACTION) then {
 		_loop = false;
 	};
 };
@@ -80,7 +80,7 @@ _loop = false;
 
 if (!_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
 		player switchmove "";
@@ -94,7 +94,7 @@ _basket = objNull;
 
 if (_finished) then {
 
-	player setVariable ["action_interrupt", false];
+	INTERRUPT_ACTION = false;
 	cutText ["I have finished building", "PLAIN DOWN"];
 	
 	_location = player modelToWorld [0,2.5,0];

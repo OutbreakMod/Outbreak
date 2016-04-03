@@ -20,26 +20,30 @@ if (_keyCode == 210) then {
 	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
 };
 
+if (_keyCode == 22) then {
+	[] execVM "addons\outbreak_code\functions\gui\fn_createCraftingGUI.sqf";
+};
+
 // Interrupt actions, ie, searching for logs etc
 
 if (_keyCode in actionKeys "MoveForward") then {
-	player setVariable ["action_interrupt", true];
 	_handled = true;
+	INTERRUPT_ACTION = true;
 };
 
 if (_keyCode in actionKeys "MoveLeft") then {
-	player setVariable ["action_interrupt", true];
 	_handled = true;
+	INTERRUPT_ACTION = true;
 };
 
 if (_keyCode in actionKeys "MoveRight") then {
-	player setVariable ["action_interrupt", true];
 	_handled = true;
+	INTERRUPT_ACTION = true;
 };
 
 if (_keyCode in actionKeys "MoveBack") then {
-	player setVariable ["action_interrupt", true];
 	_handled = true;
+	INTERRUPT_ACTION = true;
 };
 
 _handled
