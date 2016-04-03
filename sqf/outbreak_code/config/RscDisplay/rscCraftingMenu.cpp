@@ -79,7 +79,7 @@ class rscCraftingMenu
 			x = 0.337437 * safezoneW + safezoneX;
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
-			h = 0.01925 * safezoneH;
+			h = 0.042 * safezoneH;//h = 0.01825 * safezoneH;
 			sizeEx = 0.025;
 		};
 		class itemText2: MultipleLineRscText
@@ -89,7 +89,7 @@ class rscCraftingMenu
 			x = 0.420312 * safezoneW + safezoneX;
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
-			h = 0.01825 * safezoneH;
+			h = 0.042 * safezoneH;//h = 0.01825 * safezoneH;
 			sizeEx = 0.025;
 		};
 		class itemText3: MultipleLineRscText
@@ -99,7 +99,7 @@ class rscCraftingMenu
 			x = 0.507969 * safezoneW + safezoneX;
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
-			h = 0.01825 * safezoneH;
+			h = 0.042 * safezoneH;//h = 0.01825 * safezoneH;
 			sizeEx = 0.025;
 		};
 		class itemText4: MultipleLineRscText
@@ -109,7 +109,7 @@ class rscCraftingMenu
 			x = 0.592438 * safezoneW + safezoneX;
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
-			h = 0.01825 * safezoneH;
+			h = 0.042 * safezoneH;//h = 0.01825 * safezoneH;
 			sizeEx = 0.025;
 		};
 		class cancelButton: RscButtonMenuCancel

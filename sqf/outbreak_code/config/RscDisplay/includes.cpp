@@ -82,7 +82,7 @@ class RscHTML;
 
 
 class MultipleLineRscText : RscText {
-	style = ST_RIGHT + ST_MULTI;
+	style = ST_LEFT + ST_MULTI;
 };
 
 #include "rscTitles.cpp"
