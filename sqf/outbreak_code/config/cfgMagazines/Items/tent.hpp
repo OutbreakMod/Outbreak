@@ -11,7 +11,7 @@ class tent: CA_Magazine
 	}; 
 	
 	class cfgItemActions {
-		doubleClick = "['tent', 'OutbreakTent', true] call player_build;";
+		craftingDialog = "['tent', 'OutbreakTent', true] call player_build;";
 	};
 	
 	class cfgCraft {
