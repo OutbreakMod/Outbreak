@@ -7,7 +7,7 @@ class rscCraftingMenu
 	enableSimulation = true;
 
 	class controls
-	{
+	{	
 		class mainMenu: RscPicture
 		{
 			idc = 35901;
@@ -72,19 +72,17 @@ class rscCraftingMenu
 			w = 0.357 * safezoneW;
 			h = 0.03825 * safezoneH;
 		};
-		class itemText1: RscText
+		class itemText1: MultipleLineRscText
 		{
 			idc = 35908;
 			text = "ITEM 1"; //--- ToDo: Localize;
 			x = 0.337437 * safezoneW + safezoneX;
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
-			h = 0.01825 * safezoneH;
+			h = 0.01925 * safezoneH;
 			sizeEx = 0.025;
-			colorBackground[] = {0, 0, 0, 0};        
-			colorText[] = {1, 1, 1, 1};
 		};
-		class itemText2: RscText
+		class itemText2: MultipleLineRscText
 		{
 			idc = 35909;
 			text = "ITEM 2"; //--- ToDo: Localize;
@@ -94,7 +92,7 @@ class rscCraftingMenu
 			h = 0.01825 * safezoneH;
 			sizeEx = 0.025;
 		};
-		class itemText3: RscText
+		class itemText3: MultipleLineRscText
 		{
 			idc = 35910;
 			text = "ITEM 3"; //--- ToDo: Localize;
@@ -104,7 +102,7 @@ class rscCraftingMenu
 			h = 0.01825 * safezoneH;
 			sizeEx = 0.025;
 		};
-		class itemText4: RscText
+		class itemText4: MultipleLineRscText
 		{
 			idc = 35911;
 			text = "ITEM 4"; //--- ToDo: Localize;

@@ -5,6 +5,8 @@ class CfgRecipes {
 		see /config/cfgMagazines/items/ for more details
 	*/
 	recipes[] = {
-		"tent"
+		"tent",
+		"blueprint_shack_v1",
+		"matchbox"
 	};
 };

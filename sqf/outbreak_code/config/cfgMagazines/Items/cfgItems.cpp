@@ -1,5 +1,4 @@
 #include "cooking_pot.hpp"
-#include "tent.hpp"
 #include "fireaxe.hpp"
 #include "bandage.hpp"
 #include "elasticbandage.hpp"
@@ -151,3 +150,7 @@
 //farm
 #include "log.hpp"
 #include "log_rotten.hpp"
+
+// bases
+#include "blueprint_shack_v1.hpp"
+#include "tent.hpp"
