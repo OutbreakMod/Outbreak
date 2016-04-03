@@ -1,11 +1,3 @@
-disableSerialization;
-
-_dialog = uiNamespace getVariable ["rscCraftingMenu", displayNull];
-	
-if (isNull _dialog) then {
-	call fnc_createCraftingDialog;
-};
-
 fnc_createCraftingDialog = {
 	
 	_dialog = createDialog "rscCraftingMenu";
@@ -41,4 +33,12 @@ fnc_createCraftingDialog = {
 
 	_control = _idc displayCtrl 35906;
 	_control ctrlSetText "\addons\outbreak_assets\textures\items\rock.paa";
+};
+
+disableSerialization;
+
+_dialog = uiNamespace getVariable ["rscCraftingMenu", displayNull];
+	
+if (isNull _dialog) then {
+	call fnc_createCraftingDialog;
 };
