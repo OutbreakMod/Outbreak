@@ -78,8 +78,8 @@ if (_finished) then {
 	cutText ["I have successfully gutted the animal, meat is next to the carcass", "PLAIN DOWN"];
 	
 	_configMeat = configFile >> "cfgGame" >> "cfgGutAnimal" >> _type;
-	_rawMeat = getText(_configMeat >> "raw");
-	_amount = getNumber(_configMeat >> "yield");
+	_rawMeat = (_configMeat >> "raw") call BIS_fnc_getCfgData;
+	_amount = (_configMeat >> "yield") call BIS_fnc_getCfgData;
 
 	_basket = createVehicle ["OutbreakBasket", (getPosATL _deadAnimal), [], 0, "CAN_COLLIDE"];
 	_basket setDir (random 360);

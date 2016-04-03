@@ -6,6 +6,9 @@ fnc_createCraftingDialog = {
 	_control = _idc displayCtrl 35902;
 	_index = _control lbAdd ("SELECT RECIPE");
 	_control lbSetCurSel _index;
+	
+	_recipes = (configFile >> "CfgRecipes" >> "recipes") call BIS_fnc_getCfgData;
+	
 
 	_index = _control lbAdd ("Test recipe");
 	_control lbSetData [_index, "Test recipe443"];
