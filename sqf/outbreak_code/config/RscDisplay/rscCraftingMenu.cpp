@@ -2,6 +2,7 @@ class rscCraftingMenu
 {
 	idd = 35900;
 	onLoad="uiNamespace setVariable ['rscCraftingMenu', _this select 0]";
+	onUnload="uiNamespace setVariable ['rscCraftingMenu', displayNull]";
 	movingEnable = false;
 	enableSimulation = true;
 

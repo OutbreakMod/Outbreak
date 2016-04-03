@@ -22,6 +22,9 @@ class IGUIBack;
 class RscIGUIListBox;
 class RscHTML;
 
+#define IDC_OK            1 //emulate "Ok" button
+#define IDC_CANCEL        2 //emulate "Cancel" button
+
 class MyRscStructuredText {
 	idc = -1; 
 	type = CT_STRUCTURED_TEXT;  // defined constant
