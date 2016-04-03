@@ -24,6 +24,7 @@ class rscCraftingMenu
 			y = 0.313 * safezoneH + safezoneY;
 			w = 0.357 * safezoneW;
 			h = 0.03825 * safezoneH;
+			sizeEx = 0.025;
 		};
 		class itemPicture1: RscPicture
 		{
@@ -78,7 +79,7 @@ class rscCraftingMenu
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
 			h = 0.01825 * safezoneH;
-			sizeEx = 0.56;
+			sizeEx = 0.025;
 			colorBackground[] = {0, 0, 0, 0};        
 			colorText[] = {1, 1, 1, 1};
 		};
@@ -90,7 +91,7 @@ class rscCraftingMenu
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
 			h = 0.01825 * safezoneH;
-			sizeEx = 0.56;
+			sizeEx = 0.025;
 		};
 		class itemText3: RscText
 		{
@@ -100,7 +101,7 @@ class rscCraftingMenu
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
 			h = 0.01825 * safezoneH;
-			sizeEx = 0.56;
+			sizeEx = 0.025;
 		};
 		class itemText4: RscText
 		{
@@ -110,7 +111,7 @@ class rscCraftingMenu
 			y = 0.4558 * safezoneH + safezoneY;
 			w = 0.069 * safezoneW;
 			h = 0.01825 * safezoneH;
-			sizeEx = 0.56;
+			sizeEx = 0.025;
 		};
 		class cancelButton: RscButtonMenuCancel
 		{
