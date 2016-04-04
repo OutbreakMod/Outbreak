@@ -7,7 +7,7 @@ _from = _this select 0;
 _to = _this select 1;
 
 _ammoCount = 0;
-_ammoCapacity = getNumber (configFile >> "CfgMagazines" >> _to >> "count");
+_ammoCapacity = (configFile >> "CfgMagazines" >> _to >> "count") call BIS_fnc_getCfgData;
 
 _magazinesAmmo = magazinesAmmo player;
 

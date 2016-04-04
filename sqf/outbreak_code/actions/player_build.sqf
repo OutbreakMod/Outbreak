@@ -13,8 +13,8 @@ player removeAction action_build;
 action_build = -1;
 
 _cfgRecipe = (configFile >> "CfgMagazines" >> _class >> "cfgCraft");
-_recipes = getArray (_cfgRecipe >> "recipe");
-_consumes = getArray (_cfgRecipe >> "consume");
+_recipes = (_cfgRecipe >> "recipe") call BIS_fnc_getCfgData;
+_consumes = (_cfgRecipe >> "consume") call BIS_fnc_getCfgData;
 
 _canBuild = true;
 

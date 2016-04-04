@@ -7,8 +7,8 @@ private ["_type", "_message", "_animation", "_check", "_interrupt", "_animState"
 
 _type = _this select 3;
 
-player removeAction action_searchWoodPile;
-action_searchWoodPile = -1;
+player removeAction action_searchLogs;
+action_searchLogs = -1;
 
 if (_type == "ground") then {
 
@@ -70,5 +70,5 @@ if (_type == "ground") then {
 	}; 
 	
 	player_performingAction = false;
-	action_searchWoodPile = -1;
+	action_searchLogs = -1;
 };

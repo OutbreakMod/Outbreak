@@ -46,4 +46,13 @@ if (!_inVehicle && !player_performingAction) then {
 		player removeAction action_chopTree;
 		action_chopTree = -1;
 	};
+	
+	if (["forest", surfaceType position player] call fnc_inString) then {
+		if (action_searchLogs < 0) then {
+			action_searchLogs = player addAction ["Search for logs", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
+		};
+	} else {
+		player removeAction action_searchLogs;
+		action_searchLogs = -1;
+	};
 };

@@ -3,21 +3,21 @@
 	@author: TheAmazingAussie
 */
 
-FULL_HEALTH = getNumber(configFile >> "CfgGame" >> "FULL_HEALTH");
-CHOP_TREES = getArray(configFile >> "CfgGame" >> "CHOPPABLE_TREES");
-CHOP_TREES_WOOD_YIELD = getArray(configFile >> "CfgGame" >> "TREES_WOOD_YIELD");
+FULL_HEALTH = (configFile >> "CfgGame" >> "FULL_HEALTH") call BIS_fnc_getCfgData;
+CHOP_TREES = (configFile >> "CfgGame" >> "CHOPPABLE_TREES") call BIS_fnc_getCfgData;
+CHOP_TREES_WOOD_YIELD = (configFile >> "CfgGame" >> "TREES_WOOD_YIELD") call BIS_fnc_getCfgData;
 
-MAX_INFECTED_CITY = getNumber(configFile >> "CfgGame" >> "MAX_INFECTED_CITY");
-LOOT_SPAWN_RADIUS = getNumber(configFile >> "CfgGame" >> "LOOT_SPAWN_RADIUS");
+MAX_INFECTED_CITY = (configFile >> "CfgGame" >> "MAX_INFECTED_CITY") call BIS_fnc_getCfgData;
+LOOT_SPAWN_RADIUS = (configFile >> "CfgGame" >> "LOOT_SPAWN_RADIUS") call BIS_fnc_getCfgData;
 
-MIN_LOOT_SPAWN_DISTANCE = getNumber(configFile >> "CfgGame" >> "MIN_LOOT_SPAWN_DISTANCE");
-MIN_ZOMBIE_SPAWN_DISTANCE = getNumber(configFile >> "CfgGame" >> "MIN_ZOMBIE_SPAWN_DISTANCE");
+MIN_LOOT_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_LOOT_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
+MIN_ZOMBIE_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_ZOMBIE_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
 
 MIN_WILD_ZOMBIE_SPAWN_DISTANCE = 100;
 MAX_WILD_ZOMBIE_SPAWN_DISTANCE = 200;
 
-STANDING_POSES = getArray(configFile >> "CfgGame" >> "STANDING_POSES");
-STORAGE_UNITS = getArray(configFile >> "CfgGame" >> "STORAGE_UNITS");
+STANDING_POSES = (configFile >> "CfgGame" >> "STANDING_POSES") call BIS_fnc_getCfgData;
+STORAGE_UNITS = (configFile >> "CfgGame" >> "STORAGE_UNITS") call BIS_fnc_getCfgData;
 
 LOGGED_IN = false;
 INTERRUPT_ACTION = false;
@@ -29,6 +29,7 @@ action_studyDeadBody = -1;
 action_applyMorphine = -1;
 action_chopTree = -1;
 action_build = -1;
+action_searchLogs = -1;
 
 player_performingAction = false;
 player_noWeapon = nil;

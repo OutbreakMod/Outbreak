@@ -14,3 +14,4 @@ class CfgPatches {
 #include "config\cfgWeapons\cfgWeapons.cpp"
 #include "config\cfgZombies\cfgZombies.cpp"
 #include "config\RscDisplay\includes.cpp"
+#include "config\cfgRecipes\cfgRecipes.cpp"

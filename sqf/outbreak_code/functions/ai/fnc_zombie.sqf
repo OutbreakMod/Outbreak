@@ -77,7 +77,7 @@ if (count _this > 1) then {
 	};
 };
 
-_clothes = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes);
+_clothes = (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes) call BIS_fnc_getCfgData;
 _uniform = _clothes call BIS_fnc_selectRandom;
 _agent addUniform _uniform;
 
@@ -87,7 +87,7 @@ if (_zombieClothes == "military") then {
 	//_agent addVest (_vests call BIS_fnc_selectRandom);
 	
 	if (30 > random 100) then {
-		_helmets = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets");
+		_helmets = (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets") call BIS_fnc_getCfgData;
 		_agent addHeadgear (_helmets call BIS_fnc_selectRandom);
 	}; 
 };
@@ -95,12 +95,12 @@ if (_zombieClothes == "military") then {
 if (_zombieClothes == "helicopter") then {
 	
 	if (50 > random 100) then {
-		_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
+		_vests = (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests") call BIS_fnc_getCfgData;
 		_agent addVest (_vests call BIS_fnc_selectRandom);
 	};
 	
 	if (30 > random 100) then {
-		_helmets = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets");
+		_helmets = (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets") call BIS_fnc_getCfgData;
 		_agent addHeadgear (_helmets call BIS_fnc_selectRandom);
 	}; 
 };

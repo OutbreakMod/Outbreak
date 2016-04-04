@@ -1,6 +1,7 @@
 class tent: CA_Magazine
 {
 	displayName = "Pitchable Tent";
+	recipeName = "Small Storage Tent";
 	count = 1;
 	picture = "\addons\outbreak_assets\textures\items\outbreak_sleeping_bag.paa";
 	model = "\a3\structures_f\Civ\Camping\Sleeping_bag_folded_F";
@@ -11,7 +12,7 @@ class tent: CA_Magazine
 	}; 
 	
 	class cfgItemActions {
-		doubleClick = "['tent', 'OutbreakTent', true] call player_build;";
+		craftingDialog = "['tent', 'OutbreakTent', true] call player_build;";
 	};
 	
 	class cfgCraft {
