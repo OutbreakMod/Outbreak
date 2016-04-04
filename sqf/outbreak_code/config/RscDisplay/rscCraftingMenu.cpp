@@ -13,7 +13,9 @@ class rscCraftingMenu
 			idc = 35901;
 			text = "#(argb,8,8,3)color(0,0,0,0.5)";
 			x = 0.313531 * safezoneW + safezoneX;
+			y = 0.2588 * safezoneH + safezoneY;
 			w = 0.398438 * safezoneW;
+			h = 0.475 * safezoneH;
 		};
 		class itemComboSelection: RscCombo
 		{
