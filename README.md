@@ -50,6 +50,14 @@ This has been tested on my own personal computer. Client performance is at 55-60
 - 500 GB HDD
 
 --------------------------
+Screenshots
+--------------------------
+
+<img src="http://i.imgur.com/gRgICjc.png" style="width: 50%"/>
+
+
+
+--------------------------
 Mods Used
 --------------------------
 

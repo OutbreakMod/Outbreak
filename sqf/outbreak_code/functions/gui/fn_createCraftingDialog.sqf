@@ -37,6 +37,7 @@ fnc_resetWindow = {
 
 		_control = _idc displayCtrl _textIDC;
 		_control ctrlSetText "";
+		_control ctrlSetTextColor [1,1,1,1]; //white
 		
 		_pictureIDC = _pictureIDC + 1;
 		_textIDC = _textIDC + 1;
@@ -75,7 +76,7 @@ fn_drawMaterials = {
 		_control ctrlSetText _displayName;
 		
 		if ([player, _itemName, _amount] call fnc_hasItem) then {
-			_control ctrlSetTextColor [0,0.4,0,1]; // green
+			//_control ctrlSetTextColor [0,0.4,0,1]; // green
 		} else {
 			_control ctrlSetTextColor [1,0.314,0.314,1];//[1,0,0,1]; // red
 		};
