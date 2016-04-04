@@ -3,6 +3,8 @@
 - Added multi-lined texted for items with longer names in UI
 - Moved recipes away from CfgMagazines
 - Fixed GUI height
+- GUI now shows green/red if you have (or don't have) enough items
+- Searching ground for logs
 
 **Apr 3, 2016**
 - Crafting GUI by pressing U is now added
