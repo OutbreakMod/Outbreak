@@ -25,31 +25,20 @@ fnc_createCraftingDialog = {
 fnc_resetWindow = {
 
 	_idc = uiNamespace getVariable ["rscCraftingMenu", displayNull];
+	
+	_pictureIDC = 35904;
+	_textIDC = 35912;
 
-	if (!isNull _idc) then {
-		_control = _idc displayCtrl 35908;
+	for "_i" from 0 to 8 - 1 do { 
+	
+		_control = _idc displayCtrl _pictureIDC;
 		_control ctrlSetText "";
 
-		_control = _idc displayCtrl 35909;
+		_control = _idc displayCtrl _textIDC;
 		_control ctrlSetText "";
-
-		_control = _idc displayCtrl 35910;
-		_control ctrlSetText "";
-
-		_control = _idc displayCtrl 35911;
-		_control ctrlSetText "";
-
-		_control = _idc displayCtrl 35903;
-		_control ctrlSetText "";
-
-		_control = _idc displayCtrl 35904;
-		_control ctrlSetText "";
-
-		_control = _idc displayCtrl 35905;
-		_control ctrlSetText "";
-
-		_control = _idc displayCtrl 35906;
-		_control ctrlSetText "";
+		
+		_pictureIDC = _pictureIDC + 1;
+		_textIDC = _textIDC + 1;
 	};
 
 };
@@ -68,8 +57,8 @@ fn_drawMaterials = {
 	_magazine = (configFile >> "CfgMagazines" >> _cfgName);
 	_recipe = (_magazine >> "cfgCraft" >> "recipe") call BIS_fnc_getCfgData;
 
-	_pictureIDC = 35903;
-	_textIDC = 35908;
+	_pictureIDC = 35904;
+	_textIDC = 35912;
 	
 	for "_i" from 0 to (count _recipe) - 1 do { 
 	
