@@ -20,17 +20,6 @@ fnc_createCraftingDialog = {
 		
 	} forEach _recipes;
 	
-	
-	/*_recipes = (configFile >> "CfgRecipes" >> "recipes") call BIS_fnc_getCfgData;
-	{
-		_magazine = (configFile >> "CfgMagazines" >> _x);
-		_displayName = (_magazine >> "recipeName") call BIS_fnc_getCfgData;
-		
-		_index = _control lbAdd _displayName;
-		_control lbSetData [_index, _x];
-		
-	} forEach _recipes;*/
-	
 	_control ctrlSetEventHandler ["LBSelChanged", "_this call fn_drawMaterials"];
 };
 
@@ -67,7 +56,7 @@ fn_drawMaterials = {
 	
 	_dialog = uiNamespace getVariable "rscCraftingMenu";
 	_className = (configFile >> "CfgRecipes" >> _cfgName);
-	_recipe = (_magazine >> "recipe") call BIS_fnc_getCfgData;
+	_recipe = (_className >> "recipe") call BIS_fnc_getCfgData;
 
 	_pictureIDC = 35904;
 	_textIDC = 35912;

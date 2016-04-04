@@ -1,3 +1,9 @@
+**Apr 4, 2016**
+- Increased the amount of items to use in crafting
+- Added multi-lined texted for items with longer names in UI
+- Moved recipes away from CfgMagazines
+- Fixed GUI height
+
 **Apr 3, 2016**
 - Crafting GUI by pressing U is now added
 - Reading from configuration with different types of recipes is added.
