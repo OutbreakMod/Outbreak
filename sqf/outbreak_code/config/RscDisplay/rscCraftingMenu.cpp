@@ -8,14 +8,18 @@ class rscCraftingMenu
 
 	class controls
 	{	
+		////////////////////////////////////////////////////////
+		// GUI EDITOR OUTPUT START (by AmazingAussie, v1.063, #Filupu)
+		////////////////////////////////////////////////////////
+
 		class itemMainMenu: RscPicture
 		{
 			idc = 35901;
 			text = "#(argb,8,8,3)color(0,0,0,0.5)";
-			x = 0.313531 * safezoneW + safezoneX;
-			y = 0.2588 * safezoneH + safezoneY;
+			x = 0.30875 * safezoneW + safezoneX;
+			y = 0.262 * safezoneH + safezoneY;
 			w = 0.398438 * safezoneW;
-			h = 0.475 * safezoneH;
+			h = 0.467 * safezoneH;
 		};
 		class itemComboSelection: RscCombo
 		{
@@ -187,9 +191,19 @@ class rscCraftingMenu
 			h = 0.042 * safezoneH;
 			sizeEx = 0.025;
 		};
-		class cancelButton: RscButtonMenuCancel
+		class itemInfo: RscText
 		{
 			idc = 35920;
+			text = "If items are in red, it means you don't have enough"; //--- ToDo: Localize;
+			x = 0.315 * safezoneW + safezoneX;
+			y = 0.6598 * safezoneH + safezoneY;
+			w = 0.2 * safezoneW;
+			h = 0.042 * safezoneH;
+			sizeEx = 0.028;
+		};
+		class cancelButton: RscButtonMenuCancel
+		{
+			idc = 35921;
 			x = 0.6275 * safezoneW + safezoneX;
 			y = 0.6632 * safezoneH + safezoneY;
 			w = 0.06875 * safezoneW;
@@ -198,12 +212,16 @@ class rscCraftingMenu
 		};
 		class craftItemButton: RscButtonMenuCancel
 		{
-			idc = 35921;
+			idc = 35922;
 			text = "craft item"; //--- ToDo: Localize;
 			x = 0.523906 * safezoneW + safezoneX;
 			y = 0.6632 * safezoneH + safezoneY;
 			w = 0.0935 * safezoneW;
 			h = 0.04 * safezoneH;
 		};
+		////////////////////////////////////////////////////////
+		// GUI EDITOR OUTPUT END
+		////////////////////////////////////////////////////////
+
 	};
 };

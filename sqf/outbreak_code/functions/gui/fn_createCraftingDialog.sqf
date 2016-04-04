@@ -77,7 +77,7 @@ fn_drawMaterials = {
 		if ([player, _itemName, _amount] call fnc_hasItem) then {
 			_control ctrlSetTextColor [0,0.4,0,1]; // green
 		} else {
-			_control ctrlSetTextColor [1,0,0,1]; // red
+			_control ctrlSetTextColor [1,0.314,0.314,1];//[1,0,0,1]; // red
 		};
 	
 		_control = _dialog displayCtrl _pictureIDC;
