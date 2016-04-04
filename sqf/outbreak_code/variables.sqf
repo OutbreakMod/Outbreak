@@ -29,6 +29,7 @@ action_studyDeadBody = -1;
 action_applyMorphine = -1;
 action_chopTree = -1;
 action_build = -1;
+action_searchLogs = -1;
 
 player_performingAction = false;
 player_noWeapon = nil;
