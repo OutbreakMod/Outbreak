@@ -65,12 +65,20 @@ fn_drawMaterials = {
 	
 		_ingredient = _recipe select _i;
 		
-		_item = (configFile >> "CfgMagazines" >> _ingredient select 0);
+		_itemName = _ingredient select 0;
 		_amount = _ingredient select 1;
+		
+		_item = (configFile >> "CfgMagazines" >> _itemName);
 		
 		_displayName = format["%1 x%2", ((_item >> "displayName") call BIS_fnc_getCfgData), _amount];
 		_control = _dialog displayCtrl _textIDC;
 		_control ctrlSetText _displayName;
+		
+		if ([player, _itemName, _amount] call fnc_hasItem) then {
+			_control ctrlSetTextColor [0,0.4,0,1]; // green
+		} else {
+			_control ctrlSetTextColor [1,0,0,1]; // red
+		};
 	
 		_control = _dialog displayCtrl _pictureIDC;
 		_control ctrlSetText ((_item >> "picture") call BIS_fnc_getCfgData);
