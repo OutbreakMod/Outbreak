@@ -1,12 +1,19 @@
 class CfgRecipes {
 	
-	/*
-		Lists current "CfgMagazines" which contain recipes
-		see /config/cfgMagazines/items/ for more details
-	*/
-	recipes[] = {
-		"tent",
-		"blueprint_shack_v1",
-		"matchbox"
+	class DefaultRecipe {
+		recipeName = "";
+		recipeAction = "";
+		recipe[] = {};
+		consume[] = {};
 	};
+	
+	recipes[] = {
+		"SmallStorageTent",
+		"SmallWoodenShack",
+		"Fireplace"
+	};
+	
+	#include "Crafting\SmallStorageTent.cpp"
+	#include "Crafting\SmallWoodenShack.cpp"
+	#include "Crafting\Fireplace.cpp"
 };
