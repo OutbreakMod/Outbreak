@@ -55,6 +55,11 @@ Screenshots
 
 <img src="http://i.imgur.com/gRgICjc.png" />
 
+<img src="http://i.imgur.com/D6JWZ1i.png" />
+
+<img src="http://i.imgur.com/YBU0jjK.png" />
+
+<img src="http://i.imgur.com/eD9Lp91.png" />
 
 
 --------------------------
