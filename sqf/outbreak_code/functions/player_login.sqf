@@ -6,7 +6,7 @@
 private ["_timer"];
 
 _previousUnit = player;
-_newUnit = (createGroup west) createUnit ["b_survivor_F", getPosATL player, [], 0, "NONE"];
+_newUnit = (createGroup west) createUnit ["Survivor", getPosATL player, [], 0, "NONE"];
 
 addSwitchableUnit _newUnit;
 setPlayable _newUnit;

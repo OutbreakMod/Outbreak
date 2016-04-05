@@ -53,6 +53,8 @@ fn_drawMaterials = {
 	_selectedIndex = _this select 1; 
 	_cfgName = _control lbData _selectedIndex;
 	
+	uiNamespace setVariable ['rscCraftingMenuRecipe', _cfgName];
+	
 	call fnc_resetWindow;
 	
 	_dialog = uiNamespace getVariable "rscCraftingMenu";

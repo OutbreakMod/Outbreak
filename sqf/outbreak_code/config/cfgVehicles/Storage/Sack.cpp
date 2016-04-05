@@ -1,4 +1,4 @@
-class ItemSack: GroundWeaponHolder
+class MOD_Sack: GroundWeaponHolder
 {
 	scope = 2;
 	displayName = "Supplies";

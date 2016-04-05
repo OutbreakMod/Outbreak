@@ -1,4 +1,4 @@
-class WoodPileBox: GroundWeaponHolder
+class MOD_WoodPileBox: GroundWeaponHolder
 {
 	scope = 2;
 	displayName = "Wood Pile";

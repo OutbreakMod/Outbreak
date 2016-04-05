@@ -1,8 +1,8 @@
 class rscCraftingMenu
 {
 	idd = 35900;
-	onLoad="uiNamespace setVariable ['rscCraftingMenu', _this select 0]";
-	onUnload="uiNamespace setVariable ['rscCraftingMenu', displayNull]";
+	onLoad="uiNamespace setVariable ['rscCraftingMenu', _this select 0]; uiNamespace setVariable ['rscCraftingMenuRecipe', '']";
+	onUnload="uiNamespace setVariable ['rscCraftingMenu', displayNull]; uiNamespace setVariable ['rscCraftingMenuRecipe', '']";
 	movingEnable = false;
 	enableSimulation = true;
 
@@ -218,6 +218,7 @@ class rscCraftingMenu
 			y = 0.6632 * safezoneH + safezoneY;
 			w = 0.0935 * safezoneW;
 			h = 0.04 * safezoneH;
+			action = "[getText(configFile >> 'CfgRecipes' >> (uiNamespace getVariable ['rscCraftingMenuRecipe', '']) >> 'recipeAction')] spawn { call compile (_this select 0); }; closeDialog 0";
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END

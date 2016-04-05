@@ -1,29 +1,29 @@
 class CfgVehicles
 {
 	class GroundWeaponHolder;	// External class reference
-	#include "WeaponHolders\OutbreakBasket.cpp"
-	#include "WeaponHolders\ItemSack.cpp"
+	#include "Storage\Basket.cpp"
+	#include "Storage\Sack.cpp"
 	#include "Loot\MedicalBox.cpp"
 	#include "Loot\WoodPileBox.cpp"
 	
 	// Player bases
 	class Land_TentA_F;	// External class reference
-	#include "PlayerBases\OutbreakTent.cpp"
+	#include "Storage\StorageTent.cpp"
 	
 	class Land_TentDome_F;	// External class reference
-	#include "PlayerBases\OutbreakTentDome.cpp"
+	#include "Storage\StorageTentDome.cpp"
 
 	class Land_cargo_house_slum_F;	// External class reference
-	#include "PlayerBases\OutbreakShackV4.cpp"
+	#include "Storage\Shack4.cpp"
 	
 	class Land_Slum_House01_F;	// External class reference
-	#include "PlayerBases\OutbreakShackV3.cpp"
+	#include "Storage\Shack3.cpp"
 
 	class Land_Slum_House03_F;	// External class reference
-	#include "PlayerBases\OutbreakShackV2.cpp"
+	#include "Storage\Shack2.cpp"
 	
 	class Land_Slum_House02_F;	// External class reference
-	#include "PlayerBases\OutbreakShackV1.cpp"
+	#include "Storage\Shack1.cpp"
 	
 	class House;	// External class reference
 	class SpawnedWreck : House {
@@ -35,6 +35,10 @@ class CfgVehicles
 
 	class b_survivor_F;	// External class reference
 	class Zombie : b_survivor_F {
+		faceType = "ZombieFace";
+	};
+	
+	class Survivor : b_survivor_F {
 		faceType = "ZombieFace";
 	};
 };

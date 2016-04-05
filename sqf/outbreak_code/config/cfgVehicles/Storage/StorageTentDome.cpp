@@ -1,4 +1,4 @@
-class OutbreakTentDome: Land_TentDome_F {
+class MOD_StorageTentDome: Land_TentDome_F {
 	vehicleClass = "Survival";
 	transportMaxMagazines = 50;
 	transportMaxWeapons = 10;

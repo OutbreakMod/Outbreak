@@ -81,7 +81,7 @@ if (_finished) then {
 	_rawMeat = (_configMeat >> "raw") call BIS_fnc_getCfgData;
 	_amount = (_configMeat >> "yield") call BIS_fnc_getCfgData;
 
-	_basket = createVehicle ["OutbreakBasket", (getPosATL _deadAnimal), [], 0, "CAN_COLLIDE"];
+	_basket = createVehicle ["MOD_Basket", (getPosATL _deadAnimal), [], 0, "CAN_COLLIDE"];
 	_basket setDir (random 360);
 	_basket addItemCargoGlobal [_rawMeat, _amount];
 	
