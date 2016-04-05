@@ -41,7 +41,7 @@ Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG
 Peformance
 --------------------------
 
-This has been tested on my own personal computer. Client performance is at 55-60 fps (in a city) and 80+ fps in the wilderness, along with zombies and loot, at ultra settings with 1200 metre view distance.
+This has been tested on my own personal computer. Client performance is at 55-60 fps (in a city) and 80+ fps in the wilderness, along with zombies and loot, at ultra settings with 3600+ metre view distance.
 
 - i5 4690k
 - EVGA GTX 970 ACX
