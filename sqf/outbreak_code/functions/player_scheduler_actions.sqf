@@ -75,8 +75,7 @@ if (_check == "wild_zombies") then {
 			};
 
 			if (count _zombiePosition > 0) then {
-				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-				[_agent] call zombie_initialize;
+				[[_zombiePosition]] call zombie_create;
 			};
 
 		};

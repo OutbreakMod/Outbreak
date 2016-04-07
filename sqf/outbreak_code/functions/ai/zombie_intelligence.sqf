@@ -58,11 +58,11 @@ while {alive _unit} do {
 			
 			if (_hasTarget) then {
 				[_unit, "zalert" + str((floor random 5) + 1)] call object_speak;
+				_nextIdleSpeak = round (random 8);
 			} else {
 				[_unit, "zidle" + str((floor random 4) + 1)] call object_speak;
+				_nextIdleSpeak = round (random 20);
 			};
-			
-			_nextIdleSpeak = round (random 20);
 		};
 			
 		///

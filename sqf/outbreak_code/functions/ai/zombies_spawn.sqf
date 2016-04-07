@@ -51,8 +51,7 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 			};
 			
 			if (count _zombiePosition > 0) then {
-				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-				[_agent, _building] call zombie_initialize;
+				[[_zombiePosition, _building]] call zombie_create;
 			};
 			
 			/*_zombiePosition = [_position, 5, 15, 5] call fnc_selectRandomLocation;

@@ -70,5 +70,5 @@ if (!LOGGED_IN) then {
 	titleText ["Error occurred, please try again later.","BLACK FADED", _HIGH_NUMBER];
 } else {
 	titleFadeOut 7;
-	[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
+	//[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";
 };

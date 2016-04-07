@@ -49,6 +49,7 @@ zombie_hasTarget = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_initialize.sqf";
 zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_intelligence.sqf";
 zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_handleDamage.sqf";
+zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_create.sqf";
 
 obj_getModelName = {
 	_objInfo = toArray(str(_this));
