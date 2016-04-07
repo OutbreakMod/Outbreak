@@ -18,67 +18,36 @@ class CfgSounds
 		name = "zombie_alert1";
 		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert1.ogg",0.6,1};
 		titles[] = {};
+		duration = 1;
 	};
 	class zalert2
 	{
 		name = "zombie_alert2";
 		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert2.ogg",0.6,1};
 		titles[] = {};
+		duration = 3;
 	};	
 	class zalert3
 	{
 		name = "zombie_alert3";
 		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert3.ogg",0.6,1};
 		titles[] = {};
+		duration = 1;
 	};
 	class zalert4
 	{
 		name = "zombie_alert4";
 		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert4.ogg",0.6,1};
 		titles[] = {};
+		duration = 1;
 	};	
 	class zalert5
 	{
 		name = "zombie_alert5";
 		sound[] = {"addons\outbreak_sfx\sfx\zombies\alert5.ogg",0.6,1};
 		titles[] = {};
+		duration = 2;
 	};		
-	class zhurt1
-	{
-		name = "zombie_hurt1";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\hurt1.ogg",0.3,1};
-		titles[] = {};
-	};
-	class zhurt2
-	{
-		name = "zombie_hurt2";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\hurt2.ogg",0.3,1};
-		titles[] = {};
-	};
-	class zhurt3
-	{
-		name = "zombie_hurt3";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\hurt3.ogg",0.3,1};
-		titles[] = {};
-	};
-	class zpunch1
-	{
-		name = "zombie_punch1";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch1.ogg",0.3,1};
-		titles[] = {};
-	};
-	class zpunch2
-	{
-		name = "zombie_punch2";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch2.ogg",0.3,1};
-		titles[] = {};
-	};
-	class zpunch3
-	{
-		name = "zombie_punch3";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch3.ogg",0.3,1};
-		titles[] = {};
-	};
 	class zidle1
 	{
 		name = "zombie_idle1";
@@ -103,10 +72,22 @@ class CfgSounds
 		sound[] = {"addons\outbreak_sfx\sfx\zombies\idle4.ogg",0.3,1};
 		titles[] = {};
 	};
-	class zidle5
+	class zpunch1
 	{
-		name = "zombie_idle5";
-		sound[] = {"addons\outbreak_sfx\sfx\zombies\idle5.ogg",0.3,1};
+		name = "zombie_punch1";
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch1.ogg",0.3,1};
+		titles[] = {};
+	};
+	class zpunch2
+	{
+		name = "zombie_punch2";
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch2.ogg",0.3,1};
+		titles[] = {};
+	};
+	class zpunch3
+	{
+		name = "zombie_punch3";
+		sound[] = {"addons\outbreak_sfx\sfx\zombies\punch3.ogg",0.3,1};
 		titles[] = {};
 	};
 };

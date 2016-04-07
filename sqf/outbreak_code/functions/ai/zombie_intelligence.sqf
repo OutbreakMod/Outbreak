@@ -10,12 +10,15 @@ _nextWalkTime = 0;
 
 while {alive _unit} do {
 
-	// Search for alive targets
-	_unit call zombie_findTarget;
-	
+	_unit call zombie_findTarget;	
 	_hasTarget = _unit call zombie_hasTarget;
-	_target = _unit getVariable ["zombieTarget", _unit];
 	
+	_target = _unit getVariable ["zombieTarget", _unit];
+	_unit setVariable ["last_position", (getPosATL _unit)];
+	
+	///
+	/// Chase target
+	///
 	if (_hasTarget) then { 
 	
 		_destination = _target getVariable ["last_position", []];
@@ -41,9 +44,14 @@ while {alive _unit} do {
 	
 	};
 	
-	// ticking
+	///
+	/// Do tasks every x random amount of seconds
+	///
 	if ((_timer % 1) == 0) then { 
 
+		///
+		/// Idle talking
+		///
 		if (_nextIdleSpeak > 0) then {
 			_nextIdleSpeak = _nextIdleSpeak - 1;
 		} else {
@@ -51,12 +59,15 @@ while {alive _unit} do {
 			if (_hasTarget) then {
 				[_unit, "zalert" + str((floor random 5) + 1)] call object_speak;
 			} else {
-				[_unit, "zidle" + str((floor random 5) + 1)] call object_speak;
+				[_unit, "zidle" + str((floor random 4) + 1)] call object_speak;
 			};
 			
 			_nextIdleSpeak = round (random 20);
 		};
 			
+		///
+		/// Idle walking
+		///
 		if (!_hasTarget) then {
 			if (_nextWalkTime > 0) then {
 				_nextWalkTime = _nextWalkTime - 1;
@@ -72,8 +83,10 @@ while {alive _unit} do {
 			};
 		};
 	};
-	
-	// check if players nearby, if no players then we terminate zombie
+
+	///
+	/// Despawn zombie if players aren't nearby
+	///
 	if ((_timer % 60) == 0) then {
 		
 		_players = ([_unit, 300, "isPlayer"] call player_findNearby);
@@ -84,31 +97,49 @@ while {alive _unit} do {
 		};
 	};
 	
-	// Check if zombie is stuck
+	///
+	/// Zombie unstuck checking
+	///
 	if ((_timer % 60) == 0) then {
 		if (!_hasTarget) then {
 			
 			_currentPosition = getPosATL _unit;
-			_position = _unit getVariable ["last_position", (getPosATL _unit)];
+			_position = _unit getVariable ["last_position", _currentPosition];
 			
-			// if true then zombie is stuck
-			if (_unit distance _position <= 2) then { 
-				_newPosition = [_currentPosition, 5, 50, 10] call fnc_selectRandomLocation;
+			if (_currentPosition distance _position <= 1) then { 
 				
-				_unit setPos _newPosition;
-				_unit setVariable ["zombieSpawned", _newPosition];
+				_zombiePosition = [];
+				_needsRelocated = true;
+				_counter = 0;
+
+				while {_needsRelocated} do {
+					
+					_zombiePosition = [_currentPosition, 3, 30, 3] call fnc_selectRandomLocation;
+					_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
+					
+					if ((count _players) == 0) then {
+						_needsRelocated = false;
+					};
+					
+					_counter = _counter + 1;
+					
+					if (_counter > 20) then {
+						_zombiePosition = [];
+						_needsRelocated = false;
+					};
+				};
+
+				if (count _zombiePosition > 0) then {	
+					_unit setPos _zombiePosition;
+					_unit setVariable ["zombieSpawned", _zombiePosition];
+				};
 			};
 		};
 	};
 	
-	// update the zombie wandering position every 30 secs
-	/*if ((_timer % 30) == 0) then {
-		_newPosition = [(getPosATL _unit), 5, 30, 3] call fnc_selectRandomLocation;
-		_unit setVariable ["zombieSpawned", _newPosition];
-	};*/
-	
-
-	// leg breaking
+	///
+	/// Send leg updates
+	///
 	if (_unit getVariable ["update_legs", 0] > 0) then {
 
 		_oldDamage = (_unit getHit "legs");
@@ -121,13 +152,6 @@ while {alive _unit} do {
 			_unit switchMove "AmovPpneMstpSrasWrflDnon"; // prone
 		};
 	};
-	
-	// check health
-	if (_unit getVariable ["health", 6000] < 0) then {
-		_unit setDamage 1;
-	};
-	
-	_unit setVariable ["last_position", (getPosATL _unit)];
 	
 	sleep 0.25; // loop timer every 250m
 	_timer = _timer + 0.25;
