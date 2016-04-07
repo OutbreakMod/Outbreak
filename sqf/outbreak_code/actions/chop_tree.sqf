@@ -71,7 +71,7 @@ if (_finished) then {
 	_item = objNull;
 	
 	 if (count _nearByPile == 0) then {
-		_item = createVehicle ["ItemSack", _wpPos, [], 1, "CAN_COLLIDE"];
+		_item = createVehicle ["MOD_Sack", _wpPos, [], 1, "CAN_COLLIDE"];
 	} else {
 		_item = _nearByPile select 0;
 	};

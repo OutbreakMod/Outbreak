@@ -1,4 +1,4 @@
-class OutbreakBasket: GroundWeaponHolder
+class MOD_Basket: GroundWeaponHolder
 {
 	scope = 2;
 	vehicleClass = "Market";

@@ -106,4 +106,4 @@ if (_zombieClothes == "helicopter") then {
 };
 
 diag_log format ["Spawning zombie at %1 near %2 with clothes %3 : %4", getPos _agent, _className, _zombieClothes, _uniform];
-_agent spawn fnc_zombieAI; // Give zombie the brains :)
+_agent spawn zombie_intelligence; // Give zombie the brains :)

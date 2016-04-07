@@ -9,9 +9,10 @@ _nextIdleSpeak = 0;
 
 while {alive _unit} do {
 
-	_unit call fnc_findTarget;
+	// Search for alive targets
+	_unit call zombie_findTarget;
 	
-	_hasTarget = _unit call fnc_hasTarget;
+	_hasTarget = _unit call zombie_hasTarget;
 	_target = _unit getVariable ["zombieTarget", _unit];
 	
 	if (_hasTarget) then { 
@@ -33,7 +34,7 @@ while {alive _unit} do {
 				
 				// try hitting every 2 seconds
 				if ((_timer % 2) == 0) then {
-					[_unit, _target] spawn fnc_targetAttack;
+					[_unit, _target] spawn zombie_attack;
 				};
 			};
 		} else {

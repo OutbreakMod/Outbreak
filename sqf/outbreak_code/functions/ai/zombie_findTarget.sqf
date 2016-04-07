@@ -6,7 +6,7 @@
 _unit = _this;
 
 _players = ([_unit, 20, "isPlayer"] call player_findNearby);
-_hasTarget = _unit call fnc_hasTarget;
+_hasTarget = _unit call zombie_hasTarget;
 _target = _unit getVariable ["zombieTarget", _unit];
 
 // if there's players within range

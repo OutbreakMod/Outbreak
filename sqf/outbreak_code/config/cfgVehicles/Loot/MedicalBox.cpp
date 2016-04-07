@@ -1,4 +1,4 @@
-class MedicalBox: GroundWeaponHolder
+class MOD_MedicalBox: GroundWeaponHolder
 {
 	scope = 2;
 	vehicleClass = "Medical";

@@ -1,4 +1,4 @@
-class OutbreakTent: Land_TentA_F {
+class MOD_Shack2: Land_Slum_House03_F {
 	vehicleClass = "Survival";
 	transportMaxMagazines = 50;
 	transportMaxWeapons = 10;
