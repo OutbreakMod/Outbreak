@@ -12,7 +12,7 @@ _unit setVariable ["lastpos", _pos];
 
 if (_unit getVariable ["alive", false]) then {
 	if (LOGGED_IN) then {
-		hive_playerSave = [_unit, name _unit, _pos, _unit call player_serializeInventory, (player getHit "legs"), _unit getVariable ["health", 6000]];
+		hive_playerSave = player getVariable ["playerSaveData", []];
 		publicVariableServer "hive_playerSave";
 	};
 };

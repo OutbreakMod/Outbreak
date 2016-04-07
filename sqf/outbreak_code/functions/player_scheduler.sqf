@@ -18,7 +18,7 @@
 		["zombie", 200],
 		["health", 0],
 		["health_level", 1],
-		["sync", 1],
+		["sync", 180],
 		["fracture", 1],
 		["reset_fracture", 1],
 		["leg_damage", 0]
