@@ -38,7 +38,7 @@ if (_check == "loot") then {
 			_type = typeOf _building;
 			if (isClass (configFile >> "cfgBuildingClothes" >> _type)) then {
 				if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
-					[_unit, _building] call player_spawnZombies;
+					[_unit, _building] call zombies_spawn;
 				};
 			};
 		};
@@ -76,7 +76,7 @@ if (_check == "wild_zombies") then {
 
 			if (count _zombiePosition > 0) then {
 				_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-				[_agent] call fnc_zombie;
+				[_agent] call zombie_initialize;
 			};
 
 		};

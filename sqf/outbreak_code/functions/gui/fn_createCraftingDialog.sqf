@@ -71,9 +71,11 @@ fn_drawMaterials = {
 		_itemName = _ingredient select 0;
 		_amount = _ingredient select 1;
 		
+		_currentAmount = [player, _itemName] call fnc_countItems;
+		
 		_item = (configFile >> "CfgMagazines" >> _itemName);
 		
-		_displayName = format["%1 x%2", ((_item >> "displayName") call BIS_fnc_getCfgData), _amount];
+		_displayName = format["%1 %2/%3", ((_item >> "displayName") call BIS_fnc_getCfgData), _currentAmount, _amount];
 		_control = _dialog displayCtrl _textIDC;
 		_control ctrlSetText _displayName;
 		
