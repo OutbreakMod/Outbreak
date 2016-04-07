@@ -1,4 +1,5 @@
 /*
+	Creates a new zombie with AI from given position and returns the zombie created
 	@author: TheAmazingAussie
 */
 
@@ -23,11 +24,13 @@ if (count _data > 1) then {
 if (_local) then {
 	
 	_spawnedZombies = player getVariable ["spawnedZombies", []];
+	_spawnedZombies pushBack _zombie;
 	
 	 // add zombie to players spawned zombie list
 	player setVariable ["spawnedZombies", _spawnedZombies, true];
 	
 };
 
+_zombie;
 
 				
