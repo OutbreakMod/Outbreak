@@ -87,6 +87,37 @@ if (_check == "wild_zombies") then {
 if (_check == "actions") then {
 	[] execVM "addons\outbreak_code\functions\player_createActions.sqf";
 	[] execVM "addons\outbreak_code\functions\player_createActionsExtended.sqf";
+	
+	_health = player getVariable ["health", 6000];
+	
+	if (_health < 1500) then {
+		
+		_interval = 20;
+		_bloodUpdate = player getVariable ["bloodUpdate", _interval];
+		
+		if (_bloodUpdate == 0) then {
+			4 cutRsc ["rscBloodyScreen", "PLAIN", 0];
+			player setVariable ["bloodUpdate", _interval];
+			
+		} else {
+			
+			if (_bloodUpdate == _interval) then {
+				4 cutFadeOut 5;
+			};
+			
+			player setVariable ["bloodUpdate", _bloodUpdate - 1];
+		};
+		
+	};
+};
+
+if (_check == "sfx") then {
+	
+	_health = player getVariable ["health", 6000];
+	
+	if (_health < 1500) then {
+		playSound "heartpounding";
+	};
 };
 
 if (_check == "sync") then {
@@ -100,6 +131,7 @@ if (_check == "debugmenu") then {
 if (_check == "health") then {
 
 	player setVariable ["last_position", (getPosATL player), true];
+	
 	_health = player getVariable ["health", 6000];
 	
 	if (_health < 0) then {
