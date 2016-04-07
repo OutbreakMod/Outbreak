@@ -13,11 +13,14 @@ LOOT_SPAWN_RADIUS = (configFile >> "CfgGame" >> "LOOT_SPAWN_RADIUS") call BIS_fn
 MIN_LOOT_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_LOOT_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
 MIN_ZOMBIE_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_ZOMBIE_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
 
-MIN_WILD_ZOMBIE_SPAWN_DISTANCE = 100;
+MIN_WILD_ZOMBIE_SPAWN_DISTANCE = 150;
 MAX_WILD_ZOMBIE_SPAWN_DISTANCE = 200;
 
 STANDING_POSES = (configFile >> "CfgGame" >> "STANDING_POSES") call BIS_fnc_getCfgData;
 STORAGE_UNITS = (configFile >> "CfgGame" >> "STORAGE_UNITS") call BIS_fnc_getCfgData;
+
+DEAD_ZOMBIE_DESPAWN_TIME = (configFile >> "CfgGame" >> "DEAD_ZOMBIE_DESPAWN_TIME") call BIS_fnc_getCfgData;
+DEAD_PLAYER_DESPAWN_TIME = (configFile >> "CfgGame" >> "DEAD_PLAYER_DESPAWN_TIME") call BIS_fnc_getCfgData;
 
 LOGGED_IN = false;
 INTERRUPT_ACTION = false;

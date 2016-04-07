@@ -86,7 +86,7 @@ if (_check == "wild_zombies") then {
 
 if (_check == "actions") then {
 	[] execVM "addons\outbreak_code\functions\player_createActions.sqf";
-	[] execVM "addons\outbreak_code\functions\player_interactWorld.sqf";
+	[] execVM "addons\outbreak_code\functions\player_createActionsExtended.sqf";
 };
 
 if (_check == "sync") then {
@@ -146,13 +146,15 @@ if (_check == "fracture") then {
 
 if (_check == "leg_damage") then {
 	
-	_damage = (player getHit "legs");
-	
-	if (_damage > 0.6) then {
-		_state = format["%1", animationState player];
+	if (alive player) then {
+		_damage = (player getHit "legs");
 		
-		if (_state in STANDING_STANCES) then {
-			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+		if (_damage > 0.6) then {
+			_state = format["%1", animationState player];
+			
+			if (_state in STANDING_POSES) then {
+				player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+			};
 		};
 	};
 };
