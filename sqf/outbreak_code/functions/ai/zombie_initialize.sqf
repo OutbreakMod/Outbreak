@@ -31,6 +31,9 @@ _agent addEventHandler ["Killed",
 	_unit = _this select 0;
 	_unit removeAllEventHandlers "HandleDamage";
 	
+	server_cleanup = [_unit, DEAD_ZOMBIE_DESPAWN_TIME];
+	publicVariableServer "server_cleanup";
+	
  }];
 
 _agent setHit ["body", 0.9];

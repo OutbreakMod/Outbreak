@@ -86,4 +86,4 @@ class MultipleLineRscText : RscText {
 };
 
 #include "rscTitles.cpp"
-#include "rscCraftingMenu.cpp"
+#include "Dialogs\rscCraftingMenu.cpp"

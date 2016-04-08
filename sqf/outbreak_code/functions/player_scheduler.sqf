@@ -13,14 +13,10 @@
 		["loot", 20],
 		["wild_zombies", 30],
 		["actions", 1],
-		["debugmenu", 1],
-		["zombie", 200],
+		["sfx", 1],
 		["health", 0],
-		["health_level", 1],
-		["bones", 1],
-		["sync", 1],
+		["sync", 180],
 		["fracture", 1],
-		["reset_fracture", 1],
 		["leg_damage", 0]
 	];
 	
@@ -28,15 +24,18 @@
 	
 		{
 			if (LOGGED_IN) then {
-				_task = _x select 0;
-				_seconds = _x select 1;
-				
-				if (_seconds > 0) then {
-					if ((_timer % _seconds) == 0) then {
-						null = [player, _task] spawn player_scheduler_actions;
+				if (alive player) then {
+					
+					_task = _x select 0;
+					_seconds = _x select 1;
+					
+					if (_seconds > 0) then {
+						if ((_timer % _seconds) == 0) then {
+							[] execVM format["addons\outbreak_code\functions\schedule_actions\schedule_%1.sqf", _task];
+						};
+					} else {
+						[] execVM format["addons\outbreak_code\functions\schedule_actions\schedule_%1.sqf", _task];
 					};
-				} else {
-					null = [player, _task] spawn player_scheduler_actions;
 				};
 			};
 			

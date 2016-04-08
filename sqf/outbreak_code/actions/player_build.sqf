@@ -83,7 +83,7 @@ if (!_finished) then {
 	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
-		player switchmove "";
+		[player, ""] remoteExecCall ["fnc_anim_switchMove"];
 		player playActionNow "stop";
 	};
 	

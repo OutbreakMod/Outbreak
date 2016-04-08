@@ -14,3 +14,7 @@ publicVariableServer "hive_playerDelete";
 
 // custom alive/dead function for outbreak
 player setVariable ["alive", false];
+
+// clean up body timer
+server_cleanup = [_unit, DEAD_PLAYER_DESPAWN_TIME];
+publicVariableServer "server_cleanup";

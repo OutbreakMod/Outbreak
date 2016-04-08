@@ -7,8 +7,6 @@
 player_respawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_respawn.sqf";
 player_killed = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_killed.sqf";
 player_findSpawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_findSpawn.sqf";
-player_scheduler_actions = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_scheduler_actions.sqf";
-player_hiveSync = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_hiveSync.sqf";
 player_pressKey = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_pressKey.sqf";
 player_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_handleDamage.sqf";
 player_command = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_command.sqf";
@@ -34,6 +32,7 @@ fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 fnc_simulateHealthEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_simulateHealthEffect.sqf";
 fnc_selectRandomLocation = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_selectRandomLocation.sqf";
 fnc_convertMagazines = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_convertMagazines.sqf";
+fnc_baseWeapon = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_baseWeapon.sqf";
 create_uid = compile preProcessFileLineNumbers "addons\outbreak_code\functions\create_uid.sqf";
 KK_fnc_arrayShuffle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\KK_fnc_arrayShuffle.sqf";
 
@@ -49,6 +48,11 @@ zombie_hasTarget = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_initialize.sqf";
 zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_intelligence.sqf";
 zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_handleDamage.sqf";
+zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_create.sqf";
+
+fnc_anim_switchMove = compileFinal "_this select 0 switchmove (_this select 1)";
+fnc_anim_playMoveNow = compileFinal "_this select 0 switchmove (_this select 1)";
+fnc_object_speak = compileFinal "(_this select 0) say3D [(_this select 1), (_this select 2)]";
 
 obj_getModelName = {
 	_objInfo = toArray(str(_this));
