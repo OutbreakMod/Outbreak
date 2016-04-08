@@ -88,7 +88,7 @@ if (_check == "actions") then {
 	[] execVM "addons\outbreak_code\functions\player_createActionsExtended.sqf";
 	
 	// Save variable
-	_saveData = [player, (name player), (getPosATL player), (player call player_serializeInventory), (player getHit "legs"), (player getVariable ["health", 6000])];
+	_saveData = [player, (name player), (getPlayerUID _unit), (getPosATL player), (player call player_serializeInventory), (player getHit "legs"), (player getVariable ["health", 6000])];
 	player setVariable ["playerSaveData", _saveData, true];
 	
 	// Blood effect
