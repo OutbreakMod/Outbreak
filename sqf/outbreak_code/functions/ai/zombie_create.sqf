@@ -6,16 +6,20 @@
 _data = _this select 0;
 _position = _data select 0;
 
-_local = true;
+_building = objNull;
+if (count _data > 1) then {
+	_building = _data select 1;
+};
 
+_local = true;
 if (count _this > 1) then {
 	_local = _this select 1;
 };
-			
+
 _zombie = createAgent ["Zombie", _position, [], 0, "NONE"];
 
-if (count _data > 1) then {
-	[_zombie, _data select 1] call zombie_initialize;
+if (!(_building == objNull)) then {
+	[_zombie, _building] call zombie_initialize;
 } else {
 	[_zombie] call zombie_initialize;
 };

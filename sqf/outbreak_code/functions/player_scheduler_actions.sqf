@@ -175,7 +175,9 @@ if (_check == "fracture") then {
 		player setVariable ["update_legs", 0, true];
 		
 		if (_newDamage > 0.58) then {
-			player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+			
+			// GO PRONE
+			[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];
 		};
 	};
 };
@@ -189,7 +191,9 @@ if (_check == "leg_damage") then {
 			_state = format["%1", animationState player];
 			
 			if (_state in STANDING_POSES) then {
-				player switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+				
+				// GO PRONE
+				[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];
 			};
 		};
 	};

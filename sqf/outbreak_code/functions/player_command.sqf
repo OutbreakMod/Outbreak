@@ -6,15 +6,6 @@
 _response = _this select 1;
 _command = _response select 0;
 
-if (_command == "say") then {
-	
-	_unit = _response select 1;
-	_sfx = _response select 2;
-	_dist = _response select 3;
-	_unit say3D [_sfx, _dist];
-};
-
-
 if (_command == "findspawn") then { 
 	
 	_pos = call player_findSpawn;

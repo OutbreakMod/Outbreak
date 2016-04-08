@@ -11,11 +11,9 @@ _dir = round(direction player) + 180;
 _unit setDir _dir;
 
 [_unit, "zpunch" + str((floor random 3) + 1)] call object_speak;
+[_unit, "AwopPercMstpSgthWnonDnon_end"] remoteExecCall ["fnc_anim_playMoveNow"];
 
-// attack animation
-_unit playMoveNow "AwopPercMstpSgthWnonDnon_end";
-
-sleep 2;
+sleep 1.5;
 
 // get targets last known location
 _walkPath = _target getVariable ["last_position", []];
@@ -36,5 +34,5 @@ if (_unit distance _walkPath <= 2 && alive _unit) then {
 	
 } else {
 	// if target moved between zombie trying to hit, then we cancel
-	_unit switchMove "";
+	[_unit, ""] remoteExecCall ["fnc_anim_switchMove"];
 };
