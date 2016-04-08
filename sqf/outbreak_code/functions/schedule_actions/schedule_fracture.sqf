@@ -1,3 +1,8 @@
+/*
+	Updates the leg damage to local player
+	@author: TheAmazingAussie
+*/
+
 if (player getVariable ["update_legs", 0] > 0) then {
 
 	_oldDamage = (player getHit "legs");

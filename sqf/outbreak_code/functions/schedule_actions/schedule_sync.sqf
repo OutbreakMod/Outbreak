@@ -1,3 +1,8 @@
+/*
+	Sync character data with server
+	@author: TheAmazingAussie
+*/
+
 _name = name player;
 _uid = getPlayerUID player;
 _pos = getPosATL player;

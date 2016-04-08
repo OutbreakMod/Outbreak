@@ -1,3 +1,8 @@
+/*
+	Spawn wild zombies
+	@author: TheAmazingAussie
+*/
+
 _zombies = ([getPosATL player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
 
 if (count _zombies == 0) then {
@@ -27,7 +32,5 @@ if (count _zombies == 0) then {
 		if (count _zombiePosition > 0) then {
 			[[_zombiePosition]] call zombie_create;
 		};
-
 	};
-	
 };

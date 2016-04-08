@@ -1,3 +1,9 @@
+/*
+	Checks to see if a player is standing, if so, force them prone
+	@author: TheAmazingAussie
+*/
+
+
 if (alive player) then {
 	_damage = (player getHit "legs");
 	
