@@ -14,13 +14,9 @@
 		["wild_zombies", 30],
 		["actions", 1],
 		["sfx", 1],
-		["debugmenu", 1],
-		["zombie", 200],
 		["health", 0],
-		["health_level", 1],
 		["sync", 180],
 		["fracture", 1],
-		["reset_fracture", 1],
 		["leg_damage", 0]
 	];
 	
@@ -35,10 +31,10 @@
 					
 					if (_seconds > 0) then {
 						if ((_timer % _seconds) == 0) then {
-							null = [player, _task] spawn player_scheduler_actions;
+							[] execVM format["addons\outbreak_code\functions\schedule_actions\schedule_%1.sqf", _task];
 						};
 					} else {
-						null = [player, _task] spawn player_scheduler_actions;
+						[] execVM format["addons\outbreak_code\functions\schedule_actions\schedule_%1.sqf", _task];
 					};
 				};
 			};
