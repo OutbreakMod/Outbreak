@@ -34,13 +34,12 @@ if (_command == "medical") then {
 	_health = _medicalArray select 1;
 	
 	if (_health < 1) then {
-		hive_playerDelete = [_unit];
-		publicVariableServer "hive_playerDelete";
+		
+		[player] remoteExecCall ["remoteExec_player_delete", 2];
 
 		deleteVehicle (player);
 
-		hive_playerLogin = [player];
-		publicVariableServer "hive_playerLogin";
+		[player] remoteExecCall ["remoteExec_player_login", 2];
 	};
 	
 	player setHit ["legs", _medicalArray select 0];

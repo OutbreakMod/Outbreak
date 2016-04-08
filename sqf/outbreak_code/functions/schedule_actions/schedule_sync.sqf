@@ -10,5 +10,4 @@ _inventory = (player call player_serializeInventory);
 _hit = player getHit "legs";
 _health = player getVariable ["health", 6000];
 
-hive_playerSave = [player, _name, _uid, _pos, _inventory, _hit, _health];
-publicVariableServer "hive_playerSave";
+[player, _name, _uid, _pos, _inventory, _hit, _health] remoteExecCall ["remoteExec_player_save", 2];

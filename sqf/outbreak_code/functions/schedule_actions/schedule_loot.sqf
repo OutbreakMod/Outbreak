@@ -14,8 +14,7 @@ _nearly = _nearby call KK_fnc_arrayShuffle; // Spice it up :D
 	_distance = _building distance player;
 	
 	//if (_distance >= MIN_LOOT_SPAWN_DISTANCE) then {
-		server_spawnLoot = [_building];
-		publicVariableServer "server_spawnLoot";
+		[_building] remoteExecCall ["remoteExec_spawn_loot", 2];
 	//};
 	
 	if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
