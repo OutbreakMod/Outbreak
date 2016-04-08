@@ -1,0 +1,1 @@
+1 call fnc_damageEffect;
