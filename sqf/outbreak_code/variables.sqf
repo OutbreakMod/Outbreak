@@ -28,6 +28,7 @@ ZOMBIE_TARGET_COOLDOWN = 30; // After a zombie stops following someone, how many
 
 LOGGED_IN = false;
 INTERRUPT_ACTION = false;
+CAMERA_SHAKE_ACTIVE = false;
 
 // reset actions
 action_gutAnimal = -1;

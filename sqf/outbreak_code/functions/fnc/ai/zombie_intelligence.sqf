@@ -13,15 +13,28 @@ while {alive _unit} do {
 	_unit call zombie_findTarget;	
 	_hasTarget = _unit call zombie_hasTarget;
 	
+	// Set target variable as itself, aka no target
 	_target = _unit getVariable ["zombieTarget", _unit];
+	
+	// By default, the zombies didn't hear any gunshots
+	_heardGunshot = _unit getVariable ["zombieGunshotHeard", false];
+	
+	// Update last position
 	_unit setVariable ["last_position", (getPosATL _unit), true];
+	
 	
 	///
 	/// Chase target
 	///
-	if (_hasTarget) then { 
+	if (_hasTarget or _heardGunshot) then { 
 	
-		_destination = _target getVariable ["last_position", []];
+		_destination = [];
+		
+		if (_hasTarget) then {
+			_destination = _target getVariable ["last_position", []];
+		} else {
+			_destination = _unit getVariable ["zombieGunshotPosition", []];
+		};
 		
 		if (count _destination > 0) then {
 
@@ -36,6 +49,11 @@ while {alive _unit} do {
 
 				if ((_timer % 2) == 0) then {
 					[_unit, _target] spawn zombie_attack;
+				};
+				
+				if (_heardGunshot) then {
+					_unit setVariable ["zombieGunshotHeard", false, true];
+					_unit setVariable ["zombieGunshotPosition", [], true];
 				};
 			};
 		} else {

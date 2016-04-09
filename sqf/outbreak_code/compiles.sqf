@@ -48,6 +48,7 @@ zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\func
 zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_intelligence.sqf";
 zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_handleDamage.sqf";
 zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_create.sqf";
+zombies_alert = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombies_alert.sqf";
 
 // remote exec fnc
 fnc_anim_switchMove = compileFinal "_this select 0 switchmove (_this select 1)";
