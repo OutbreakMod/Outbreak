@@ -12,7 +12,7 @@ if (!(_zombie distance _target > 40)) then {
 	_eyeDir = eyeDirection _zombie;
 	_eyeAngle = abs((_eyeDir select 0) atan2 (_eyeDir select 1));
 
-	if (abs(_targetAngle - _eyeAngle) < 60) then {
+	if (abs(_targetAngle - _eyeAngle) < 140) then { // slightly reduced vision from 180 because zombies
 
 		if (!(terrainIntersectASL[eyePos _target, eyePos _zombie])) then {
 			if (!(lineIntersects[eyePos _target, eyePos _zombie])) then {

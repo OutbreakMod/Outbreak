@@ -48,7 +48,14 @@ while {alive _unit} do {
 	/// Do tasks every x random amount of seconds
 	///
 	if ((_timer % 1) == 0) then { 
-
+		
+		_cooldown = _unit getVariable ["zombieTargetCooldown", 0];
+				
+		if (_cooldown > 0) then {
+			_unit setVariable ["zombieTargetCooldown", _cooldown - 1, true];
+		};
+			
+	
 		///
 		/// Idle talking
 		///
@@ -89,11 +96,11 @@ while {alive _unit} do {
 		
 		if (_hasTarget) then {
 			
-			_timer = _unit getVariable ["loseZombieTimer", 0];
+			_timerLose = _unit getVariable ["loseZombieTimer", 0];
 					
-			if (_timer > 0) then {
-				_timer = _timer - 1;
-				_unit setVariable ["loseZombieTimer", _timer, true];
+			if (_timerLose > 0) then {
+				_timerLose = _timerLose - 1;
+				_unit setVariable ["loseZombieTimer", _timerLose, true];
 			};
 						
 			if ((_unit distance _target >= LOSE_ZOMBIE_DISTANCE) or (!(_timer > 0))) then {	
@@ -101,8 +108,9 @@ while {alive _unit} do {
 				_zombies = _target getVariable ["attackingZombies", []];
 				_zombies = _zombies - [_unit];
 				_target setVariable ["attackingZombies", _zombies, true];
-				
+
 				_unit setVariable ["zombieTarget", _unit, true];
+				_unit setVariable ["zombieTargetCooldown", ZOMBIE_TARGET_COOLDOWN, true];
 				_unit setVariable ["zombieSpawned", getPos _target, true];
 			};
 		};
