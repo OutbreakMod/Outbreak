@@ -3,7 +3,7 @@
 </p>
 
 
-Outbreak Mod created by Alex (TheAmazingAussie), inspired by DayZ mod created for Arma 3, is a multiplayer survival mod that aims for realism in world where infection has taken over and turned people into monsters.
+Outbreak Mod created by Alex (TheAmazingAussie) inspired by DayZ mod created for Arma 3, is a multiplayer survival mod that aims for realism in world where infection has taken over and turned people into monsters.
 
 The master repository is the stable branch, if you want to test the newest updates then go to [here](https://github.com/OutbreakMod/Outbreak/tree/unstable) however **I cannot guarantee** that you won't experience problems with client performance and you will *most likely* experience error warnings and bugs.
 
@@ -15,27 +15,29 @@ Features
 
 Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG.md
 
-- All data is saved through the server which utilises MySQL and ArmaHive.
+- All character data is saved
 - Permadeath system (lose all your gear when dying, respawn starts a fresh character)
 - Clothes are randomised when respawning
 - Loot spawning in different buildings, different types of loot depending on which buildings
-- FPS optimised, high performance
+- High client and client performance
 - Persistent object storage
-- Object spawns across the map
-- Basic crafting, wood shack, etc
-- Convert magazine typee
-- Medical system such as blood count
-- Colour the screen depending on your blood level
-- Breaking legs
-- Heal legs with morphine
+- Database controlled object spawns
+- Custom crafting using a custom UI
+- Crafting recipes
+- Convert magazines
+- Medical system
+- Low health effects
+- Showing visual blood level
+- Possible to break legs, including zombies legs
+- Fix legs with morphine
 - Study body (tell what caliber they were shot by, how they died etc)
 - Zombies with custom AI written by me
-- Zombie sounds
-- Zombie attacking (checking if player is nearby)
-- Zombie clothing changes depending on where zombies spawned
+- Different zombie sounds depending if idle, attacking, spotting players
+- Zombie uniform changes depending which building they spawned at
 - Dynamic server events, such as helicopter crash sites, which can be custom changed to rotate around the map every x minutes or just run once when server restarts.
 - Zombies spawning at dynamic events 
-- Chop trees down and harvest logs using an axe
+- Custom object actions (study body, gut body)
+- Custom world actions (search logs, chopping trees down)
 
 --------------------------
 Peformance
