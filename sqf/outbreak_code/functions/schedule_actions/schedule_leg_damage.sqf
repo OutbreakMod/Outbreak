@@ -5,7 +5,7 @@
 
 
 if (alive player) then {
-	if ((player getHit "legs") > 0.6) then {
+	if ((player getHit "legs") > 0.58) then {
 		if ((stance player) == "STAND") then {
 			[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];
 		};					

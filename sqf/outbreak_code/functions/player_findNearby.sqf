@@ -10,7 +10,7 @@ _range = _this select 1;
 _variable = _this select 2;
 
 _units = [];
-_nearby = _position nearEntities ["Man", _range];
+_nearby = _position nearEntities [["Man", "Animal_Base_F", "Animal"], _range];
 
 {
 	_unit = _x;
