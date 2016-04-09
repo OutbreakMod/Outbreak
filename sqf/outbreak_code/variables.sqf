@@ -22,6 +22,9 @@ STORAGE_UNITS = (configFile >> "CfgGame" >> "STORAGE_UNITS") call BIS_fnc_getCfg
 DEAD_ZOMBIE_DESPAWN_TIME = (configFile >> "CfgGame" >> "DEAD_ZOMBIE_DESPAWN_TIME") call BIS_fnc_getCfgData;
 DEAD_PLAYER_DESPAWN_TIME = (configFile >> "CfgGame" >> "DEAD_PLAYER_DESPAWN_TIME") call BIS_fnc_getCfgData;
 
+LOSE_ZOMBIE_TIMER = 120; // If a timer spots a zombie, this is in how many seconds a zombie will continue to chase until they get bored
+LOSE_ZOMBIE_DISTANCE = 45; // How far away the player has to run before the zombie grows bored
+
 LOGGED_IN = false;
 INTERRUPT_ACTION = false;
 
