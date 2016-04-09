@@ -83,4 +83,4 @@
 - Server-side loot spawn
 - TheAmazingAussie committed on Nov 8, 2015
 
-
+*The first commit can be found [here](https://github.com/OutbreakMod/Outbreak/commit/967fc3781b8805d61ee70946b7b9893cb74abc87)*
