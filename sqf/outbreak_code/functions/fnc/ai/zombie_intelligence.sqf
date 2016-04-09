@@ -17,7 +17,7 @@ while {alive _unit} do {
 	_target = _unit getVariable ["zombieTarget", _unit];
 	
 	// By default, the zombies didn't hear any gunshots
-	_heardGunshot = _unit getVariable ["zombieGunshotHeard", false];
+	_heardGunshot = (_unit getVariable ["zombieTimerGunshot", -1]) > 0;
 	
 	// Update last position
 	_unit setVariable ["last_position", (getPosATL _unit), true];
@@ -47,13 +47,16 @@ while {alive _unit} do {
 			if (_unit distance _destination <= 2) then { 
 				_unit forceSpeed 1;
 
-				if ((_timer % 2) == 0) then {
-					[_unit, _target] spawn zombie_attack;
+				if (_hasTarget) then {
+					if ((_timer % 2) == 0) then {
+						[_unit, _target] spawn zombie_attack;
+					};
 				};
 				
 				if (_heardGunshot) then {
-					_unit setVariable ["zombieGunshotHeard", false, true];
-					_unit setVariable ["zombieGunshotPosition", [], true];
+					
+					// Reset gunshot status
+					_unit setVariable ["zombieTimerGunshot", 0, true]; 
 				};
 			};
 		} else {
@@ -81,7 +84,7 @@ while {alive _unit} do {
 			_nextIdleSpeak = _nextIdleSpeak - 1;
 		} else {
 			
-			if (_hasTarget) then {
+			if (_hasTarget or _heardGunshot) then {
 				[_unit, "zalert" + str((floor random 5) + 1)] call object_speak;
 				_nextIdleSpeak = round (random 8);
 			} else {
@@ -106,6 +109,22 @@ while {alive _unit} do {
 				
 				_nextWalkTime = round (random 15);				
 			};
+		};
+		
+		///
+		/// Gunshot timer cooldown
+		///
+		_timerGunshot = _unit getVariable ["zombieTimerGunshot", -1];
+				
+		if (_timerGunshot > 0) then {
+			_timerGunshot = _timerGunshot - 1;
+			_unit setVariable ["zombieTimerGunshot", _timerGunshot, true];
+		};
+		
+		if (_timerGunshot == 0) then {
+			_unit setVariable ["zombieGunshotPosition", [], true];
+			_unit setVariable ["zombieTimerGunshot", -1, true];
+			diag_log format ["ZOMBIE: gunshot alert reset"];
 		};
 		
 		///

@@ -25,7 +25,7 @@ DEAD_PLAYER_DESPAWN_TIME = (configFile >> "CfgGame" >> "DEAD_PLAYER_DESPAWN_TIME
 LOSE_ZOMBIE_TIMER = 120; // If a timer spots a zombie, this is in how many seconds a zombie will continue to chase until they get bored
 LOSE_ZOMBIE_DISTANCE = 45; // How far away the player has to run before the zombie grows bored
 ZOMBIE_TARGET_COOLDOWN = 30; // After a zombie stops following someone, how many seconds until they decide to target again
-ZOMBIE_TARGET_GUNSHOT_COOLDOWN = 1; 
+ZOMBIE_TARGET_GUNSHOT_COOLDOWN = 40; 
 
 LOGGED_IN = false;
 INTERRUPT_ACTION = false;
