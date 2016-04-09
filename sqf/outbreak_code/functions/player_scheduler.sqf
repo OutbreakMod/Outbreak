@@ -50,7 +50,7 @@
 [] spawn {
 	while {true} do {
 		if (LOGGED_IN) then {
-			_sound = format["ambient_%1", floor(random 7) + 1];
+			_sound = format["ambient_%1", floor(random 8) + 1];
 			_length = (configFile >> "cfgMusic" >> _sound >> "duration") call BIS_fnc_getCfgData;
 			_pause = ((random 5) + 2) + _length;
 			playMusic _sound;
