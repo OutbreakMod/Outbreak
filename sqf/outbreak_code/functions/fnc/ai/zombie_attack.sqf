@@ -18,21 +18,25 @@ sleep 1.5;
 // get targets last known location
 _walkPath = _target getVariable ["last_position", []];
 
+
 // if target didn't move between zombie trying to hit
 // then we carry on the damage
-if (_unit distance _walkPath <= 2 && alive _unit) then {
-	
-	_targetHealth = _target getVariable ["health", 0];
-	_targetHealth = _targetHealth - 100;
-	_target setVariable ["health", _targetHealth, true];
-	
-	if (isServer) then {
-		[_target, ["camera_shake"]] call server_clientCommand;
+
+if (count _walkPath > 0) then {
+	if (_unit distance _walkPath <= 2 && alive _unit) then {
+		
+		_targetHealth = _target getVariable ["health", 0];
+		_targetHealth = _targetHealth - 100;
+		_target setVariable ["health", _targetHealth, true];
+		
+		if (isServer) then {
+			[_target, ["camera_shake"]] call server_clientCommand;
+		} else {
+			1 call fnc_damageEffect;
+		};
+		
 	} else {
-		1 call fnc_damageEffect;
+		// if target moved between zombie trying to hit, then we cancel
+		[_unit, ""] remoteExecCall ["fnc_anim_switchMove"];
 	};
-	
-} else {
-	// if target moved between zombie trying to hit, then we cancel
-	[_unit, ""] remoteExecCall ["fnc_anim_switchMove"];
 };
