@@ -52,8 +52,7 @@ while {_LOGIN_TIMER > 0} do {
 	sleep 1;
 };
 
-hive_playerLogin = [player];
-publicVariableServer "hive_playerLogin";
+[player] remoteExecCall ["remoteExec_player_login", 2];
 
 _LOGIN_TRIES = 0;
 _HIGH_NUMBER = 9999999;

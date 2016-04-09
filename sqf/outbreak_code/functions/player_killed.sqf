@@ -9,12 +9,10 @@ _caused = _this select 1;
 diag_log format["%1 killed from %2", name _unit, _caused];
 
 // send kill to server
-hive_playerDelete = [_unit];
-publicVariableServer "hive_playerDelete";
+[_unit] remoteExecCall ["remoteExec_player_delete", 2];
 
 // custom alive/dead function for outbreak
 player setVariable ["alive", false];
 
 // clean up body timer
-server_cleanup = [_unit, DEAD_PLAYER_DESPAWN_TIME];
-publicVariableServer "server_cleanup";
+[_unit, DEAD_PLAYER_DESPAWN_TIME] remoteExecCall ["remoteExec_add_cleanup", 2];

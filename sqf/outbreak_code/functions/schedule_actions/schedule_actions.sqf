@@ -1,3 +1,8 @@
+/*
+	Create actions every 1 second
+	@author: TheAmazingAussie
+*/
+
 [] execVM "addons\outbreak_code\functions\player_createActions.sqf";
 [] execVM "addons\outbreak_code\functions\player_createActionsExtended.sqf";
 

@@ -24,7 +24,6 @@ player_selectItem = compile preProcessFileLineNumbers "addons\outbreak_code\func
 
 // fnc functions
 fnc_inString = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_inString.sqf";
-fnc_getServerVehicle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_getServerVehicle.sqf";
 fnc_hasItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_hasItem.sqf";
 fnc_countItems = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_countItems.sqf";
 fnc_damageType = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_damageType.sqf";
@@ -32,7 +31,6 @@ fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 fnc_simulateHealthEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_simulateHealthEffect.sqf";
 fnc_selectRandomLocation = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_selectRandomLocation.sqf";
 fnc_convertMagazines = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_convertMagazines.sqf";
-fnc_baseWeapon = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_baseWeapon.sqf";
 create_uid = compile preProcessFileLineNumbers "addons\outbreak_code\functions\create_uid.sqf";
 KK_fnc_arrayShuffle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\KK_fnc_arrayShuffle.sqf";
 
@@ -41,18 +39,27 @@ player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\p
 player_apply_morphine = compile preProcessFileLineNumbers "addons\outbreak_code\actions\apply_morphine.sqf";
 
 // infected
-zombies_spawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombies_spawn.sqf";
-zombie_attack = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_attack.sqf";
-zombie_findTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_findTarget.sqf";
-zombie_hasTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_hasTarget.sqf";
-zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_initialize.sqf";
-zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_intelligence.sqf";
-zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_handleDamage.sqf";
-zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\ai\zombie_create.sqf";
+zombies_spawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombies_spawn.sqf";
+zombie_attack = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_attack.sqf";
+zombie_findTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_findTarget.sqf";
+zombie_hasTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_hasTarget.sqf";
+zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_initialize.sqf";
+zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_intelligence.sqf";
+zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_handleDamage.sqf";
+zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_create.sqf";
 
+// remote exec fnc
 fnc_anim_switchMove = compileFinal "_this select 0 switchmove (_this select 1)";
 fnc_anim_playMoveNow = compileFinal "_this select 0 switchmove (_this select 1)";
 fnc_object_speak = compileFinal "(_this select 0) say3D [(_this select 1), (_this select 2)]";
+
+// remote exec
+remoteExec_find_spawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_find_spawn.sqf";
+remoteExec_login = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_login.sqf";
+remoteExec_teleport = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_teleport.sqf";
+remoteExec_medical = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_medical.sqf";
+remoteExec_gear = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_gear.sqf";
+remoteExec_camera_shake = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_camera_shake.sqf";
 
 obj_getModelName = {
 	_objInfo = toArray(str(_this));
