@@ -14,7 +14,7 @@ while {alive _unit} do {
 	_hasTarget = _unit call zombie_hasTarget;
 	
 	_target = _unit getVariable ["zombieTarget", _unit];
-	_unit setVariable ["last_position", (getPosATL _unit)];
+	_unit setVariable ["last_position", (getPosATL _unit), true];
 	
 	///
 	/// Chase target
@@ -39,7 +39,7 @@ while {alive _unit} do {
 				};
 			};
 		} else {
-			_unit setVariable ["zombieTarget", _unit];
+			_unit setVariable ["zombieTarget", _unit, true];
 		}
 	
 	};
@@ -73,13 +73,37 @@ while {alive _unit} do {
 				_nextWalkTime = _nextWalkTime - 1;
 			} else {
 				
-				_pos = _unit getVariable ["zombieSpawned", 0];
+				_pos = _unit getVariable ["zombieSpawned", []];
 				_destination = [_pos, 5, 30, 3] call fnc_selectRandomLocation;
 				
 				_unit moveTo _destination;
 				_unit forceSpeed (_unit getSpeed "SLOW");
 				
 				_nextWalkTime = round (random 15);				
+			};
+		};
+		
+		///
+		/// LOSE ZOMBIE TIMER
+		///
+		
+		if (_hasTarget) then {
+			
+			_timer = _unit getVariable ["loseZombieTimer", 0];
+					
+			if (_timer > 0) then {
+				_timer = _timer - 1;
+				_unit setVariable ["loseZombieTimer", _timer, true];
+			};
+						
+			if ((_unit distance _target >= LOSE_ZOMBIE_DISTANCE) or (!(_timer > 0))) then {	
+			
+				_zombies = _target getVariable ["attackingZombies", []];
+				_zombies = _zombies - [_unit];
+				_target setVariable ["attackingZombies", _zombies, true];
+				
+				_unit setVariable ["zombieTarget", _unit, true];
+				_unit setVariable ["zombieSpawned", getPos _target, true];
 			};
 		};
 	};
@@ -131,7 +155,7 @@ while {alive _unit} do {
 
 				if (count _zombiePosition > 0) then {	
 					_unit setPos _zombiePosition;
-					_unit setVariable ["zombieSpawned", _zombiePosition];
+					_unit setVariable ["zombieSpawned", _zombiePosition, true];
 				};
 			};
 		};
