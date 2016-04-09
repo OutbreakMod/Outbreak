@@ -9,4 +9,7 @@ if (_health < 1) then {
 
 player setHit ["legs", _medical select 0];
 player setVariable ["health", _health, true];
-player getVariable ["health", 0] call fnc_simulateHealthEffect;
+
+if (!CAMERA_SHAKE_ACTIVE) then {
+	player getVariable ["health", 0] call fnc_simulateHealthEffect;
+};

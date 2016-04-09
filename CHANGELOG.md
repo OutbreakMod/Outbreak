@@ -1,3 +1,17 @@
+**Apr 8, 2016**
+- Server FPS improvements from hive/loading saving
+- Fixed can't find "sfx" sounds
+- remoteExec used instead for object_speak class
+- Relogging no longer triggers zombie spawning instantly, the timer is persistent across relogging
+- All zombie creation is now passed through "zombie_create"
+- Zombies spawned by player are cleaned up when player is disconnected, instead of logging in
+
+**Apr 7, 2016**
+- Zombie stuck detection
+- Server clean up of objects based on timer
+- Added clean up of bodies (zombies and human)
+- Crafting UI now shows (current amount/needed amount)
+
 **Apr 4, 2016**
 - Increased the amount of items to use in crafting
 - Added multi-lined texted for items with longer names in UI
@@ -69,4 +83,4 @@
 - Server-side loot spawn
 - TheAmazingAussie committed on Nov 8, 2015
 
-
+*The first commit can be found [here](https://github.com/OutbreakMod/Outbreak/commit/967fc3781b8805d61ee70946b7b9893cb74abc87)*

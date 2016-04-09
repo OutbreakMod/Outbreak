@@ -31,6 +31,7 @@ fnc_damageEffect = compile preProcessFileLineNumbers "addons\outbreak_code\funct
 fnc_simulateHealthEffect = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_simulateHealthEffect.sqf";
 fnc_selectRandomLocation = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_selectRandomLocation.sqf";
 fnc_convertMagazines = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_convertMagazines.sqf";
+fnc_hasSight = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_hasSight.sqf";
 create_uid = compile preProcessFileLineNumbers "addons\outbreak_code\functions\create_uid.sqf";
 KK_fnc_arrayShuffle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\KK_fnc_arrayShuffle.sqf";
 
@@ -47,6 +48,7 @@ zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\func
 zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_intelligence.sqf";
 zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_handleDamage.sqf";
 zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_create.sqf";
+zombies_alert = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombies_alert.sqf";
 
 // remote exec fnc
 fnc_anim_switchMove = compileFinal "_this select 0 switchmove (_this select 1)";

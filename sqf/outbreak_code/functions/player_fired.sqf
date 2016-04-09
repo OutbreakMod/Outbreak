@@ -21,8 +21,7 @@ if (((player weaponAccessories _muzzle) select 0) != "") then {
 hint format ["GUN FIRE DISTANCE: %1", _distance];
 
 if (_distance > 0) then {
-	
-	
+	[getPosATL _unit, _distance] call zombies_alert;
 };
 
 _magazines = primaryWeaponMagazine _unit;

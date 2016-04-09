@@ -13,15 +13,28 @@ while {alive _unit} do {
 	_unit call zombie_findTarget;	
 	_hasTarget = _unit call zombie_hasTarget;
 	
+	// Set target variable as itself, aka no target
 	_target = _unit getVariable ["zombieTarget", _unit];
-	_unit setVariable ["last_position", (getPosATL _unit)];
+	
+	// By default, the zombies didn't hear any gunshots
+	_heardGunshot = (_unit getVariable ["zombieTimerGunshot", -1]) > 0;
+	
+	// Update last position
+	_unit setVariable ["last_position", (getPosATL _unit), true];
+	
 	
 	///
 	/// Chase target
 	///
-	if (_hasTarget) then { 
+	if (_hasTarget or _heardGunshot) then { 
 	
-		_destination = _target getVariable ["last_position", []];
+		_destination = [];
+		
+		if (_hasTarget) then {
+			_destination = _target getVariable ["last_position", []];
+		} else {
+			_destination = _unit getVariable ["zombieGunshotPosition", []];
+		};
 		
 		if (count _destination > 0) then {
 
@@ -34,12 +47,20 @@ while {alive _unit} do {
 			if (_unit distance _destination <= 2) then { 
 				_unit forceSpeed 1;
 
-				if ((_timer % 2) == 0) then {
-					[_unit, _target] spawn zombie_attack;
+				if (_hasTarget) then {
+					if ((_timer % 2) == 0) then {
+						[_unit, _target] spawn zombie_attack;
+					};
+				};
+				
+				if (_heardGunshot) then {
+					
+					// Reset gunshot status
+					_unit setVariable ["zombieTimerGunshot", 0, true]; 
 				};
 			};
 		} else {
-			_unit setVariable ["zombieTarget", _unit];
+			_unit setVariable ["zombieTarget", _unit, true];
 		}
 	
 	};
@@ -48,7 +69,14 @@ while {alive _unit} do {
 	/// Do tasks every x random amount of seconds
 	///
 	if ((_timer % 1) == 0) then { 
-
+		
+		_cooldown = _unit getVariable ["zombieTargetCooldown", 0];
+				
+		if (_cooldown > 0) then {
+			_unit setVariable ["zombieTargetCooldown", _cooldown - 1, true];
+		};
+			
+	
 		///
 		/// Idle talking
 		///
@@ -56,7 +84,7 @@ while {alive _unit} do {
 			_nextIdleSpeak = _nextIdleSpeak - 1;
 		} else {
 			
-			if (_hasTarget) then {
+			if (_hasTarget or _heardGunshot) then {
 				[_unit, "zalert" + str((floor random 5) + 1)] call object_speak;
 				_nextIdleSpeak = round (random 8);
 			} else {
@@ -73,13 +101,54 @@ while {alive _unit} do {
 				_nextWalkTime = _nextWalkTime - 1;
 			} else {
 				
-				_pos = _unit getVariable ["zombieSpawned", 0];
+				_pos = _unit getVariable ["zombieSpawned", []];
 				_destination = [_pos, 5, 30, 3] call fnc_selectRandomLocation;
 				
 				_unit moveTo _destination;
 				_unit forceSpeed (_unit getSpeed "SLOW");
 				
 				_nextWalkTime = round (random 15);				
+			};
+		};
+		
+		///
+		/// Gunshot timer cooldown
+		///
+		_timerGunshot = _unit getVariable ["zombieTimerGunshot", -1];
+				
+		if (_timerGunshot > 0) then {
+			_timerGunshot = _timerGunshot - 1;
+			_unit setVariable ["zombieTimerGunshot", _timerGunshot, true];
+		};
+		
+		if (_timerGunshot == 0) then {
+			_unit setVariable ["zombieGunshotPosition", [], true];
+			_unit setVariable ["zombieTimerGunshot", -1, true];
+			diag_log format ["ZOMBIE: gunshot alert reset"];
+		};
+		
+		///
+		/// LOSE ZOMBIE TIMER
+		///
+		
+		if (_hasTarget) then {
+			
+			_timerLose = _unit getVariable ["loseZombieTimer", 0];
+					
+			if (_timerLose > 0) then {
+				_timerLose = _timerLose - 1;
+				_unit setVariable ["loseZombieTimer", _timerLose, true];
+			};
+						
+			if ((_unit distance _target >= LOSE_ZOMBIE_DISTANCE) or (!(_timer > 0))) then {	
+			
+				_zombies = _target getVariable ["attackingZombies", []];
+				_zombies = _zombies - [_unit];
+				_target setVariable ["attackingZombies", _zombies, true];
+
+				_unit setVariable ["zombieTarget", _unit, true];
+				_unit setVariable ["zombieTargetCooldown", ZOMBIE_TARGET_COOLDOWN, true];
+				_unit setVariable ["zombieSpawned", getPos _target, true];
 			};
 		};
 	};
@@ -131,7 +200,7 @@ while {alive _unit} do {
 
 				if (count _zombiePosition > 0) then {	
 					_unit setPos _zombiePosition;
-					_unit setVariable ["zombieSpawned", _zombiePosition];
+					_unit setVariable ["zombieSpawned", _zombiePosition, true];
 				};
 			};
 		};
