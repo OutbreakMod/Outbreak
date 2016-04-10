@@ -50,4 +50,10 @@ class CfgMusic
 		sound[] = {"addons\outbreak_music\music\ambience\ambient_8.ogg", db+0, 1.0};
 		duration = 62;
 	};
+	class ambient_9
+	{
+		name = "ambient_8";
+		sound[] = {"addons\outbreak_music\music\ambience\ambient_9.ogg", db+0, 1.0};
+		duration = 59;
+	};
 };

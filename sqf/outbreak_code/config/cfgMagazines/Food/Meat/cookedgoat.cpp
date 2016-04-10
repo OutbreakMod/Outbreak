@@ -1,6 +1,6 @@
-class cookedmeat: CA_Magazine
+class cookedgoat: CA_Magazine
 {
-	displayName = "Cooked Meat";
+	displayName = "Cooked Goat";
 	count = 1;
 	class ItemInfo
 		{
