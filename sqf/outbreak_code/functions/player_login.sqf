@@ -47,7 +47,7 @@ FULL_HEALTH call fnc_simulateHealthEffect;
 
 _LOGIN_TIMER = 10;
 while {_LOGIN_TIMER > 0} do {
-	titleText [format["Logging in %1 seconds... Please wait...", _LOGIN_TIMER], "BLACK FADED", 0.2];
+	titleText [format[localize "STR_LOGIN_PLEASE_WAIT", _LOGIN_TIMER], "BLACK FADED", 0.2];
 	_LOGIN_TIMER = _LOGIN_TIMER - 1;
 	sleep 1;
 };
@@ -61,12 +61,12 @@ while {(!LOGGED_IN) && (_LOGIN_TRIES <= 20)} do {
 	if (!LOGGED_IN) then {
 		sleep 1;
 		_LOGIN_TRIES = _LOGIN_TRIES + 1;
-		titleText [format["Trying to load character (%1)... Please wait...", _LOGIN_TRIES], "BLACK FADED", 0.2];
+		titleText [format[localize "STR_LOGIN_LOAD_CHARACTER", _LOGIN_TRIES], "BLACK FADED", 0.2];
 	};
 };
 
 if (!LOGGED_IN) then {
-	titleText ["Error occurred, please try again later.","BLACK FADED", _HIGH_NUMBER];
+	titleText [localize "STR_LOGIN_ERROR_OCCURRED", "BLACK FADED", _HIGH_NUMBER];
 } else {
 	titleFadeOut 7;
 	//[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";

@@ -35,7 +35,7 @@ if (!_inVehicle && !player_performingAction) then {
 		////////////
 		if (_objName in CHOP_TREES && alive _object && ([player, "fireaxe"] call fnc_hasItem or [player, "axe"] call fnc_hasItem)) then {
 			if (action_chopTree < 0) then {
-				action_chopTree = player addAction ["Chop tree", "addons\outbreak_code\actions\chop_tree.sqf", _object, 3, true, true, "", ""];
+				action_chopTree = player addAction [localize "STR_ACTIONS_CHOP_TREE", "addons\outbreak_code\actions\chop_tree.sqf", _object, 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_chopTree;
@@ -49,7 +49,7 @@ if (!_inVehicle && !player_performingAction) then {
 	
 	if (["forest", surfaceType position player] call fnc_inString) then {
 		if (action_searchLogs < 0) then {
-			action_searchLogs = player addAction ["Search for logs", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
+			action_searchLogs = player addAction [localize "STR_ACTIONS_SEARCH_LOGS", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
 		};
 	} else {
 		player removeAction action_searchLogs;

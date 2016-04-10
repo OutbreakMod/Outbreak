@@ -23,7 +23,7 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		///////////////////
 		if ((_type in ["Sheep_random_F"] || _cursorTarget isKindOf "Man") && (!alive _cursorTarget)) then {
 			if (action_gutAnimal < 0) then {
-				action_gutAnimal = player addAction ["Gut body", "addons\outbreak_code\actions\gut_animal.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+				action_gutAnimal = player addAction [localize "STR_ACTIONS_GUT_BODY", "addons\outbreak_code\actions\gut_animal.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_gutAnimal;
@@ -35,7 +35,7 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		/////////////////
 		if ((_cursorTarget isKindOf "Man") && (!alive _cursorTarget)) then {
 			if (action_studyDeadBody < 0) then {
-				action_studyDeadBody = player addAction ["Study body", "addons\outbreak_code\actions\study_body.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+				action_studyDeadBody = player addAction [localize "STR_ACTIONS_STUDY_BODY", "addons\outbreak_code\actions\study_body.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_studyDeadBody;
@@ -47,7 +47,7 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		///////////////////
 		if ((_cursorTarget isKindOf "Man") && (alive _cursorTarget) && (_cursorTarget getVariable ["leg_break", false])) then {
 			if (action_applyMorphine < 0) then {
-				action_applyMorphine = player addAction ["Apply morphine", "addons\outbreak_code\actions\apply_morphine.sqf", _cursorTarget, 3, true, true, "", ""];
+				action_applyMorphine = player addAction [localize "STR_ACTIONS_APPLY_MORPHINE", "addons\outbreak_code\actions\apply_morphine.sqf", _cursorTarget, 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_applyMorphine;
@@ -57,9 +57,9 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		///////////////////
 		// Cook meat
 		///////////////////
-		if ((inflamed _cursorTarget) && (_type == "Land_FirePlace_F") && ([player, "sc_matchbook"] call fnc_hasItem)) then {
+		if ((inflamed _cursorTarget) && (_type == "Land_FirePlace_F") && ([player, "matchbox"] call fnc_hasItem)) then {
 			if (action_cookMeat < 0) then {
-				action_cookMeat = player addAction ["Cook meat", "addons\outbreak_code\actions\cook_meat.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+				action_cookMeat = player addAction [localize "STR_ACTIONS_COOK_MEAT", "addons\outbreak_code\actions\cook_meat.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_cookMeat;
