@@ -1,86 +1,101 @@
+**Apr 10, 2016**
+- [New] Players now scream when they break their legs
+- [New] Strings are now localised
+- [New] Spawning wild animals in grass fields
+- [New] Two ambient soundtracks
+- [Fixed] Zombies spawning near players (again)
+- [Fixed] Huge fps drop (10% drop) when zombies spawned
+- [Changed] Moved git repo files around
+- [Changed] Zombies will notice player by sound, depending if prone/crouched/standing
+
+**Apr 9, 2016**
+- [New] Zombie AI overhaul (line of sight)
+- [New] Zombies now run to the source of the gun shot
+- [Fixed] Server error caused by player when logging in next to a wreck/dynamic event
+- [Removed] publicVariable calls, changed to remoteExec
+
 **Apr 8, 2016**
-- Server FPS improvements from hive/loading saving
-- Fixed can't find "sfx" sounds
-- remoteExec used instead for object_speak class
-- Relogging no longer triggers zombie spawning instantly, the timer is persistent across relogging
-- All zombie creation is now passed through "zombie_create"
-- Zombies spawned by player are cleaned up when player is disconnected, instead of logging in
+- [New] All zombie creation is now passed through "zombie_create"
+- [Fixed] Server FPS improvements from hive/loading saving
+- [Fixed] Can't find "sfx" sounds
+- [Fixed] Zombies spawned by player are cleaned up when player is disconnected, instead of logging in
+- [Changed] remoteExec used instead for object_speak class
 
 **Apr 7, 2016**
-- Zombie stuck detection
-- Server clean up of objects based on timer
-- Added clean up of bodies (zombies and human)
-- Crafting UI now shows (current amount/needed amount)
+- [New] Zombie stuck detection
+- [New] Server clean up of objects based on timer
+- [New] Added clean up of bodies (zombies and human)
+- [New] Crafting UI now shows (current amount/needed amount)
 
 **Apr 4, 2016**
-- Increased the amount of items to use in crafting
-- Added multi-lined texted for items with longer names in UI
-- Moved recipes away from CfgMagazines
-- Fixed GUI height
-- GUI now shows green/red if you have (or don't have) enough items
-- Searching ground for logs
+- [New] Added multi-lined texted for items with longer names in UI
+- [New] Searching ground for logs
+- [Fixed] Fixed GUI height
+- [Changed] Moved recipes away from CfgMagazines
+- [Changed] Increased the amount of items to use in crafting UI
+- [Changed] GUI now shows green/red if you have (or don't have) enough items
 
 **Apr 3, 2016**
-- Crafting GUI by pressing U is now added
-- Reading from configuration with different types of recipes is added.
-- Removed deprecated ArmA 2 (getNumber, getArray, getText) calls and replaced with BIS_fnc_getCfgData
+- [New] Crafting GUI by pressing U is now added
+- [New] Reading from configuration with different types of recipes is added.
+- [Changed] Removed deprecated ArmA 2 (getNumber, getArray, getText) calls and replaced with BIS_fnc_getCfgData
 
 **Apr 2, 2016**
-- Added wild zombie spawns
-- Fixed wild zombie spawns
-- Added more zombie sounds
-- Variable refactor (login, min max wild z spawn)
-- Delete magazine when it's empty
-- Mute sound when logging in
-- Zombies sprint after pursuit and not invincible
+- [New] Added wild zombie spawns
+- [New] Added more zombie sounds
+- [New] Delete magazine when it's empty
+- [New] Mute sound when logging in
+- [New] Zombies sprint after pursuit
+- [Fied] Zombies no longer invincible
+- [Fixed] Wild zombie spawns
+- [Changed] Variable refactor (login, min max wild z spawn)
 
 **Commits on Apr 1, 2016**
-- Added extra military areas
-- Only run tasks when logged in
-- Zombie clothes and wandering fixes
-- BUG FIX: FindNearby checks for alive units only
-- BUG FIX: Zombies faced opposite way when attacking
-- BUG FIX: Zombies spawned too close
-- Zombie now faces player
-- Fixed FPS drop when shooting zombies
-- Dynamic zed spawning (instead of one area in city)
-- Renamed and refactored functions
-- Fixed persistent item placement (when placed, it would hover 2 feet)
+- [New] Added extra military areas
+- [New] Dynamic zed spawning (instead of one area in city)
+- [Fixed] Zombie clothes and wandering fixes
+- [Fixed] FindNearby checks for alive units only
+- [Fixed] Zombies faced opposite way when attacking
+- [Fixed] Zombies spawned too close
+- [Fixed] FPS drop when shooting zombies
+- [Fixed] Persistent item placement (when placed, it would hover 2 feet)
+- [Changed] Renamed and refactored functions
+- [Changed] Zombie now faces player
+- [Changed] Only run tasks when logged in
 
 **March 29, 2016**
-- Removed ability to stand when logs are broken
-- Fixed bug where dmg handlers were unregistered
+- [Removed] Removed ability to stand when logs are broken
+- [Fixed] Fixed bug where dmg handlers were unregistered
 
 **Mar 28, 2016**
-- Fixed missing "fnc_zombiePunch"
-- Object_say is now 3D and global
-- Asset path changes
-- Zombie idle sounds no longer synced together
-- Health regenerate
-- New zombie sounds
-- Fixed zombies getting hurt sound
-- Lowered zombie sound volume
-- Added zombie sounds
-- Zombie AI: Update path after waiting 1 second fix
-- Zombie hit detection nerf
-- Hitting player detection
-- Hitting and only find alive targets
+- [New] Health regenerate
+- [New] Zombie sounds
+- [New] Added zombie sounds
+- [New] Zombie AI: Update path after waiting 1 second fix
+- [New] Hitting
+- [Fixed] Zombies targeting dead players
+- [Fixed] Missing "fnc_zombiePunch"
+- [Fixed] Zombies getting hurt sound
+- [Changed] Hitting player detection
+- [Changed] Zombie hit detection nerf
+- [Changed] Object_say is now 3D and global
+- [Changed] Asset path
+- [Changed] Zombie idle sounds no longer synced with other zombies
+- [Changed] Lowered zombie sound volume
 
 **Mar 27, 2016**
-- Zombies now chase player
-- Started zombie AI (WARNING BUGS)
-- SVD/PKM weapon damage nerf
-- Forgot to disable Arma 3 dmg system
-- TheAmazingAussie committed 6 days ago
-- Added zombie leg breaking
+- [New] Zombies now chase player
+- [New] Started zombie AI (WARNING BUGS)
+- [New] Added zombie leg breaking
+- [Changed] SVD/PKM weapon damage nerf
+- [Removed] Arma 3's default damage system
 
 **Mar 26, 2016**
-- Health update is instant now
-- Convert FNFAL/DMR magazines
-- Ability to convert magazines by double clicking
+- [New] Convert FNFAL/DMR magazines
+- [New] Ability to convert magazines by double clicking
+- [Changed] Health update is instant now
 
 **Nov 8, 2015**
-- Server-side loot spawn
-- TheAmazingAussie committed on Nov 8, 2015
+- [New] Server-side loot spawn
 
 *The first commit can be found [here](https://github.com/OutbreakMod/Outbreak/commit/967fc3781b8805d61ee70946b7b9893cb74abc87)*
