@@ -41,20 +41,20 @@ if (_distance <= 60) then {
 	} else {
 		
 		// If we can't see them, but we can detect them if they get too close
-		
-		if (stance _target == "STAND") then {
-			if (_distance <= 10) then {
-			_return = true;
-			};
-		};
-		
-		if (stance _target == "CROUCH") then {
-			if (_distance <= 10) then {
-			_return = true;
-			};
-		} else {
-			if (_distance <= 5) then {
+		if (speed player > 5) then { // ...by making noise
+			if (stance _target == "STAND") then {
+				if (_distance <= 15) then {
 				_return = true;
+				};
+			};
+			if (stance _target == "CROUCH") then {
+				if (_distance <= 10) then {
+				_return = true;
+				};
+			} else {
+				if (_distance <= 5) then {
+					_return = true;
+				};
 			};
 		};
 	};
