@@ -22,7 +22,7 @@ if (_count < MAX_INFECTED_CITY) then {
 	
 	if (_toSpawn >= _amount) then {
 		_toSpawn = _amount;
-	}
+	};
 	
 	diag_log format ["There needs to be (%1) more zombies to spawn!", _toSpawn];
 
