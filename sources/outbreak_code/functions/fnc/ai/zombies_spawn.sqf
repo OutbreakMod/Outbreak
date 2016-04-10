@@ -28,7 +28,11 @@ if (_count < MAX_INFECTED_CITY) then {
 
 	for "_i" from 0 to _toSpawn - 1 do { 
 	
-		[[_position, _building]] call zombie_create;
+		_players = [_position, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
+		
+		if ((count _players) == 0) then {
+			[[_position, _building]] call zombie_create;
+		};
 		
 		/*_zombiePosition = [];
 		_needsRelocated = true;
