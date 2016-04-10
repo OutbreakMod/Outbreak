@@ -3,6 +3,8 @@
 	@author: TheAmazingAussie
 */
 
+ZOMBIE_GROUP = createGroup east;
+
 FULL_HEALTH = (configFile >> "CfgGame" >> "FULL_HEALTH") call BIS_fnc_getCfgData;
 CHOP_TREES = (configFile >> "CfgGame" >> "CHOPPABLE_TREES") call BIS_fnc_getCfgData;
 CHOP_TREES_WOOD_YIELD = (configFile >> "CfgGame" >> "TREES_WOOD_YIELD") call BIS_fnc_getCfgData;
@@ -13,7 +15,7 @@ LOOT_SPAWN_RADIUS = (configFile >> "CfgGame" >> "LOOT_SPAWN_RADIUS") call BIS_fn
 MIN_LOOT_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_LOOT_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
 MIN_ZOMBIE_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_ZOMBIE_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
 
-MIN_ANIMAL_SPAWN_DISTANCE = 150;
+MIN_ANIMAL_SPAWN_DISTANCE = 100;
 MAX_ANIMAL_SPAWN_DISTANCE = 200;
 
 MIN_WILD_ZOMBIE_SPAWN_DISTANCE = 150;

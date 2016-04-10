@@ -13,8 +13,13 @@ _nearly = _nearby call KK_fnc_arrayShuffle; // Spice it up :D
 	_building = _x;
 	_distance = _building distance player;
 	
-	//if (_distance >= MIN_LOOT_SPAWN_DISTANCE) then {
-		[_building] remoteExecCall ["remoteExec_spawn_loot", 2];
-	//};
+	if (_distance >= MIN_ZOMBIE_SPAWN_DISTANCE) then {
+		_type = typeOf _building;
+		if (isClass (configFile >> "cfgBuildingClothes" >> _type)) then {
+			if (serverTime > _building getVariable ["zombieSpawnTimer", 0]) then {
+				[player, _building] call zombies_spawn;
+			};
+		};
+	};
 	
 } foreach _nearby;

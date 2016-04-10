@@ -29,7 +29,9 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 
 		for "_i" from 0 to _toSpawn - 1 do { 
 		
-			_zombiePosition = [];
+			[[_position, _building]] call zombie_create;
+			
+			/*_zombiePosition = [];
 			_needsRelocated = true;
 			_counter = 0;
 			
@@ -44,7 +46,7 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 				
 				_counter = _counter + 1;
 				
-				if (_counter > 20) then {
+				if (_counter > 10) then {
 					_zombiePosition = [];
 					_needsRelocated = false;
 				};
@@ -52,11 +54,7 @@ if (count _globalinfected < MAX_INFECTED_CITY) then {
 			
 			if (count _zombiePosition > 0) then {
 				[[_zombiePosition, _building]] call zombie_create;
-			};
-			
-			/*_zombiePosition = [_position, 5, 15, 5] call fnc_selectRandomLocation;
-			_agent = createAgent ["Zombie", _zombiePosition, [], 0, "NONE"];
-			[_agent, _building] call fnc_startZombie;*/
+			};*/
 		};
 	};
 };

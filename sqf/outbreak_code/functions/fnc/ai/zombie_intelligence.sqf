@@ -1,5 +1,7 @@
 _unit = _this;
 
+_loop = true;
+
 _target = _unit;
 _walking = false;
 _timer = 0;
@@ -8,20 +10,15 @@ _walkPath = [];
 _nextIdleSpeak = 0;
 _nextWalkTime = 0;
 
-while {alive _unit} do {
+while {_loop} do {
 
-	_unit call zombie_findTarget;	
 	_hasTarget = _unit call zombie_hasTarget;
-	
-	// Set target variable as itself, aka no target
 	_target = _unit getVariable ["zombieTarget", _unit];
-	
-	// By default, the zombies didn't hear any gunshots
 	_heardGunshot = (_unit getVariable ["zombieTimerGunshot", -1]) > 0;
 	
-	// Update last position
-	_unit setVariable ["last_position", (getPosATL _unit), true];
-	
+	if ((_timer % 10) == 0) then {
+		_unit setVariable ["last_position", (getPosATL _unit), true];
+	};
 	
 	///
 	/// Chase target
@@ -64,6 +61,10 @@ while {alive _unit} do {
 		}
 	
 	};
+	
+	if ((_timer % 5) == 0) then { 
+		_unit call zombie_findTarget;
+	};	
 	
 	///
 	/// Do tasks every x random amount of seconds
@@ -156,13 +157,16 @@ while {alive _unit} do {
 	///
 	/// Despawn zombie if players aren't nearby
 	///
-	if ((_timer % 60) == 0) then {
-		
-		_players = ([_unit, 300, "isPlayer"] call player_findNearby);
-		
-		if (!(count _players > 0)) exitWith {
-			_unit setDamage 1;
-			deleteVehicle (_unit);
+	if (alive _unit) then {
+		if ((_timer % 30) == 0) then {
+			
+			_players = ([_unit, 200, "isPlayer"] call player_findNearby);
+			
+			if (count _players == 0) then {
+				_unit setDamage 1;
+				deleteVehicle (_unit);
+				_loop = false;
+			};
 		};
 	};
 	
@@ -204,6 +208,10 @@ while {alive _unit} do {
 				};
 			};
 		};
+	};
+	
+	if (!(alive _unit)) then {
+		_loop = false;
 	};
 	
 	///
