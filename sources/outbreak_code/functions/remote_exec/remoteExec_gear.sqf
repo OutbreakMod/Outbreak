@@ -1,0 +1,1 @@
+[player, _this select 0] call player_loadInventory;
