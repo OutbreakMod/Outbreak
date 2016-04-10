@@ -15,5 +15,8 @@ if (player getVariable ["update_legs", 0] > 0) then {
 		
 		// GO PRONE
 		[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];
+		
+		// SCREAM
+		[player, "scream" + str((floor random 2) + 1)] call object_speak;
 	};
 };

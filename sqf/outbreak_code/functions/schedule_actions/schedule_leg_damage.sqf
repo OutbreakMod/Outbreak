@@ -11,6 +11,7 @@ if (alive player) then {
 		
 			if ((stance player) == "STAND") then {
 				[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];
+				[player, "scream" + str((floor random 2) + 1)] call object_speak;
 			};
 			
 			LEG_BREAK_STAND_TIMER = LEG_BREAK_STAND_COOLDOWN;

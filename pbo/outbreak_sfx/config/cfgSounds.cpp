@@ -5,13 +5,31 @@ class CfgSounds
 		sound[] = {"addons\outbreak_sfx\sfx\guts1.ogg",0.6,1};
 		titles[] = {};
 	};
+
+	// HEALTH
 	
 	class heartpounding
 	{
 		name = "heartpounding";
-		sound[] = {"addons\outbreak_sfx\sfx\heartpounding.ogg",0.6,1};
+		sound[] = {"addons\outbreak_sfx\sfx\health\heartpounding.ogg",0.6,1};
 		titles[] = {};
 	};
+	
+	class scream1
+	{
+		name = "scream1";
+		sound[] = {"addons\outbreak_sfx\sfx\health\scream1.ogg",0.6,1};
+		titles[] = {};
+	};
+
+	class scream2
+	{
+		name = "scream2";
+		sound[] = {"addons\outbreak_sfx\sfx\health\scream2.ogg",0.5,1};
+		titles[] = {};
+	};
+	
+	// ZOMBIES
 	
 	class zalert1
 	{
