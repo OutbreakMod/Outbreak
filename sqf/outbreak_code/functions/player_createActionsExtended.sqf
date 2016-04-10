@@ -35,7 +35,7 @@ if (!_inVehicle && !player_performingAction) then {
 		////////////
 		if (_objName in CHOP_TREES && alive _object && ([player, "fireaxe"] call fnc_hasItem or [player, "axe"] call fnc_hasItem)) then {
 			if (action_chopTree < 0) then {
-				action_chopTree = player addAction ["Chop Tree", "addons\outbreak_code\actions\chop_tree.sqf", _object, 3, true, true, "", ""];
+				action_chopTree = player addAction ["Chop tree", "addons\outbreak_code\actions\chop_tree.sqf", _object, 3, true, true, "", ""];
 			};
 		} else {
 			player removeAction action_chopTree;
