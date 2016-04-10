@@ -51,7 +51,6 @@ class CfgMagazines
 	// TOOLS
 	#include "Tools\axe.hpp"
 	#include "Tools\barbedwire.hpp"
-	#include "Tools\cartyre.hpp"
 	#include "Tools\fireaxe.hpp"
 	#include "Tools\hammer.hpp"
 	#include "Tools\jerrycan.hpp"
