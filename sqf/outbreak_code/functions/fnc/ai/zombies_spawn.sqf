@@ -11,52 +11,50 @@ _position = getPosATL _building;
 
 _amount = 3;
 
-// number of infected around house
-_infected = [_position, 10, "isZombie"] call player_findNearby;
-_count = (count _infected);
-
 // limit zombies per city
-_globalinfected = [_unit, LOOT_SPAWN_RADIUS, "isZombie"] call player_findNearby;
+_infected = [_unit, LOOT_SPAWN_RADIUS, "isZombie"] call player_findNearby;
+_count = count _infected;
 
 // check for max amount within city
-if (count _globalinfected < MAX_INFECTED_CITY) then {
+if (_count < MAX_INFECTED_CITY) then {
+
+	_toSpawn = MAX_INFECTED_CITY - _count;
 	
-	// if the amount of current zeds is less than amount threshold, we spawn more infected
-	if (_count < _amount) then {
+	if (_toSpawn >= _amount) then {
+		_toSpawn = _amount;
+	}
+	
+	diag_log format ["There needs to be (%1) more zombies to spawn!", _toSpawn];
 
-		_toSpawn = _amount - _count;
-		diag_log format ["There needs to be (%1) more zombies to spawn!", _toSpawn];
-
-		for "_i" from 0 to _toSpawn - 1 do { 
+	for "_i" from 0 to _toSpawn - 1 do { 
+	
+		[[_position, _building]] call zombie_create;
 		
-			[[_position, _building]] call zombie_create;
+		/*_zombiePosition = [];
+		_needsRelocated = true;
+		_counter = 0;
+		
+		while {_needsRelocated} do {
 			
-			/*_zombiePosition = [];
-			_needsRelocated = true;
-			_counter = 0;
+			_zombiePosition = [_position, 3, 15, 3] call fnc_selectRandomLocation;
+			_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
 			
-			while {_needsRelocated} do {
-				
-				_zombiePosition = [_position, 3, 15, 3] call fnc_selectRandomLocation;
-				_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
-				
-				if ((count _players) == 0) then {
-					_needsRelocated = false;
-				};
-				
-				_counter = _counter + 1;
-				
-				if (_counter > 10) then {
-					_zombiePosition = [];
-					_needsRelocated = false;
-				};
+			if ((count _players) == 0) then {
+				_needsRelocated = false;
 			};
 			
-			if (count _zombiePosition > 0) then {
-				[[_zombiePosition, _building]] call zombie_create;
-			};*/
+			_counter = _counter + 1;
+			
+			if (_counter > 10) then {
+				_zombiePosition = [];
+				_needsRelocated = false;
+			};
 		};
+		
+		if (count _zombiePosition > 0) then {
+			[[_zombiePosition, _building]] call zombie_create;
+		};*/
 	};
 };
 
-_building setVariable ["zombieSpawnTimer", serverTime + 600, true];
+_building setVariable ["zombieSpawnTimer", serverTime + 600];
