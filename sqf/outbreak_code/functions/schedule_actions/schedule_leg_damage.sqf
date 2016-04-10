@@ -6,8 +6,14 @@
 
 if (alive player) then {
 	if ((player getHit "legs") > 0.58) then {
-		if ((stance player) == "STAND") then {
-			[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];
-		};					
+		
+		if (!(LEG_BREAK_STAND_TIMER > 0)) then {
+		
+			if ((stance player) == "STAND") then {
+				[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];
+			};
+			
+			LEG_BREAK_STAND_TIMER = LEG_BREAK_STAND_COOLDOWN;
+		};		
 	};
 };

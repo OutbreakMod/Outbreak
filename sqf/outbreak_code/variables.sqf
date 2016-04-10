@@ -30,6 +30,9 @@ LOSE_ZOMBIE_DISTANCE = 45; // How far away the player has to run before the zomb
 ZOMBIE_TARGET_COOLDOWN = 30; // After a zombie stops following someone, how many seconds until they decide to target again
 ZOMBIE_TARGET_GUNSHOT_COOLDOWN = 40; 
 
+LEG_BREAK_STAND_COOLDOWN = 10;
+LEG_BREAK_STAND_TIMER = 0;
+
 LOGGED_IN = false;
 INTERRUPT_ACTION = false;
 CAMERA_SHAKE_ACTIVE = false;

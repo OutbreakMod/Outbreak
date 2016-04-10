@@ -13,6 +13,10 @@ if (_health < 6000) then {
 	player setVariable ["health", _health, true];
 };
 
+if (LEG_BREAK_STAND_TIMER > 0) then {
+	LEG_BREAK_STAND_TIMER = LEG_BREAK_STAND_TIMER - 1;
+};
+
 player setVariable ["last_position", (getPosATL player), true];
 
 // Save variable
