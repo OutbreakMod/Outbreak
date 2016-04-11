@@ -90,7 +90,7 @@ if (_finished) then {
 	_vehicle setVariable ["ObjectID", _objectID, true];
 	
 	if (_persistent) then {
-		[player, _vehicle, _type, _worldspace, _dir, ""] remoteExecCall ["remoteExec_new_object", 2];
+		[player, _vehicle, _type, _worldspace, _direction, ""] remoteExecCall ["remoteExec_new_object", 2];
 	};
 
 	{
