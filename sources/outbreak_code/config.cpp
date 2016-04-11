@@ -7,6 +7,7 @@ class CfgPatches {
 	};
 };
 
+
 #include "config\cfgBuildingClothes\cfgBuildingClothes.cpp"
 #include "config\cfgGame\cfgGame.cpp"
 #include "config\cfgVehicles\cfgVehicles.cpp"

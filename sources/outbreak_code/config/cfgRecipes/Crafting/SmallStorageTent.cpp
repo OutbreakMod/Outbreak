@@ -5,7 +5,8 @@ class SmallStorageTent : DefaultRecipe {
 	
 	recipeType = "vehicle";
 	recipeCreate = "MOD_StorageTent";
-	persistent = true;
+	persistent = 1;
+	buildDistance = 2.5;
 	
 	recipe[] = {
 		{"toolbox", 1},

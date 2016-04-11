@@ -4,8 +4,9 @@ class SmallWoodenShack : DefaultRecipe {
 	recipeAction = "['tent', 'OutbreakShackV1', true] call player_build;";
 	
 	recipeType = "vehicle";
-	recipeCreate = "OutbreakShackV1";
-	persistent = false;
+	recipeCreate = "MOD_Shack1";
+	persistent = 1;
+	buildDistance = 6;
 	
 	recipe[] = {
 		{"blueprint_shack_v1", 1},

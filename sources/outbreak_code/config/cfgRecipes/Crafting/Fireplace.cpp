@@ -5,7 +5,8 @@ class Fireplace : DefaultRecipe {
 	
 	recipeType = "vehicle";
 	recipeCreate = "Land_Fireplace_F";
-	persistent = false;
+	persistent = 0;
+	buildDistance = 2.5;
 	
 	recipe[] = {
 		{"log", 3},

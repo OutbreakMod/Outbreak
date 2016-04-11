@@ -191,7 +191,7 @@ class rscCraftingMenu
 			h = 0.042 * safezoneH;
 			sizeEx = 0.025;
 		};
-		class itemInfo: RscText
+		class itemInfo: MultipleLineRscText
 		{
 			idc = 35920;
 			text = "If items are in red, it means you don't have enough"; //--- ToDo: Localize;
@@ -199,7 +199,7 @@ class rscCraftingMenu
 			y = 0.6598 * safezoneH + safezoneY;
 			w = 0.2 * safezoneW;
 			h = 0.042 * safezoneH;
-			sizeEx = 0.028;
+			sizeEx = 0.025;
 		};
 		class cancelButton: RscButtonMenuCancel
 		{

@@ -34,11 +34,10 @@ class CfgVehicles
 	#include "Wrecks\Mi8Wreck.cpp"
 
 	class b_survivor_F;	// External class reference
-	class Zombie : b_survivor_F {
-		faceType = "ZombieFace";
-	};
-	
 	class Survivor : b_survivor_F {
+		//faceType = "ZombieFace";
+	};
+	class Zombie : b_survivor_F {
 		faceType = "ZombieFace";
 	};
 };

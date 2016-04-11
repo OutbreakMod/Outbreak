@@ -6,45 +6,23 @@
 private ["_type", "_animation", "_check", "_interrupt", "_animState", "_loop", "_started", "_finished", "_vehicle", "_location", "_class", "_cities"];
 
 _class = _this select 0;
-_type = _this select 1;
-_persistent = _this select 2;
+_worldspace = _this select 1;
+_direction = _this select 2;
 
 player removeAction action_build;
 action_build = -1;
 
-_cfgRecipe = (configFile >> "CfgMagazines" >> _class >> "cfgCraft");
-_recipes = (_cfgRecipe >> "recipe") call BIS_fnc_getCfgData;
+_cfgRecipe = (configFile >> "CfgRecipes" >> _class);
 _consumes = (_cfgRecipe >> "consume") call BIS_fnc_getCfgData;
+_type =  (_cfgRecipe >> "recipeCreate") call BIS_fnc_getCfgData;
+_persistent =  ((_cfgRecipe >> "persistent") call BIS_fnc_getCfgData) == 1;
 
-_canBuild = true;
-
-{
-	_ingredient = _x select 0;
-	_amount = _x select 1;
-	if (!([player, _ingredient, _amount] call fnc_hasItem)) then {
-		
-		_displayName = getText (configFile >> "CfgMagazines" >> _ingredient >> "displayName");
-		cutText [format["Approximately %1 of %2 is required to build this", _amount, toLower (_displayName)], "PLAIN DOWN"];		
-		_canBuild = false;
-	};
-	
-} forEach _recipes;
-
-if (_persistent) then {
-	_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 300];
-
-	if ((count _cities) > 0) exitWith {
-		cutText ["I'm too close to a city", "PLAIN DOWN"];
-		_canBuild = false;
-	};
-};
-
-if (!_canBuild) exitWith {};
-
-player_performingAction = true;
+hint str(_type);
 
 player playActionNow "Medic";
+
 INTERRUPT_ACTION = false;
+player_performingAction = true;
 
 _loop = true;
 _animState = animationState player;
@@ -87,35 +65,34 @@ if (!_finished) then {
 		player playActionNow "stop";
 	};
 	
-	cutText ["I have stopped building", "PLAIN DOWN"];
+	cutText ["I have cancelled building", "PLAIN DOWN"];
+	
+	deleteVehicle (BUILDING_OBJECT);
+	BUILDING_OBJECT = objNull;
 };
-
-_basket = objNull;
 
 if (_finished) then {
 
 	INTERRUPT_ACTION = false;
 	cutText ["I have finished building", "PLAIN DOWN"];
 	
-	_location = player modelToWorld [0,2.5,0];
-	_location set [2,0];
+
+	_vehicle = createVehicle [_type, (_worldspace select 0), [], 0, "CAN_COLLIDE"];
+	_vehicle setDir _direction;
+	_vehicle setPos (_worldspace select 0);
+	_vehicle setVectorDir (_worldspace select 1);
+	_vehicle setVectorUp (_worldspace select 2);
+
+	deleteVehicle (BUILDING_OBJECT);
+	BUILDING_OBJECT = objNull;
 	
-	_dir = round(direction player);
-	
-	_vehicle = createVehicle [_type, _location, [], 0, "CAN_COLLIDE"];
-	_vehicle setDir _dir;
-	_vehicle setPos _location;
-	
-	// Add object ID (if it's zero, it will automatically be inserted)
-	_objectID = _location call create_uid;
+	_objectID = (_worldspace select 0) call create_uid;
 	_vehicle setVariable ["ObjectID", _objectID, true];
 	
-	// save to database
 	if (_persistent) then {
-		[player, _vehicle, _type, [_location, vectorDir _vehicle, vectorUp _vehicle], _dir, ""] remoteExecCall ["remoteExec_new_object", 2];
+		[player, _vehicle, _type, _worldspace, _dir, ""] remoteExecCall ["remoteExec_new_object", 2];
 	};
 
-	// remove consumable ingredients
 	{
 		_ingredient = _x select 0;
 		_amount = _x select 1;

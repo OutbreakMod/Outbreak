@@ -23,6 +23,10 @@ fnc_openDialog = {
 	} forEach _recipes;
 	
 	_control ctrlSetEventHandler ["LBSelChanged", "_this call fn_drawMaterials"];
+	
+		
+	_control = _idc displayCtrl 35920;
+	_control ctrlSetText "If items are in red, it means you don't have enough. Not all items will be consumed.";
 };
 
 fnc_resetWindow = {
@@ -62,6 +66,7 @@ fn_drawMaterials = {
 	_dialog = uiNamespace getVariable "rscCraftingMenu";
 	_className = (configFile >> "CfgRecipes" >> _cfgName);
 	_recipe = (_className >> "recipe") call BIS_fnc_getCfgData;
+    _consume = (_className >> "consume") call BIS_fnc_getCfgData;
 
 	_pictureIDC = 35904;
 	_textIDC = 35912;
@@ -79,6 +84,11 @@ fn_drawMaterials = {
 		
 		_displayName = format["%1 %2/%3", ((_item >> "displayName") call BIS_fnc_getCfgData), _currentAmount, _amount];
 		_control = _dialog displayCtrl _textIDC;
+		
+		if (_itemName in _consume) then {
+			_displayName = _displayName + " (Consumed)";
+		};
+		
 		_control ctrlSetText _displayName;
 		
 		if ([player, _itemName, _amount] call fnc_hasItem) then {
@@ -97,12 +107,13 @@ fn_drawMaterials = {
 	
 };
 
-_canCreateRecipe = true;
 disableSerialization;
 _dialog = uiNamespace getVariable ["rscCraftingMenu", displayNull];
 
 if (isNull _dialog) then {
-	call fnc_openDialog;
+	if (!BUILDING) then {
+		call fnc_openDialog;
+	};
 } else {
 	closeDialog 0;
 };
