@@ -14,10 +14,18 @@ _ammo = _this select 4;
 _type = [_damage, _ammo] call fnc_damageType;
 
 _unitIsPlayer = _unit == player;
-if (!_unitIsPlayer) exitWith { 0 };
 
-// no damage if not logged in
+if (!_unitIsPlayer) exitWith { 0 };
 if (!LOGGED_IN) exitWith { 0 };
+
+///
+/// Temporary fix for no leg damage when wearing this
+/// 
+if (_hit == "arms") then {
+	if ((uniform _unit) == "U_B_GhillieSuit") then {
+		_hit = "legs";
+	};
+};
 
 _scale = 100;
 _health = _unit getVariable ["health", 0];
