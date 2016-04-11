@@ -1,8 +1,8 @@
 class rscCraftingMenu
 {
 	idd = 35900;
-	onLoad="uiNamespace setVariable ['rscCraftingMenu', _this select 0]; uiNamespace setVariable ['rscCraftingMenuRecipe', '']";
-	onUnload="uiNamespace setVariable ['rscCraftingMenu', displayNull]; uiNamespace setVariable ['rscCraftingMenuRecipe', '']";
+	onLoad="uiNamespace setVariable ['rscCraftingMenu', _this select 0]; uiNamespace setVariable ['rscCraftingMenuRecipe', '']; uiNamespace setVariable ['rscCraftingMenuHasEnough', true]";
+	onUnload="uiNamespace setVariable ['rscCraftingMenu', nil]; uiNamespace setVariable ['rscCraftingMenuRecipe', nil]; uiNamespace setVariable ['rscCraftingMenuHasEnough', nil]";
 	movingEnable = false;
 	enableSimulation = true;
 
@@ -218,7 +218,7 @@ class rscCraftingMenu
 			y = 0.6632 * safezoneH + safezoneY;
 			w = 0.0935 * safezoneW;
 			h = 0.04 * safezoneH;
-			action = "[getText(configFile >> 'CfgRecipes' >> (uiNamespace getVariable ['rscCraftingMenuRecipe', '']) >> 'recipeAction')] spawn { call compile (_this select 0); }; closeDialog 0";
+			action = "[uiNamespace getVariable ['rscCraftingMenuRecipe', ''], uiNamespace getVariable ['rscCraftingMenuHasEnough', false]] execVM 'addons\outbreak_code\functions\gui\fnc_craftItem.sqf'";
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END

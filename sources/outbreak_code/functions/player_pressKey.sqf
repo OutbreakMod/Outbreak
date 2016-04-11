@@ -21,7 +21,7 @@ if (_keyCode == 210) then {
 };
 
 if (_keyCode == 22) then {
-	[] execVM "addons\outbreak_code\functions\gui\fn_createCraftingDialog.sqf";
+	[] call fnc_createCraftingDialog;
 };
 
 // Interrupt actions, ie, searching for logs etc

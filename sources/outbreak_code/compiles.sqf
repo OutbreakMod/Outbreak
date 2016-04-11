@@ -50,6 +50,10 @@ zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\fu
 zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_create.sqf";
 zombies_alert = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombies_alert.sqf";
 
+// gui
+fnc_craftItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_craftItem.sqf";
+fnc_createCraftingDialog = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_createCraftingDialog.sqf";
+
 // remote exec fnc
 fnc_anim_switchMove = compileFinal "_this select 0 switchmove (_this select 1)";
 fnc_anim_playMoveNow = compileFinal "_this select 0 switchmove (_this select 1)";

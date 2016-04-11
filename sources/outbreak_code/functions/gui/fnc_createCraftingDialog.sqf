@@ -1,4 +1,6 @@
-fnc_createCraftingDialog = {
+private ["_canCreateRecipe"];
+
+fnc_openDialog = {
 	
 	_dialog = createDialog "rscCraftingMenu";
 	_idc = uiNamespace getVariable "rscCraftingMenu";
@@ -83,6 +85,7 @@ fn_drawMaterials = {
 			//_control ctrlSetTextColor [0,0.4,0,1]; // green
 		} else {
 			_control ctrlSetTextColor [1,0.314,0.314,1];//[1,0,0,1]; // red
+			uiNamespace setVariable ['rscCraftingMenuHasEnough', true];
 		};
 	
 		_control = _dialog displayCtrl _pictureIDC;
@@ -94,12 +97,14 @@ fn_drawMaterials = {
 	
 };
 
+_canCreateRecipe = true;
 disableSerialization;
 _dialog = uiNamespace getVariable ["rscCraftingMenu", displayNull];
 
 if (isNull _dialog) then {
-	call fnc_createCraftingDialog;
+	call fnc_openDialog;
 } else {
 	closeDialog 0;
-}
+};
+	
 	
