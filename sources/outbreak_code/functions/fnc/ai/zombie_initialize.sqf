@@ -8,7 +8,6 @@ private ["_agent", "_isZombieWild", "_clothes", "_cities", "_vests", "_zombieClo
 _agent = _this select 0;
 
 _agent setVariable ["isZombie", true, true];
-_agent setVariable ["health", 6000, true];
 _agent call player_clearInventory; // remove everything
 _agent disableAI "FSM";
 _agent setBehaviour "CARELESS";	
@@ -30,8 +29,22 @@ _agent addEventHandler ["Killed",
  { 
 	_unit = _this select 0;
 	_unit removeAllEventHandlers "HandleDamage";
-	[_unit, DEAD_ZOMBIE_DESPAWN_TIME] remoteExecCall ["remoteExec_add_cleanup", 2];
 	
+	_vars = [
+		"zombieSpawned",
+		"last_position",
+		"update_legs",
+		"attackingZombies",
+		"zombieTarget",
+		"zombieTargetCooldown",
+		"loseZombieTimer",
+		"zombieGunshotPosition",
+		"zombieTimerGunshot",
+		"isZombie"
+	];
+	
+	{ _unit setVariable [_x, nil, true]; } foreach _vars; // Important these variables are removed.
+	[_unit, DEAD_ZOMBIE_DESPAWN_TIME] remoteExecCall ["remoteExec_add_cleanup", 2]; // Tell server to clean up the zombie body
  }];
 
 _agent setHit ["body", 0.9];

@@ -18,7 +18,7 @@ _nearby = _position nearEntities [["Man", "Animal_Base_F", "Animal"], _range];
 	
 	if (_isUnit) then {
 		if (alive _unit) then {
-			_units = _units + [_unit];
+			_units pushBack _unit;
 		};
 	};
 	
