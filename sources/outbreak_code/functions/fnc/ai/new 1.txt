@@ -1,9 +1,0 @@
-zombieSpawned
-last_position
-update_legs
-attackingZombies
-zombieTarget
-zombieTargetCooldown
-loseZombieTimer
-zombieGunshotPosition
-zombieTimerGunshot

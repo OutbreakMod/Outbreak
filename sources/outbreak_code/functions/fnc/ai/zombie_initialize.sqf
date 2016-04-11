@@ -43,8 +43,8 @@ _agent addEventHandler ["Killed",
 		"isZombie"
 	];
 	
-	{ _unit setVariable [_x, nil, true]; } foreach _vars;
-	[_unit, DEAD_ZOMBIE_DESPAWN_TIME] remoteExecCall ["remoteExec_add_cleanup", 2];
+	{ _unit setVariable [_x, nil, true]; } foreach _vars; // Important these variables are removed.
+	[_unit, DEAD_ZOMBIE_DESPAWN_TIME] remoteExecCall ["remoteExec_add_cleanup", 2]; // Tell server to clean up the zombie body
  }];
 
 _agent setHit ["body", 0.9];
