@@ -40,4 +40,13 @@ class CfgVehicles
 	class Zombie : b_survivor_F {
 		faceType = "ZombieFace";
 	};
+	
+	class Hen_random_F;
+	class Cock_random_F;
+	class Goat_random_F;
+	class Sheep_random_F;
+	#include "Animals\Hen.cpp"
+	#include "Animals\Cock.cpp"
+	#include "Animals\Goat.cpp"
+	#include "Animals\Sheep.cpp"
 };
