@@ -3,9 +3,10 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"outbreak_assets"};
+		requiredAddons[] = {"outbreak_assets", "Unlocked_Uniforms"};
 	};
 };
+
 
 #include "config\cfgBuildingClothes\cfgBuildingClothes.cpp"
 #include "config\cfgGame\cfgGame.cpp"

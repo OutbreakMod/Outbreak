@@ -5,6 +5,10 @@ class CfgRecipes {
 		recipeAction = "";
 		recipe[] = {};
 		consume[] = {};
+		recipeType = "vehicle"; // "vehicle" or "item", vehicle being object placed or item as in magazine/backpack/storage item
+		recipeCreate = "";
+		persistent = 0;
+		buildDistance = 0;
 	};
 	
 	recipes[] = {

@@ -39,6 +39,11 @@ LOGGED_IN = false;
 INTERRUPT_ACTION = false;
 CAMERA_SHAKE_ACTIVE = false;
 
+BUILDING = false;
+BUILDING_OBJECT = objNull;
+BUILDING_WORLDSPACE = [];
+BUILDING_RECIPE = "";
+
 // reset actions
 action_gutAnimal = -1;
 action_cookMeat = -1;

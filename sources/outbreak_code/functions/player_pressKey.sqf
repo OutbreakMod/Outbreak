@@ -21,7 +21,21 @@ if (_keyCode == 210) then {
 };
 
 if (_keyCode == 22) then {
-	[] execVM "addons\outbreak_code\functions\gui\fn_createCraftingDialog.sqf";
+	[] call fnc_createCraftingDialog;
+};
+
+if (_keyCode == 57) then {
+	
+	if (BUILDING) then {
+		
+		_object = BUILDING_OBJECT;
+		[BUILDING_RECIPE, BUILDING_WORLDSPACE] spawn player_build;
+		
+		BUILDING = false;
+		BUILDING_RECIPE = "";
+		BUILDING_WORLDSPACE = [];
+		//BUILDING_OBJECT = objNull;
+	};
 };
 
 // Interrupt actions, ie, searching for logs etc
