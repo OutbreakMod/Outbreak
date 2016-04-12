@@ -74,5 +74,5 @@ fnc_updateObject = {
 	_vehicle setDir _dir;
 	_vehicle setPos _location;
 	
-	BUILDING_WORLDSPACE = [_location, vectorDir _vehicle, vectorUp _vehicle];
+	BUILDING_WORLDSPACE = [_location, vectorDir _vehicle, vectorUp _vehicle, _dir];
 };

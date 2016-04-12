@@ -29,9 +29,7 @@ if (_keyCode == 57) then {
 	if (BUILDING) then {
 		
 		_object = BUILDING_OBJECT;
-		_direction = getDir _object;
-
-		[BUILDING_RECIPE, BUILDING_WORLDSPACE, _direction] spawn player_build;
+		[BUILDING_RECIPE, BUILDING_WORLDSPACE] spawn player_build;
 		
 		BUILDING = false;
 		BUILDING_RECIPE = "";

@@ -7,7 +7,6 @@ private ["_type", "_animation", "_check", "_interrupt", "_animState", "_loop", "
 
 _class = _this select 0;
 _worldspace = _this select 1;
-_direction = _this select 2;
 
 player removeAction action_build;
 action_build = -1;
@@ -78,8 +77,8 @@ if (_finished) then {
 	
 
 	_vehicle = createVehicle [_type, (_worldspace select 0), [], 0, "CAN_COLLIDE"];
-	_vehicle setDir _direction;
-	_vehicle setPos (_worldspace select 0);
+	_vehicle setDir (_worldspace select 0);
+	_vehicle setPos (_worldspace select 1);
 	_vehicle setVectorDir (_worldspace select 1);
 	_vehicle setVectorUp (_worldspace select 2);
 
@@ -90,7 +89,7 @@ if (_finished) then {
 	_vehicle setVariable ["ObjectID", _objectID, true];
 	
 	if (_persistent) then {
-		[player, _vehicle, _type, _worldspace, _direction, ""] remoteExecCall ["remoteExec_new_object", 2];
+		[player, _vehicle, _type, _worldspace, ""] remoteExecCall ["remoteExec_new_object", 2];
 	};
 
 	{
