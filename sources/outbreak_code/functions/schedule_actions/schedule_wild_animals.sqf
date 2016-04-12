@@ -31,7 +31,7 @@ if (count _cities == 0) then {
 					_spawnedZombies = player getVariable ["spawnedZombies", []];
 					_spawnedZombies pushBack _animal;
 					
-					player setPos _animalPosition;
+					//player setPos _animalPosition;
 					
 					 // add zombie to players spawned zombie list
 					player setVariable ["spawnedZombies", _spawnedZombies, true];
