@@ -67,7 +67,7 @@ while {_loop} do {
 		};
 		
 		if ((_timer % 5) == 0) then { 
-			_unit call zombie_findTarget;
+			_unit spawn zombie_findTarget;
 		};	
 		
 		///

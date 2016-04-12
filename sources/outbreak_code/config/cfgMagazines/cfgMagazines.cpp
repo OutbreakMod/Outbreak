@@ -15,7 +15,7 @@ class CfgMagazines
 	
 	// FOOD
 	#include "Food\cannedfood.hpp"
-	#include "Food\candybar.hpp"
+	#include "Food\tacticalbacon.hpp"
 	#include "Food\carrot.hpp"
 	#include "Food\cereal.hpp"
 	#include "Food\chips.hpp"
@@ -24,7 +24,7 @@ class CfgMagazines
 	#include "Food\corn.hpp"
 	#include "Food\donut.hpp"
 	#include "Food\potato.hpp"
-	#include "Food\salisbury_steak.hpp"
+	#include "Food\rice.hpp"
 	#include "Food\twinkies.hpp"
 	#include "Food\snack_cakes.hpp"
 	#include "Food\snoballs.hpp"

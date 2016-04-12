@@ -70,6 +70,7 @@ fn_drawMaterials = {
 
 	_pictureIDC = 35904;
 	_textIDC = 35912;
+	_canCraft = true;
 	
 	for "_i" from 0 to (count _recipe) - 1 do { 
 	
@@ -95,9 +96,10 @@ fn_drawMaterials = {
 			//_control ctrlSetTextColor [0,0.4,0,1]; // green
 		} else {
 			_control ctrlSetTextColor [1,0.314,0.314,1];//[1,0,0,1]; // red
-			uiNamespace setVariable ['rscCraftingMenuHasEnough', true];
+			_canCraft = false;
 		};
 	
+		uiNamespace setVariable ['rscCraftingMenuHasEnough', _canCraft];
 		_control = _dialog displayCtrl _pictureIDC;
 		_control ctrlSetText ((_item >> "picture") call BIS_fnc_getCfgData);
 		
