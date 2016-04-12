@@ -14,7 +14,6 @@
 		["zombies", 180],
 		["sync", 180],
 		["wild_zombies", 300],
-		["wild_animals", 30],
 		["actions", 1],
 		["sfx", 1],
 		["fracture", 1],
