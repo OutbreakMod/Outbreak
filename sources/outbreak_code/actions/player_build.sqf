@@ -77,8 +77,8 @@ if (_finished) then {
 	
 
 	_vehicle = createVehicle [_type, (_worldspace select 0), [], 0, "CAN_COLLIDE"];
-	_vehicle setDir (_worldspace select 0);
-	_vehicle setPos (_worldspace select 1);
+	_vehicle setPos (_worldspace select 0);
+	_vehicle setDir (_worldspace select 1);
 	_vehicle setVectorDir (_worldspace select 2);
 	_vehicle setVectorUp (_worldspace select 3);
 
