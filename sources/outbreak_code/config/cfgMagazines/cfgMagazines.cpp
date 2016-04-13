@@ -18,7 +18,7 @@ class CfgMagazines
 	#include "Food\tacticalbacon.hpp"
 	#include "Food\carrot.hpp"
 	#include "Food\cereal.hpp"
-	#include "Food\chips.hpp"
+	#include "Food\powderedmilk.hpp"
 	#include "Food\coffee.hpp"
 	#include "Food\mre.hpp"
 	#include "Food\corn.hpp"
@@ -67,7 +67,7 @@ class CfgMagazines
 	
 	// SURVIVAL
 	#include "Survival\knife.hpp"
-	#include "Survival\matchbox.hpp"
+	#include "Survival\matches.hpp"
 	#include "Survival\switchblade.hpp"
 	#include "Survival\tent.hpp"
 	#include "Survival\rope.hpp"

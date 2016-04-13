@@ -24,8 +24,9 @@
 	
 	while {true} do {
 	
-		{
-			if (LOGGED_IN) then {
+		if (LOGGED_IN) then {
+	
+			{
 				if (alive player) then {
 					
 					_task = _x select 0;
@@ -39,12 +40,11 @@
 						[] execVM format["addons\outbreak_code\functions\schedule_actions\schedule_%1.sqf", _task];
 					};
 				};
-			};
+			} foreach _scheduled;
 			
-		} foreach _scheduled;
-		
-		sleep 0.25; // loop timer every 250m
-		_timer = _timer + 0.25;
+			sleep 0.25; // loop timer every 250m
+			_timer = _timer + 0.25;
+		};
 	};
 };
 
