@@ -11,7 +11,7 @@ class Fireplace : DefaultRecipe {
 	recipe[] = {
 		{"log", 3},
 		{"rock", 3},
-		{"matchbox", 1}
+		{"matches", 1}
 	};
 	
 	consume[] = {
