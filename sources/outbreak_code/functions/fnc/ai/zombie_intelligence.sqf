@@ -177,7 +177,7 @@ while {_loop} do {
 		///
 		/// Zombie unstuck checking
 		///
-		if ((_timer % 60) == 0) then {
+		/*if ((_timer % 60) == 0) then {
 			if (!(_hasTarget or _heardGunshot)) then {
 				
 				_currentPosition = getPosATL _unit;
@@ -212,7 +212,7 @@ while {_loop} do {
 					};
 				};
 			};
-		};
+		};*/
 		
 		///
 		/// Send leg updates
