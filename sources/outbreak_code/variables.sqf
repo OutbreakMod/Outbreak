@@ -6,6 +6,8 @@
 ZOMBIE_GROUP = createGroup east;
 
 FULL_HEALTH = (configFile >> "CfgGame" >> "FULL_HEALTH") call BIS_fnc_getCfgData;
+FULL_STOMACH = 5000;
+
 CHOP_TREES = (configFile >> "CfgGame" >> "CHOPPABLE_TREES") call BIS_fnc_getCfgData;
 CHOP_TREES_WOOD_YIELD = (configFile >> "CfgGame" >> "TREES_WOOD_YIELD") call BIS_fnc_getCfgData;
 
@@ -36,6 +38,7 @@ LEG_BREAK_STAND_COOLDOWN = 10;
 LEG_BREAK_STAND_TIMER = 0;
 
 LOGGED_IN = false;
+IN_GAME = false;
 INTERRUPT_ACTION = false;
 CAMERA_SHAKE_ACTIVE = false;
 
