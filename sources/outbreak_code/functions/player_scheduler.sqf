@@ -11,10 +11,10 @@
 	
 	_scheduled = [
 		["loot", 20],
-		["zombies", 180],
+		["zombies", 30],
 		["sync", 180],
 		["wild_zombies", 300],
-		["wild_animals", 180],
+		["wild_animals", 300],
 		["actions", 1],
 		["sfx", 1],
 		["fracture", 1],
