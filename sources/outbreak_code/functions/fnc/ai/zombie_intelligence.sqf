@@ -6,13 +6,13 @@ _walking = false;
 
 _walkPath = [];
 
-_timer = 0;
+_timer = floor (random 6);
 _nextIdleSpeak = 0;
 _nextWalkTime = 0;
 
 while {_loop} do {
 	
-	if !(alive _unit) then {
+	if (!(alive _unit)) then {
 		_loop = false;
 	} else {
 		
@@ -178,7 +178,7 @@ while {_loop} do {
 		/// Zombie unstuck checking
 		///
 		if ((_timer % 60) == 0) then {
-			if (!_hasTarget) then {
+			if (!(_hasTarget or _heardGunshot)) then {
 				
 				_currentPosition = getPosATL _unit;
 				_position = _unit getVariable ["last_position", _currentPosition];
@@ -200,7 +200,7 @@ while {_loop} do {
 						
 						_counter = _counter + 1;
 						
-						if (_counter > 20) then {
+						if (_counter > 10) then {
 							_zombiePosition = [];
 							_needsRelocated = false;
 						};
