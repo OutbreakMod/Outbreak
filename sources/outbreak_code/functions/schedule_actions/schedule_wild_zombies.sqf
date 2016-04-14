@@ -12,8 +12,8 @@ if (count _cities == 0) then {
 		
 		for "_i" from 1 to 3 do {
 
-			_zombiePosition = [getPosATL player, MIN_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
-			_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
+			_zombiePosition = [getPosATL player, MIN_WILD_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
+			_players = [_zombiePosition, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
 
 			if ((count _players > 0)) then {
 				[[_zombiePosition]] call zombie_create;
