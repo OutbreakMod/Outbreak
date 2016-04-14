@@ -42,10 +42,10 @@
 					};
 				};
 			} foreach _scheduled;
+			
+			sleep 0.25; // loop timer every 250m
+			_timer = _timer + 0.25;
 		};
-		
-		sleep 0.25; // loop timer every 250m
-		_timer = _timer + 0.25;
 	};
 };
 

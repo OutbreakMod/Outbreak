@@ -19,12 +19,7 @@ while {_loop} do {
 		_hasTarget = _unit call zombie_hasTarget;
 		_target = _unit getVariable ["zombieTarget", _unit];
 		_heardGunshot = (_unit getVariable ["zombieTimerGunshot", -1]) > 0;
-		
-		if ((_timer % 10) == 0) then {
-			_unit setVariable ["last_position", (getPosATL _unit), true];
-			_unit setVariable ["last_position_updated", serverTime + 30, true];
-		};
-		
+
 		///
 		/// Chase target
 		///
@@ -173,50 +168,6 @@ while {_loop} do {
 					_loop = false;
 				};
 			};
-		};
-		
-		///
-		/// Zombie unstuck checking
-		///
-		if ((_timer % 10) == 0) then {
-			//if (!(_hasTarget or _heardGunshot)) then {
-				
-			_currentPosition = getPosATL _unit;
-			_position = _unit getVariable ["last_position", _currentPosition];
-			_lastUpdate = _unit getVariable ["last_position_updated", serverTime];
-			
-			if ((_currentPosition distance _position <= 1) and (serverTime > _lastUpdate)) then { 
-				
-				_zombiePosition = [];
-				_needsRelocated = true;
-				_counter = 0;
-
-				while {_needsRelocated} do {
-					
-					_zombiePosition = [_currentPosition, 3, 30, 3] call fnc_selectRandomLocation;
-					_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
-					
-					if ((count _players) == 0) then {
-						_needsRelocated = false;
-					};
-					
-					_counter = _counter + 1;
-					
-					if (_counter > 10) then {
-						_zombiePosition = [];
-						_needsRelocated = false;
-					};
-				};
-
-				if (count _zombiePosition > 0) then {	
-					_unit setPos _zombiePosition;
-					_unit setVariable ["zombieSpawned", _zombiePosition, true];
-					
-					_unit setVariable ["last_position", (getPosATL _zombiePosition), true];
-					_unit setVariable ["last_position_updated", serverTime + 30, true];
-				};
-			};
-			//};
 		};
 		
 		///
