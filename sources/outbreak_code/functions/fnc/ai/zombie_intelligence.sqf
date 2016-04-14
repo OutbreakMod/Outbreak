@@ -165,7 +165,7 @@ while {_loop} do {
 		if (alive _unit) then {
 			if ((_timer % 30) == 0) then {
 				
-				_players = ([_unit, LOOT_SPAWN_RADIUS, "isPlayer"] call player_findNearby);
+				_players = ([_unit, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby);
 				
 				if (count _players == 0) then {
 					_unit setDamage 1;
