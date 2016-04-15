@@ -13,6 +13,12 @@ setPlayable _newUnit;
 selectPlayer _newUnit;
 deleteVehicle (_previousUnit);
 
+player enableSimulation false;
+player allowDammage false;
+player disableAI 'FSM';
+player disableAI 'ANIM';
+player disableAI 'MOVE';
+
 setAperture 10000;
 1 fadeSound 0;
 1 fadeSpeech 0;
