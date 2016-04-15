@@ -5,6 +5,15 @@
 
 _zombie = _this select 0;
 _target = _this select 1;
+
+if (!(alive _zombie)) exitWith {
+	false;
+};
+
+if (!(alive _target)) exitWith {
+	false;
+};
+
 _distance = _zombie distance _target;
 
 _return = false;

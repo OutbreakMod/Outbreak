@@ -7,5 +7,6 @@ class ibuprofen: CA_Magazine
 				mass = 2;
 		}; 
 	picture = "\addons\outbreak_assets\textures\items\ibuprofen.paa";
+	model = "\A3\structures_f_epa\Items\medical\PainKillers_F";//"\A3\structures_f_epa\Items\medical\antibiotic_F";
 	descriptionShort = "";
 };

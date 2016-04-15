@@ -92,7 +92,8 @@ if (count _this > 1) then {
 };
 
 _clothes = (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes) call BIS_fnc_getCfgData;
-_uniform = _clothes call BIS_fnc_selectRandom;
+_uniform = selectRandom _clothes;
+
 _agent addUniform _uniform;
 
 if (_zombieClothes == "military") then {

@@ -7,5 +7,6 @@ class cereal: CA_Magazine
 				mass = 2;
 		}; 
 	picture = "\addons\outbreak_assets\textures\items\cereal.paa";
+	model="\A3\structures_f_epa\Items\Food\CerealsBox_F";
 	descriptionShort = "";
 };

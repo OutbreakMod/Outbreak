@@ -2,6 +2,7 @@
   <img src="http://i.imgur.com/nQHWgbp.png" alt="Outbreak Mod"/>
 </p>
 
+##About
 
 Outbreak Mod created by Alex (TheAmazingAussie) inspired by DayZ mod created for Arma 3, is a multiplayer survival mod that aims for realism in world where infection has taken over and turned people into monsters.
 
@@ -9,9 +10,7 @@ The master repository is the stable branch, if you want to test the newest updat
 
 Server data located here: https://github.com/OutbreakMod/OutbreakServer
 
---------------------------
-Features
---------------------------
+##Features
 
 Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG.md
 
@@ -39,9 +38,7 @@ Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG
 - Custom object actions (study body, gut body)
 - Custom world actions (search logs, chopping trees down)
 
---------------------------
-Peformance
---------------------------
+##Peformance
 
 This has been tested on my own personal computer. Client performance is at 55-60 fps (in a city) and 80+ fps in the wilderness, along with zombies and loot, at ultra settings with 3600+ metre view distance.
 
@@ -51,9 +48,7 @@ This has been tested on my own personal computer. Client performance is at 55-60
 - 250 GB SSD
 - 500 GB HDD
 
---------------------------
-Screenshots
---------------------------
+##Screenshots
 
 <img src="http://i.imgur.com/gRgICjc.png" />
 
@@ -61,22 +56,23 @@ Screenshots
 
 <img src="http://i.imgur.com/YBU0jjK.png" />
 
+##Mods Required
 
---------------------------
-Mods Used
---------------------------
+You need to add these mods to the launch options of both client and server to be able to play.
 
- 1. Community Base addons A3 - http://www.armaholic.com/page.php?id=18767
- 2. Weapon Pack  - http://www.armaholic.com/page.php?id=27489
- 3. Terrains Complete v1.0.1 - http://www.armaholic.com/page.php?id=30045
+1. [Community Upgrade Project - Terrains Complete v1.0.1](http://www.armaholic.com/page.php?id=30045)
+2. [Community Upgrade Project - Weapon Pack](http://www.armaholic.com/page.php?id=27489)
+3. [Community Base addons A3](http://www.armaholic.com/page.php?id=18767)
 
-Thanks to these AMAZING mod creators <3
+##Contributors
 
---------------------------
-Contact
---------------------------
+Every small contribution, regardless big or small, will be included here.
 
-Email: alex.daniel.97[at]gmail.com
+- 
+
+##Contact
+
+Email: alex.daniel.97 [at] gmail.com
 
 Twitter: http://twitter.com/TheAmazingAussie
 

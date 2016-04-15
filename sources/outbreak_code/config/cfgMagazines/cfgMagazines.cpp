@@ -15,16 +15,16 @@ class CfgMagazines
 	
 	// FOOD
 	#include "Food\cannedfood.hpp"
-	#include "Food\candybar.hpp"
+	#include "Food\tacticalbacon.hpp"
 	#include "Food\carrot.hpp"
 	#include "Food\cereal.hpp"
-	#include "Food\chips.hpp"
+	#include "Food\powderedmilk.hpp"
 	#include "Food\coffee.hpp"
 	#include "Food\mre.hpp"
 	#include "Food\corn.hpp"
 	#include "Food\donut.hpp"
 	#include "Food\potato.hpp"
-	#include "Food\salisbury_steak.hpp"
+	#include "Food\rice.hpp"
 	#include "Food\twinkies.hpp"
 	#include "Food\snack_cakes.hpp"
 	#include "Food\snoballs.hpp"
@@ -67,7 +67,7 @@ class CfgMagazines
 	
 	// SURVIVAL
 	#include "Survival\knife.hpp"
-	#include "Survival\matchbox.hpp"
+	#include "Survival\matches.hpp"
 	#include "Survival\switchblade.hpp"
 	#include "Survival\tent.hpp"
 	#include "Survival\rope.hpp"

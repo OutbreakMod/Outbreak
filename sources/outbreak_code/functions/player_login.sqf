@@ -28,8 +28,6 @@ player addEventHandler ["Respawn", { _this call player_respawn; }];
 player addEventHandler ["HandleDamage", { _this call player_handleDamage; }];
 player addEventHandler ["Fired", { _this call player_fired; }];
 
-// add variable
-LOGGED_IN = false;
 player setVariable ["playeruuid", getPlayerUID player, true];
 player setVariable ["alive", true];
 player setVariable ["isPlayer", true, true];
@@ -39,8 +37,8 @@ player enableFatigue false;
 // clears a players inventory from default mission items
 player call player_clearInventory;
 
-// medical
 player setVariable ["health", FULL_HEALTH, true];
+player setVariable ["stomach", FULL_STOMACH, true];
 
 //if respawn from grey screen
 FULL_HEALTH call fnc_simulateHealthEffect;
