@@ -36,9 +36,27 @@ class CfgVehicles
 	class b_survivor_F;	// External class reference
 	class Survivor : b_survivor_F {
 		//faceType = "ZombieFace";
+		uniformClass = "";
+		weapons[] = {};
+		respawnWeapons[] = {};
+		Items[] = {};
+		RespawnItems[] = {};
+		magazines[] = {};
+		respawnMagazines[] = {};
+		linkedItems[] = {};
+		respawnLinkedItems[] = {};
 	};
 	class Zombie : b_survivor_F {
 		faceType = "ZombieFace";
+		uniformClass = "";
+		weapons[] = {};
+		respawnWeapons[] = {};
+		Items[] = {};
+		RespawnItems[] = {};
+		magazines[] = {};
+		respawnMagazines[] = {};
+		linkedItems[] = {};
+		respawnLinkedItems[] = {};
 	};
 	
 	class Hen_random_F;
