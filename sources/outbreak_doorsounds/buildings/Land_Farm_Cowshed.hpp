@@ -188,6 +188,8 @@ class Land_Farm_Cowshed_a : House {
 		class door01_a {
 			animPeriod = 1;
 			initPhase = 1;
+			sound = "GenericDoorsSound";
+			soundPosition = "door01_a_axis";
 		};
 		
 		class door01_b {
@@ -198,6 +200,8 @@ class Land_Farm_Cowshed_a : House {
 		class door02_a {
 			animPeriod = 1;
 			initPhase = 1;
+			sound = "GenericDoorsSound";
+			soundPosition = "door02_a_axis";
 		};
 		
 		class door02_b {
@@ -208,6 +212,8 @@ class Land_Farm_Cowshed_a : House {
 		class door03 {
 			animPeriod = 1;
 			initPhase = 0;
+			sound = "GenericDoorsSound";
+			soundPosition = "door03_axis";
 		};
 	};
 	
@@ -576,11 +582,15 @@ class Land_Farm_Cowshed_c : House {
 		class door_a {
 			animPeriod = 1;
 			initPhase = 1;
+			sound = "GenericDoorsSound";
+			soundPosition = "door_a_axis";
 		};
 		
 		class door_b {
 			animPeriod = 1;
 			initPhase = 1;
+			sound = "GenericDoorsSound";
+			soundPosition = "door_a_axis";
 		};
 	};
 	
