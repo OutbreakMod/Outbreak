@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"CAStructures_Mil", "CUP_CAStructures_Mil", "Farm_Cowshed", "CUP_Farm_Cowshed", "CUP_Buildings_Data", "CABuildings", "CABuildings2", "Barn_Metal"};
+		requiredAddons[] = {"CAStructures_Mil", "Farm_Cowshed", "CABuildings", "CABuildings2", "Barn_Metal", "CAStructuresHouse_HouseV2", "CAStructuresHouse"};
 		magazines[] = {};
 		ammo[] = {};
 	};
@@ -24,4 +24,5 @@ class CfgVehicles {
 	#include "buildings\Land_Hangar_2.hpp"
 	#include "buildings\Land_Farm_Cowshed.hpp"
 	#include "buildings\Land_Barn_Metal.hpp"
+	//#include "buildings\House_V2_04_interier.hpp"
 };
