@@ -180,7 +180,7 @@ while {_loop} do {
 		/// Zombie unstuck checking
 		///
 		if ((_timer % 10) == 0) then {
-			if (!(_hasTarget or _heardGunshot)) then {
+			if (!(_hasTarget or _heardGunshot) and (speed _unit < 10)) then {
 				
 				_currentPosition = getPosATL _unit;
 				_position = _unit getVariable ["last_position", _currentPosition];
