@@ -13,6 +13,7 @@ class CfgRemoteExec
 		class remoteExec_spawn_loot { allowedTargets=2; };
 		
 		/* client only remoteexec */
+		class remoteExec_camera_shake { allowedTargets=1; };
 		class fnc_anim_switchMove { allowedTargets=1; };
 		class fnc_anim_playMoveNow { allowedTargets=1; };
 		class fnc_object_speak { allowedTargets=1; };

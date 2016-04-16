@@ -29,11 +29,7 @@ if (count _walkPath > 0) then {
 		_targetHealth = _targetHealth - 100;
 		_target setVariable ["health", _targetHealth, true];
 		
-		if (isServer) then {
-			[_target, ["camera_shake"]] call server_clientCommand;
-		} else {
-			1 call fnc_damageEffect;
-		};
+		[] remoteExecCall ["remoteExec_camera_shake", (owner _target)];
 		
 	} else {
 		// if target moved between zombie trying to hit, then we cancel
