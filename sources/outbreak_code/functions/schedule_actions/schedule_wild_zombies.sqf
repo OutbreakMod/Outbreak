@@ -5,7 +5,7 @@
 
 _cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 100];
 
-_houses = nearObjects ["House", 50];
+_houses = player nearObjects ["House", 50];
 
 if (!(count _houses > 3)) then { // if we have more than 3 houses nearby, no wild animal spawns
 
