@@ -18,7 +18,7 @@ _distance = _zombie distance _target;
 
 _return = false;
 
-if (_distance <= 40) then {
+if (_distance <= ZOMBIE_SEARCH_DISTANCE) then {
 		
 	_a = (getPos _target select 0) - (getPos _zombie select 0);
 	_b = (getPos _target select 1) - (getPos _zombie select 1);

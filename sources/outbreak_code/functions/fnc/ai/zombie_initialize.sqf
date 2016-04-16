@@ -25,6 +25,16 @@ _agent addEventHandler ["HandleDamage",
 	_this call zombie_handleDamage; 
 }];
 
+_agent addEventHandler ["Hit", 
+{
+	_unit = _this select 0;
+	_causedBy = _this select 1;
+	
+	if (isPlayer _causedBy) then {
+		[_unit, getPosATL _causedBy] call alert_zombie;
+	};
+}];
+
 _agent addEventHandler ["Killed",
  { 
 	_unit = _this select 0;
