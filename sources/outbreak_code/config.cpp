@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"outbreak_assets", "Unlocked_Uniforms"};
+		requiredAddons[] = {"outbreak_assets", "A3_Characters_F"};
 	};
 };
 

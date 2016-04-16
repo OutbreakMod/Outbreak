@@ -44,19 +44,21 @@ while {_loop} do {
 					_unit forceSpeed (_unit getSpeed "FAST");
 				
 				};
+				
+				if (_hasTarget) then {
+					
+					if (_unit distance _destination <= ZOMBIE_REACH_DISTANCE) then { 
+						_unit forceSpeed 1;
 
-				if (_unit distance _destination <= 2) then { 
-					_unit forceSpeed 1;
-
-					if (_hasTarget) then {
 						if ((_timer % 2) == 0) then {
 							[_unit, _target] spawn zombie_attack;
 						};
 					};
-					
+				};
+				
+				if (_unit distance _destination <= 2) then { 
 					if (_heardGunshot) then {
-						
-						// Reset gunshot status
+						_unit forceSpeed 1;
 						_unit setVariable ["zombieTimerGunshot", 0, true]; 
 					};
 				};

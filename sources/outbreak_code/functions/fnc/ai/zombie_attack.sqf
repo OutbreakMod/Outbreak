@@ -13,7 +13,7 @@ _unit setDir _dir;
 [_unit, "zpunch" + str((floor random 3) + 1)] call object_speak;
 [_unit, "AwopPercMstpSgthWnonDnon_end"] remoteExecCall ["fnc_anim_playMoveNow"];
 
-sleep 1.5;
+sleep 1;
 
 // get targets last known location
 _walkPath = _target getVariable ["last_position", []];
@@ -23,7 +23,7 @@ _walkPath = _target getVariable ["last_position", []];
 // then we carry on the damage
 
 if (count _walkPath > 0) then {
-	if (_unit distance _walkPath <= 2 && alive _unit) then {
+	if (_unit distance _walkPath <= ZOMBIE_REACH_DISTANCE && alive _unit) then {
 		
 		_targetHealth = _target getVariable ["health", 0];
 		_targetHealth = _targetHealth - 100;

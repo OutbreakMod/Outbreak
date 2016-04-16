@@ -4,4 +4,8 @@ class CfgWeapons {
 	#include "1911\1911.cpp"
 	#include "DMR\DMR.cpp"
 	#include "FNFAL\FNFAL.cpp"
+	
+	class Uniform_Base;
+	
+	// Uniforms
 };

@@ -4,9 +4,10 @@
 */
 
 _animalTypes = ["MOD_Hen", "MOD_Cock", "MOD_Goat", "MOD_Sheep"];
-_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 100];
 
-if (count _cities == 0) then {
+_houses = nearObjects ["House", 50];
+
+if (!(count _houses > 3)) then { // if we have more than 3 houses nearby, no wild zombie spawns
 
 	_animals = ([getPosATL player, MAX_ANIMAL_SPAWN_DISTANCE, "isAnimal"] call player_findNearby);
 
