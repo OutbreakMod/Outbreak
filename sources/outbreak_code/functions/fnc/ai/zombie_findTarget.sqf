@@ -14,7 +14,7 @@ _cooldown = _unit getVariable ["zombieTargetCooldown", 0];
 if (!(_cooldown > 0)) then {
 	if (!_hasTarget) then {
 		
-		_players = ([_unit, 40, "isPlayer"] call player_findNearby);
+		_players = ([_unit, ZOMBIE_SEARCH_DISTANCE, "isPlayer"] call player_findNearby);
 		
 		if (count _players > 0) then {
 			

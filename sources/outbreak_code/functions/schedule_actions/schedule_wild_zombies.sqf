@@ -5,7 +5,9 @@
 
 _cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 100];
 
-if (count _cities == 0) then {
+_houses = player nearObjects ["House", 50];
+
+if (!(count _houses > 3)) then { // if we have more than 3 houses nearby, no wild animal spawns
 
 	_zombies = ([getPosATL player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
 	

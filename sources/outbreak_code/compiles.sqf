@@ -49,6 +49,7 @@ zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\fu
 zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_handleDamage.sqf";
 zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_create.sqf";
 zombies_alert = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombies_alert.sqf";
+alert_zombie = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\alert_zombie.sqf";
 
 // gui
 fnc_craftItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_craftItem.sqf";

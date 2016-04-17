@@ -44,19 +44,21 @@ while {_loop} do {
 					_unit forceSpeed (_unit getSpeed "FAST");
 				
 				};
+				
+				if (_hasTarget) then {
+					
+					if (_unit distance _destination <= ZOMBIE_REACH_DISTANCE) then { 
+						_unit forceSpeed 1;
 
-				if (_unit distance _destination <= 2) then { 
-					_unit forceSpeed 1;
-
-					if (_hasTarget) then {
 						if ((_timer % 2) == 0) then {
 							[_unit, _target] spawn zombie_attack;
 						};
 					};
-					
+				};
+				
+				if (_unit distance _destination <= 2) then { 
 					if (_heardGunshot) then {
-						
-						// Reset gunshot status
+						_unit forceSpeed 1;
 						_unit setVariable ["zombieTimerGunshot", 0, true]; 
 					};
 				};
@@ -66,7 +68,7 @@ while {_loop} do {
 		
 		};
 		
-		if ((_timer % 5) == 0) then { 
+		if ((_timer % 1) == 0) then { 
 			_unit spawn zombie_findTarget;
 		};	
 		
@@ -164,7 +166,7 @@ while {_loop} do {
 		if (alive _unit) then {
 			if ((_timer % 30) == 0) then {
 				
-				_players = ([_unit, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby);
+				_players = ([_unit, ZOMBIE_DESPAWN_DISTANCE, "isPlayer"] call player_findNearby);
 				
 				if (count _players == 0) then {
 					_unit setDamage 1;
@@ -178,7 +180,7 @@ while {_loop} do {
 		/// Zombie unstuck checking
 		///
 		if ((_timer % 10) == 0) then {
-			if (!(_hasTarget or _heardGunshot)) then {
+			if (!(_hasTarget or _heardGunshot) and (speed _unit < 10)) then {
 				
 				_currentPosition = getPosATL _unit;
 				_position = _unit getVariable ["last_position", _currentPosition];
