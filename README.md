@@ -80,5 +80,5 @@ The following people listed is everyone who has contributed towards the mod in o
 
 Email: alex.daniel.97 [at] gmail.com
 
-Twitter: http://twitter.com/TheAmazingAussie
+Twitter: http://twitter.com/AmazingAussie
 

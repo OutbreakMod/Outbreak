@@ -2,7 +2,6 @@
 
 - [New] Disable movement when logging in
 - [New] remoteExec security configuration added
-- [New] Various building door sounds
 - [New] Stomach configuration
 - [New] 45 ACP model for 1911 model
 - [New] FN FAL / DMR magazine model added
