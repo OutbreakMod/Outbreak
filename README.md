@@ -66,9 +66,15 @@ You need to add these mods to the launch options of both client and server to be
 
 ##Contributors
 
-Every small contribution, regardless big or small, will be included here.
+The following people listed is everyone who has contributed towards the mod in one shape or form.
 
-- 
+**2D Artists**
+
+[Rixty](https://devbest.com/members/rixty.53754/) (player status HUD)
+
+**Other mod authors**
+
+[Unlocked Uniforms](https://forums.bistudio.com/topic/166657-unlocked-uniforms/) mod by [halek](https://forums.bistudio.com/user/878679-haleks/)
 
 ##Contact
 
