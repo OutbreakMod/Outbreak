@@ -1,3 +1,17 @@
+**Apr 17, 2016**
+
+- [New] Disable movement when logging in
+- [New] remoteExec security configuration added
+- [New] Various building door sounds
+- [New] Stomach configuration
+- [New] 45 ACP model for 1911 model
+- [New] FN FAL / DMR magazine model added
+- [New] Player building precision
+- [New] Door sounds on various Arma 2 buildings (barracks, ATC, etc)
+- [Fixed] Major FPS drop in cities when attempting to spawn wild zombies
+- [Changed] Zombie arm reach
+- [Changed] Zombie detection interval lowered from 5 sec to 1 sec (before was due to optimisation issues)
+
 **Apr 10, 2016**
 - [New] Players now scream when they break their legs
 - [New] Strings are now localised
