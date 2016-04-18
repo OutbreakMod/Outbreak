@@ -10,6 +10,8 @@ _timer = floor (random 6);
 _nextIdleSpeak = 0;
 _nextWalkTime = 0;
 
+//AmovPercMevaSnonWnonDf
+
 while {_loop} do {
 	
 	if (!(alive _unit)) then {
@@ -224,12 +226,15 @@ while {_loop} do {
 			_oldDamage = (_unit getHit "legs");
 			_newDamage = _oldDamage + (_unit getVariable ["update_legs", 0]);
 
-			_unit setHit ["legs", _newDamage];
 			_unit setVariable ["update_legs", 0, true];
 			
-			if (_newDamage > 0.58) then {
-				_unit switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+			if (!(_oldDamage > 0.58)) then {
+				if (_newDamage > 0.58) then {
+					_unit switchMove "AmovPpneMstpSrasWrflDnon"; // prone
+				};
 			};
+			
+			_unit setHit ["legs", _newDamage];
 		};
 		
 		sleep 1; // loop timer every 250m

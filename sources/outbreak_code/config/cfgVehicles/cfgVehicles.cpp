@@ -45,6 +45,8 @@ class CfgVehicles
 		respawnMagazines[] = {};
 		linkedItems[] = {};
 		respawnLinkedItems[] = {};
+		//moves = "CfgMovesZombieSdr";
+		//gestures = "CfgGesturesZombie";
 	};
 	class Zombie : b_survivor_F {
 		faceType = "ZombieFace";

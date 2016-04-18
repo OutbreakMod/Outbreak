@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"outbreak_assets", "A3_Characters_F"};
+		requiredAddons[] = {"outbreak_assets", "A3_Characters_F", "CUP_Weapons_AK"};
 	};
 };
 
@@ -17,3 +17,5 @@ class CfgPatches {
 #include "config\RscDisplay\includes.cpp"
 #include "config\cfgRecipes\cfgRecipes.cpp"
 #include "config\CfgRemoteExec\cfgRemoteExec.cpp"
+
+//#include "config\CfgMoves\CfgMoves.cpp"
