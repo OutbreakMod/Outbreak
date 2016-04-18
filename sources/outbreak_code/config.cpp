@@ -17,3 +17,5 @@ class CfgPatches {
 #include "config\RscDisplay\includes.cpp"
 #include "config\cfgRecipes\cfgRecipes.cpp"
 #include "config\CfgRemoteExec\cfgRemoteExec.cpp"
+
+#include "config\CfgMoves\CfgMoves.cpp"

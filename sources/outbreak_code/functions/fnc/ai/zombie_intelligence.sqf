@@ -10,6 +10,8 @@ _timer = floor (random 6);
 _nextIdleSpeak = 0;
 _nextWalkTime = 0;
 
+//AmovPercMevaSnonWnonDf
+
 while {_loop} do {
 	
 	if (!(alive _unit)) then {
