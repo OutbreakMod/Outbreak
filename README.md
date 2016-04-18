@@ -72,6 +72,10 @@ The following people listed is everyone who has contributed towards the mod in o
 
 [Rixty](https://devbest.com/members/rixty.53754/) (player status HUD)
 
+**3D Modelers**
+
+- AKM and AK74 magazines by [CoftSock](https://github.com/CoftSock)
+
 **Other mod authors**
 
 [Unlocked Uniforms](https://forums.bistudio.com/topic/166657-unlocked-uniforms/) mod by [halek](https://forums.bistudio.com/user/878679-haleks/)
