@@ -4,6 +4,8 @@ class CfgMagazines
 	#include "Items\cfgItems.cpp"
 	#include "Ammunition\45ACP.cpp"
 	#include "Ammunition\762x51.cpp"
+	#include "Ammunition\545x39.cpp"
+	#include "Ammunition\762x39.cpp"
 	
 	// MEAT
 	#include "Food\Meat\rawmutton.cpp"
