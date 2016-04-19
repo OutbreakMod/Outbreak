@@ -42,8 +42,8 @@ fnc_hungerUI = {
 	
 	private ["_health", "_healthComponents", "_healthControl", "_almostFull", "_full", "_low", "_medium", "_status", "_veryLow"];
 	
-	_healthComponents = FULL_HEALTH / 5;
-	_health = player getVariable ["stomach", FULL_HEALTH];
+	_healthComponents = FULL_STOMACH / 5;
+	_health = player getVariable ["stomach", FULL_STOMACH];
 
 	_full = FULL_HEALTH;
 
