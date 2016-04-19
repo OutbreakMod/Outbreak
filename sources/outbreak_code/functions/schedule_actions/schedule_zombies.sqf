@@ -5,7 +5,7 @@ if (_inVehicle) then {
 	_searchPosition = getPosATL (vehicle player);
 };
 
-_nearby = _searchPosition nearObjects LOOT_SPAWN_RADIUS;
+_nearby = _searchPosition nearObjects ZOMBIE_SPAWN_RADIUS;
 _nearly = _nearby call KK_fnc_arrayShuffle; // Spice it up :D
 
 {
