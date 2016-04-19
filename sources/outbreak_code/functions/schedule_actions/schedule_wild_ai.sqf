@@ -6,8 +6,13 @@
 _animalTypes = ["MOD_Hen", "MOD_Cock", "MOD_Goat", "MOD_Sheep"];
 
 _houses = player nearObjects ["House", 50];
+_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 150];
 
-if (!(count _houses > 3)) then { // if we have more than 3 houses nearby, no wild zombie spawns
+if (!(count _houses > 3) && (count _cities == 0)) then { 
+
+	/////////////////////////
+	// WILD ANIMAL SPAWNING
+	/////////////////////////
 
 	_animals = ([getPosATL player, MAX_ANIMAL_SPAWN_DISTANCE, "isAnimal"] call player_findNearby);
 
@@ -61,6 +66,26 @@ if (!(count _houses > 3)) then { // if we have more than 3 houses nearby, no wil
 						};
 					};
 				};
+			};
+		};
+		
+	};
+	
+	/////////////////////////
+	// WILD ZOMBIE SPAWNING
+	/////////////////////////
+	
+	_zombies = ([getPosATL player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
+	
+	if (count _zombies == 0) then {
+		
+		for "_i" from 1 to 3 do {
+
+			_zombiePosition = [getPosATL player, MIN_WILD_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
+			_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
+
+			if (!(count _players > 0)) then {
+				[[_zombiePosition]] call zombie_create;
 			};
 		};
 	};

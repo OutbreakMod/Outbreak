@@ -33,6 +33,8 @@ if ((name player) != "Error: No unit") then {
 	player setVariable ["playerSaveData", _saveData, true];
 };
 
+call player_updateStatus;
+
 if (_health < 1500) then {
 	
 	_interval = 20;
