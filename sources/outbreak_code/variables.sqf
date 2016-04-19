@@ -11,8 +11,10 @@ FULL_STOMACH = 5000;
 CHOP_TREES = (configFile >> "CfgGame" >> "CHOPPABLE_TREES") call BIS_fnc_getCfgData;
 CHOP_TREES_WOOD_YIELD = (configFile >> "CfgGame" >> "TREES_WOOD_YIELD") call BIS_fnc_getCfgData;
 
-MAX_INFECTED_CITY = (configFile >> "CfgGame" >> "MAX_INFECTED_CITY") call BIS_fnc_getCfgData;
+MAX_INFECTED_CITY = 30;
+
 LOOT_SPAWN_RADIUS = (configFile >> "CfgGame" >> "LOOT_SPAWN_RADIUS") call BIS_fnc_getCfgData;
+ZOMBIE_SPAWN_RADIUS = 300;
 
 MIN_LOOT_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_LOOT_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
 MIN_ZOMBIE_SPAWN_DISTANCE = (configFile >> "CfgGame" >> "MIN_ZOMBIE_SPAWN_DISTANCE") call BIS_fnc_getCfgData;
