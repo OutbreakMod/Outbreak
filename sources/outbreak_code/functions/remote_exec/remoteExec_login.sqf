@@ -12,3 +12,5 @@ player enableAI 'ANIM';
 player enableAI 'MOVE';
 
 IN_GAME = true;
+
+3 cutRsc ["playerHUD", "PLAIN", 0];
