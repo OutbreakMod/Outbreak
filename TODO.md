@@ -11,6 +11,9 @@
 
 **TODO (before letting the public play):**
 
+- Randomised car spawning
+- Repair cars
+- Respawn cars if they blew up/full damage
 - Skinning animals (inc. sound effects)
 - Cooking meat
 - Storage objects despawn without interacting for x days
