@@ -40,16 +40,16 @@ player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\p
 player_apply_morphine = compile preProcessFileLineNumbers "addons\outbreak_code\actions\apply_morphine.sqf";
 
 // infected
-zombies_spawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombies_spawn.sqf";
-zombie_attack = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_attack.sqf";
-zombie_findTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_findTarget.sqf";
-zombie_hasTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_hasTarget.sqf";
-zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_initialize.sqf";
-zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_intelligence.sqf";
-zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_handleDamage.sqf";
-zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombie_create.sqf";
-zombies_alert = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\zombies_alert.sqf";
-alert_zombie = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\ai\alert_zombie.sqf";
+zombies_spawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombies_spawn.sqf";
+zombie_attack = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombie_attack.sqf";
+zombie_findTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombie_findTarget.sqf";
+zombie_hasTarget = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombie_hasTarget.sqf";
+zombie_initialize = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombie_initialize.sqf";
+zombie_intelligence = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombie_intelligence.sqf";
+zombie_handleDamage = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombie_handleDamage.sqf";
+zombie_create = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombie_create.sqf";
+zombies_alert = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombies_alert.sqf";
+alert_zombie = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\alert_zombie.sqf";
 
 // gui
 fnc_craftItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_craftItem.sqf";
