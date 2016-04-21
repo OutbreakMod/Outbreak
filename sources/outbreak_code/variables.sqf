@@ -11,7 +11,7 @@ FULL_STOMACH = 5000;
 CHOP_TREES = (configFile >> "CfgGame" >> "CHOPPABLE_TREES") call BIS_fnc_getCfgData;
 CHOP_TREES_WOOD_YIELD = (configFile >> "CfgGame" >> "TREES_WOOD_YIELD") call BIS_fnc_getCfgData;
 
-MAX_INFECTED_CITY = 20;
+MAX_INFECTED_CITY = 30;
 LOOT_SPAWN_RADIUS = 100;
 
 MIN_LOOT_SPAWN_DISTANCE = 30;
