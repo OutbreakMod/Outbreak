@@ -11,7 +11,7 @@
 	
 	_scheduled = [
 		["loot", 20],
-		["zombies", 300],
+		["zombies", ZOMBIE_RESPAWN_COOLDOWN],
 		["sync", 180],
 		["wild_ai", 300],
 		["actions", 1],
