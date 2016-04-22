@@ -26,22 +26,22 @@ if (_distance <= ZOMBIE_SEARCH_DISTANCE) then {
 	_eyeDir = eyeDirection _zombie;
 	_eyeAngle = abs((_eyeDir select 0) atan2 (_eyeDir select 1));
 
-	if (abs(_targetAngle - _eyeAngle) < 140) then { // slightly reduced vision from 180 because zombies
+	if (abs(_targetAngle - _eyeAngle) < 100) then { // slightly reduced vision from 180 because zombies
 
 		if (!(terrainIntersectASL[eyePos _target, eyePos _zombie])) then {
 			if (!(lineIntersects[eyePos _target, eyePos _zombie])) then {
 				_fogc = 0 max (1 - fog);
 				if (stance _target == "STAND") then {
-					if (_distance <= 40) then {
+					if (_distance <= ZOMBIE_SEARCH_DISTANCE) then {
 						_return = true;
 					};
 				};
 				if (stance _target == "CROUCH") then {
-					if (_distance <= 25) then {
+					if (_distance <= 15) then {
 						_return = true;
 					};
 				} else {
-					if (_distance <= 10) then {
+					if (_distance <= 5) then {
 						_return = true;
 					};
 				};

@@ -1,5 +1,7 @@
 class CfgVehicles
 {
+	#include "Uniforms\cfgUniforms.cpp"
+	
 	class GroundWeaponHolder;	// External class reference
 	#include "Storage\Basket.cpp"
 	#include "Storage\Sack.cpp"

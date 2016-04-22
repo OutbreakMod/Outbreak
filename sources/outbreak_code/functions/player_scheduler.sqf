@@ -11,9 +11,7 @@
 	
 	_scheduled = [
 		["loot", 20],
-		["zombies", 300],
 		["sync", 180],
-		["wild_ai", 300],
 		["actions", 1],
 		["sfx", 1],
 		["fracture", 1],
@@ -21,6 +19,11 @@
 		["leg_damage", 0],
 		["stomach", 2]
 	];
+	
+	if (!DISABLE_ZOMBIES) then {
+		_scheduled = _scheduled + ["wild_ai", 300];
+		_scheduled = _scheduled + ["zombies", 120];
+	};
 	
 	while {true} do {
 	

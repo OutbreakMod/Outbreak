@@ -12,7 +12,7 @@ _position = getPosATL _building;
 _amount = 3;
 _amountSpawned = 0;
 
-_infected = [_unit, LOOT_SPAWN_RADIUS, "isZombie"] call player_findNearby;
+_infected = [_unit, ZOMBIE_SPAWN_RADIUS, "isZombie"] call player_findNearby;
 _count = count _infected;
 
 if (_count < MAX_INFECTED_CITY) then {
