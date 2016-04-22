@@ -3,6 +3,7 @@ _target = _unit;
 
 _loop = true;
 _walking = false;
+_needsUnstuck = true;
 
 _walkPath = [];
 
@@ -182,7 +183,7 @@ while {_loop} do {
 		/// Zombie unstuck checking
 		///
 		if ((_timer % 10) == 0) then {
-			if (!(_hasTarget or _heardGunshot) and (speed _unit < 10)) then {
+			if (!(_hasTarget or _heardGunshot) and (speed _unit < 10) and _needsUnstuck) then {
 				
 				_currentPosition = getPosATL _unit;
 				_position = _unit getVariable ["last_position", _currentPosition];
@@ -213,6 +214,7 @@ while {_loop} do {
 					if (count _zombiePosition > 0) then {	
 						_unit setPos _zombiePosition;
 						_unit setVariable ["zombieSpawned", _zombiePosition, true];
+						_needsUnstuck = false;
 					};
 				};
 			};
