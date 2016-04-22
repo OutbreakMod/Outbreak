@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"outbreak_assets", "A3_Characters_F", "CUP_Weapons_AK"};
+		requiredAddons[] = {"outbreak_assets", "A3_Characters_F", "CUP_Weapons_AK", "A3_Characters_F_Common", "A3_Characters_F"};
 	};
 };
 

@@ -1,3 +1,9 @@
+**Apr 22, 2016**
+- [New] AKM, AK74 and AK74M magazines
+- [New] Thirst, hunger and health display
+- [Fixed] Optimisation issues where zombies would spawn non-stop
+- [Fixed] FPS drops when logging inside a city
+
 **Apr 17, 2016**
 
 - [New] Disable movement when logging in

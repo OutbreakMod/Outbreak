@@ -76,10 +76,6 @@ The following people listed is everyone who has contributed towards the mod in o
 
 - AKM and AK74 magazines by [CoftSock](https://github.com/CoftSock)
 
-**Other mod authors**
-
-[Unlocked Uniforms](https://forums.bistudio.com/topic/166657-unlocked-uniforms/) mod by [halek](https://forums.bistudio.com/user/878679-haleks/)
-
 ##Contact
 
 Email: alex.daniel.97 [at] gmail.com
