@@ -11,6 +11,7 @@ class CfgRemoteExec
 		class remoteExec_player_delete { allowedTargets=2; };
 		class remoteExec_player_login { allowedTargets=2; };
 		class remoteExec_spawn_loot { allowedTargets=2; };
+		class remoteExec_player_save { allowedTargets=2; };
 		
 		/* client only remoteexec */
 		class remoteExec_camera_shake { allowedTargets=1; };
