@@ -47,7 +47,7 @@ LOGGED_IN = false;
 IN_GAME = false;
 INTERRUPT_ACTION = false;
 CAMERA_SHAKE_ACTIVE = false;
-DISABLE_ZOMBIES = true;
+DISABLE_ZOMBIES = false;
 
 BUILDING = false;
 BUILDING_OBJECT = objNull;
