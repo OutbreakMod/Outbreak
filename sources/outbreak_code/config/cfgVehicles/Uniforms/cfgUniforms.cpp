@@ -1,3 +1,11 @@
+/*
+	Override uniform factions from
+	@source: https://forums.bistudio.com/topic/170406-uniforms-and-factions-question/
+	
+	Model sides:
+	3 blufor, 2 opfor, 1 independent, 0 civillian
+	
+*/
 class B_Soldier_base_F : SoldierWB {
 	modelsides[] = {3, 2, 1, 0};
 };
