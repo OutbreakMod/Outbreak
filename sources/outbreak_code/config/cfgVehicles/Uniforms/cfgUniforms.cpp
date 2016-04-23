@@ -1,3 +1,6 @@
+/*
+	Source: https://forums.bistudio.com/topic/170406-uniforms-and-factions-question/
+*/
 class B_Soldier_base_F : SoldierWB {
 	modelsides[] = {3, 2, 1, 0};
 };
