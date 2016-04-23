@@ -1,12 +1,3 @@
-class SoldierWB;
-class SoldierEB;
-class SoldierGB;
-class Civilian;
-class C_man_1;
-class B_Soldier_diver_base_F;
-class O_Soldier_diver_base_F;
-class I_Soldier_diver_base_F;
-
 class B_Soldier_base_F : SoldierWB {
 	modelsides[] = {3, 2, 1, 0};
 };
