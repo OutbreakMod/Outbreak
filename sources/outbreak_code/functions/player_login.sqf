@@ -45,6 +45,7 @@ player call player_clearInventory;
 
 player setVariable ["health", FULL_HEALTH, true];
 player setVariable ["stomach", FULL_STOMACH, true];
+player setVariable ["thirst", FULL_THIRST, true];
 
 //if respawn from grey screen
 FULL_HEALTH call fnc_simulateHealthEffect;
@@ -59,7 +60,6 @@ while {_LOGIN_TIMER > 0} do {
 [player] remoteExecCall ["remoteExec_player_login", 2];
 
 _LOGIN_TRIES = 0;
-_HIGH_NUMBER = 9999999;
 
 while {(!LOGGED_IN) && (_LOGIN_TRIES <= 20)} do {
 	if (!LOGGED_IN) then {
@@ -70,7 +70,7 @@ while {(!LOGGED_IN) && (_LOGIN_TRIES <= 20)} do {
 };
 
 if (!LOGGED_IN) then {
-	titleText [localize "STR_LOGIN_ERROR_OCCURRED", "BLACK FADED", _HIGH_NUMBER];
+	titleText [localize "STR_LOGIN_ERROR_OCCURRED", "BLACK FADED", HIGH_NUMBER];
 } else {
 	titleFadeOut 7;
 	//[] execVM "addons\outbreak_code\functions\player_clearEntities.sqf";

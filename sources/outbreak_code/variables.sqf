@@ -7,6 +7,7 @@ ZOMBIE_GROUP = createGroup east;
 
 FULL_HEALTH = 6000;
 FULL_STOMACH = 5000;
+FULL_THIRST = 5000;
 
 CHOP_TREES = (configFile >> "CfgGame" >> "CHOPPABLE_TREES") call BIS_fnc_getCfgData;
 CHOP_TREES_WOOD_YIELD = (configFile >> "CfgGame" >> "TREES_WOOD_YIELD") call BIS_fnc_getCfgData;
@@ -62,6 +63,8 @@ action_applyMorphine = -1;
 action_chopTree = -1;
 action_build = -1;
 action_searchLogs = -1;
+
+HIGH_NUMBER = 9999999;
 
 player_performingAction = false;
 player_noWeapon = nil;

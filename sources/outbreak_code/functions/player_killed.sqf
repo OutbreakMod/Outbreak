@@ -8,8 +8,9 @@ _caused = _this select 1;
 
 diag_log format["%1 killed from %2", name _unit, _caused];
 
-// Cancel music
-//playMusic "";
+1 fadeSound 0;
+1 fadeSpeech 0;
+1 fadeMusic 0;
 
 // send kill to server
 [_unit] remoteExecCall ["remoteExec_player_delete", 2];
