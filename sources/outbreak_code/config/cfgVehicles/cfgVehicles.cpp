@@ -39,4 +39,32 @@ class CfgVehicles
 	#include "Animals\Cock.cpp"
 	#include "Animals\Goat.cpp"
 	#include "Animals\Sheep.cpp"
+
+	class b_survivor_F;	// External class reference
+	class Survivor : b_survivor_F {
+		//faceType = "ZombieFace";
+		uniformClass = "";
+		weapons[] = {};
+		respawnWeapons[] = {};
+		Items[] = {};
+		RespawnItems[] = {};
+		magazines[] = {};
+		respawnMagazines[] = {};
+		linkedItems[] = {};
+		respawnLinkedItems[] = {};
+		//moves = "CfgMovesZombieSdr";
+		//gestures = "CfgGesturesZombie";
+	};
+	class Zombie : b_survivor_F {
+		faceType = "ZombieFace";
+		uniformClass = "";
+		weapons[] = {};
+		respawnWeapons[] = {};
+		Items[] = {};
+		RespawnItems[] = {};
+		magazines[] = {};
+		respawnMagazines[] = {};
+		linkedItems[] = {};
+		respawnLinkedItems[] = {};
+	};
 };
