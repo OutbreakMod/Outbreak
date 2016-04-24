@@ -1,25 +1,24 @@
 class CfgClothes {
 	
 	new_player[] = {
-		"U_C_Poloshirt_blue",
-		"U_C_Poloshirt_burgundy",
-		"U_C_Poloshirt_stripped",
-		"U_C_Poloshirt_tricolour",
-		"U_C_Poloshirt_salmon",
-		"U_C_Poloshirt_redwhite",
-		"U_C_Commoner1_1"
+		"MOD_CivillianUniform1",
+		"MOD_CivillianUniform2",
+		"MOD_CivillianUniform3",
+		"MOD_CivillianUniform4",
+		"MOD_CivillianUniform5",
+		"MOD_CivillianUniform6",
+		"MOD_CivillianUniform7"
 	};
 	
 	
 	civilian[] = {
-		"U_C_Poloshirt_blue",
-		"U_C_Poloshirt_burgundy",
-		"U_C_Poloshirt_stripped",
-		"U_C_Poloshirt_tricolour",
-		"U_C_Poloshirt_salmon",
-		"U_C_Poloshirt_redwhite",
-		"U_C_Commoner1_1",
-		"U_C_Poor_1",
+		"MOD_CivillianUniform1",
+		"MOD_CivillianUniform2",
+		"MOD_CivillianUniform3",
+		"MOD_CivillianUniform4",
+		"MOD_CivillianUniform5",
+		"MOD_CivillianUniform6",
+		"MOD_CivillianUniform7",
 		"U_NikosAgedBody"
 	};
 	
@@ -34,9 +33,9 @@ class CfgClothes {
 	};
 	
 	wild[] = {
-		"U_IG_Guerilla3_1",
-		"U_IG_Guerilla3_2",
-		"U_IG_Guerilla1_1"
+		"MOD_UniformWild1",
+		"MOD_UniformWild2",
+		"MOD_UniformWild3"
 	};
 	
 	military[] = {
