@@ -9,6 +9,7 @@ class MOD_MilitaryUniform1 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
+		uniformClass = "SoldierMilitary1";
 		containerClass = "Supply40";
 		mass = 40;
 	};
@@ -25,6 +26,7 @@ class MOD_MilitaryUniform2 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
+		uniformClass = "SoldierMilitary2";
 		containerClass = "Supply40";
 		mass = 40;
 	};
