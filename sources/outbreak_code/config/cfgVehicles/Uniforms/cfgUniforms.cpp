@@ -1,7 +1,7 @@
 /*
 	Override uniform factions from
-	@source: https://forums.bistudio.com/topic/170406-uniforms-and-factions-question/
-	
+	Original code by Haleks: https://forums.bistudio.com/topic/166657-unlocked-uniforms/
+
 	Model sides:
 	3 blufor, 2 opfor, 1 independent, 0 civillian
 	
