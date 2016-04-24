@@ -17,13 +17,10 @@
 		["fracture", 1],
 		["health", 0],
 		["leg_damage", 0],
-		["stomach", 2]
+		["food", 2],
+		["wild_ai", 300],
+		["zombies", 120]
 	];
-	
-	if (!DISABLE_ZOMBIES) then {
-		_scheduled = _scheduled + ["wild_ai", 300];
-		_scheduled = _scheduled + ["zombies", 120];
-	};
 	
 	while {true} do {
 	

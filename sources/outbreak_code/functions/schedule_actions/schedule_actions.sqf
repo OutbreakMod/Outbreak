@@ -28,8 +28,9 @@ if ((name player) != "Error: No unit") then {
 	_inventory = (player call player_serializeInventory);
 	_hit = player getHit "legs";
 	_stomach = player getVariable ["stomach", FULL_STOMACH];
+	_thirst = player getVariable ["thirst", FULL_THIRST];
 
-	_saveData = [player, _name, _uid, _pos, _inventory, _hit, _health, _stomach];
+	_saveData = [player, _name, _uid, _pos, _inventory, _hit, _health, _stomach, _thirst];
 	player setVariable ["playerSaveData", _saveData, true];
 };
 

@@ -35,6 +35,7 @@ if (debugMenu) then {
 		<t size='0.95' align='left' color='#FFFFFF'>Zombies killed: </t><t size='0.95' align='right'>%2</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'>Murders: </t><t size='0.95' align='right'>%3</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'>Stomach: </t><t size='0.95' align='right'>%4</t><br/>
+		<t size='0.95' align='left' color='#FFFFFF'>Thirst: </t><t size='0.95' align='right'>%9</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'>Health: </t><t size='0.95' align='right'>%5</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'>FPS: </t><t size='0.95' align='right'>%6</t><br/>
 		<t size='0.95' align='left' color='#FFFFFF'></t><t size='0.95' align='right'></t><br/>
@@ -47,7 +48,8 @@ if (debugMenu) then {
 		(player getVariable['health', FULL_HEALTH]),
 		(round diag_fps),
 		_hours,
-		_minutes
+		_minutes,
+		(player getVariable['thirst', FULL_THIRST])
 	];
 	
 } else {

@@ -4,6 +4,7 @@ call player_missionLogin;
 setAperture -1;
 1 fadeSound 1;
 1 fadeSpeech 1;
+1 fadeMusic 1;
 
 player enableSimulation true;
 player allowDammage true;

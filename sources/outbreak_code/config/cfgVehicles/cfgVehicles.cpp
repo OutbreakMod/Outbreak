@@ -1,7 +1,13 @@
 class CfgVehicles
 {
-	class Civilian;
-	class C_man_1;
+	class SoldierWB;	// External class reference
+	class SoldierEB;	// External class reference
+	class SoldierGB;	// External class reference
+	class Civilian;	// External class reference
+	class C_man_1;	// External class reference
+	class B_Soldier_diver_base_F;	// External class reference
+	class O_Soldier_diver_base_F;	// External class reference
+	class I_Soldier_diver_base_F;	// External class reference
 	#include "Uniforms\cfgUniforms.cpp"
 	
 	class GroundWeaponHolder;	// External class reference
