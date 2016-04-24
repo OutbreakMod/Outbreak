@@ -18,18 +18,17 @@ class CfgClothes {
 		"MOD_CivillianUniform4",
 		"MOD_CivillianUniform5",
 		"MOD_CivillianUniform6",
-		"MOD_CivillianUniform7",
-		"U_NikosAgedBody"
+		"MOD_CivillianUniform7"
 	};
 	
 	worker[] = {
-		"U_Competitor",
-		"U_C_WorkerCoveralls"
+		"MOD_IndustrialUniform1",
+		"MOD_IndustrialUniform2"
 	};
 	
 	industrial[] = {
-		"U_Competitor",
-		"U_C_WorkerCoveralls"
+		"MOD_IndustrialUniform1",
+		"MOD_IndustrialUniform1"
 	};
 	
 	wild[] = {

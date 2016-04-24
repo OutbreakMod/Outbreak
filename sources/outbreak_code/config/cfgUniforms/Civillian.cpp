@@ -9,7 +9,7 @@ class MOD_CivillianUniform1 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_polo_1_F";
+		uniformClass = "SoldierCivillian1";// "C_man_polo_1_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -26,7 +26,7 @@ class MOD_CivillianUniform2 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_polo_2_F";
+		uniformClass = "SoldierCivillian2";// "C_man_polo_2_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -43,7 +43,7 @@ class MOD_CivillianUniform3 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_polo_3_F";
+		uniformClass = "SoldierCivillian3";// "C_man_polo_3_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -60,7 +60,7 @@ class MOD_CivillianUniform4 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_polo_4_F";
+		uniformClass = "SoldierCivillian4";// "C_man_polo_4_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -77,7 +77,7 @@ class MOD_CivillianUniform5 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_polo_5_F";
+		uniformClass = "SoldierCivillian5";// "C_man_polo_5_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -94,7 +94,7 @@ class MOD_CivillianUniform6 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_polo_6_F";
+		uniformClass = "SoldierCivillian6";// "C_man_polo_6_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -111,7 +111,7 @@ class MOD_CivillianUniform7 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_1_1_F";
+		uniformClass = "SoldierCivillian7";// "C_man_1_1_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -128,7 +128,7 @@ class MOD_CivillianUniform8 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_1_2_F";
+		uniformClass = "SoldierCivillian8";// "C_man_1_2_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -145,7 +145,7 @@ class MOD_CivillianUniform9 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_man_1_3_F";
+		uniformClass = "SoldierCivillian9";// "C_man_1_3_F";
 		containerClass = "Supply20";
 		mass = 40;
 	};
@@ -162,7 +162,7 @@ class MOD_CivillianUniform10 : MOD_Uniform_Base {
 		
 		class ItemInfo : UniformItem {
 			uniformModel = "-";
-			uniformClass = "Survivor";// "C_man_p_fugitive_F";
+			uniformClass = "SoldierCivillian10";// "C_man_p_fugitive_F";
 			containerClass = "Supply30";
 			mass = 30;
 		};
@@ -179,7 +179,7 @@ class MOD_CivillianUniform11 : MOD_Uniform_Base {
 	
 	class ItemInfo : UniformItem {
 		uniformModel = "-";
-		uniformClass = "Survivor";// "C_Nikos_aged";
+		uniformClass = "SoldierCivillian11";// "C_Nikos_aged";
 		containerClass = "Supply20";
 		mass = 10;
 	};
