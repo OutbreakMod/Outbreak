@@ -22,13 +22,13 @@ class CfgClothes {
 	};
 	
 	worker[] = {
-		"U_Competitor",
-		"U_C_WorkerCoveralls"
+		"MOD_IndustrialUniform1",
+		"MOD_IndustrialUniform2"
 	};
 	
 	industrial[] = {
-		"U_Competitor",
-		"U_C_WorkerCoveralls"
+		"MOD_IndustrialUniform1",
+		"MOD_IndustrialUniform1"
 	};
 	
 	wild[] = {

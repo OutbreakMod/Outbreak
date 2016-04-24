@@ -15,7 +15,7 @@ class MOD_IndustrialUniform1 : MOD_Uniform_Base {
 	};
 };
 
-class U_C_WorkerCoveralls : MOD_Uniform_Base {
+class MOD_IndustrialUniform2 : MOD_Uniform_Base {
 	author = "$STR_A3_Bohemia_Interactive";
 	scope = 2;
 	displayName = "$STR_A3_worker_overalls";
