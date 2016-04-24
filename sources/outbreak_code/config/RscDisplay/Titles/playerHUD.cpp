@@ -13,7 +13,7 @@ class playerHUD {
 		y = 0.86 * safezoneH + safezoneY; // up down
 		w = 0.075;
 		h = 0.10;
-		text = "\addons\outbreak_assets\textures\ui\icons\health\100.paa";
+		text = "\addons\outbreak_assets\textures\ui\icons\health\0.paa";
 	};
 	
 	class rscPictureFood: RscPicture {
@@ -22,7 +22,7 @@ class playerHUD {
 		y = 0.76 * safezoneH + safezoneY; // up down
 		w = 0.075;
 		h = 0.10;
-		text = "\addons\outbreak_assets\textures\ui\icons\food\25.paa";
+		text = "\addons\outbreak_assets\textures\ui\icons\food\0.paa";
 	};
 	
 	class rscPictureThirst: RscPicture {
@@ -31,6 +31,6 @@ class playerHUD {
 		y = 0.66 * safezoneH + safezoneY; // up down
 		w = 0.075;
 		h = 0.10;
-		text = "\addons\outbreak_assets\textures\ui\icons\thirst\75.paa";
+		text = "\addons\outbreak_assets\textures\ui\icons\thirst\0.paa";
 	};
 };
