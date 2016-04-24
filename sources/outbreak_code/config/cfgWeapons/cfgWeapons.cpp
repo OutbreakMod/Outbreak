@@ -13,7 +13,24 @@ class CfgWeapons {
 	#include "AK\AKS74U.cpp"
 	#include "AK\Sa58P.cpp"
 	
-	class Uniform_Base;
+	class InventoryItem_Base_F;	// External class reference
+	class ItemCore;	// External class reference
+	class UniformItem;
+
+	class MOD_Uniform_Base : ItemCore {
+		scope = 0;
+		allowedSlots[] = {901};
+
+		class ItemInfo : UniformItem {
+			uniformModel = "-";
+			uniformClass = "B_Soldier_F";
+			containerClass = "Supply0";
+			mass = 0;
+		};
+	};
+	
+	#include "..\cfgUniforms\Civillian.cpp"
+	#include "..\cfgUniforms\Wild.cpp"
 	
 	// Uniforms
 };
