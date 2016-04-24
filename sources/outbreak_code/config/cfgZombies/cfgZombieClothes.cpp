@@ -28,7 +28,7 @@ class CfgClothes {
 	
 	industrial[] = {
 		"MOD_IndustrialUniform1",
-		"MOD_IndustrialUniform1"
+		"MOD_IndustrialUniform2"
 	};
 	
 	wild[] = {
@@ -38,8 +38,8 @@ class CfgClothes {
 	};
 	
 	military[] = {
-		"U_I_OfficerUniform",
-		"U_I_CombatUniform"
+		"MOD_MilitaryUniform1",
+		"MOD_MilitaryUniform2"
 	};
 	
 	helicopter[] = {
