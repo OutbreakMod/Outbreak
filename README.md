@@ -78,7 +78,7 @@ The following people listed is everyone who has contributed towards the mod in o
 
 **Other**
 
-- Unlocked uniforms from [unlocked uniforms](https://forums.bistudio.com/topic/166657-unlocked-uniforms/) by Haleks.
+- [Unlocked uniforms](https://forums.bistudio.com/topic/166657-unlocked-uniforms/) by Haleks.
 
 ##Contact
 
