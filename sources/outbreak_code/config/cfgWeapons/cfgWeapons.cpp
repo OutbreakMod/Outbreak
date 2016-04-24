@@ -31,6 +31,7 @@ class CfgWeapons {
 	
 	#include "..\cfgUniforms\Civillian.cpp"
 	#include "..\cfgUniforms\Wild.cpp"
+	#include "..\cfgUniforms\Industrial.cpp"
 	
 	// Uniforms
 };
