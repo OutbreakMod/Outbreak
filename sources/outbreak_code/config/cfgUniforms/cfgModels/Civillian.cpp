@@ -44,7 +44,6 @@ class SoldierCivillian8 : C_man_1_2_F {
 	modelSides[] = {3, 2, 1, 0};
 };
 
-
 class SoldierCivillian9 : C_man_1_3_F {
 	modelSides[] = {3, 2, 1, 0};
 };
