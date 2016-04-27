@@ -40,6 +40,7 @@ BUILDING_RECIPE = _cfgClassName;
 	
 	_vehicle = _recipeCreate createVehicle _originalPos; //createVehicleLocal [_recipeCreate, _originalPos, [], 0, "CAN_COLLIDE"];
 	_vehicle setVariable ["ObjectID", -1, true]; // don't save to hive
+	player setVariable ["CraftedVehicle", _vehicle, true];
 	
 	[_vehicle, _buildDistance] call fnc_updateObject;
 	BUILDING_OBJECT = _vehicle;
@@ -51,6 +52,8 @@ BUILDING_RECIPE = _cfgClassName;
 		if ((_originalPos distance player) >= 10) then {
 			
 			cutText [format["Cancelled building"], "PLAIN DOWN"];
+			player setVariable ["CraftedVehicle", objNull, true];
+			
 			deleteVehicle (_vehicle);
 			
 			BUILDING = false;

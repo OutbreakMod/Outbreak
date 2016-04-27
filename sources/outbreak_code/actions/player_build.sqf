@@ -90,6 +90,7 @@ if (_finished) then {
 
 	deleteVehicle (BUILDING_OBJECT);
 	BUILDING_OBJECT = objNull;
+	player setVariable ["CraftedVehicle", objNull, true];
 	
 	_objectID = (_worldspace select 0) call create_uid;
 	_vehicle setVariable ["ObjectID", _objectID, true];
