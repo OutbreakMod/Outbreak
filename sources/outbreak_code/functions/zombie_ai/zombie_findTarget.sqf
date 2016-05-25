@@ -3,6 +3,8 @@
 	@author: TheAmazingAussie
 */
 
+private ["_unit", "_hasTarget", "_target", "_cooldown", "_players", "_zombies"];
+
 _unit = _this;
 
 _hasTarget = _unit call zombie_hasTarget;

@@ -73,7 +73,18 @@ while {_loop} do {
 		
 		if ((_timer % 1) == 0) then { 
 			_unit spawn zombie_findTarget;
-		};	
+		};
+		
+		// If we can't detect them, why go after them?
+		if (_hasTarget) then {
+			if ((_timer % 10) == 0) then { 
+				if (!([_unit, _target] call fnc_hasSight)) then {
+					_unit setVariable ["zombieTarget", _unit, true];
+					_unit setVariable ["zombieTargetCooldown", ZOMBIE_TARGET_COOLDOWN, true];
+					_unit setVariable ["zombieSpawned", getPos _unit, true];
+				};
+			};	
+		};
 		
 		///
 		/// Do tasks every x random amount of seconds
@@ -158,7 +169,7 @@ while {_loop} do {
 
 					_unit setVariable ["zombieTarget", _unit, true];
 					_unit setVariable ["zombieTargetCooldown", ZOMBIE_TARGET_COOLDOWN, true];
-					_unit setVariable ["zombieSpawned", getPos _target, true];
+					_unit setVariable ["zombieSpawned", getPos _unit, true];
 				};
 			};
 		};

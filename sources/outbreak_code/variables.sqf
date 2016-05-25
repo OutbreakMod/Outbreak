@@ -43,6 +43,7 @@ ZOMBIE_RESPAWN_COOLDOWN = 600; // (in seconds, how long you can clear a city bef
 
 LEG_BREAK_STAND_COOLDOWN = 5;
 LEG_BREAK_STAND_TIMER = 0; // DON'T TOUCH THIS
+LEG_BREAK_DAMAGE_CHECK = 0.50
 
 LOGGED_IN = false;
 IN_GAME = false;

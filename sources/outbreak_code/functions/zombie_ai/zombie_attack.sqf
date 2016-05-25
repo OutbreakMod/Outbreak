@@ -3,13 +3,15 @@
 	@author: TheAmazingAussie
 */
 
+private ["_unit", "_target", "_dir", "_walkPath", "_targetHealth"];
+
 _unit = _this select 0;
 _target = _this select 1;
 
-// zombie attack sound
-_dir = round(direction player) + 180;
+_dir = round(direction _target) + 180;
 _unit setDir _dir;
 
+// zombie attack sound
 [_unit, "zpunch" + str((floor random 3) + 1)] call object_speak;
 [_unit, "AwopPercMstpSgthWnonDnon_end"] remoteExecCall ["fnc_anim_playMoveNow"];
 
@@ -17,7 +19,6 @@ sleep 1;
 
 // get targets last known location
 _walkPath = _target getVariable ["last_position", []];
-
 
 // if target didn't move between zombie trying to hit
 // then we carry on the damage

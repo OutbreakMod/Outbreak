@@ -6,16 +6,11 @@ fnc_healthUI = {
 	
 	private ["_health", "_healthComponents", "_healthControl", "_almostFull", "_full", "_low", "_medium", "_status", "_veryLow"];
 	
-	_healthComponents = FULL_HEALTH / 5;
 	_health = player getVariable ["health", FULL_HEALTH];
-
+	_percentage = FULL_HEALTH / _health;
+	
 	_full = FULL_HEALTH;
-
-	_almostFull = _full - _healthComponents; // 100
-	_medium = _full - _healthComponents - _healthComponents; // 75
-	_low = _full - _healthComponents - _healthComponents - _healthComponents; // 50
-	_veryLow = _full - _healthComponents - _healthComponents - _healthComponents - _healthComponents; // 25
-
+	
 	_status = "0";
 
 	if (_health > _almostFull) then {

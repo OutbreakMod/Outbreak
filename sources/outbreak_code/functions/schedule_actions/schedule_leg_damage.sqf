@@ -5,7 +5,7 @@
 
 
 if (alive player) then {
-	if ((player getHit "legs") > 0.58) then {
+	if ((player getHit "legs") >= LEG_BREAK_DAMAGE_CHECK) then {
 		
 		if (!(LEG_BREAK_STAND_TIMER > 0)) then {
 		

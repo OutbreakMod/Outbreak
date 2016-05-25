@@ -3,6 +3,8 @@ _health = _medical select 1;
 _stomach = _medical select 2;
 _thirst = _medical select 3;
 
+diag_log format ["LOGIN FUNCTION: Found medical array (%1)", _medical];
+
 if (_health < 1) then {
 	[player] remoteExecCall ["remoteExec_player_delete", 2];
 	deleteVehicle (player);
