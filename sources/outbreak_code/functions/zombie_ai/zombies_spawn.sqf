@@ -35,4 +35,4 @@ if (_count < MAX_INFECTED_CITY) then {
 	};
 };
 
-_building setVariable ["zombieSpawnTimer", serverTime + ZOMBIE_RESPAWN_COOLDOWN];
+_building setVariable ["zombieSpawnTimer", time + ZOMBIE_RESPAWN_COOLDOWN];

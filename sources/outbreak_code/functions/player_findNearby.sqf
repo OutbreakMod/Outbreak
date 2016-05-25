@@ -10,7 +10,7 @@ _range = _this select 1;
 _variable = _this select 2;
 
 _units = [];
-_nearby = _position nearEntities [["Man", "Animal_Base_F", "Animal"], _range];
+_nearby = _position nearEntities [["Survivor", "Animal_Base_F", "Animal", "Zombie"], _range];
 
 {
 	_unit = _x;
@@ -23,5 +23,10 @@ _nearby = _position nearEntities [["Man", "Animal_Base_F", "Animal"], _range];
 	};
 	
 } forEach _nearby;
+
+if (_variable != "isPlayer") then {
+	hint format["%1 - %2", (count _units), _variable];
+	diag_log format["%1 - %2", (count _units), _variable];
+};
 
 _units;

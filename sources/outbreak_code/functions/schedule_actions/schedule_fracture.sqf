@@ -11,7 +11,7 @@ if (player getVariable ["update_legs", 0] > 0) then {
 	player setHit ["legs", _newDamage];
 	player setVariable ["update_legs", 0, true];
 	
-	if ((player getHit "legs") > 0.58) then {
+	if ((player getHit "legs") >= LEG_BREAK_DAMAGE_CHECK) then {
 		
 		// GO PRONE
 		[player, "AmovPpneMstpSrasWrflDnon"] remoteExecCall ["fnc_anim_switchMove"];

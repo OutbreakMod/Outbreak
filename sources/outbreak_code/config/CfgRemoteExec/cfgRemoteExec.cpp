@@ -18,6 +18,7 @@ class CfgRemoteExec
 		class fnc_anim_switchMove { allowedTargets=1; };
 		class fnc_anim_playMoveNow { allowedTargets=1; };
 		class fnc_object_speak { allowedTargets=1; };
+		class bis_fnc_execvm { allowedTargets=1; };
 	};
 	
     class Commands

@@ -5,16 +5,19 @@
 
 _animalTypes = ["MOD_Hen", "MOD_Cock", "MOD_Goat", "MOD_Sheep"];
 
-_houses = player nearObjects ["House", 50];
-_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 150];
+_pos = getPos player;
+_position = [_pos select 0, _pos select 1, 0];
 
-if (!(count _houses > 3) && (count _cities == 0)) then { 
+_houses = _position nearObjects ["House", 50];
+_cities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"], 150];
+
+if ((count _houses) == 0 && (count _cities == 0)) then { 
 
 	/////////////////////////
 	// WILD ANIMAL SPAWNING
 	/////////////////////////
 
-	_animals = ([getPosATL player, MAX_ANIMAL_SPAWN_DISTANCE, "isAnimal"] call player_findNearby);
+	_animals = ([_position, MAX_ANIMAL_SPAWN_DISTANCE, "isAnimal"] call player_findNearby);
 
 	if (count _animals == 0) then {
 		for "_i" from 1 to 3 do {
@@ -23,7 +26,7 @@ if (!(count _houses > 3) && (count _cities == 0)) then {
 			_animalType = selectRandom _animalTypes;
 			
 			_favouriteZones = ((configFile >> "CfgVehicles" >> _animalType >> "favouriteZones") call BIS_fnc_getCfgData);
-			_animalPositions = selectBestPlaces [(getPosATL player), MAX_ANIMAL_SPAWN_DISTANCE, _favouriteZones, 10, 5];
+			_animalPositions = selectBestPlaces [_position, MAX_ANIMAL_SPAWN_DISTANCE, _favouriteZones, 10, 5];
 			_animalPosition = (selectRandom _animalPositions) select 0;
 		
 			if (player distance _animalPosition >= MIN_ANIMAL_SPAWN_DISTANCE) then {
@@ -70,19 +73,22 @@ if (!(count _houses > 3) && (count _cities == 0)) then {
 		};
 		
 	};
+};
 	
+if ((count _houses) == 0 && (count _cities == 0)) then { 
+
 	/////////////////////////
 	// WILD ZOMBIE SPAWNING
 	/////////////////////////
 	
 	if (!DISABLE_ZOMBIES) then {
-		_zombies = ([getPosATL player, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
+		_zombies = ([_position, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, "isZombie"] call player_findNearby);
 		
 		if (count _zombies == 0) then {
 			
 			for "_i" from 1 to 3 do {
 
-				_zombiePosition = [getPosATL player, MIN_WILD_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
+				_zombiePosition = [_position, MIN_WILD_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
 				_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
 
 				if (!(count _players > 0)) then {

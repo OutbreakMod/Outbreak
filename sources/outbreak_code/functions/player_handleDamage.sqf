@@ -78,11 +78,13 @@ if (_type > 0) then {
 	_effect = true;
 };
 
-if (_type > 2) then {
+_scale = _scale * 2;
+
+/*if (_type > 2) then {
 	_scale = _scale * 2;
 } else {
 	_scale = _scale * 4;
-};
+};*/
 
 if (_hit == "legs") then {
 	if (_ammo == "") then {

@@ -602,7 +602,7 @@ class Land_Farm_Cowshed_c : House {
 			radius = 3;
 			onlyForPlayer = 0;
 			condition = "this animationPhase ""door_a"" < 0.5";
-			statement = "this animate [""door_a"", 1];this animate [""door_b"", 1]";
+			statement = "this animate [""door_a"", 1];this animate [""door_b"", 1];hint format[""%1 -- %2 -- %3"", this, _this, player]";
 		};
 		
 		class CloseDoors1 {
