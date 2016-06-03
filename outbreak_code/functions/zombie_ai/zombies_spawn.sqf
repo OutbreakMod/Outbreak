@@ -9,7 +9,7 @@ _unit = _this select 0;
 _building = _this select 1;
 _position = getPosATL _building;
 
-_amount = 3;
+_amount = floor (random 3) + 1;
 _amountSpawned = 0;
 
 _infected = [_unit, ZOMBIE_SPAWN_RADIUS, "isZombie"] call player_findNearby;
