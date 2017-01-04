@@ -24,9 +24,4 @@ _nearby = _position nearEntities [["Survivor", "Animal_Base_F", "Animal", "Zombi
 	
 } forEach _nearby;
 
-if (_variable != "isPlayer") then {
-	hint format["%1 - %2", (count _units), _variable];
-	diag_log format["%1 - %2", (count _units), _variable];
-};
-
 _units;
