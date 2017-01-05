@@ -75,6 +75,8 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		action_studyDeadBody = -1;
 		player removeAction action_applyMorphine;
 		action_applyMorphine = -1;
+		player removeAction action_consumeItem;
+		action_consumeItem = -1;
 	};
 };
 

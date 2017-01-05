@@ -8,4 +8,13 @@ class mre: CA_Magazine
 		}; 
 	picture = "\addons\outbreak_assets\textures\items\mre.paa";
 	descriptionShort = "";
+	
+	class Nutrition {
+		energy = 300;
+		water = -50;
+	}
+	
+	class cfgItemActions {
+		doubleClick = "['mre'] call player_consume;";
+	};
 };

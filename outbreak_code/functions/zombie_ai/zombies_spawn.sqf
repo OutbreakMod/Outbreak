@@ -13,15 +13,21 @@ _amount = floor (random 3) + 1;
 _amountSpawned = 0;
 
 _infected = [_unit, ZOMBIE_SPAWN_RADIUS, "isZombie"] call player_findNearby;
+_playersNearby = [_unit, ZOMBIE_SPAWN_RADIUS, "isPlayer"] call player_findNearby;
+
+_NEW_MAX_INFECTED_CITY = (MAX_INFECTED_CITY * (count _playersNearby));
+
 _count = count _infected;
 
-if (_count < MAX_INFECTED_CITY) then {
+if (_count < _NEW_MAX_INFECTED_CITY) then {
 
-	_amountSpawned = MAX_INFECTED_CITY - _count;
+	_amountSpawned = _NEW_MAX_INFECTED_CITY - _count;
 	
 	if (_amountSpawned >= _amount) then {
 		_amountSpawned = _amount;
 	};
+	
+	hint format["amount zombie spawned: %1", _amountSpawned];
 	
 	diag_log format ["There needs to be (%1) more zombies to spawn!", _amountSpawned];
 
