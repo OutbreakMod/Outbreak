@@ -26,7 +26,7 @@ if (_distance <= ZOMBIE_SEARCH_DISTANCE) then {
 	_eyeDir = eyeDirection _zombie;
 	_eyeAngle = abs((_eyeDir select 0) atan2 (_eyeDir select 1));
 
-	if (abs(_targetAngle - _eyeAngle) < 100) then { // slightly reduced vision from 180 because zombies
+	if (abs(_targetAngle - _eyeAngle) < 90) then { // slightly reduced vision from 180 because zombies
 
 		if (!(terrainIntersectASL[eyePos _target, eyePos _zombie])) then {
 			if (!(lineIntersects[eyePos _target, eyePos _zombie])) then {
@@ -37,7 +37,7 @@ if (_distance <= ZOMBIE_SEARCH_DISTANCE) then {
 					};
 				};
 				if (stance _target == "CROUCH") then {
-					if (_distance <= 15) then {
+					if (_distance <= 10) then {
 						_return = true;
 					};
 				} else {
@@ -52,16 +52,16 @@ if (_distance <= ZOMBIE_SEARCH_DISTANCE) then {
 		// If we can't see them, but we can detect them if they get too close
 		if (speed player > 5) then { // ...by making noise
 			if (stance _target == "STAND") then {
-				if (_distance <= 15) then {
+				if (_distance <= 10) then {
 					_return = true;
 				};
 			};
 			if (stance _target == "CROUCH") then {
-				if (_distance <= 10) then {
+				if (_distance <= 6) then {
 					_return = true;
 				};
 			} else {
-				if (_distance <= 5) then {
+				if (_distance <= 3) then {
 					_return = true;
 				};
 			};

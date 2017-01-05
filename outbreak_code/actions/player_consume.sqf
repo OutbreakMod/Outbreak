@@ -71,9 +71,17 @@ if (_finished) then {
 	player removeItem _class;
 	
 	cutText [format["I've consumed %1", _displayName], "PLAIN DOWN"];
+
 	
 	_stomach = player getVariable ["stomach", FULL_STOMACH];
-	_stomach = _stomach + _energy;
+	
+	if (_energy > 0) then {
+		_stomach = _stomach + _energy;
+	};
+
+	if (_energy < 0) then {
+		_stomach = _stomach - _energy;
+	};
 
 	if (_stomach >= 0) then {
 		player setVariable ["stomach", _stomach, true];
@@ -81,7 +89,15 @@ if (_finished) then {
 
 	_thirst = player getVariable ["thirst", FULL_THIRST];
 	_thirst = _thirst - _water;
+	
+	if (_water > 0) then {
+		_thirst = _thirst + _water;
+	};
 
+	if (_water < 0) then {
+		_thirst = _thirst - _water;
+	};
+	
 	if (_thirst >= 0) then {
 		player setVariable ["thirst", _thirst, true];
 	};
