@@ -9,4 +9,13 @@ class powderedmilk : CA_Magazine {
 	picture = "\addons\outbreak_assets\textures\items\powderedmilk.paa";
 	model = "a3\structures_f_epa\Items\Food\PowderedMilk_F";
 	descriptionShort = "A bag of dried milk";
+	
+	class Nutrition {
+		energy = 700;
+		water = -200;
+	}
+	
+	class cfgItemActions {
+		doubleClick = "['powderedmilk'] call player_consume;";
+	};
 };

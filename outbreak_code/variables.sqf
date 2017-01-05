@@ -64,6 +64,7 @@ action_applyMorphine = -1;
 action_chopTree = -1;
 action_build = -1;
 action_searchLogs = -1;
+action_consumeItem = -1;
 
 HIGH_NUMBER = 9999999;
 

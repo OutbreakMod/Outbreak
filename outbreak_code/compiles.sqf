@@ -38,6 +38,7 @@ KK_fnc_arrayShuffle = compile preProcessFileLineNumbers "addons\outbreak_code\fu
 // actions
 player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
 player_apply_morphine = compile preProcessFileLineNumbers "addons\outbreak_code\actions\apply_morphine.sqf";
+player_consume = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_consume.sqf";
 
 // infected
 zombies_spawn = compile preProcessFileLineNumbers "addons\outbreak_code\functions\zombie_ai\zombies_spawn.sqf";

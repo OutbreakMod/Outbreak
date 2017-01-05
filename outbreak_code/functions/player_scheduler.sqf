@@ -19,7 +19,7 @@
 		["leg_damage", 0],
 		["food", 2],
 		["wild_ai", 300],
-		["zombies", 120]
+		["zombies", 300]
 	];
 	
 	while {true} do {
