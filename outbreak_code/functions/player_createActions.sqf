@@ -66,6 +66,18 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 			action_cookMeat = -1;
 		};
 		
+		///////////////////
+		// Drink from fountain
+		///////////////////
+		if ((inflamed _cursorTarget) && (_type == "Land_FirePlace_F") && ([player, "matchbox"] call fnc_hasItem)) then {
+			if (action_cookMeat < 0) then {
+				action_cookMeat = player addAction [localize "STR_ACTIONS_COOK_MEAT", "addons\outbreak_code\actions\cook_meat.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
+			};
+		} else {
+			player removeAction action_cookMeat;
+			action_cookMeat = -1;
+		};
+		
 	} else {
 		player removeAction action_cookMeat;
 		action_cookMeat = -1;

@@ -12,11 +12,11 @@ FULL_THIRST = 5000;
 CHOP_TREES = (configFile >> "CfgGame" >> "CHOPPABLE_TREES") call BIS_fnc_getCfgData;
 CHOP_TREES_WOOD_YIELD = (configFile >> "CfgGame" >> "TREES_WOOD_YIELD") call BIS_fnc_getCfgData;
 
-MAX_INFECTED_CITY = 8; // increases with more players 
+MAX_INFECTED_CITY = 15; // increases with more players 
 LOOT_SPAWN_RADIUS = 100;
 
 MIN_LOOT_SPAWN_DISTANCE = 30;
-MIN_ZOMBIE_SPAWN_DISTANCE = 100;
+MIN_ZOMBIE_SPAWN_DISTANCE = 60;
 
 MIN_ANIMAL_SPAWN_DISTANCE = 100;
 MAX_ANIMAL_SPAWN_DISTANCE = 200;
@@ -26,8 +26,8 @@ MAX_WILD_ZOMBIE_SPAWN_DISTANCE = 200;
 
 STORAGE_UNITS = (configFile >> "CfgGame" >> "STORAGE_UNITS") call BIS_fnc_getCfgData;
 
-DEAD_ZOMBIE_DESPAWN_TIME = (configFile >> "CfgGame" >> "DEAD_ZOMBIE_DESPAWN_TIME") call BIS_fnc_getCfgData;
-DEAD_PLAYER_DESPAWN_TIME = (configFile >> "CfgGame" >> "DEAD_PLAYER_DESPAWN_TIME") call BIS_fnc_getCfgData;
+DEAD_ZOMBIE_DESPAWN_TIME = 300;
+DEAD_PLAYER_DESPAWN_TIME = 1800;
 
 LOSE_ZOMBIE_TIMER = 60; // If a timer spots a zombie, this is in how many seconds a zombie will continue to chase until they get bored
 LOSE_ZOMBIE_DISTANCE = 60; // How far away the player has to run before the zombie grows bored
@@ -65,6 +65,7 @@ action_chopTree = -1;
 action_build = -1;
 action_searchLogs = -1;
 action_consumeItem = -1;
+action_drinkWater = -1;
 
 HIGH_NUMBER = 9999999;
 
