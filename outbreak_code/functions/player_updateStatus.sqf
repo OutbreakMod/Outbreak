@@ -110,7 +110,7 @@ fnc_thirstUI = {
 	_healthControl ctrlSetText format["\addons\outbreak_assets\textures\ui\icons\thirst\%1.paa", _status];
 };
 
-if (isNull (uiNamespace getVariable ["playerHUD", displayNull])) then {
+/*if (isNull (uiNamespace getVariable ["playerHUD", displayNull])) then {
 	5 cutRsc ["playerHUD", "PLAIN", 0];
 };
 
@@ -119,4 +119,4 @@ _display = uiNamespace getVariable ["playerHUD", displayNull];
 
 call fnc_healthUI;
 call fnc_hungerUI;
-call fnc_thirstUI;
+call fnc_thirstUI;*/
