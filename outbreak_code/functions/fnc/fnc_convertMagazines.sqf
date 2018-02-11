@@ -26,9 +26,7 @@ _magazines = floor (_ammoCount / _ammoCapacity);
 _extraBullets = _ammoCount % _ammoCapacity;
 
 player removeMagazines _from;
-
-hint format ["ammo capacity: %1, ammo count: %2, extra bullets: %3, magazines: %4", _ammoCapacity, _ammoCount, _extraBullets, _magazines];
-
+//hint format ["ammo capacity: %1, ammo count: %2, extra bullets: %3, magazines: %4", _ammoCapacity, _ammoCount, _extraBullets, _magazines];
 player addMagazines [_to, _magazines];
 
 if (_extraBullets > 0) then {

@@ -27,8 +27,7 @@ if (_count < _NEW_MAX_INFECTED_CITY) then {
 		_amountSpawned = _amount;
 	};
 	
-	hint format["amount zombie spawned: %1", _amountSpawned];
-	
+	//hint format["amount zombie spawned: %1", _amountSpawned];
 	diag_log format ["There needs to be (%1) more zombies to spawn!", _amountSpawned];
 
 	for "_i" from 0 to _amountSpawned - 1 do { 
