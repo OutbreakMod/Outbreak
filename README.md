@@ -2,7 +2,7 @@
   <img src="http://i.imgur.com/nQHWgbp.png" alt="Outbreak Mod"/>
 </p>
 
-##About
+## About
 
 Outbreak Mod created by Alex (TheAmazingAussie) inspired by DayZ mod created for Arma 3, is a multiplayer survival mod that aims for realism in world where infection has taken over and turned people into monsters.
 
@@ -10,7 +10,7 @@ The master repository is the stable branch, if you want to test the newest updat
 
 Server data located here: https://github.com/OutbreakMod/OutbreakServer
 
-##Features
+## Features
 
 Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG.md
 
@@ -38,17 +38,18 @@ Full changelog at: https://github.com/OutbreakMod/Outbreak/blob/master/CHANGELOG
 - Custom object actions (study body, gut body)
 - Custom world actions (search logs, chopping trees down)
 
-##Peformance
+## Peformance
 
 This has been tested on my own personal computer. Client performance is at 55-60 fps (in a city) and 80+ fps in the wilderness, along with zombies and loot, at ultra settings with 3600+ metre view distance.
 
-- i5 4690k
-- EVGA GTX 970 ACX
-- 8 GB RAM @ 1333 Hz
+- i5 4690K @ 4.4 GHz
+- AMD R9 Fury X
+- 16 GB RAM @ 1600 MHz
 - 250 GB SSD
-- 500 GB HDD
+- 1 TB GB SSD
+- 750 GB HDD
 
-##Screenshots
+## Screenshots
 
 <img src="http://i.imgur.com/gRgICjc.png" />
 
@@ -64,21 +65,19 @@ You need to add these mods to the launch options of both client and server to be
 2. [Community Upgrade Project - Weapon Pack](http://www.armaholic.com/page.php?id=27489)
 3. [Community Base addons A3](http://www.armaholic.com/page.php?id=18767)
 
-##Contributors
+## Contributors
 
 The following people listed is everyone who has contributed towards the mod in one shape or form.
 
-**2D Artists**
+** 2D Artists**
 
 [Rixty](https://devbest.com/members/rixty.53754/) (player status HUD)
 
-**3D Modelers**
+** 3D Modelers**
 
 - AKM and AK74 magazines by [CoftSock](https://github.com/CoftSock)
 
-##Contact
+## Contact
 
 Email: alex.daniel.97 [at] gmail.com
-
-Twitter: http://twitter.com/AmazingAussie
 
