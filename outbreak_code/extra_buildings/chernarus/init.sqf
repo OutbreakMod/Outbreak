@@ -9,7 +9,7 @@ _towns = [
 	"balota",
 	"starysobor",
 	"elektro",
-    "elektro_damn",
+    "elektro_dam",
 	"nwaf",
 	"zelenogorsk"
 ];
