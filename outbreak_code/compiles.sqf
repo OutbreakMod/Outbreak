@@ -34,6 +34,8 @@ fnc_convertMagazines = compile preProcessFileLineNumbers "addons\outbreak_code\f
 fnc_hasSight = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_hasSight.sqf";
 create_uid = compile preProcessFileLineNumbers "addons\outbreak_code\functions\create_uid.sqf";
 KK_fnc_arrayShuffle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\KK_fnc_arrayShuffle.sqf";
+fnc_isInsideBuilding = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_isInsideBuilding.sqf";
+dzn_fnc_snowfall = compile preProcessFileLineNumbers "addons\outbreak_code\weather\fn_dzn_snowfall.sqf";
 
 // actions
 player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
