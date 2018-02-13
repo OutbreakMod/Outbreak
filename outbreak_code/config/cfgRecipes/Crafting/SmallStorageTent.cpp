@@ -1,5 +1,4 @@
 class SmallStorageTent : DefaultRecipe {
-	
 	recipeName = "Small Storage Tent";
 	recipeAction = "['tent', 'MOD_StorageTent', true] call player_build;";
 	

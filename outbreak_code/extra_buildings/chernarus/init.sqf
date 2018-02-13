@@ -11,7 +11,8 @@ _towns = [
 	"elektro",
     "elektro_dam",
 	"nwaf",
-	"zelenogorsk"
+	"zelenogorsk",
+    "bash"
 ];
 
 {

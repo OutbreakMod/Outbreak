@@ -10,7 +10,6 @@ _handled = false;
 
 // no debug
 if (_keyCode == 210) then {
-
 	if (isNil 'debugMenu') then {
 		debugMenu = true;
 	} else {
@@ -25,9 +24,7 @@ if (_keyCode == 22) then {
 };
 
 if (_keyCode == 57) then {
-	
 	if (BUILDING) then {
-		
 		_object = BUILDING_OBJECT;
 		[BUILDING_RECIPE, BUILDING_WORLDSPACE] spawn player_build;
 		

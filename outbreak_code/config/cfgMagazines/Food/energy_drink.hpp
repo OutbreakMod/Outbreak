@@ -12,7 +12,7 @@ class energy_drink: CA_Magazine
 	
 	class Nutrition {
 		energy = 100;
-		water = 200;
+		water = 300;
 	}
 	
 	class cfgItemActions {

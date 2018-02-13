@@ -71,8 +71,6 @@ if (_finished) then {
 	player removeItem _class;
 	
 	cutText [format["I've consumed %1", _displayName], "PLAIN DOWN"];
-
-	
 	_stomach = player getVariable ["stomach", FULL_STOMACH];
 	
 	if (_energy > 0) then {

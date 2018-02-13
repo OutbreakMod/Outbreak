@@ -12,8 +12,8 @@ _position = getPosATL _building;
 _amount = floor (random 3) + 1;
 _amountSpawned = 0;
 
-_infected = [_unit, ZOMBIE_SPAWN_RADIUS, "isZombie"] call player_findNearby;
-_playersNearby = [_unit, ZOMBIE_SPAWN_RADIUS, "isPlayer"] call player_findNearby;
+_infected = [getPos vehicle _unit, ZOMBIE_SPAWN_RADIUS, "isZombie"] call player_findNearby;
+_playersNearby = [getPos vehicle _unit, ZOMBIE_SPAWN_RADIUS, "isPlayer"] call player_findNearby;
 
 _NEW_MAX_INFECTED_CITY = (MAX_INFECTED_CITY * (count _playersNearby));
 

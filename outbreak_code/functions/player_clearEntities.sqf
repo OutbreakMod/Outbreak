@@ -9,4 +9,4 @@ _radius = 200;
 
 {
 	deleteVehicle _x;
-} forEach ([player, _radius, "isZombie"] call player_findNearby);
+} forEach ([getPos vehicle player, _radius, "isZombie"] call player_findNearby);

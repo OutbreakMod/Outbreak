@@ -8,8 +8,6 @@ private ["_inVehicle", "_cursorTarget", "_dist", "_type", "_surface"];
 _inVehicle = (vehicle player != player);
 
 if (!_inVehicle && !player_performingAction) then {
-	
-	
 	_currentPos = player modelToWorld [0, 5, 0];
 	
 	if !(surfaceIsWater _currentPos) then {

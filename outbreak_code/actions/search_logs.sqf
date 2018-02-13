@@ -57,7 +57,7 @@ if (_type == "ground") then {
 			player playActionNow "stop";
 		};
 		
-		cutText ["I have cancelled searching for logs", "PLAIN DOWN"];
+		cutText ["I have canceled searching for logs", "PLAIN DOWN"];
 	};
 
 	if (_finished) then {

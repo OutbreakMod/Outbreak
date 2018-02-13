@@ -5,7 +5,7 @@
 
 _animalTypes = ["MOD_Hen", "MOD_Cock", "MOD_Goat", "MOD_Sheep"];
 
-_pos = getPos player;
+_pos = getPos vehicle player;
 _position = [_pos select 0, _pos select 1, 0];
 
 _houses = _position nearObjects ["House", 50];
@@ -46,7 +46,6 @@ if ((count _houses) == 0 && (count _cities == 0)) then {
 					player setVariable ["spawnedZombies", _spawnedZombies, true];
 					
 					[_animal] spawn {
-						
 						_animal = _this select 0;
 						_loop = true;
 						

@@ -1,7 +1,6 @@
 private ["_canCreateRecipe"];
 
 fnc_openDialog = {
-	
 	_dialog = createDialog "rscCraftingMenu";
 	_idc = uiNamespace getVariable "rscCraftingMenu";
 
@@ -30,7 +29,6 @@ fnc_openDialog = {
 };
 
 fnc_resetWindow = {
-
 	_idc = uiNamespace getVariable ["rscCraftingMenu", displayNull];
 	
 	_pictureIDC = 35904;
@@ -48,7 +46,6 @@ fnc_resetWindow = {
 		_pictureIDC = _pictureIDC + 1;
 		_textIDC = _textIDC + 1;
 	};
-
 };
 
 fn_drawMaterials = {

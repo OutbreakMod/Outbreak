@@ -70,18 +70,16 @@ if (!_finished) then {
 		player playActionNow "stop";
 	};
 	
-	cutText ["I have cancelled building", "PLAIN DOWN"];
+	cutText ["I have canceled building", "PLAIN DOWN"];
 	
 	deleteVehicle (BUILDING_OBJECT);
 	BUILDING_OBJECT = objNull;
 };
 
 if (_finished) then {
-
 	INTERRUPT_ACTION = false;
 	cutText ["I have finished building", "PLAIN DOWN"];
 	
-
 	_vehicle = createVehicle [_type, (_worldspace select 0), [], 0, "CAN_COLLIDE"];
 	_vehicle setPos (_worldspace select 0);
 	_vehicle setDir (_worldspace select 1);

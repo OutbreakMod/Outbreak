@@ -29,7 +29,6 @@ BUILDING = true;
 BUILDING_RECIPE = _cfgClassName;
 
 [_config, _recipeCreate, _buildDistance] spawn {
-	
 	_config = _this select 0;
 	_recipeCreate = _this select 1;
 	_buildDistance = _this select 2;
@@ -46,12 +45,10 @@ BUILDING_RECIPE = _cfgClassName;
 	BUILDING_OBJECT = _vehicle;
 	
 	while {BUILDING} do {
-		
 		[_vehicle, _buildDistance] call fnc_updateObject;
 		
 		if ((_originalPos distance player) >= 10) then {
-			
-			cutText [format["Cancelled building"], "PLAIN DOWN"];
+			cutText [format["Canceled building"], "PLAIN DOWN"];
 			player setVariable ["CraftedVehicle", objNull, true];
 			
 			deleteVehicle (_vehicle);
@@ -65,7 +62,6 @@ BUILDING_RECIPE = _cfgClassName;
 };
 
 fnc_updateObject = {
-	
 	_vehicle = _this select 0;
 	_buildDistance = _this select 1;
 	
