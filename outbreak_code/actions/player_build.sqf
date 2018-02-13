@@ -16,13 +16,13 @@ _consumes = (_cfgRecipe >> "consume") call BIS_fnc_getCfgData;
 _type =  (_cfgRecipe >> "recipeCreate") call BIS_fnc_getCfgData;
 _persistent =  ((_cfgRecipe >> "persistent") call BIS_fnc_getCfgData) == 1;
 
-if (_persistent) then {
+/*if (_persistent) then {
 	_cities = nearestLocations [getPosATL player, ["NameCityCapital","NameCity","NameVillage"], 300];
 
 	if ((count _cities) > 0) exitWith {
 		cutText ["I'm too close to a city", "PLAIN DOWN"];
 	};
-};
+};*/
 
 player playActionNow "Medic";
 
