@@ -90,7 +90,6 @@ while {_loop} do {
 		/// Do tasks every x random amount of seconds
 		///
 		if ((_timer % 1) == 0) then { 
-			
 			_cooldown = _unit getVariable ["zombieTargetCooldown", 0];
 					
 			if (_cooldown > 0) then {
@@ -153,7 +152,6 @@ while {_loop} do {
 			///
 			
 			if (_hasTarget) then {
-				
 				_timerLose = _unit getVariable ["loseZombieTimer", 0];
 						
 				if (_timerLose > 0) then {
@@ -162,7 +160,6 @@ while {_loop} do {
 				};
 							
 				if ((_unit distance _target >= LOSE_ZOMBIE_DISTANCE) or (!(_timer > 0))) then {	
-				
 					_zombies = _target getVariable ["attackingZombies", []];
 					_zombies = _zombies - [_unit];
 					_target setVariable ["attackingZombies", _zombies, true];
@@ -193,7 +190,7 @@ while {_loop} do {
 		///
 		/// Zombie unstuck checking
 		///
-		if ((_timer % 10) == 0) then {
+		/*if ((_timer % 10) == 0) then {
 			if (!(_hasTarget or _heardGunshot) and (speed _unit < 10) and _needsUnstuck) then {
 				
 				_currentPosition = getPosATL _unit;
@@ -229,23 +226,22 @@ while {_loop} do {
 					};
 				};
 			};
-		};
+		};*/
 		
 		///
 		/// Send leg updates
 		///
 		if (_unit getVariable ["update_legs", 0] > 0) then {
-
 			_oldDamage = (_unit getHit "legs");
 			_newDamage = _oldDamage + (_unit getVariable ["update_legs", 0]);
 
 			_unit setVariable ["update_legs", 0, true];
 			
-			if (!(_oldDamage > 0.58)) then {
+			/*if (!(_oldDamage > 0.58)) then {
 				if (_newDamage > 0.58) then {
 					_unit switchMove "AmovPpneMstpSrasWrflDnon"; // prone
 				};
-			};
+			};*/
 			
 			_unit setHit ["legs", _newDamage];
 		};

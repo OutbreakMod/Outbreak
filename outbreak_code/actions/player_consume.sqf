@@ -27,7 +27,6 @@ _finished = false;
 _loop = true;
 
 while {_loop} do {
-
 	_animState = animationState player;
 	_hasAction = ["PutDown", _animState] call fnc_inString;
 	
@@ -54,7 +53,6 @@ while {_loop} do {
 _loop = false;
 
 if (!_finished) then {
-
 	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
@@ -66,7 +64,6 @@ if (!_finished) then {
 };
 
 if (_finished) then {
-	
 	INTERRUPT_ACTION = false;
 	player removeItem _class;
 	
@@ -86,7 +83,6 @@ if (_finished) then {
 	};
 
 	_thirst = player getVariable ["thirst", FULL_THIRST];
-	_thirst = _thirst - _water;
 	
 	if (_water > 0) then {
 		_thirst = _thirst + _water;
