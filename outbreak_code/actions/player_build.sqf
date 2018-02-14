@@ -35,7 +35,6 @@ _started = false;
 _finished = false;
 
 while {_loop} do {
-
 	_animState = animationState player;
 	_hasAction = ["medic", _animState] call fnc_inString;
 	
@@ -62,7 +61,6 @@ waitUntil {!_loop};
 _loop = false;
 
 if (!_finished) then {
-
 	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
