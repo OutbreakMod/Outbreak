@@ -4,7 +4,7 @@
 */
 
 [] execVM "addons\outbreak_code\functions\player_createActions.sqf";
-[] execVM "addons\outbreak_code\functions\player_createActionsExtended.sqf";
+[] execVM "addons\outbreak_code\functions\player_createEnvironmentActions.sqf";
 
 _health = player getVariable ["health", 6000];
 
