@@ -33,9 +33,9 @@ fnc_selectRandomLocation = compile preProcessFileLineNumbers "addons\outbreak_co
 fnc_convertMagazines = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_convertMagazines.sqf";
 fnc_hasSight = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_hasSight.sqf";
 create_uid = compile preProcessFileLineNumbers "addons\outbreak_code\functions\create_uid.sqf";
-KK_fnc_arrayShuffle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\KK_fnc_arrayShuffle.sqf";
+fnc_arrayShuffle = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\KK_fnc_arrayShuffle.sqf";
 fnc_isInsideBuilding = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\fnc_isInsideBuilding.sqf";
-dzn_fnc_snowfall = compile preProcessFileLineNumbers "addons\outbreak_code\weather\fn_dzn_snowfall.sqf";
+obj_getModelName = compile preProcessFileLineNumbers "addons\outbreak_code\functions\fnc\obj_getModelName.sqf";
 
 // actions
 player_build = compile preProcessFileLineNumbers "addons\outbreak_code\actions\player_build.sqf";
@@ -71,21 +71,3 @@ remoteExec_teleport = compile preProcessFileLineNumbers "addons\outbreak_code\fu
 remoteExec_medical = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_medical.sqf";
 remoteExec_gear = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_gear.sqf";
 remoteExec_camera_shake = compile preProcessFileLineNumbers "addons\outbreak_code\functions\remote_exec\remoteExec_camera_shake.sqf";
-
-obj_getModelName = {
-	_objInfo = toArray(str(_this));
-	_lenInfo = count _objInfo - 1;
-	_objName = [];
-	_i = 0;
-	// determine where the object name starts
-	{
-		if (58 == _objInfo select _i) exitWith {};
-		_i = _i + 1;
-	} count _objInfo;
-	_i = _i + 2; // skip the ": " part
-	for "_k" from _i to _lenInfo do {
-		_objName set [(count _objName), (_objInfo select _k)];
-	};
-	_objName = toLower(toString(_objName));
-	_objName
-};

@@ -23,9 +23,7 @@
 	];
 	
 	while {true} do {
-	
 		if (IN_GAME) then {
-	
 			{
 				if (alive player) then {
 					

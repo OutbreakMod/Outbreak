@@ -86,7 +86,6 @@ if ((count _houses) == 0 && (count _cities == 0)) then {
 		if (count _zombies == 0) then {
 			
 			for "_i" from 1 to 3 do {
-
 				_zombiePosition = [_position, MIN_WILD_ZOMBIE_SPAWN_DISTANCE, MAX_WILD_ZOMBIE_SPAWN_DISTANCE, 3] call fnc_selectRandomLocation;
 				_players = [_zombiePosition, MIN_ZOMBIE_SPAWN_DISTANCE, "isPlayer"] call player_findNearby;
 

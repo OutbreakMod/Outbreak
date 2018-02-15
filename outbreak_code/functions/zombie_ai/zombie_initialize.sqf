@@ -69,7 +69,6 @@ _nearby = nearestObjects [_agent, ["House", "Wreck_Base"], 20];
 _className = "wild";
 
 if (count _this > 1) then {
-	
 	_building = _this select 1;
 	_className = typeOf _building;
 	_buildingCfg = configFile >> "cfgBuildingClothes" >> _className;
@@ -81,7 +80,6 @@ if (count _this > 1) then {
 	_agent setVariable ["zombieSpawned", position _building, true];
 
 } else {
-	
 	if (count _nearby > 0) then {
 		_nearestBuilding = _nearby select 0;
 		_className = typeOf _nearestBuilding;

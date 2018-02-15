@@ -20,7 +20,6 @@ _NEW_MAX_INFECTED_CITY = 20;//(MAX_INFECTED_CITY * (count _playersNearby));
 _count = count _infected;
 
 if (_count < _NEW_MAX_INFECTED_CITY) then {
-
 	_amountSpawned = _NEW_MAX_INFECTED_CITY - _count;
 	
 	if (_amountSpawned >= _amount) then {
@@ -40,4 +39,4 @@ if (_count < _NEW_MAX_INFECTED_CITY) then {
 	};
 };
 
-_building setVariable ["zombieSpawnTimer", time + ZOMBIE_RESPAWN_COOLDOWN, true];
+_building setVariable ["zombieSpawnTimer", time + ZOMBIE_RESPAWN_COOLDOWN];

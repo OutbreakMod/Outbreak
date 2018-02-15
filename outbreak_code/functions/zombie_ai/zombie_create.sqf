@@ -26,13 +26,11 @@ if (!(_building == objNull)) then {
 
 // If zombie is local, add it to players list of spawned zombies
 if (_local) then {
-	
 	_spawnedZombies = player getVariable ["spawnedZombies", []];
 	_spawnedZombies pushBack _zombie;
 	
 	 // add zombie to players spawned zombie list
 	player setVariable ["spawnedZombies", _spawnedZombies, true];
-	
 };
 
 _zombie;
