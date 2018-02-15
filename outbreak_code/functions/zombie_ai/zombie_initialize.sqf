@@ -75,7 +75,9 @@ if (count _this > 1) then {
 	
 	if (isClass(_buildingCfg)) then {
 		_zombieClothes = getText (_buildingCfg >> "zombieClothes");
-	};
+	} else {
+        _zombieClothes = "civilian";
+    };
 	
 	_agent setVariable ["zombieSpawned", position _building, true];
 
@@ -86,7 +88,6 @@ if (count _this > 1) then {
 		_building = configFile >> "cfgBuildingClothes" >> _className;
 
 		if ((_nearestBuilding getVariable ["helicrashSpawnZeds", true])) then {
-			
 			if (isClass(_building)) then {
 				_zombieClothes = getText (_building >> "zombieClothes");
 			};
@@ -105,7 +106,6 @@ _uniform = selectRandom _clothes;
 _agent addUniform _uniform;
 
 if (_zombieClothes == "military") then {
-	
 	//_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
 	//_agent addVest (_vests call BIS_fnc_selectRandom);
 	

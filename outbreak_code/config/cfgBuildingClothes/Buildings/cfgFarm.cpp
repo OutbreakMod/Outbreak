@@ -17,7 +17,3 @@ class Land_stodola_old_open: Default {
 class Land_stodola_open: Default {
 	zombieClothes = "wild";
 };
-
-class Land_Misc_deerstand: Default {
-	zombieClothes = "wild";
-};

@@ -75,7 +75,6 @@ if ((count _houses) == 0 && (count _cities == 0)) then {
 };
 	
 if ((count _houses) == 0 && (count _cities == 0)) then { 
-
 	/////////////////////////
 	// WILD ZOMBIE SPAWNING
 	/////////////////////////

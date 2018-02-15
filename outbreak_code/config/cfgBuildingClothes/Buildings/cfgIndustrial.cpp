@@ -42,6 +42,18 @@ class Land_Shed_W01 : Default {
 	zombieClothes = "worker";
 };
 
+class Land_Barn_W02 : Default {
+	zombieClothes = "worker";
+};
+
+class Land_Barn_W03 : Default {
+	zombieClothes = "worker";
+};
+
+class Land_Shed_M01 : Default {
+	zombieClothes = "worker";
+};
+
 class Land_Tovarna2 : Default {
 	zombieClothes = "worker";
 };
@@ -54,5 +66,13 @@ class Land_kulna : Default {
 	zombieClothes = "worker";};
 
 class Land_A_Stationhouse : Default {
-	zombieClothes = "industrial";
+	zombieClothes = "worker";
+};
+
+class Land_Ind_Garage01 : Default {
+	zombieClothes = "worker";
+};
+
+class Land_Nasypka : Default {
+	zombieClothes = "worker";
 };

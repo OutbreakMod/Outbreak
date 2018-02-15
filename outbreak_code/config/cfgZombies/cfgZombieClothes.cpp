@@ -30,6 +30,10 @@ class CfgClothes {
 		"MOD_IndustrialUniform1",
 		"MOD_IndustrialUniform2"
 	};
+    
+    hunting[] = {
+		"MOD_HuntingUniform1"
+	};
 	
 	wild[] = {
 		"MOD_UniformWild1",
