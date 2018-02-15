@@ -9,7 +9,7 @@ _unit = _this select 0;
 _building = _this select 1;
 _position = getPosATL _building;
 
-_amount = [0, 1, 2, 3] call BIS_fnc_selectRandom;//floor (random 3);
+_amount = [0, 1] call BIS_fnc_selectRandom;//floor (random 3);
 _amountSpawned = 0;
 
 _infected = [getPos vehicle _unit, ZOMBIE_SPAWN_RADIUS, "isZombie"] call player_findNearby;
