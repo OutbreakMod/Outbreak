@@ -128,5 +128,9 @@ if (_zombieClothes == "helicopter") then {
 	}; 
 };
 
+if (_uniform == "MOD_HuntingUniform1") the {
+    _agent addHeadgear "H_Booniehat_mcamo";
+};
+
 diag_log format ["Spawning zombie at %1 near %2 with clothes %3 : %4", getPos _agent, _className, _zombieClothes, _uniform];
 _agent spawn zombie_intelligence; // Give zombie the brains :)

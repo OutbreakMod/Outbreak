@@ -10,7 +10,6 @@ class CfgClothes {
 		"MOD_CivillianUniform7"
 	};
 	
-	
 	civilian[] = {
 		"MOD_CivillianUniform1",
 		"MOD_CivillianUniform2",
