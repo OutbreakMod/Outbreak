@@ -46,11 +46,12 @@ class CfgClothes {
 	};
 	
 	helicopter[] = {
-		"U_O_SpecopsUniform_ocamo",
-		"U_O_SpecopsUniform_blk",
-		"U_B_GhillieSuit",
-		"U_I_HeliPilotCoveralls",
-		"U_KerryBody"
+		"MOD_HelicopterPilotUniform", 
+		"MOD_HelicopterCrewUniform",
+        "MOD_HelicopterCrewUniform",
+		"MOD_HelicopterUnarmedUniform",
+        "MOD_HelicopterUnarmedUniform",
+        "MOD_HelicopterUnarmedUniform"
 	};
 	
 	military_vests[] = {

@@ -34,6 +34,5 @@ class CfgWeapons {
 	#include "..\cfgUniforms\Industrial.cpp"
 	#include "..\cfgUniforms\Military.cpp"
     #include "..\cfgUniforms\Hunting.cpp"
-	
-	// Uniforms
+	#include "..\cfgUniforms\Helicopter.cpp"
 };

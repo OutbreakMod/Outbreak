@@ -5,7 +5,8 @@ class CfgVehicles
 	#include "..\cfgUniforms\cfgModels\Industrial.cpp"
 	#include "..\cfgUniforms\cfgModels\Military.cpp"
     #include "..\cfgUniforms\cfgModels\Hunting.cpp"
-	
+	#include "..\cfgUniforms\cfgModels\Helicopter.cpp"
+    
 	class GroundWeaponHolder;		// External class reference
 	#include "Storage\Basket.cpp"
 	#include "Storage\Sack.cpp"

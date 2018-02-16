@@ -38,18 +38,26 @@ class HMMWVWreck: Default {
 	zombieClothes = "military";
 };
 
-class BMP2Wreck: Default {
+class BMP2Wreck : Default {
 	zombieClothes = "military";
 };
 
-class Land_Mil_Barracks_L: Default {
+class Land_Mil_Barracks_L : Default {
 	zombieClothes = "military";
 };
 
-class Land_Mil_Barracks: Default {
+class Land_Mil_Barracks : Default {
 	zombieClothes = "military";
 };
 
-class Land_Mil_House: Default {
+class Land_Mil_House : Default {
 	zombieClothes = "military";
+};
+
+class Land_Ind_IlluminantTower : Default {
+	zombieClothes = "military";
+};
+
+class Land_Vysilac_FM : Default {
+    zombieClothes = "military";
 };

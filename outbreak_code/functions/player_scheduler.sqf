@@ -26,7 +26,6 @@
 		if (IN_GAME) then {
 			{
 				if (alive player) then {
-					
 					_task = _x select 0;
 					_seconds = _x select 1;
 					
@@ -46,7 +45,7 @@
 	};
 };
 
-[] spawn {
+/*[] spawn {
 	while {true} do {
 		//if (IN_GAME) then {
 			_sound = format["ambient_%1", floor(random 8) + 1];
@@ -56,7 +55,7 @@
 			sleep _pause;
 		//};
 	};
-};
+};*/
 
 [] spawn {
 	while {true} do {
