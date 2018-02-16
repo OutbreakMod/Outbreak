@@ -11,7 +11,7 @@ _position = [_pos select 0, _pos select 1, 0];
 _houses = _position nearObjects ["House", 50];
 _cities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"], 150];
 
-if ((count _houses) == 0 && (count _cities == 0)) then { 
+/*if ((count _houses) == 0 && (count _cities == 0)) then { 
 
 	/////////////////////////
 	// WILD ANIMAL SPAWNING
@@ -36,13 +36,10 @@ if ((count _houses) == 0 && (count _cities == 0)) then {
 					_animal setVariable ["BIS_fnc_animalBehaviour_disable", true];
 					_animal setVariable ["isAnimal", true, true];
 					
-					// When player disconnects these animals will be removed
 					_spawnedZombies = player getVariable ["spawnedZombies", []];
 					_spawnedZombies pushBack _animal;
 					
-					//player setPos _animalPosition;
-					
-					 // add zombie to players spawned zombie list
+					// add animal to spawned zombie list so they can be cleared when player disconnects
 					player setVariable ["spawnedZombies", _spawnedZombies, true];
 					
 					[_animal] spawn {
@@ -72,7 +69,7 @@ if ((count _houses) == 0 && (count _cities == 0)) then {
 		};
 		
 	};
-};
+};*/
 	
 if ((count _houses) == 0 && (count _cities == 0)) then { 
 	/////////////////////////

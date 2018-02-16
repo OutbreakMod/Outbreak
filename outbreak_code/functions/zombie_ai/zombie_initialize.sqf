@@ -20,13 +20,11 @@ _agent removeAllEventHandlers "Hit";
 _agent removeAllEventHandlers "Respawn";
 _agent removeAllEventHandlers "HandleDamage";
 
-_agent addEventHandler ["HandleDamage", 
-{
+_agent addEventHandler ["HandleDamage", {
 	_this call zombie_handleDamage; 
 }];
 
-_agent addEventHandler ["Hit", 
-{
+_agent addEventHandler ["Hit", {
 	_unit = _this select 0;
 	_causedBy = _this select 1;
 	
@@ -66,7 +64,7 @@ _agent setHit ["hands", 0.9];
 
 _zombieClothes = "wild";
 _nearby = nearestObjects [_agent, ["House", "Wreck_Base"], 20];
-_className = "wild";
+_className = "";
 
 if (count _this > 1) then {
 	_building = _this select 1;
@@ -78,8 +76,13 @@ if (count _this > 1) then {
 	} else {
         _zombieClothes = "civilian";
     };
+    
+    /*{
+        diag_log format["zombie init: %1", _x];
+    } foreach _this;*/
 	
 	_agent setVariable ["zombieSpawned", position _building, true];
+    //diag_log format["Non-wild zombie."];
 
 } else {
 	if (count _nearby > 0) then {
@@ -97,7 +100,18 @@ if (count _this > 1) then {
 		
 	} else {
 		_agent setVariable ["zombieSpawned", position _agent, true];
+        //diag_log format["Wild zombie spawned."];
 	};
+};
+
+// Do wild zombie clothing if building is null.
+if (count _this > 1) then {
+    _building = _this select 1;
+    
+    if (isNull _building) then {
+        _zombieClothes = "wild";
+        _agent setVariable ["zombieSpawned", position _agent, true];
+    };
 };
 
 _clothes = (configFile >> "CfgZombies" >> "CfgClothes" >> _zombieClothes) call BIS_fnc_getCfgData;
