@@ -109,27 +109,28 @@ if (_zombieClothes == "military") then {
 	//_vests = getArray (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests");
 	//_agent addVest (_vests call BIS_fnc_selectRandom);
 	
-	if (30 > random 100) then {
+	if (70 > random 100) then {
 		_helmets = (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets") call BIS_fnc_getCfgData;
 		_agent addHeadgear (_helmets call BIS_fnc_selectRandom);
 	}; 
 };
 
 if (_zombieClothes == "helicopter") then {
-	
 	if (50 > random 100) then {
 		_vests = (configFile >> "CfgZombies" >> "CfgClothes" >> "military_vests") call BIS_fnc_getCfgData;
 		_agent addVest (_vests call BIS_fnc_selectRandom);
 	};
 	
-	if (30 > random 100) then {
+	if (70 > random 100) then {
 		_helmets = (configFile >> "CfgZombies" >> "CfgClothes" >> "military_helmets") call BIS_fnc_getCfgData;
 		_agent addHeadgear (_helmets call BIS_fnc_selectRandom);
 	}; 
 };
 
-if (_uniform == "MOD_HuntingUniform1") the {
-    _agent addHeadgear "H_Booniehat_mcamo";
+if (_uniform == "MOD_HuntingUniform1") then {
+    if (70 > random 100) then {
+        _agent addHeadgear "H_Booniehat_mcamo";
+    }
 };
 
 diag_log format ["Spawning zombie at %1 near %2 with clothes %3 : %4", getPos _agent, _className, _zombieClothes, _uniform];
