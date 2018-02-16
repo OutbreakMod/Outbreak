@@ -1,6 +1,6 @@
 if (!DISABLE_ZOMBIES) then {
-	_nearby = nearestObjects [getPosATL player, ["House"], ZOMBIE_SPAWN_RADIUS];//(getPosATL player) nearObjects ZOMBIE_SPAWN_RADIUS;
-	_nearly = _nearby call fnc_arrayShuffle; // Spice it up :D
+	_nearby = nearestObjects [getPos vehicle player, ["House"], ZOMBIE_SPAWN_RADIUS];//(getPosATL player) nearObjects ZOMBIE_SPAWN_RADIUS;
+	//_nearly = _nearby call fnc_arrayShuffle; // Spice it up :D
 
 	{
 		_building = _x;

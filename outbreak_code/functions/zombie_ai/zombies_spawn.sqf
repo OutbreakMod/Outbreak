@@ -9,13 +9,13 @@ _unit = _this select 0;
 _building = _this select 1;
 _position = getPosATL _building;
 
-_amount = [0, 1] call BIS_fnc_selectRandom;//floor (random 3);
+_amount = floor (random 3);
 _amountSpawned = 0;
 
 _infected = [getPos vehicle _unit, ZOMBIE_SPAWN_RADIUS, "isZombie"] call player_findNearby;
 _playersNearby = [getPos vehicle _unit, ZOMBIE_SPAWN_RADIUS, "isPlayer"] call player_findNearby;
 
-_NEW_MAX_INFECTED_CITY = 20;//(MAX_INFECTED_CITY * (count _playersNearby));
+_NEW_MAX_INFECTED_CITY = 15;//(MAX_INFECTED_CITY * (count _playersNearby));
 
 _count = count _infected;
 
