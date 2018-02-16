@@ -9,7 +9,7 @@ class MOD_HuntingUniform1 : MOD_Uniform_Base {
     
     class ItemInfo : UniformItem {
         uniformModel = "-";
-        uniformClass = "B_Soldier_F";
+        uniformClass = "HuntingSoldier1";
         containerClass = "Supply40";
         mass = 40;
     };

@@ -13,3 +13,8 @@ player enableAI 'ANIM';
 player enableAI 'MOVE';
 
 IN_GAME = true;
+
+player addAction ["Select No Weapon", {
+    player action ["SwitchWeapon", player, player, 100];
+    player switchCamera cameraView;
+}];
