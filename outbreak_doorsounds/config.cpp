@@ -3,7 +3,7 @@ class CfgPatches {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
-		requiredAddons[] = {"CAStructures_Mil", "Farm_Cowshed", "CABuildings", "CABuildings2", "Barn_Metal", "CAStructuresHouse_HouseV2", "CAStructuresHouse"};
+		requiredAddons[] = {"CUP_Buildings_Data", "CUP_Buildings_Config"};
 		magazines[] = {};
 		ammo[] = {};
 	};
@@ -18,11 +18,5 @@ class CfgVehicles {
 	
 	class Ruins;	// External class reference
 	
-	#include "buildings\Land_Mil_Barracks_i.hpp"
-	#include "buildings\Land_Mil_ControlTower.hpp"
 	#include "buildings\Land_Ss_hangar.hpp"
-	#include "buildings\Land_Hangar_2.hpp"
-	#include "buildings\Land_Farm_Cowshed.hpp"
-	#include "buildings\Land_Barn_Metal.hpp"
-	//#include "buildings\House_V2_04_interier.hpp"
 };
