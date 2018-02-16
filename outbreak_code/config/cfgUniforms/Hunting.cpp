@@ -1,6 +1,6 @@
 class MOD_HuntingUniform1 : MOD_Uniform_Base {
     author = "$STR_A3_Bohemia_Interactive";
-    scope = public;
+    scope = 2;
     displayName = "$STR_A3_Combat_fatigues";
     picture = "\A3\characters_f\data\ui\icon_U_B_CombatUniform_mcam_ca.paa";
     model = "\A3\Characters_F\Common\Suitpacks\suitpack_universal_F.p3d";
