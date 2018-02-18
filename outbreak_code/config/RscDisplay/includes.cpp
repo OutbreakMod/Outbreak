@@ -11,6 +11,7 @@ class RscIGUIShortcutButton;
 class RscGearShortcutButton;
 class RscIGUIListNBox;
 class RscActiveText;
+class RscFrame;
 
 class RscPictureKeepAspect;
 class RscStandardDisplay;
@@ -21,7 +22,6 @@ class RscObject;
 class IGUIBack;
 class RscIGUIListBox;
 class RscHTML;
-
 
 // Static styles
 #define ST_POS            0x0F
@@ -80,10 +80,10 @@ class RscHTML;
 #define MB_BUTTON_CANCEL  2
 #define MB_BUTTON_USER    4
 
-
 class MultipleLineRscText : RscText {
 	style = ST_LEFT + ST_MULTI;
 };
 
 #include "rscTitles.cpp"
 #include "Dialogs\rscCraftingMenu.cpp"
+#include "Dialogs\rscUserSettings.cpp"

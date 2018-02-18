@@ -56,7 +56,10 @@ alert_zombie = compile preProcessFileLineNumbers "addons\outbreak_code\functions
 
 // gui
 fnc_craftItem = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_craftItem.sqf";
+fnc_applySettings = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_applySettings.sqf";
 fnc_createCraftingDialog = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_createCraftingDialog.sqf";
+fnc_createSettingsDialog = compile preProcessFileLineNumbers "addons\outbreak_code\functions\gui\fnc_createSettingsDialog.sqf"; 
+
 player_updateStatus = compile preProcessFileLineNumbers "addons\outbreak_code\functions\player_updateStatus.sqf";
 
 // remote exec fnc

@@ -3,7 +3,6 @@
 */
 
 fnc_healthUI = {
-	
 	private ["_health", "_healthComponents", "_healthControl", "_almostFull", "_full", "_low", "_medium", "_status", "_veryLow"];
 	
 	_healthComponents = FULL_HEALTH / 5;
@@ -39,7 +38,6 @@ fnc_healthUI = {
 };
 
 fnc_hungerUI = {
-	
 	private ["_health", "_healthComponents", "_healthControl", "_almostFull", "_full", "_low", "_medium", "_status", "_veryLow"];
 	
 	_healthComponents = FULL_STOMACH / 5;
@@ -75,7 +73,6 @@ fnc_hungerUI = {
 };
 
 fnc_thirstUI = {
-	
 	private ["_health", "_healthComponents", "_healthControl", "_almostFull", "_full", "_low", "_medium", "_status", "_veryLow"];
 	
 	_healthComponents = FULL_THIRST / 5;
@@ -110,13 +107,16 @@ fnc_thirstUI = {
 	_healthControl ctrlSetText format["\addons\outbreak_assets\textures\ui\icons\thirst\%1.paa", _status];
 };
 
-if (isNull (uiNamespace getVariable ["playerHUD", displayNull])) then {
-	5 cutRsc ["playerHUD", "PLAIN", 0];
+if (SHOW_PLAYER_ICONS) then {
+    if (SHOW_PLAYER_ICONS_CHECK) then {
+        5 cutRsc ["playerHUD", "PLAIN", 0];
+        SHOW_PLAYER_ICONS_CHECK = false;
+    };
+
+    disableSerialization;
+    _display = uiNamespace getVariable ["playerHUD", displayNull];
+
+    call fnc_healthUI;
+    call fnc_hungerUI;
+    call fnc_thirstUI;
 };
-
-disableSerialization;
-_display = uiNamespace getVariable ["playerHUD", displayNull];
-
-call fnc_healthUI;
-call fnc_hungerUI;
-call fnc_thirstUI;

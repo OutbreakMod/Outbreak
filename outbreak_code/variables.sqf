@@ -3,6 +3,13 @@
 	@author: TheAmazingAussie
 */
 
+/*
+    PLAYER OPTIONS
+*/
+SHOW_DEBUG_MENU = false;
+SHOW_PLAYER_ICONS = true;
+SHOW_PLAYER_ICONS_CHECK = true;
+
 ZOMBIE_GROUP = createGroup east;
 
 FULL_HEALTH = 6000;

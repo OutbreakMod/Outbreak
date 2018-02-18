@@ -10,13 +10,7 @@ _handled = false;
 
 // no debug
 if (_keyCode == 210) then {
-	if (isNil 'debugMenu') then {
-		debugMenu = true;
-	} else {
-		debugMenu = !debugMenu;
-	};
-	
-	[] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";
+	[] call fnc_createSettingsDialog;
 };
 
 if (_keyCode == 22) then {

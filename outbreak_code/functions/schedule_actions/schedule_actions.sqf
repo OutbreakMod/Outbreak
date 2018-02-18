@@ -6,6 +6,10 @@
 [] execVM "addons\outbreak_code\functions\player_createActions.sqf";
 [] execVM "addons\outbreak_code\functions\player_createEnvironmentActions.sqf";
 
+if (SHOW_DEBUG_MENU) then {
+    [] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";  
+};
+
 _health = player getVariable ["health", 6000];
 
 if (_health < 6000) then {
@@ -21,7 +25,6 @@ player setVariable ["last_position", (getPosATL player), true];
 
 // Save variable
 if ((name player) != "Error: No unit") then {
-	
 	_name = name player;
 	_uid = getPlayerUID player;
 	_pos = getPosATL player;
@@ -37,7 +40,6 @@ if ((name player) != "Error: No unit") then {
 call player_updateStatus;
 
 if (_health < 1500) then {
-	
 	_interval = 20;
 	_bloodUpdate = player getVariable ["bloodUpdate", _interval];
 	
