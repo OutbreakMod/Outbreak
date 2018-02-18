@@ -7,6 +7,7 @@ _settingToApply = _this select 0;
 
 if (_settingToApply == "user_stats") then {
     SHOW_DEBUG_MENU = !SHOW_DEBUG_MENU;
+    hintSilent "";
 };
 
 if (_settingToApply == "user_icons") then {
