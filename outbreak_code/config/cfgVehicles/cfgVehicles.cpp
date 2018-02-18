@@ -39,10 +39,6 @@ class CfgVehicles
 	class Cock_random_F;
 	class Goat_random_F;
 	class Sheep_random_F;
-	#include "Animals\Hen.cpp"
-	#include "Animals\Cock.cpp"
-	#include "Animals\Goat.cpp"
-	#include "Animals\Sheep.cpp"
 
 	class b_survivor_F;	// External class reference
 	class Survivor : b_survivor_F {

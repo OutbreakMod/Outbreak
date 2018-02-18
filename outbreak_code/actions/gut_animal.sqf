@@ -14,7 +14,6 @@ player removeAction action_gutAnimal;
 action_gutAnimal = -1;
 
 if (!([player, "sc_knife"] call fnc_hasItem)) exitWith {
-	
 	cutText ["I need a knife to gut the animal", "PLAIN DOWN"];
 	_loop = false;
 };

@@ -3,12 +3,12 @@
 	@author: TheAmazingAussie
 */
 
-_animalTypes = ["MOD_Hen", "MOD_Cock", "MOD_Goat", "MOD_Sheep"];
-_pos = getPosATL vehicle player;
+_animalTypes = ["Hen_random_F", "Cock_random_F", "Goat_random_F", "Sheep_random_F"];
+_position = getPosATL vehicle player;
 
 _cities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"], 150];
 
-if ((count _houses) == 0 && (count _cities == 0)) then { 
+if (count _cities == 0) then { 
 	_animals = ([_position, MAX_ANIMAL_SPAWN_DISTANCE, "isAnimal"] call player_findNearby);
 
 	if (count _animals == 0) then {
@@ -21,10 +21,9 @@ if ((count _houses) == 0 && (count _cities == 0)) then {
             _animal setVariable ["BIS_fnc_animalBehaviour_disable", true];
             _animal setVariable ["isAnimal", true, true];
             
+            // add animal to spawned zombie list so they can be cleared when player disconnects
             _spawnedZombies = player getVariable ["spawnedZombies", []];
             _spawnedZombies pushBack _animal;
-            
-            // add animal to spawned zombie list so they can be cleared when player disconnects
             player setVariable ["spawnedZombies", _spawnedZombies, true];
             
             [_animal] spawn {
