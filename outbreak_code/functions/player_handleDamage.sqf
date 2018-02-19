@@ -10,17 +10,14 @@ _hit = _this select 1;
 _damage = _this select 2;
 _source = _this select 3;
 _ammo = _this select 4;
-
 _type = [_damage, _ammo] call fnc_damageType;
-
-_unitIsPlayer = _unit == player;
 
 if (!_unitIsPlayer) exitWith { 0 };
 if (!LOGGED_IN) exitWith { 0 };
 
-///
-/// Temporary fix for no leg damage when wearing this
-/// 
+//
+// Temporary fix for no leg damage when wearing this
+// 
 if (_hit == "arms") then {
 	if ((uniform _unit) == "U_B_GhillieSuit") then {
 		_hit = "legs";
@@ -88,7 +85,6 @@ _scale = _scale * 2;
 
 if (_hit == "legs") then {
 	if (_ammo == "") then {
-	
 		_effect = true;
 		_scale = _scale + 3500;
 		_unit setVariable ["deathmessage", format["His name was %1 and died from a fall", name _unit], true];
@@ -100,7 +96,7 @@ if (_hit == "legs") then {
 // notify player damage taken
 if (_effect) then {
 	_health = _health - (_damage * _scale);
-	1 call fnc_damageEffect;
+	1 remoteExecCall ["fnc_damageEffect", _unit];
 };
 
 // set new health
