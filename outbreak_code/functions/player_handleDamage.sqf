@@ -96,7 +96,11 @@ if (_hit == "legs") then {
 // notify player damage taken
 if (_effect) then {
 	_health = _health - (_damage * _scale);
-	1 remoteExecCall ["fnc_damageEffect", _unit];
+    if (local player) then {
+        1 call fnc_damageEffect;
+    } else {
+        1 remoteExecCall ["fnc_damageEffect", _unit];
+    };
 };
 
 // set new health
