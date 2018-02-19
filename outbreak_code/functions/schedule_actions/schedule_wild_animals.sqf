@@ -3,7 +3,7 @@
 	@author: TheAmazingAussie
 */
 
-_animalTypes = ["Hen_random_F", "Cock_random_F", "Goat_random_F", "Sheep_random_F"];
+_animalTypes = ["Goat_random_F", "Sheep_random_F"];
 _position = getPosATL vehicle player;
 
 _cities = nearestLocations [_position, ["NameCityCapital","NameCity","NameVillage"], 150];
@@ -43,9 +43,12 @@ if (count _cities == 0) then {
                             deleteVehicle (_animal);
                             _loop = false;
                         };
+                        
                     } else {
                         _loop = false;
                     };
+                    
+                    sleep 10;
                 };
             };
 		};

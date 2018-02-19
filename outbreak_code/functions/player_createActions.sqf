@@ -21,7 +21,7 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 		///////////////////
 		// Gut animal
 		///////////////////
-		if ((_type in ["Sheep_random_F"] || _cursorTarget isKindOf "Man") && (!alive _cursorTarget)) then {
+		if ((_type in ["Goat_random_F", "Sheep_random_F"] || _cursorTarget isKindOf "Man") && (!alive _cursorTarget)) then {
 			if (action_gutAnimal < 0) then {
 				action_gutAnimal = player addAction [localize "STR_ACTIONS_GUT_BODY", "addons\outbreak_code\actions\gut_animal.sqf", [_type, _cursorTarget], 3, true, true, "", ""];
 			};

@@ -4,7 +4,6 @@
 */
 
 private ["_commit"];
-
 _commit = _this;
 
 "colorCorrections" ppEffectEnable true;

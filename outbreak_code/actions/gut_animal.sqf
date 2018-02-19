@@ -31,11 +31,10 @@ _finished = false;
 [(getPosATL _deadAnimal), "effects_guts", 2] call object_speak;
 
 while {_loop} do {
-
 	_animState = animationState player;
 	_hasAction = ["medic", _animState] call fnc_inString;
 	
-	if (!(isnull (finddisplay 602))) then {;
+	if (!(isNull (findDisplay 602))) then {
 		closeDialog 602;
 	};
 	
@@ -58,7 +57,6 @@ while {_loop} do {
 _loop = false;
 
 if (!_finished) then {
-
 	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
@@ -66,13 +64,12 @@ if (!_finished) then {
 		player playActionNow "stop";
 	};
 	
-	cutText ["I have cancelled gutting the animal", "PLAIN DOWN"];
+	cutText ["I have canceled gutting the animal", "PLAIN DOWN"];
 };
 
 _basket = objNull;
 
 if (_finished) then {
-
 	INTERRUPT_ACTION = false;
 	cutText ["I have successfully gutted the animal, meat is next to the carcass", "PLAIN DOWN"];
 	
@@ -83,6 +80,10 @@ if (_finished) then {
 	_basket = createVehicle ["MOD_Basket", (getPosATL _deadAnimal), [], 0, "CAN_COLLIDE"];
 	_basket setDir (random 360);
 	_basket addItemCargoGlobal [_rawMeat, _amount];
+    
+    _spawnedZombies = player getVariable ["spawnedZombies", []];
+    _spawnedZombies pushBack _basket;
+    player setVariable ["spawnedZombies", _spawnedZombies, true];
 	
 	deleteVehicle (_deadAnimal);
 }; 
@@ -90,9 +91,7 @@ if (_finished) then {
 player_performingAction = false;
 
 if (_finished) then {
-
 	[_basket] spawn {
-	
 		sleep 60;
 		deleteVehicle (_this select 0);
 	};

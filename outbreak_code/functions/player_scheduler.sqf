@@ -16,7 +16,6 @@
 		["sfx", 1],
 		["fracture", 1],
 		["health", 0],
-		["leg_damage", 0],
 		["food", 2],
 		["wild_animals", 120],
         ["wild_zombies", 300],

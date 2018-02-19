@@ -42,12 +42,10 @@ ZOMBIE_TARGET_GUNSHOT_COOLDOWN = 40; // When zombie pursuits gunshot, long until
 ZOMBIE_SEARCH_DISTANCE = 40; // How far zombies have sight, in metres
 ZOMBIE_REACH_DISTANCE = 3; // Arm length hit distance
 ZOMBIE_SPAWN_RADIUS = 300; // How far around a city in metres can zombies spawn at
-ZOMBIE_DESPAWN_DISTANCE = 400; // How far away must a player be away from a zombie for it to despawn
 
+ZOMBIE_DESPAWN_DISTANCE = 400; // How far away must a player be away from a zombie for it to despawn
 ZOMBIE_RESPAWN_COOLDOWN = 600; // (in seconds, how long you can clear a city before zombies respawn again)
 
-LEG_BREAK_STAND_COOLDOWN = 5;
-LEG_BREAK_STAND_TIMER = 0; // DON'T TOUCH THIS
 LEG_BREAK_DAMAGE_CHECK = 0.50;
 
 LOGGED_IN = false;
