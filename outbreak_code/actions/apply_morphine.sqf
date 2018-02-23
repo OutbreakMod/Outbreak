@@ -48,7 +48,6 @@ while {_loop} do {
 _loop = false;
 
 if (!_finished) then {
-
 	INTERRUPT_ACTION = false;
 
 	if (vehicle player == player) then {
@@ -60,15 +59,9 @@ if (!_finished) then {
 };
 
 if (_finished) then {
-
-	_location = player modeltoworld [0, 0.3, 0];
-	
-	if ((_location select 2) < 0) then {
-		_location set [2,0];
-	};
-	
 	INTERRUPT_ACTION = false;
-	player setVariable ["reset_fracture", true, true];
+	_target setDamage 0;
+    
 	player removeItem "morphine";
 	
 	if ((name _target) != (name player)) then {

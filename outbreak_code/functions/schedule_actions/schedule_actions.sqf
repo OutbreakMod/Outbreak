@@ -4,7 +4,6 @@
 */
 
 [] execVM "addons\outbreak_code\functions\player_createActions.sqf";
-[] execVM "addons\outbreak_code\functions\player_createEnvironmentActions.sqf";
 
 if (SHOW_DEBUG_MENU) then {
     [] execVM "addons\outbreak_code\functions\player_debugMenu.sqf";  

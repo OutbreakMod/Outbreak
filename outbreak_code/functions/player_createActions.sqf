@@ -9,7 +9,6 @@ _inVehicle = (vehicle player != player);
 _cursorTarget = cursorTarget;
 
 if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
-
 	_dist = player distance _cursorTarget;
 	//hint format["%1", typeOf _cursorTarget];
 	//diag_log format["CURSOR TARGET: %1", typeOf _cursorTarget];
@@ -83,33 +82,48 @@ if (!isNil '_cursorTarget' && !_inVehicle && !player_performingAction) then {
 // misc actions not requiring objects
 
 if (!_inVehicle && !player_performingAction) then {
+	_currentPos = player modelToWorld [0, 5, 0];
 	
-	_surface = surfaceType getPosATL player;
-	_isForest = ["forest", str(_surface)] call fnc_inString;
+	if !(surfaceIsWater _currentPos) then {
+		_currentPos = ATLtoASL _currentPos;
+	};
 
-	///////////////////
-	// Search legs
-	///////////////////
-	//if (_isForest) then {
-	//	if (action_searchWoodPile < 0) then {
-	//		action_searchWoodPile = player addAction ["Search for logs", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
-	//	};
-	//} else {
-	//	player removeAction action_searchWoodPile;
-	//	action_searchWoodPile = -1;
-	//};
+	_objects = lineIntersectsWith[eyePos player, _currentPos, player, objNull, true];
+	_object = objNull;
+	_objName = "";
 
-	// create basic structure
+	_type = 0;
+
+	{	
+		_objName = _x call obj_getModelName;
+		_object = _x;
+		
+	} forEach _objects;
+
+	if (!isNull _object) then {
+		////////////
+		// Trees  //
+		////////////
+		if (_objName in CHOP_TREES && alive _object && ([player, "fireaxe"] call fnc_hasItem) or ([player, "axe"] call fnc_hasItem)) then {
+			if (action_chopTree < 0) then {
+				action_chopTree = player addAction [localize "STR_ACTIONS_CHOP_TREE", "addons\outbreak_code\actions\chop_tree.sqf", _object, 3, true, true, "", ""];
+			};
+		} else {
+			player removeAction action_chopTree;
+			action_chopTree = -1;
+		};
+		
+	} else {
+		player removeAction action_chopTree;
+		action_chopTree = -1;
+	};
 	
-	///////////////////
-	// Build makeshift base
-	///////////////////
-	//if (([player, "sc_wood", 20] call fnc_hasItem) && ([player, "sc_toolbox"] call fnc_hasItem) && ([player, "sc_hammer"] call fnc_hasItem) && ([player, "sc_scrap", 2] call fnc_hasItem)) then {
-	//	if (action_makeshiftBaseBasic < 0) then {
-	//		action_makeshiftBaseBasic = player addAction ["Build Makeshift Base", "addons\outbreak_code\actions\makeshift_base.sqf", "OutbreakShackV1", 3, true, true, "", ""];
-    //		};
-	//} else {
-	//	player removeAction action_makeshiftBaseBasic;
-	//	action_makeshiftBaseBasic = -1;
-	//};
+	if ((["forest", surfaceType position player] call fnc_inString) && (speed player == 0)) then {
+		if (action_searchLogs < 0) then {
+			action_searchLogs = player addAction [localize "STR_ACTIONS_SEARCH_LOGS", "addons\outbreak_code\actions\search_logs.sqf", "ground", 3, true, true, "", ""];
+		};
+	} else {
+		player removeAction action_searchLogs;
+		action_searchLogs = -1;
+	};
 };

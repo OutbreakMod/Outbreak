@@ -1,10 +1,8 @@
-class morphine: CA_Magazine
-{
+class morphine: CA_Magazine {
 	displayName = "Morphine";
 	count = 1;
 	
-	class ItemInfo
-	{
+	class ItemInfo {
 		mass = 1;
 	};
 
